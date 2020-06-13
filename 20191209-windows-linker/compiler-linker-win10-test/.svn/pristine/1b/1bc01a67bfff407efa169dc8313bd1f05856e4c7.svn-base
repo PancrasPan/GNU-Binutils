@@ -1,0 +1,921 @@
+
+#####==========stderr_mid==========#####:
+In file included from ./c_standard_lib-master/MATH/SQRT.c:2:
+In file included from ./c_standard_lib-master/_HEADERS\limits.h:5:
+./c_standard_lib-master/_HEADERS\yvals.h:35:5: warning: declaration of built-in function 'setjmp' requires inclusion of the header <setjmp.h> [-Wbuiltin-requires-header]
+int setjmp(int *);
+    ^
+'' is not a recognized processor for this target (ignoring processor)
+1 warning generated.
+
+#####==========stderr_asm==========#####:
+Pass Arguments:  -targetlibinfo -datalayout -jump-instr-table-info -notti -basictti -targetpassconfig -no-aa -tbaa -basicaa -collector-metadata -machinemoduleinfo -machine-branch-prob -jump-instr-tables -verify -verify-di -domtree -loops -loop-simplify -scalar-evolution -iv-users -loop-reduce -gc-lowering -unreachableblockelim -consthoist -codegenprepare -verify-di -stack-protector -verify -domtree -loops -branch-prob -expand-isel-pseudos -tailduplication -opt-phis -machinedomtree -slotindexes -stack-coloring -localstackalloc -dead-mi-elimination -machinedomtree -machine-loops -machinelicm -machine-cse -machine-sink -peephole-opts -machinedomtree -machine-loops -hwloops -processimpdefs -unreachable-mbb-elimination -livevars -machinedomtree -machine-loops -phi-node-elimination -twoaddressinstruction -slotindexes -liveintervals -simple-register-coalescing -machine-block-freq -livedebugvars -livestacks -virtregmap -liveregmatrix -edge-bundles -spill-code-placement -virtregrewriter -stack-slot-coloring -machinelicm -prologepilog -branch-folder -tailduplication -machine-cp -postrapseudos -machinedomtree -machine-loops -post-RA-sched -gc-analysis -machine-block-freq -block-placement2 -machinedomtree -machine-loops -packets -hwloopsfixup -stackmap-liveness
+Target Library Information
+Data Layout
+Jump-Instruction Table Info
+No target information
+Target independent code generator's TTI
+Target Pass Configuration
+No Alias Analysis (always returns 'may' alias)
+Type-Based Alias Analysis
+Basic Alias Analysis (stateless AA impl)
+Create Garbage Collector Module Metadata
+Machine Module Information
+Machine Branch Probability Analysis
+  ModulePass Manager
+    Jump-Instruction Tables
+    FunctionPass Manager
+      Module Verifier
+    Debug Info Verifier
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Induction Variable Users
+        Loop Strength Reduction
+      Lower Garbage Collection Instructions
+      Remove unreachable blocks from the CFG
+      Constant Hoisting
+      CodeGen Prepare
+      Exception handling preparation
+    Debug Info Verifier
+    FunctionPass Manager
+      Insert stack protectors
+      Module Verifier
+      Machine Function Analysis
+      Dominator Tree Construction
+      Natural Loop Information
+      Branch Probability Analysis
+      DSP DAG->DAG Pattern Instruction Selection
+      Expand ISel Pseudo-instructions
+      Tail Duplication
+      Optimize machine instruction PHIs
+      MachineDominator Tree Construction
+      Slot index numbering
+      Merge disjoint stack slots
+      Local Stack Slot Allocation
+      Remove dead machine instructions
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Machine Loop Invariant Code Motion
+      Machine Common Subexpression Elimination
+      Machine code sinking
+      Peephole Optimizations
+      DSP handle CC
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Hardware Loops
+      Process Implicit Definitions
+      Remove unreachable machine basic blocks
+      Live Variable Analysis
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Eliminate PHI nodes for register allocation
+      Two-Address instruction pass
+      Slot index numbering
+      Live Interval Analysis
+      Simple Register Coalescing
+      Machine Block Frequency Analysis
+      Debug Variable Analysis
+      Live Stack Slot Analysis
+      Virtual Register Map
+      Live Register Matrix
+      Bundle Machine CFG Edges
+      Spill Code Placement Analysis
+      Greedy Register Allocator
+      Virtual Register Rewriter
+      Stack Slot Coloring
+      Machine Loop Invariant Code Motion
+      Prologue/Epilogue Insertion & Frame Finalization
+      Control Flow Optimizer
+      Tail Duplication
+      Machine Copy Propagation Pass
+      Post-RA pseudo instruction expansion pass
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Post RA top-down list latency scheduler
+      Analyze Machine Code For Garbage Collection
+      Machine Block Frequency Analysis
+      Branch Probability Basic Block Placement
+      DSP Del Useless jmp
+      DSP Delay Slot Filler
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Packetizer
+      DSP VLIWBundlerDrive
+      DSP Hardware Loop Fixup
+      StackMap Liveness Analysis
+      dsp assembly printer
+# Machine code for function sqrt: SSA
+Frame Objects:
+  fi#0: size=8, align=8, at location [SP]
+  fi#1: size=8, align=8, at location [SP]
+  fi#2: size=2, align=4, at location [SP]
+  fi#3: size=8, align=8, at location [SP]
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	ST %vreg1, <fi#1>, 4; mem:ST4[%x.addr+4] CPURegs:%vreg1
+	ST %vreg0, <fi#1>, 0; mem:ST4[%x.addr](align=8) CPURegs:%vreg0
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = LEA <fi#2>, 0; CPURegs:%vreg3
+	%vreg4<def> = LEA <fi#1>, 0; CPURegs:%vreg4
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@_Dunscale>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg5<def> = COPY %V0; CPURegs:%vreg5
+	%vreg6<def> = EQI %vreg5, 0; CPURegs:%vreg6,%vreg5
+	JC %vreg6<kill>, <BB#5>; CPURegs:%vreg6
+	Jmp <BB#12>
+    Successors according to CFG: BB#5(16) BB#12(32)
+
+BB#12: derived from LLVM BB %entry
+    Predecessors according to CFG: BB#0
+	%vreg2<def> = COPY %vreg5; CPURegs:%vreg2,%vreg5
+	%vreg7<def> = EQI %vreg2, 1; CPURegs:%vreg7,%vreg2
+	JC %vreg7<kill>, <BB#2>; CPURegs:%vreg7
+	Jmp <BB#13>
+    Successors according to CFG: BB#2(16) BB#13(16)
+
+BB#13: derived from LLVM BB %entry
+    Predecessors according to CFG: BB#12
+	%vreg8<def> = NEQI %vreg2, 2; CPURegs:%vreg8,%vreg2
+	JC %vreg8<kill>, <BB#6>; CPURegs:%vreg8
+	Jmp <BB#1>
+    Successors according to CFG: BB#1(16) BB#6(16)
+
+BB#1: derived from LLVM BB %sw.bb
+    Predecessors according to CFG: BB#13
+	%vreg28<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg28
+	%vreg29<def,tied1> = MovIGL %vreg28<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg29,%vreg28
+	%vreg30<def> = MovGR %ZERO, 33; CPURegs:%vreg30
+	ST %vreg30<kill>, %vreg29<kill>, 0; mem:ST4[@errno] CPURegs:%vreg30,%vreg29
+	%vreg31<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg31
+	%vreg32<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg32
+	ST %vreg32<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg32
+	ST %vreg31<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg31
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#2: derived from LLVM BB %sw.bb1
+    Predecessors according to CFG: BB#12
+	%vreg10<def> = MovGR %ZERO, 128; CPURegs:%vreg10
+	%vreg11<def> = LDBZ <fi#1>, 7; mem:LD1[%arrayidx+1] CPURegs:%vreg11
+	%vreg12<def> = AND %vreg11<kill>, %vreg10<kill>; CPURegs:%vreg12,%vreg11,%vreg10
+	%vreg13<def> = EQI %vreg12<kill>, 0; CPURegs:%vreg13,%vreg12
+	JC %vreg13<kill>, <BB#4>; CPURegs:%vreg13
+	Jmp <BB#3>
+    Successors according to CFG: BB#3(20) BB#4(12)
+
+BB#3: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#2
+	%vreg21<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg21
+	%vreg22<def,tied1> = MovIGL %vreg21<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg22,%vreg21
+	%vreg23<def> = MovGR %ZERO, 33; CPURegs:%vreg23
+	ST %vreg23<kill>, %vreg22<kill>, 0; mem:ST4[@errno] CPURegs:%vreg23,%vreg22
+	%vreg24<def> = MovIGH %ZERO, <ga:@_Nan>[TF=3]; CPURegs:%vreg24
+	%vreg25<def,tied1> = MovIGL %vreg24<tied0>, <ga:@_Nan>[TF=4]; CPURegs:%vreg25,%vreg24
+	%vreg26<def> = LD %vreg25, 4; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)+4] CPURegs:%vreg26,%vreg25
+	ST %vreg26<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg26
+	%vreg27<def> = LD %vreg25, 0; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)](align=8) CPURegs:%vreg27,%vreg25
+	ST %vreg27<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg27
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#4: derived from LLVM BB %if.else
+    Predecessors according to CFG: BB#2
+	%vreg14<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg14
+	%vreg15<def,tied1> = MovIGL %vreg14<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg15,%vreg14
+	%vreg16<def> = MovGR %ZERO, 34; CPURegs:%vreg16
+	ST %vreg16<kill>, %vreg15<kill>, 0; mem:ST4[@errno] CPURegs:%vreg16,%vreg15
+	%vreg17<def> = MovIGH %ZERO, <ga:@_Inf>[TF=3]; CPURegs:%vreg17
+	%vreg18<def,tied1> = MovIGL %vreg17<tied0>, <ga:@_Inf>[TF=4]; CPURegs:%vreg18,%vreg17
+	%vreg19<def> = LD %vreg18, 4; mem:LD4[getelementptr inbounds (%union.anon* @_Inf, i32 0, i32 0)+4] CPURegs:%vreg19,%vreg18
+	ST %vreg19<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg19
+	%vreg20<def> = LD %vreg18, 0; mem:LD4[getelementptr inbounds (%union.anon* @_Inf, i32 0, i32 0)](align=8) CPURegs:%vreg20,%vreg18
+	ST %vreg20<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg20
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#5: derived from LLVM BB %sw.bb3
+    Predecessors according to CFG: BB#0
+	%vreg9<def> = MovGR %ZERO, 0; CPURegs:%vreg9
+	ST %vreg9, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg9
+	ST %vreg9, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg9
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#6: derived from LLVM BB %sw.default
+    Predecessors according to CFG: BB#13
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg33<def> = COPY %SP; CPURegs:%vreg33
+	%vreg34<def> = MovGR %ZERO, 0; CPURegs:%vreg34
+	ST %vreg34, %vreg33, 12; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg33
+	ST %vreg34, %vreg33, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg33
+	%vreg35<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg35
+	%vreg36<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg36
+	%A0<def> = COPY %vreg35; CPURegs:%vreg35
+	%A1<def> = COPY %vreg36; CPURegs:%vreg36
+	CALL <es:__gedf2>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg37<def> = COPY %V0; CPURegs:%vreg37
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg38<def> = COPY %SP; CPURegs:%vreg38
+	ST %vreg34, %vreg38, 12; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg38
+	ST %vreg34, %vreg38, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg38
+	%vreg39<def> = MovGR %ZERO, -1; CPURegs:%vreg39
+	%vreg40<def> = GT %vreg37, %vreg39<kill>; CPURegs:%vreg40,%vreg37,%vreg39
+	%A0<def> = COPY %vreg35; CPURegs:%vreg35
+	%A1<def> = COPY %vreg36; CPURegs:%vreg36
+	CALL <es:__unorddf2>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg41<def> = COPY %V0; CPURegs:%vreg41
+	%vreg42<def> = NEQ %vreg41, %vreg34; CPURegs:%vreg42,%vreg41,%vreg34
+	%vreg43<def> = ORu %vreg42<kill>, %vreg40<kill>; CPURegs:%vreg43,%vreg42,%vreg40
+	JC %vreg43<kill>, <BB#8>; CPURegs:%vreg43
+	Jmp <BB#7>
+    Successors according to CFG: BB#7(16) BB#8(16)
+
+BB#7: derived from LLVM BB %if.then5
+    Predecessors according to CFG: BB#6
+	%vreg120<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg120
+	%vreg121<def,tied1> = MovIGL %vreg120<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg121,%vreg120
+	%vreg122<def> = MovGR %ZERO, 33; CPURegs:%vreg122
+	ST %vreg122<kill>, %vreg121<kill>, 0; mem:ST4[@errno] CPURegs:%vreg122,%vreg121
+	%vreg123<def> = MovIGH %ZERO, <ga:@_Nan>[TF=3]; CPURegs:%vreg123
+	%vreg124<def,tied1> = MovIGL %vreg123<tied0>, <ga:@_Nan>[TF=4]; CPURegs:%vreg124,%vreg123
+	%vreg125<def> = LD %vreg124, 4; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)+4] CPURegs:%vreg125,%vreg124
+	ST %vreg125<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg125
+	%vreg126<def> = LD %vreg124, 0; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)](align=8) CPURegs:%vreg126,%vreg124
+	ST %vreg126<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg126
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#8: derived from LLVM BB %if.end
+    Predecessors according to CFG: BB#6
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg44<def> = COPY %SP; CPURegs:%vreg44
+	%vreg45<def> = MovGR %ZERO, -1077319782; CPURegs:%vreg45
+	ST %vreg45<kill>, %vreg44, 12; mem:ST4[<unknown>] CPURegs:%vreg45,%vreg44
+	%vreg46<def> = MovGR %ZERO, 1124910346; CPURegs:%vreg46
+	ST %vreg46<kill>, %vreg44, 8; mem:ST4[<unknown>] CPURegs:%vreg46,%vreg44
+	%vreg47<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg47
+	%vreg48<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg48
+	%A0<def> = COPY %vreg47; CPURegs:%vreg47
+	%A1<def> = COPY %vreg48; CPURegs:%vreg48
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg49<def> = COPY %V0; CPURegs:%vreg49
+	%vreg50<def> = COPY %V1; CPURegs:%vreg50
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg51<def> = COPY %SP; CPURegs:%vreg51
+	%vreg52<def> = MovGR %ZERO, 1072442616; CPURegs:%vreg52
+	ST %vreg52<kill>, %vreg51, 12; mem:ST4[<unknown>] CPURegs:%vreg52,%vreg51
+	%vreg53<def> = MovGR %ZERO, 456077423; CPURegs:%vreg53
+	ST %vreg53<kill>, %vreg51, 8; mem:ST4[<unknown>] CPURegs:%vreg53,%vreg51
+	%A0<def> = COPY %vreg49; CPURegs:%vreg49
+	%A1<def> = COPY %vreg50; CPURegs:%vreg50
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg54<def> = COPY %V0; CPURegs:%vreg54
+	%vreg55<def> = COPY %V1; CPURegs:%vreg55
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg56<def> = COPY %SP; CPURegs:%vreg56
+	ST %vreg48, %vreg56, 12; mem:ST4[<unknown>] CPURegs:%vreg48,%vreg56
+	ST %vreg47, %vreg56, 8; mem:ST4[<unknown>] CPURegs:%vreg47,%vreg56
+	%A0<def> = COPY %vreg54; CPURegs:%vreg54
+	%A1<def> = COPY %vreg55; CPURegs:%vreg55
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg57<def> = COPY %V0; CPURegs:%vreg57
+	%vreg58<def> = COPY %V1; CPURegs:%vreg58
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg59<def> = COPY %SP; CPURegs:%vreg59
+	%vreg60<def> = MovGR %ZERO, 1070879919; CPURegs:%vreg60
+	ST %vreg60<kill>, %vreg59, 12; mem:ST4[<unknown>] CPURegs:%vreg60,%vreg59
+	%vreg61<def> = MovGR %ZERO, 425565976; CPURegs:%vreg61
+	ST %vreg61<kill>, %vreg59, 8; mem:ST4[<unknown>] CPURegs:%vreg61,%vreg59
+	%A0<def> = COPY %vreg57; CPURegs:%vreg57
+	%A1<def> = COPY %vreg58; CPURegs:%vreg58
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg62<def> = COPY %V0; CPURegs:%vreg62
+	%vreg63<def> = COPY %V1; CPURegs:%vreg63
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg64<def> = COPY %SP; CPURegs:%vreg64
+	ST %vreg63, %vreg64, 12; mem:ST4[<unknown>] CPURegs:%vreg63,%vreg64
+	ST %vreg62, %vreg64, 8; mem:ST4[<unknown>] CPURegs:%vreg62,%vreg64
+	ST %vreg63, <fi#3>, 4; mem:ST4[%y+4] CPURegs:%vreg63
+	ST %vreg62, <fi#3>, 0; mem:ST4[%y](align=8) CPURegs:%vreg62
+	%vreg65<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg65
+	%vreg66<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg66
+	%A0<def> = COPY %vreg65; CPURegs:%vreg65
+	%A1<def> = COPY %vreg66; CPURegs:%vreg66
+	CALL <es:__divdf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg67<def> = COPY %V0; CPURegs:%vreg67
+	%vreg68<def> = COPY %V1; CPURegs:%vreg68
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg69<def> = COPY %SP; CPURegs:%vreg69
+	ST %vreg68, %vreg69, 12; mem:ST4[<unknown>] CPURegs:%vreg68,%vreg69
+	ST %vreg67, %vreg69, 8; mem:ST4[<unknown>] CPURegs:%vreg67,%vreg69
+	%A0<def> = COPY %vreg62; CPURegs:%vreg62
+	%A1<def> = COPY %vreg63; CPURegs:%vreg63
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg70<def> = COPY %V0; CPURegs:%vreg70
+	%vreg71<def> = COPY %V1; CPURegs:%vreg71
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg72<def> = COPY %SP; CPURegs:%vreg72
+	%vreg73<def> = MovGR %ZERO, 1071644672; CPURegs:%vreg73
+	ST %vreg73<kill>, %vreg72, 12; mem:ST4[<unknown>] CPURegs:%vreg73,%vreg72
+	ST %vreg34, %vreg72, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg72
+	%A0<def> = COPY %vreg70; CPURegs:%vreg70
+	%A1<def> = COPY %vreg71; CPURegs:%vreg71
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg75<def> = COPY %V0; CPURegs:%vreg75
+	%vreg76<def> = COPY %V1; CPURegs:%vreg76
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg77<def> = COPY %SP; CPURegs:%vreg77
+	ST %vreg76, %vreg77, 12; mem:ST4[<unknown>] CPURegs:%vreg76,%vreg77
+	ST %vreg75, %vreg77, 8; mem:ST4[<unknown>] CPURegs:%vreg75,%vreg77
+	ST %vreg76, <fi#3>, 4; mem:ST4[%y+4] CPURegs:%vreg76
+	ST %vreg75, <fi#3>, 0; mem:ST4[%y](align=8) CPURegs:%vreg75
+	%vreg78<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg78
+	%vreg79<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg79
+	%A0<def> = COPY %vreg78; CPURegs:%vreg78
+	%A1<def> = COPY %vreg79; CPURegs:%vreg79
+	CALL <es:__divdf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg80<def> = COPY %V0; CPURegs:%vreg80
+	%vreg81<def> = COPY %V1; CPURegs:%vreg81
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg82<def> = COPY %SP; CPURegs:%vreg82
+	ST %vreg81, %vreg82, 12; mem:ST4[<unknown>] CPURegs:%vreg81,%vreg82
+	ST %vreg80, %vreg82, 8; mem:ST4[<unknown>] CPURegs:%vreg80,%vreg82
+	%A0<def> = COPY %vreg75; CPURegs:%vreg75
+	%A1<def> = COPY %vreg76; CPURegs:%vreg76
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg83<def> = COPY %V0; CPURegs:%vreg83
+	%vreg84<def> = COPY %V1; CPURegs:%vreg84
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg85<def> = COPY %SP; CPURegs:%vreg85
+	ST %vreg84, %vreg85, 12; mem:ST4[<unknown>] CPURegs:%vreg84,%vreg85
+	ST %vreg83, %vreg85, 8; mem:ST4[<unknown>] CPURegs:%vreg83,%vreg85
+	ST %vreg84, <fi#3>, 4; mem:ST4[%y+4] CPURegs:%vreg84
+	ST %vreg83, <fi#3>, 0; mem:ST4[%y](align=8) CPURegs:%vreg83
+	%vreg86<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg86
+	%vreg87<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg87
+	%A0<def> = COPY %vreg86; CPURegs:%vreg86
+	%A1<def> = COPY %vreg87; CPURegs:%vreg87
+	CALL <es:__divdf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg88<def> = COPY %V0; CPURegs:%vreg88
+	%vreg89<def> = COPY %V1; CPURegs:%vreg89
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg90<def> = COPY %SP; CPURegs:%vreg90
+	%vreg91<def> = MovGR %ZERO, 1070596096; CPURegs:%vreg91
+	ST %vreg91<kill>, %vreg90, 12; mem:ST4[<unknown>] CPURegs:%vreg91,%vreg90
+	ST %vreg34, %vreg90, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg90
+	%A0<def> = COPY %vreg83; CPURegs:%vreg83
+	%A1<def> = COPY %vreg84; CPURegs:%vreg84
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg92<def> = COPY %V0; CPURegs:%vreg92
+	%vreg93<def> = COPY %V1; CPURegs:%vreg93
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg94<def> = COPY %SP; CPURegs:%vreg94
+	ST %vreg89, %vreg94, 12; mem:ST4[<unknown>] CPURegs:%vreg89,%vreg94
+	ST %vreg88, %vreg94, 8; mem:ST4[<unknown>] CPURegs:%vreg88,%vreg94
+	%A0<def> = COPY %vreg92; CPURegs:%vreg92
+	%A1<def> = COPY %vreg93; CPURegs:%vreg93
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg95<def> = COPY %V0; CPURegs:%vreg95
+	%vreg96<def> = COPY %V1; CPURegs:%vreg96
+	ST %vreg96, <fi#1>, 4; mem:ST4[%x.addr+4] CPURegs:%vreg96
+	ST %vreg95, <fi#1>, 0; mem:ST4[%x.addr](align=8) CPURegs:%vreg95
+	%vreg97<def> = MovGR %ZERO, 1; CPURegs:%vreg97
+	%vreg98<def> = LDBZ <fi#2>, 0; mem:LD1[%xexp](align=4) CPURegs:%vreg98
+	%vreg99<def> = AND %vreg98<kill>, %vreg97; CPURegs:%vreg99,%vreg98,%vreg97
+	%vreg100<def> = EQI %vreg99<kill>, 0; CPURegs:%vreg100,%vreg99
+	JC %vreg100<kill>, <BB#10>; CPURegs:%vreg100
+	Jmp <BB#9>
+    Successors according to CFG: BB#9(20) BB#10(12)
+
+BB#9: derived from LLVM BB %if.then18
+    Predecessors according to CFG: BB#8
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg101<def> = COPY %SP; CPURegs:%vreg101
+	%vreg102<def> = MovGR %ZERO, 1073127582; CPURegs:%vreg102
+	ST %vreg102<kill>, %vreg101, 12; mem:ST4[<unknown>] CPURegs:%vreg102,%vreg101
+	%vreg103<def> = MovGR %ZERO, 1719614413; CPURegs:%vreg103
+	ST %vreg103<kill>, %vreg101, 8; mem:ST4[<unknown>] CPURegs:%vreg103,%vreg101
+	%vreg104<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg104
+	%vreg105<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg105
+	%A0<def> = COPY %vreg104; CPURegs:%vreg104
+	%A1<def> = COPY %vreg105; CPURegs:%vreg105
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg106<def> = COPY %V0; CPURegs:%vreg106
+	%vreg107<def> = COPY %V1; CPURegs:%vreg107
+	ST %vreg107, <fi#1>, 4; mem:ST4[%x.addr+4] CPURegs:%vreg107
+	ST %vreg106, <fi#1>, 0; mem:ST4[%x.addr](align=8) CPURegs:%vreg106
+	%vreg108<def> = LDH <fi#2>, 0; mem:LD2[%xexp](align=4) CPURegs:%vreg108
+	%vreg109<def> = ADDiu %vreg108<kill>, -1; CPURegs:%vreg109,%vreg108
+	STH %vreg109<kill>, <fi#2>, 0; mem:ST2[%xexp](align=4) CPURegs:%vreg109
+    Successors according to CFG: BB#10
+
+BB#10: derived from LLVM BB %if.end20
+    Predecessors according to CFG: BB#8 BB#9
+	%vreg110<def> = MovGR %ZERO, 31; CPURegs:%vreg110
+	%vreg111<def> = LDHS <fi#2>, 0; mem:LD2[%xexp](align=4) CPURegs:%vreg111
+	%vreg112<def> = SRL %vreg111, %vreg110<kill>; CPURegs:%vreg112,%vreg111,%vreg110
+	%vreg113<def> = ADDu %vreg111, %vreg112<kill>; CPURegs:%vreg113,%vreg111,%vreg112
+	%vreg115<def> = SRA %vreg113<kill>, %vreg97; CPURegs:%vreg115,%vreg113,%vreg97
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg116<def> = LEA <fi#1>, 0; CPURegs:%vreg116
+	%A0<def> = COPY %vreg116; CPURegs:%vreg116
+	%A1<def> = COPY %vreg115; CPURegs:%vreg115
+	CALL <ga:@_Dscale>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg118<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg118
+	%vreg119<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg119
+	ST %vreg119<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg119
+	ST %vreg118<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg118
+    Successors according to CFG: BB#11
+
+BB#11: derived from LLVM BB %return
+    Predecessors according to CFG: BB#5 BB#4 BB#3 BB#1 BB#10 BB#7
+	%vreg127<def> = LD <fi#0>, 0; mem:LD4[%retval](align=8) CPURegs:%vreg127
+	%vreg128<def> = LD <fi#0>, 4; mem:LD4[%retval+4] CPURegs:%vreg128
+	%V0<def> = COPY %vreg127; CPURegs:%vreg127
+	%V1<def> = COPY %vreg128; CPURegs:%vreg128
+	RetLR %V0<imp-use>, %V1<imp-use>
+
+# End machine code for function sqrt.
+
+
+#####==========stderr_obj==========#####:
+Pass Arguments:  -targetlibinfo -datalayout -jump-instr-table-info -notti -basictti -targetpassconfig -no-aa -tbaa -basicaa -collector-metadata -machinemoduleinfo -machine-branch-prob -jump-instr-tables -verify -verify-di -domtree -loops -loop-simplify -scalar-evolution -iv-users -loop-reduce -gc-lowering -unreachableblockelim -consthoist -codegenprepare -verify-di -stack-protector -verify -domtree -loops -branch-prob -expand-isel-pseudos -tailduplication -opt-phis -machinedomtree -slotindexes -stack-coloring -localstackalloc -dead-mi-elimination -machinedomtree -machine-loops -machinelicm -machine-cse -machine-sink -peephole-opts -machinedomtree -machine-loops -hwloops -processimpdefs -unreachable-mbb-elimination -livevars -machinedomtree -machine-loops -phi-node-elimination -twoaddressinstruction -slotindexes -liveintervals -simple-register-coalescing -machine-block-freq -livedebugvars -livestacks -virtregmap -liveregmatrix -edge-bundles -spill-code-placement -virtregrewriter -stack-slot-coloring -machinelicm -prologepilog -branch-folder -tailduplication -machine-cp -postrapseudos -machinedomtree -machine-loops -post-RA-sched -gc-analysis -machine-block-freq -block-placement2 -machinedomtree -machine-loops -packets -hwloopsfixup -stackmap-liveness
+Target Library Information
+Data Layout
+Jump-Instruction Table Info
+No target information
+Target independent code generator's TTI
+Target Pass Configuration
+No Alias Analysis (always returns 'may' alias)
+Type-Based Alias Analysis
+Basic Alias Analysis (stateless AA impl)
+Create Garbage Collector Module Metadata
+Machine Module Information
+Machine Branch Probability Analysis
+  ModulePass Manager
+    Jump-Instruction Tables
+    FunctionPass Manager
+      Module Verifier
+    Debug Info Verifier
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Induction Variable Users
+        Loop Strength Reduction
+      Lower Garbage Collection Instructions
+      Remove unreachable blocks from the CFG
+      Constant Hoisting
+      CodeGen Prepare
+      Exception handling preparation
+    Debug Info Verifier
+    FunctionPass Manager
+      Insert stack protectors
+      Module Verifier
+      Machine Function Analysis
+      Dominator Tree Construction
+      Natural Loop Information
+      Branch Probability Analysis
+      DSP DAG->DAG Pattern Instruction Selection
+      Expand ISel Pseudo-instructions
+      Tail Duplication
+      Optimize machine instruction PHIs
+      MachineDominator Tree Construction
+      Slot index numbering
+      Merge disjoint stack slots
+      Local Stack Slot Allocation
+      Remove dead machine instructions
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Machine Loop Invariant Code Motion
+      Machine Common Subexpression Elimination
+      Machine code sinking
+      Peephole Optimizations
+      DSP handle CC
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Hardware Loops
+      Process Implicit Definitions
+      Remove unreachable machine basic blocks
+      Live Variable Analysis
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Eliminate PHI nodes for register allocation
+      Two-Address instruction pass
+      Slot index numbering
+      Live Interval Analysis
+      Simple Register Coalescing
+      Machine Block Frequency Analysis
+      Debug Variable Analysis
+      Live Stack Slot Analysis
+      Virtual Register Map
+      Live Register Matrix
+      Bundle Machine CFG Edges
+      Spill Code Placement Analysis
+      Greedy Register Allocator
+      Virtual Register Rewriter
+      Stack Slot Coloring
+      Machine Loop Invariant Code Motion
+      Prologue/Epilogue Insertion & Frame Finalization
+      Control Flow Optimizer
+      Tail Duplication
+      Machine Copy Propagation Pass
+      Post-RA pseudo instruction expansion pass
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Post RA top-down list latency scheduler
+      Analyze Machine Code For Garbage Collection
+      Machine Block Frequency Analysis
+      Branch Probability Basic Block Placement
+      DSP Del Useless jmp
+      DSP Delay Slot Filler
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Packetizer
+      DSP VLIWBundlerDrive
+      DSP Hardware Loop Fixup
+      StackMap Liveness Analysis
+      dsp assembly printer
+# Machine code for function sqrt: SSA
+Frame Objects:
+  fi#0: size=8, align=8, at location [SP]
+  fi#1: size=8, align=8, at location [SP]
+  fi#2: size=2, align=4, at location [SP]
+  fi#3: size=8, align=8, at location [SP]
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	ST %vreg1, <fi#1>, 4; mem:ST4[%x.addr+4] CPURegs:%vreg1
+	ST %vreg0, <fi#1>, 0; mem:ST4[%x.addr](align=8) CPURegs:%vreg0
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = LEA <fi#2>, 0; CPURegs:%vreg3
+	%vreg4<def> = LEA <fi#1>, 0; CPURegs:%vreg4
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@_Dunscale>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg5<def> = COPY %V0; CPURegs:%vreg5
+	%vreg6<def> = EQI %vreg5, 0; CPURegs:%vreg6,%vreg5
+	JC %vreg6<kill>, <BB#5>; CPURegs:%vreg6
+	Jmp <BB#12>
+    Successors according to CFG: BB#5(16) BB#12(32)
+
+BB#12: derived from LLVM BB %entry
+    Predecessors according to CFG: BB#0
+	%vreg2<def> = COPY %vreg5; CPURegs:%vreg2,%vreg5
+	%vreg7<def> = EQI %vreg2, 1; CPURegs:%vreg7,%vreg2
+	JC %vreg7<kill>, <BB#2>; CPURegs:%vreg7
+	Jmp <BB#13>
+    Successors according to CFG: BB#2(16) BB#13(16)
+
+BB#13: derived from LLVM BB %entry
+    Predecessors according to CFG: BB#12
+	%vreg8<def> = NEQI %vreg2, 2; CPURegs:%vreg8,%vreg2
+	JC %vreg8<kill>, <BB#6>; CPURegs:%vreg8
+	Jmp <BB#1>
+    Successors according to CFG: BB#1(16) BB#6(16)
+
+BB#1: derived from LLVM BB %sw.bb
+    Predecessors according to CFG: BB#13
+	%vreg28<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg28
+	%vreg29<def,tied1> = MovIGL %vreg28<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg29,%vreg28
+	%vreg30<def> = MovGR %ZERO, 33; CPURegs:%vreg30
+	ST %vreg30<kill>, %vreg29<kill>, 0; mem:ST4[@errno] CPURegs:%vreg30,%vreg29
+	%vreg31<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg31
+	%vreg32<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg32
+	ST %vreg32<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg32
+	ST %vreg31<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg31
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#2: derived from LLVM BB %sw.bb1
+    Predecessors according to CFG: BB#12
+	%vreg10<def> = MovGR %ZERO, 128; CPURegs:%vreg10
+	%vreg11<def> = LDBZ <fi#1>, 7; mem:LD1[%arrayidx+1] CPURegs:%vreg11
+	%vreg12<def> = AND %vreg11<kill>, %vreg10<kill>; CPURegs:%vreg12,%vreg11,%vreg10
+	%vreg13<def> = EQI %vreg12<kill>, 0; CPURegs:%vreg13,%vreg12
+	JC %vreg13<kill>, <BB#4>; CPURegs:%vreg13
+	Jmp <BB#3>
+    Successors according to CFG: BB#3(20) BB#4(12)
+
+BB#3: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#2
+	%vreg21<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg21
+	%vreg22<def,tied1> = MovIGL %vreg21<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg22,%vreg21
+	%vreg23<def> = MovGR %ZERO, 33; CPURegs:%vreg23
+	ST %vreg23<kill>, %vreg22<kill>, 0; mem:ST4[@errno] CPURegs:%vreg23,%vreg22
+	%vreg24<def> = MovIGH %ZERO, <ga:@_Nan>[TF=3]; CPURegs:%vreg24
+	%vreg25<def,tied1> = MovIGL %vreg24<tied0>, <ga:@_Nan>[TF=4]; CPURegs:%vreg25,%vreg24
+	%vreg26<def> = LD %vreg25, 4; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)+4] CPURegs:%vreg26,%vreg25
+	ST %vreg26<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg26
+	%vreg27<def> = LD %vreg25, 0; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)](align=8) CPURegs:%vreg27,%vreg25
+	ST %vreg27<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg27
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#4: derived from LLVM BB %if.else
+    Predecessors according to CFG: BB#2
+	%vreg14<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg14
+	%vreg15<def,tied1> = MovIGL %vreg14<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg15,%vreg14
+	%vreg16<def> = MovGR %ZERO, 34; CPURegs:%vreg16
+	ST %vreg16<kill>, %vreg15<kill>, 0; mem:ST4[@errno] CPURegs:%vreg16,%vreg15
+	%vreg17<def> = MovIGH %ZERO, <ga:@_Inf>[TF=3]; CPURegs:%vreg17
+	%vreg18<def,tied1> = MovIGL %vreg17<tied0>, <ga:@_Inf>[TF=4]; CPURegs:%vreg18,%vreg17
+	%vreg19<def> = LD %vreg18, 4; mem:LD4[getelementptr inbounds (%union.anon* @_Inf, i32 0, i32 0)+4] CPURegs:%vreg19,%vreg18
+	ST %vreg19<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg19
+	%vreg20<def> = LD %vreg18, 0; mem:LD4[getelementptr inbounds (%union.anon* @_Inf, i32 0, i32 0)](align=8) CPURegs:%vreg20,%vreg18
+	ST %vreg20<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg20
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#5: derived from LLVM BB %sw.bb3
+    Predecessors according to CFG: BB#0
+	%vreg9<def> = MovGR %ZERO, 0; CPURegs:%vreg9
+	ST %vreg9, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg9
+	ST %vreg9, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg9
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#6: derived from LLVM BB %sw.default
+    Predecessors according to CFG: BB#13
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg33<def> = COPY %SP; CPURegs:%vreg33
+	%vreg34<def> = MovGR %ZERO, 0; CPURegs:%vreg34
+	ST %vreg34, %vreg33, 12; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg33
+	ST %vreg34, %vreg33, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg33
+	%vreg35<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg35
+	%vreg36<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg36
+	%A0<def> = COPY %vreg35; CPURegs:%vreg35
+	%A1<def> = COPY %vreg36; CPURegs:%vreg36
+	CALL <es:__gedf2>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg37<def> = COPY %V0; CPURegs:%vreg37
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg38<def> = COPY %SP; CPURegs:%vreg38
+	ST %vreg34, %vreg38, 12; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg38
+	ST %vreg34, %vreg38, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg38
+	%vreg39<def> = MovGR %ZERO, -1; CPURegs:%vreg39
+	%vreg40<def> = GT %vreg37, %vreg39<kill>; CPURegs:%vreg40,%vreg37,%vreg39
+	%A0<def> = COPY %vreg35; CPURegs:%vreg35
+	%A1<def> = COPY %vreg36; CPURegs:%vreg36
+	CALL <es:__unorddf2>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg41<def> = COPY %V0; CPURegs:%vreg41
+	%vreg42<def> = NEQ %vreg41, %vreg34; CPURegs:%vreg42,%vreg41,%vreg34
+	%vreg43<def> = ORu %vreg42<kill>, %vreg40<kill>; CPURegs:%vreg43,%vreg42,%vreg40
+	JC %vreg43<kill>, <BB#8>; CPURegs:%vreg43
+	Jmp <BB#7>
+    Successors according to CFG: BB#7(16) BB#8(16)
+
+BB#7: derived from LLVM BB %if.then5
+    Predecessors according to CFG: BB#6
+	%vreg120<def> = MovIGH %ZERO, <ga:@errno>[TF=3]; CPURegs:%vreg120
+	%vreg121<def,tied1> = MovIGL %vreg120<tied0>, <ga:@errno>[TF=4]; CPURegs:%vreg121,%vreg120
+	%vreg122<def> = MovGR %ZERO, 33; CPURegs:%vreg122
+	ST %vreg122<kill>, %vreg121<kill>, 0; mem:ST4[@errno] CPURegs:%vreg122,%vreg121
+	%vreg123<def> = MovIGH %ZERO, <ga:@_Nan>[TF=3]; CPURegs:%vreg123
+	%vreg124<def,tied1> = MovIGL %vreg123<tied0>, <ga:@_Nan>[TF=4]; CPURegs:%vreg124,%vreg123
+	%vreg125<def> = LD %vreg124, 4; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)+4] CPURegs:%vreg125,%vreg124
+	ST %vreg125<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg125
+	%vreg126<def> = LD %vreg124, 0; mem:LD4[getelementptr inbounds (%union.anon* @_Nan, i32 0, i32 0)](align=8) CPURegs:%vreg126,%vreg124
+	ST %vreg126<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg126
+	Jmp <BB#11>
+    Successors according to CFG: BB#11
+
+BB#8: derived from LLVM BB %if.end
+    Predecessors according to CFG: BB#6
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg44<def> = COPY %SP; CPURegs:%vreg44
+	%vreg45<def> = MovGR %ZERO, -1077319782; CPURegs:%vreg45
+	ST %vreg45<kill>, %vreg44, 12; mem:ST4[<unknown>] CPURegs:%vreg45,%vreg44
+	%vreg46<def> = MovGR %ZERO, 1124910346; CPURegs:%vreg46
+	ST %vreg46<kill>, %vreg44, 8; mem:ST4[<unknown>] CPURegs:%vreg46,%vreg44
+	%vreg47<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg47
+	%vreg48<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg48
+	%A0<def> = COPY %vreg47; CPURegs:%vreg47
+	%A1<def> = COPY %vreg48; CPURegs:%vreg48
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg49<def> = COPY %V0; CPURegs:%vreg49
+	%vreg50<def> = COPY %V1; CPURegs:%vreg50
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg51<def> = COPY %SP; CPURegs:%vreg51
+	%vreg52<def> = MovGR %ZERO, 1072442616; CPURegs:%vreg52
+	ST %vreg52<kill>, %vreg51, 12; mem:ST4[<unknown>] CPURegs:%vreg52,%vreg51
+	%vreg53<def> = MovGR %ZERO, 456077423; CPURegs:%vreg53
+	ST %vreg53<kill>, %vreg51, 8; mem:ST4[<unknown>] CPURegs:%vreg53,%vreg51
+	%A0<def> = COPY %vreg49; CPURegs:%vreg49
+	%A1<def> = COPY %vreg50; CPURegs:%vreg50
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg54<def> = COPY %V0; CPURegs:%vreg54
+	%vreg55<def> = COPY %V1; CPURegs:%vreg55
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg56<def> = COPY %SP; CPURegs:%vreg56
+	ST %vreg48, %vreg56, 12; mem:ST4[<unknown>] CPURegs:%vreg48,%vreg56
+	ST %vreg47, %vreg56, 8; mem:ST4[<unknown>] CPURegs:%vreg47,%vreg56
+	%A0<def> = COPY %vreg54; CPURegs:%vreg54
+	%A1<def> = COPY %vreg55; CPURegs:%vreg55
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg57<def> = COPY %V0; CPURegs:%vreg57
+	%vreg58<def> = COPY %V1; CPURegs:%vreg58
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg59<def> = COPY %SP; CPURegs:%vreg59
+	%vreg60<def> = MovGR %ZERO, 1070879919; CPURegs:%vreg60
+	ST %vreg60<kill>, %vreg59, 12; mem:ST4[<unknown>] CPURegs:%vreg60,%vreg59
+	%vreg61<def> = MovGR %ZERO, 425565976; CPURegs:%vreg61
+	ST %vreg61<kill>, %vreg59, 8; mem:ST4[<unknown>] CPURegs:%vreg61,%vreg59
+	%A0<def> = COPY %vreg57; CPURegs:%vreg57
+	%A1<def> = COPY %vreg58; CPURegs:%vreg58
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg62<def> = COPY %V0; CPURegs:%vreg62
+	%vreg63<def> = COPY %V1; CPURegs:%vreg63
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg64<def> = COPY %SP; CPURegs:%vreg64
+	ST %vreg63, %vreg64, 12; mem:ST4[<unknown>] CPURegs:%vreg63,%vreg64
+	ST %vreg62, %vreg64, 8; mem:ST4[<unknown>] CPURegs:%vreg62,%vreg64
+	ST %vreg63, <fi#3>, 4; mem:ST4[%y+4] CPURegs:%vreg63
+	ST %vreg62, <fi#3>, 0; mem:ST4[%y](align=8) CPURegs:%vreg62
+	%vreg65<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg65
+	%vreg66<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg66
+	%A0<def> = COPY %vreg65; CPURegs:%vreg65
+	%A1<def> = COPY %vreg66; CPURegs:%vreg66
+	CALL <es:__divdf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg67<def> = COPY %V0; CPURegs:%vreg67
+	%vreg68<def> = COPY %V1; CPURegs:%vreg68
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg69<def> = COPY %SP; CPURegs:%vreg69
+	ST %vreg68, %vreg69, 12; mem:ST4[<unknown>] CPURegs:%vreg68,%vreg69
+	ST %vreg67, %vreg69, 8; mem:ST4[<unknown>] CPURegs:%vreg67,%vreg69
+	%A0<def> = COPY %vreg62; CPURegs:%vreg62
+	%A1<def> = COPY %vreg63; CPURegs:%vreg63
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg70<def> = COPY %V0; CPURegs:%vreg70
+	%vreg71<def> = COPY %V1; CPURegs:%vreg71
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg72<def> = COPY %SP; CPURegs:%vreg72
+	%vreg73<def> = MovGR %ZERO, 1071644672; CPURegs:%vreg73
+	ST %vreg73<kill>, %vreg72, 12; mem:ST4[<unknown>] CPURegs:%vreg73,%vreg72
+	ST %vreg34, %vreg72, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg72
+	%A0<def> = COPY %vreg70; CPURegs:%vreg70
+	%A1<def> = COPY %vreg71; CPURegs:%vreg71
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg75<def> = COPY %V0; CPURegs:%vreg75
+	%vreg76<def> = COPY %V1; CPURegs:%vreg76
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg77<def> = COPY %SP; CPURegs:%vreg77
+	ST %vreg76, %vreg77, 12; mem:ST4[<unknown>] CPURegs:%vreg76,%vreg77
+	ST %vreg75, %vreg77, 8; mem:ST4[<unknown>] CPURegs:%vreg75,%vreg77
+	ST %vreg76, <fi#3>, 4; mem:ST4[%y+4] CPURegs:%vreg76
+	ST %vreg75, <fi#3>, 0; mem:ST4[%y](align=8) CPURegs:%vreg75
+	%vreg78<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg78
+	%vreg79<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg79
+	%A0<def> = COPY %vreg78; CPURegs:%vreg78
+	%A1<def> = COPY %vreg79; CPURegs:%vreg79
+	CALL <es:__divdf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg80<def> = COPY %V0; CPURegs:%vreg80
+	%vreg81<def> = COPY %V1; CPURegs:%vreg81
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg82<def> = COPY %SP; CPURegs:%vreg82
+	ST %vreg81, %vreg82, 12; mem:ST4[<unknown>] CPURegs:%vreg81,%vreg82
+	ST %vreg80, %vreg82, 8; mem:ST4[<unknown>] CPURegs:%vreg80,%vreg82
+	%A0<def> = COPY %vreg75; CPURegs:%vreg75
+	%A1<def> = COPY %vreg76; CPURegs:%vreg76
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg83<def> = COPY %V0; CPURegs:%vreg83
+	%vreg84<def> = COPY %V1; CPURegs:%vreg84
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg85<def> = COPY %SP; CPURegs:%vreg85
+	ST %vreg84, %vreg85, 12; mem:ST4[<unknown>] CPURegs:%vreg84,%vreg85
+	ST %vreg83, %vreg85, 8; mem:ST4[<unknown>] CPURegs:%vreg83,%vreg85
+	ST %vreg84, <fi#3>, 4; mem:ST4[%y+4] CPURegs:%vreg84
+	ST %vreg83, <fi#3>, 0; mem:ST4[%y](align=8) CPURegs:%vreg83
+	%vreg86<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg86
+	%vreg87<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg87
+	%A0<def> = COPY %vreg86; CPURegs:%vreg86
+	%A1<def> = COPY %vreg87; CPURegs:%vreg87
+	CALL <es:__divdf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg88<def> = COPY %V0; CPURegs:%vreg88
+	%vreg89<def> = COPY %V1; CPURegs:%vreg89
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg90<def> = COPY %SP; CPURegs:%vreg90
+	%vreg91<def> = MovGR %ZERO, 1070596096; CPURegs:%vreg91
+	ST %vreg91<kill>, %vreg90, 12; mem:ST4[<unknown>] CPURegs:%vreg91,%vreg90
+	ST %vreg34, %vreg90, 8; mem:ST4[<unknown>] CPURegs:%vreg34,%vreg90
+	%A0<def> = COPY %vreg83; CPURegs:%vreg83
+	%A1<def> = COPY %vreg84; CPURegs:%vreg84
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg92<def> = COPY %V0; CPURegs:%vreg92
+	%vreg93<def> = COPY %V1; CPURegs:%vreg93
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg94<def> = COPY %SP; CPURegs:%vreg94
+	ST %vreg89, %vreg94, 12; mem:ST4[<unknown>] CPURegs:%vreg89,%vreg94
+	ST %vreg88, %vreg94, 8; mem:ST4[<unknown>] CPURegs:%vreg88,%vreg94
+	%A0<def> = COPY %vreg92; CPURegs:%vreg92
+	%A1<def> = COPY %vreg93; CPURegs:%vreg93
+	CALL <es:__adddf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg95<def> = COPY %V0; CPURegs:%vreg95
+	%vreg96<def> = COPY %V1; CPURegs:%vreg96
+	ST %vreg96, <fi#1>, 4; mem:ST4[%x.addr+4] CPURegs:%vreg96
+	ST %vreg95, <fi#1>, 0; mem:ST4[%x.addr](align=8) CPURegs:%vreg95
+	%vreg97<def> = MovGR %ZERO, 1; CPURegs:%vreg97
+	%vreg98<def> = LDBZ <fi#2>, 0; mem:LD1[%xexp](align=4) CPURegs:%vreg98
+	%vreg99<def> = AND %vreg98<kill>, %vreg97; CPURegs:%vreg99,%vreg98,%vreg97
+	%vreg100<def> = EQI %vreg99<kill>, 0; CPURegs:%vreg100,%vreg99
+	JC %vreg100<kill>, <BB#10>; CPURegs:%vreg100
+	Jmp <BB#9>
+    Successors according to CFG: BB#9(20) BB#10(12)
+
+BB#9: derived from LLVM BB %if.then18
+    Predecessors according to CFG: BB#8
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg101<def> = COPY %SP; CPURegs:%vreg101
+	%vreg102<def> = MovGR %ZERO, 1073127582; CPURegs:%vreg102
+	ST %vreg102<kill>, %vreg101, 12; mem:ST4[<unknown>] CPURegs:%vreg102,%vreg101
+	%vreg103<def> = MovGR %ZERO, 1719614413; CPURegs:%vreg103
+	ST %vreg103<kill>, %vreg101, 8; mem:ST4[<unknown>] CPURegs:%vreg103,%vreg101
+	%vreg104<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg104
+	%vreg105<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg105
+	%A0<def> = COPY %vreg104; CPURegs:%vreg104
+	%A1<def> = COPY %vreg105; CPURegs:%vreg105
+	CALL <es:__muldf3>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>, %V1<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg106<def> = COPY %V0; CPURegs:%vreg106
+	%vreg107<def> = COPY %V1; CPURegs:%vreg107
+	ST %vreg107, <fi#1>, 4; mem:ST4[%x.addr+4] CPURegs:%vreg107
+	ST %vreg106, <fi#1>, 0; mem:ST4[%x.addr](align=8) CPURegs:%vreg106
+	%vreg108<def> = LDH <fi#2>, 0; mem:LD2[%xexp](align=4) CPURegs:%vreg108
+	%vreg109<def> = ADDiu %vreg108<kill>, -1; CPURegs:%vreg109,%vreg108
+	STH %vreg109<kill>, <fi#2>, 0; mem:ST2[%xexp](align=4) CPURegs:%vreg109
+    Successors according to CFG: BB#10
+
+BB#10: derived from LLVM BB %if.end20
+    Predecessors according to CFG: BB#8 BB#9
+	%vreg110<def> = MovGR %ZERO, 31; CPURegs:%vreg110
+	%vreg111<def> = LDHS <fi#2>, 0; mem:LD2[%xexp](align=4) CPURegs:%vreg111
+	%vreg112<def> = SRL %vreg111, %vreg110<kill>; CPURegs:%vreg112,%vreg111,%vreg110
+	%vreg113<def> = ADDu %vreg111, %vreg112<kill>; CPURegs:%vreg113,%vreg111,%vreg112
+	%vreg115<def> = SRA %vreg113<kill>, %vreg97; CPURegs:%vreg115,%vreg113,%vreg97
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg116<def> = LEA <fi#1>, 0; CPURegs:%vreg116
+	%A0<def> = COPY %vreg116; CPURegs:%vreg116
+	%A1<def> = COPY %vreg115; CPURegs:%vreg115
+	CALL <ga:@_Dscale>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg118<def> = LD <fi#1>, 0; mem:LD4[%x.addr](align=8) CPURegs:%vreg118
+	%vreg119<def> = LD <fi#1>, 4; mem:LD4[%x.addr+4] CPURegs:%vreg119
+	ST %vreg119<kill>, <fi#0>, 4; mem:ST4[%retval+4] CPURegs:%vreg119
+	ST %vreg118<kill>, <fi#0>, 0; mem:ST4[%retval](align=8) CPURegs:%vreg118
+    Successors according to CFG: BB#11
+
+BB#11: derived from LLVM BB %return
+    Predecessors according to CFG: BB#5 BB#4 BB#3 BB#1 BB#10 BB#7
+	%vreg127<def> = LD <fi#0>, 0; mem:LD4[%retval](align=8) CPURegs:%vreg127
+	%vreg128<def> = LD <fi#0>, 4; mem:LD4[%retval+4] CPURegs:%vreg128
+	%V0<def> = COPY %vreg127; CPURegs:%vreg127
+	%V1<def> = COPY %vreg128; CPURegs:%vreg128
+	RetLR %V0<imp-use>, %V1<imp-use>
+
+# End machine code for function sqrt.
+

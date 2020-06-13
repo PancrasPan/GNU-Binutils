@@ -1,0 +1,11 @@
+当前目录：./c_standard_lib-master/_TEST
+
+TASSERT.C:
+Time Elapsed 0.605781s
+读取ASM文件中的指令出错TLIMITS.C:
+Time Elapsed 0.480089s
+读取ASM文件中的指令出错TSIGNAL.C:
+Time Elapsed 0.506428s
+读取ASM文件中的指令出错TSTDARG.C:
+Time Elapsed 0.775881s
+读取ASM文件中的指令出错

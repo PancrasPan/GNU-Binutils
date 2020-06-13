@@ -1,0 +1,10 @@
+//#include "vector_support.h"
+typedef int v16si __attribute__((vector_size(16)));
+typedef char v64sc __attribute__((vector_size(16)));
+typedef short v32ss __attribute__((vector_size(16)));
+v16si init_vgb;
+
+int vsum(v16si v1, v16si v2, v16si v3)
+{
+	init_vgb += v2 +v3 + v1;
+}

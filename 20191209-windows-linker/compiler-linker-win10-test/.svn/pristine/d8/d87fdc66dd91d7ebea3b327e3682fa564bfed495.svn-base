@@ -1,0 +1,127 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+Pass Arguments:  -targetlibinfo -datalayout -jump-instr-table-info -notti -basictti -targetpassconfig -no-aa -tbaa -basicaa -collector-metadata -machinemoduleinfo -machine-branch-prob -jump-instr-tables -verify -verify-di -domtree -loops -loop-simplify -scalar-evolution -iv-users -loop-reduce -gc-lowering -unreachableblockelim -consthoist -codegenprepare -verify-di -stack-protector -verify -domtree -loops -branch-prob -expand-isel-pseudos -tailduplication -opt-phis -machinedomtree -slotindexes -stack-coloring -localstackalloc -dead-mi-elimination -machinedomtree -machine-loops -machinelicm -machine-cse -machine-sink -peephole-opts -machinedomtree -machine-loops -hwloops -processimpdefs -unreachable-mbb-elimination -livevars -machinedomtree -machine-loops -phi-node-elimination -twoaddressinstruction -slotindexes -liveintervals -simple-register-coalescing -machine-block-freq -livedebugvars -livestacks -virtregmap -liveregmatrix -edge-bundles -spill-code-placement -virtregrewriter -stack-slot-coloring -machinelicm -prologepilog -branch-folder -tailduplication -machine-cp -postrapseudos -machinedomtree -machine-loops -post-RA-sched -gc-analysis -machine-block-freq -block-placement2 -machinedomtree -machine-loops -packets -hwloopsfixup -stackmap-liveness
+Target Library Information
+Data Layout
+Jump-Instruction Table Info
+No target information
+Target independent code generator's TTI
+Target Pass Configuration
+No Alias Analysis (always returns 'may' alias)
+Type-Based Alias Analysis
+Basic Alias Analysis (stateless AA impl)
+Create Garbage Collector Module Metadata
+Machine Module Information
+Machine Branch Probability Analysis
+  ModulePass Manager
+    Jump-Instruction Tables
+    FunctionPass Manager
+      Module Verifier
+    Debug Info Verifier
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Induction Variable Users
+        Loop Strength Reduction
+      Lower Garbage Collection Instructions
+      Remove unreachable blocks from the CFG
+      Constant Hoisting
+      CodeGen Prepare
+      Exception handling preparation
+    Debug Info Verifier
+    FunctionPass Manager
+      Insert stack protectors
+      Module Verifier
+      Machine Function Analysis
+      Dominator Tree Construction
+      Natural Loop Information
+      Branch Probability Analysis
+      DSP DAG->DAG Pattern Instruction Selection
+      Expand ISel Pseudo-instructions
+      Tail Duplication
+      Optimize machine instruction PHIs
+      MachineDominator Tree Construction
+      Slot index numbering
+      Merge disjoint stack slots
+      Local Stack Slot Allocation
+      Remove dead machine instructions
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Machine Loop Invariant Code Motion
+      Machine Common Subexpression Elimination
+      Machine code sinking
+      Peephole Optimizations
+      DSP handle CC
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Hardware Loops
+      Process Implicit Definitions
+      Remove unreachable machine basic blocks
+      Live Variable Analysis
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Eliminate PHI nodes for register allocation
+      Two-Address instruction pass
+      Slot index numbering
+      Live Interval Analysis
+      Simple Register Coalescing
+      Machine Block Frequency Analysis
+      Debug Variable Analysis
+      Live Stack Slot Analysis
+      Virtual Register Map
+      Live Register Matrix
+      Bundle Machine CFG Edges
+      Spill Code Placement Analysis
+      Greedy Register Allocator
+      Virtual Register Rewriter
+      Stack Slot Coloring
+      Machine Loop Invariant Code Motion
+      Prologue/Epilogue Insertion & Frame Finalization
+      Control Flow Optimizer
+      Tail Duplication
+      Machine Copy Propagation Pass
+      Post-RA pseudo instruction expansion pass
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Post RA top-down list latency scheduler
+      Analyze Machine Code For Garbage Collection
+      Machine Block Frequency Analysis
+      Branch Probability Basic Block Placement
+      DSP Del Useless jmp
+      DSP Delay Slot Filler
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Packetizer
+      DSP VLIWBundlerDrive
+      DSP Hardware Loop Fixup
+      StackMap Liveness Analysis
+      dsp assembly printer
+LLVM ERROR: Cannot select: 0x1cb4120ce30: i32 = select 0x1cb4120f3a8, 0x1cb4120d040, 0x1cb4120f090 [ORD=11] [ID=17]
+  0x1cb4120f3a8: i32 = setcc 0x1cb4120ed78, 0x1cb4120c4e8, 0x1cb4120cc20 [ORD=10] [ID=15]
+    0x1cb4120ed78: i32,ch = load 0x1cb411c0400, 0x1cb4120cf38, 0x1cb4120cd28<LD1[%arrayidx], zext from i8> [ORD=5] [ID=13]
+      0x1cb4120cf38: i32 = add 0x1cb4120f2a0, 0x1cb4120d040 [ORD=3] [ID=11]
+        0x1cb4120f2a0: i32,ch = load 0x1cb411c0400, 0x1cb4120d148, 0x1cb4120cd28<LD4[%l]> [ORD=2] [ID=9]
+          0x1cb4120d148: i32 = FrameIndex<4> [ID=1]
+          0x1cb4120cd28: i32 = undef [ID=2]
+        0x1cb4120d040: i32 = Constant<-1> [ID=3]
+      0x1cb4120cd28: i32 = undef [ID=2]
+    0x1cb4120c4e8: i32,ch = load 0x1cb411c0400, 0x1cb4120cb18, 0x1cb4120cd28<LD1[%arrayidx5], zext from i8> [ORD=9] [ID=14]
+      0x1cb4120cb18: i32 = add 0x1cb4120eb68, 0x1cb4120d040 [ORD=7] [ID=12]
+        0x1cb4120eb68: i32,ch = load 0x1cb411c0400, 0x1cb4120e850, 0x1cb4120cd28<LD4[%r]> [ORD=6] [ID=10]
+          0x1cb4120e850: i32 = FrameIndex<5> [ID=4]
+          0x1cb4120cd28: i32 = undef [ID=2]
+        0x1cb4120d040: i32 = Constant<-1> [ID=3]
+      0x1cb4120cd28: i32 = undef [ID=2]
+  0x1cb4120d040: i32 = Constant<-1> [ID=3]
+  0x1cb4120f090: i32 = Constant<1> [ID=6]
+In function: memcmp
+Stack dump:
+0.	Program arguments: D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\llc ./testcase_8slots/memcmp.ll -filetype=asm -o ./testcase_8slots/memcmp.s -march=dsp -mcpu=dspse -relocation-model=static -debug-pass=Structure -debug-only=dsp-analyze-imm 
+1.	Running pass 'Function Pass Manager' on module './testcase_8slots/memcmp.ll'.
+2.	Running pass 'DSP DAG->DAG Pattern Instruction Selection' on function '@memcmp'

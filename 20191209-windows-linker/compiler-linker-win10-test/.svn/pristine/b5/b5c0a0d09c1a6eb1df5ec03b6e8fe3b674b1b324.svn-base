@@ -1,0 +1,9 @@
+ int sum(int a,int b){
+	 return(a+b);
+ }
+ int main(){
+	short k=5;
+	short m=7;
+	sum(-k,-m);
+	return 0;
+ }

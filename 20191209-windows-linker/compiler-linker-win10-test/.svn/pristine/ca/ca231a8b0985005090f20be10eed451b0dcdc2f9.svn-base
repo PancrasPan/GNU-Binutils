@@ -1,0 +1,18 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+LLVM ERROR: Cannot select: 0x315a4a8: v16i32 = scalar_to_vector 0x315a028 [ORD=8] [ID=67]
+  0x315a028: i32,ch = load 0x3158d38, 0x315c948, 0x3158a68<LD4[@init_vgb](align=16)> [ORD=8] [ID=59]
+    0x315c948: i32 = add 0x315c8b8, 0x315c828 [ORD=8] [ID=44]
+      0x315c8b8: i32 = DSPISD::Hi 0x3158ee8 [ORD=8] [ID=37]
+        0x3158ee8: i32 = TargetGlobalAddress<<4 x i32>* @init_vgb> 0 [TF=3] [ORD=8] [ID=24]
+      0x315c828: i32 = DSPISD::Lo 0x315c798 [ORD=8] [ID=38]
+        0x315c798: i32 = TargetGlobalAddress<<4 x i32>* @init_vgb> 0 [TF=4] [ORD=8] [ID=25]
+    0x3158a68: i32 = undef [ID=5]
+In function: main
+Stack dump:
+0.	Program arguments: D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_4slots\build-4slots\Debug\bin\llc ./testcase_4slots/global_vector.ll -filetype=asm -o ./testcase_4slots/global_vector.s -march=dsp -mcpu=dspse -relocation-model=static -disable-dsp-hwloops 
+1.	Running pass 'Function Pass Manager' on module './testcase_4slots/global_vector.ll'.
+2.	Running pass 'DSP DAG->DAG Pattern Instruction Selection' on function '@main'

@@ -1,0 +1,92 @@
+; ModuleID = './testcase_4slots/loopmain.c'
+target datalayout = "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64"
+target triple = "dsp"
+
+@sum = global i32 0, align 4
+@bound = global i32 1024, align 4
+@threshold = global i32 -294967296, align 4
+@ExArray = global [100 x i32] [i32 1, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0], align 4
+
+; Function Attrs: nounwind
+define i32 @main() #0 {
+entry:
+  %retval = alloca i32, align 4
+  %FiboArray = alloca [100 x i32], align 4
+  %i = alloca i32, align 4
+  %i6 = alloca i32, align 4
+  store i32 0, i32* %retval
+  %arrayidx = getelementptr inbounds [100 x i32]* %FiboArray, i32 0, i32 1
+  store i32 1, i32* %arrayidx, align 4
+  %arrayidx1 = getelementptr inbounds [100 x i32]* %FiboArray, i32 0, i32 0
+  store i32 1, i32* %arrayidx1, align 4
+  store i32 2, i32* %i, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %0 = load i32* %i, align 4
+  %cmp = icmp slt i32 %0, 100
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %1 = load i32* %i, align 4
+  %sub = sub nsw i32 %1, 1
+  %arrayidx2 = getelementptr inbounds [100 x i32]* %FiboArray, i32 0, i32 %sub
+  %2 = load i32* %arrayidx2, align 4
+  %3 = load i32* %i, align 4
+  %sub3 = sub nsw i32 %3, 2
+  %arrayidx4 = getelementptr inbounds [100 x i32]* %FiboArray, i32 0, i32 %sub3
+  %4 = load i32* %arrayidx4, align 4
+  %add = add nsw i32 %2, %4
+  %5 = load i32* %i, align 4
+  %arrayidx5 = getelementptr inbounds [100 x i32]* %FiboArray, i32 0, i32 %5
+  store i32 %add, i32* %arrayidx5, align 4
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %6 = load i32* %i, align 4
+  %inc = add nsw i32 %6, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  store i32 1, i32* %i6, align 4
+  br label %for.cond7
+
+for.cond7:                                        ; preds = %for.inc13, %for.end
+  %7 = load i32* %i6, align 4
+  %cmp8 = icmp slt i32 %7, 100
+  br i1 %cmp8, label %for.body9, label %for.end15
+
+for.body9:                                        ; preds = %for.cond7
+  %8 = load i32* %i6, align 4
+  %sub10 = sub nsw i32 %8, 1
+  %arrayidx11 = getelementptr inbounds [100 x i32]* @ExArray, i32 0, i32 %sub10
+  %9 = load i32* %arrayidx11, align 4
+  %mul = mul nsw i32 %9, 2
+  %10 = load i32* %i6, align 4
+  %arrayidx12 = getelementptr inbounds [100 x i32]* @ExArray, i32 0, i32 %10
+  store i32 %mul, i32* %arrayidx12, align 4
+  br label %for.inc13
+
+for.inc13:                                        ; preds = %for.body9
+  %11 = load i32* %i6, align 4
+  %inc14 = add nsw i32 %11, 1
+  store i32 %inc14, i32* %i6, align 4
+  br label %for.cond7
+
+for.end15:                                        ; preds = %for.cond7
+  %arraydecay = getelementptr inbounds [100 x i32]* %FiboArray, i32 0, i32 0
+  %call = call i32 @add(i32* %arraydecay, i32 100)
+  store i32 %call, i32* @sum, align 4
+  %12 = load i32* @sum, align 4
+  ret i32 %12
+}
+
+declare i32 @add(i32*, i32) #1
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}

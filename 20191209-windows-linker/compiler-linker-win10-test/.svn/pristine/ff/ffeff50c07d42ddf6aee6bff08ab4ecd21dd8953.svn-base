@@ -1,0 +1,9 @@
+
+#####==========stderr_mid==========#####:
+./testcase_4slots/v4max.c:10:32: error: passing 'v4i' (vector of 4 'int' values) to parameter of incompatible type '__attribute__((__vector_size__(16 * sizeof(int)))) int' (vector of 16 'int' values)
+        v4i c = __builtin_dsp_vmax_40(a, b);
+                                      ^
+1 error generated.
+
+#####==========stderr_asm==========#####:
+D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_4slots\build-4slots\Debug\bin\llc: ./testcase_4slots/v4max.ll: error: Could not open input file: no such file or directory

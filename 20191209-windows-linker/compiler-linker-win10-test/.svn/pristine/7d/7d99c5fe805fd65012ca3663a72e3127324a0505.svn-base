@@ -1,0 +1,275 @@
+	.text
+	.file	"./testcase_4slots/loopifmain.ll"
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -48
+}
+{
+	store32	GR31, GR30, 11
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 10
+	movigl	GR2,1
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 6
+}
+{
+	store32	GR2, GR30, 5
+	movigl	GR3,2
+}
+{
+	movigh	GR3,0
+}
+{
+	store32	GR3, GR30, 4
+}
+{
+	jmp	$BB0_1
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_2:                                 # %for.inc
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR4, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sl	GR4, GR4, GR3
+	addi	GR5, GR30, 20
+}
+{
+	add	GR4, GR5, GR4
+}
+{
+	load32	GR5, GR4, -2
+}
+{
+	nop
+}
+{
+	load32	GR6, GR4, -1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR5, GR6, GR5
+}
+{
+	store32	GR5, GR4, 0
+	load32	GR4, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR4, GR4, 1
+}
+{
+	store32	GR4, GR30, 4
+}
+$BB0_1:                                 # %for.cond
+                                        # =>This Inner Loop Header: Depth=1
+{
+	load32	GR4, GR30, 4
+}
+{
+	nop
+}
+{
+	lti	 GR4, 5
+}
+{
+	jc	 $BB0_2
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#3:                                 # %for.end
+{
+	store32	GR2, GR30, 3
+}
+{
+	jmp	$BB0_4
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_5:                                 # %for.inc13
+                                        #   in Loop: Header=BB0_4 Depth=1
+{
+	load32	GR4, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sl	GR4, GR4, GR3
+	movigh	GR5,%hi(ExArray)
+}
+{
+	movigl	GR5,%lo(ExArray)
+}
+{
+	add	GR4, GR5, GR4
+}
+{
+	load32	GR5, GR4, -1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sl	GR5, GR5, GR2
+}
+{
+	store32	GR5, GR4, 0
+	load32	GR4, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR4, GR4, 1
+}
+{
+	store32	GR4, GR30, 3
+}
+$BB0_4:                                 # %for.cond7
+                                        # =>This Inner Loop Header: Depth=1
+{
+	load32	GR4, GR30, 3
+}
+{
+	nop
+}
+{
+	lti	 GR4, 5
+}
+{
+	jc	 $BB0_5
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#6:                                 # %for.end15
+{
+	addi	GR4, GR30, 20
+	movigl	GR5,5
+}
+{
+	movigh	GR5,0
+}
+{
+	call	add
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movigh	GR3,%hi(sum)
+}
+{
+	movigl	GR3,%lo(sum)
+}
+{
+	store32	GR2, GR3, 0
+	load32	GR31, GR30, 11
+	addi	GR30, GR30, 48
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:                                  # EmittedInsts:70
+	.size	main, ($tmp0)-main
+
+	.type	sum,@object             # @sum
+	.bss
+	.globl	sum
+	.align	2
+sum:
+	.4byte	0                       # 0x0
+	.size	sum, 4
+
+	.type	bound,@object           # @bound
+	.data
+	.globl	bound
+	.align	2
+bound:
+	.4byte	3                       # 0x3
+	.size	bound, 4
+
+	.type	threshold,@object       # @threshold
+	.globl	threshold
+	.align	2
+threshold:
+	.4byte	10                      # 0xa
+	.size	threshold, 4
+
+	.type	ExArray,@object         # @ExArray
+	.globl	ExArray
+	.align	2
+ExArray:
+	.4byte	1                       # 0x1
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.size	ExArray, 20
+
+

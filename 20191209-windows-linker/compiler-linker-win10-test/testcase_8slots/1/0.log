@@ -1,0 +1,29 @@
+当前目录：./testcase_8slots/1/
+
+heapsort.c:
+Time Elapsed 0.756920s
+读取ASM文件中的指令出错iltj_while.c:
+Time Elapsed 0.349092s
+读取ASM文件中的指令出错iltj_while1.c:
+Time Elapsed 0.338579s
+读取ASM文件中的指令出错local_var_args.c:
+Time Elapsed 0.302566s
+读取ASM文件中的指令出错loopifmain.c:
+Time Elapsed 0.404681s
+读取ASM文件中的指令出错main.c:
+Time Elapsed 0.292304s
+读取ASM文件中的指令出错mergesort_norecur.c:
+Time Elapsed 0.699722s
+读取ASM文件中的指令出错parallelandnestedloop.c:
+Time Elapsed 0.396588s
+读取ASM文件中的指令出错recursion.c:
+Time Elapsed 0.324167s
+读取ASM文件中的指令出错referenceIndOut.c:
+Time Elapsed 0.337837s
+读取ASM文件中的指令出错startup.c:
+Time Elapsed 0.742655s
+读取ASM文件中的指令出错summain.c:
+Time Elapsed 0.301545s
+读取ASM文件中的指令出错whiletrue.c:
+Time Elapsed 0.338551s
+读取ASM文件中的指令出错

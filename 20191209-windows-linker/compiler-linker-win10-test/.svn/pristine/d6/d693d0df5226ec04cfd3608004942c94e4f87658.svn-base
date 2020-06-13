@@ -1,0 +1,30 @@
+; ModuleID = './testcase_8slots/v4max.c'
+target datalayout = "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64"
+target triple = "dsp"
+
+; Function Attrs: nounwind
+define i32 @main() #0 {
+entry:
+  %retval = alloca i32, align 4
+  %a = alloca <64 x i32>, align 256
+  %b = alloca <64 x i32>, align 256
+  %c = alloca <64 x i32>, align 256
+  store i32 0, i32* %retval
+  store <64 x i32> <i32 256, i32 512, i32 768, i32 1024, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, <64 x i32>* %a, align 256
+  store <64 x i32> zeroinitializer, <64 x i32>* %b, align 256
+  %0 = load <64 x i32>* %a, align 256
+  %1 = load <64 x i32>* %b, align 256
+  %2 = call <64 x i32> @llvm.dsp.vmax.40(<64 x i32> %0, <64 x i32> %1)
+  store <64 x i32> %2, <64 x i32>* %c, align 256
+  ret i32 0
+}
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vmax.40(<64 x i32>, <64 x i32>) #1
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind readnone }
+
+!llvm.ident = !{!0}
+
+!0 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}

@@ -1,0 +1,7 @@
+当前目录：./testcase_8slots/1
+
+select.c:
+Time Elapsed 0.583160s
+读取ASM文件中的指令出错udivrem_sdivrem.c:
+Time Elapsed 0.371609s
+读取ASM文件中的指令出错

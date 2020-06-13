@@ -1,0 +1,1595 @@
+	.text
+	.file	"./c_standard_lib-master/MATH/XEXP.ll"
+	.globl	_Exp
+	.align	2
+	.type	_Exp,@function
+_Exp:                                   # @_Exp
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -112
+}
+{
+	store32	GR31, GR30, 27
+	store32	GR29, GR30, 26
+}
+{
+	store32	GR20, GR30, 25
+	store32	GR19, GR30, 24
+}
+{
+	store32	GR18, GR30, 23
+	store32	GR17, GR30, 22
+}
+{
+	store32	GR16, GR30, 21
+	movigl	GR16,0
+}
+{
+	movigh	GR16,0
+}
+{
+	store32	GR16, GR30, 3
+}
+{
+	store32	GR16, GR30, 2
+}
+{
+	store32	GR4, GR30, 19
+	store16	GR5, GR30, 36
+}
+{
+	load32	GR2, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR17, GR2, 0
+}
+{
+	nop
+}
+{
+	load32	GR18, GR2, 1
+}
+{
+	nop
+}
+{
+	movg2g	GR4,GR17
+}
+{
+	movg2g	GR5,GR18
+}
+{
+	call	__gedf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR16, GR30, 3
+}
+{
+	store32	GR16, GR30, 2
+	movigl	GR3,-1
+}
+{
+	movigh	GR3,-1
+}
+{
+	store32	GR3, GR30, 9
+	gt	 GR2, GR3
+}
+{
+	movg2g	GR4,GR17
+}
+{
+	movg2g	GR5,GR18
+}
+{
+	call	__unorddf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	neq	 GR2, GR16
+}
+{
+	or	GR2, GR2, GR19
+}
+{
+	jc	 $BB0_2
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#1:                                 # %if.then
+{
+	load32	GR17, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR2, GR17, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 3
+}
+{
+	load32	GR2, GR17, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+	movigl	GR4,0
+}
+{
+	movigh	GR4,0
+	movigl	GR5,0
+}
+{
+	movigh	GR5,-32768
+}
+{
+	call	__subdf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR17, 1
+}
+{
+	store32	GR2, GR17, 0
+	movigl	GR2,1
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 17
+}
+{
+	jmp	$BB0_3
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_2:                                 # %if.else
+{
+	store32	GR16, GR30, 17
+}
+$BB0_3:                                 # %if.end
+{
+	movigl	GR19,-14336
+}
+{
+	movigh	GR19,16540
+}
+{
+	store32	GR19, GR30, 3
+}
+{
+	store32	GR16, GR30, 2
+}
+{
+	load32	GR2, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR17, GR2, 0
+}
+{
+	nop
+}
+{
+	load32	GR18, GR2, 1
+}
+{
+	nop
+}
+{
+	movg2g	GR4,GR17
+}
+{
+	movg2g	GR5,GR18
+}
+{
+	call	__ledf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR19, GR30, 3
+}
+{
+	store32	GR16, GR30, 2
+	movigl	GR3,1
+}
+{
+	movigh	GR3,0
+}
+{
+	lt	 GR2, GR3
+	movg2g	GR4,GR17
+}
+{
+	movg2g	GR5,GR18
+}
+{
+	call	__unorddf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	neq	 GR2, GR16
+}
+{
+	or	GR2, GR2, GR19
+}
+{
+	jc	 $BB0_9
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#4:                                 # %if.then2
+{
+	load32	GR2, GR30, 17
+}
+{
+	nop
+}
+{
+	eqi	 GR2, 0
+}
+{
+	jc	 $BB0_6
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#5:                                 # %if.then3
+{
+	load32	GR2, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR16, GR2, 1
+}
+{
+	store32	GR16, GR2, 0
+}
+{
+	jmp	$BB0_7
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_9:                                 # %if.else10
+{
+	movigl	GR2,5447
+}
+{
+	movigh	GR2,16375
+}
+{
+	store32	GR2, GR30, 3
+	movigl	GR2,-32002
+}
+{
+	movigh	GR2,25899
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	load32	GR2, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR2, 0
+}
+{
+	nop
+}
+{
+	load32	GR5, GR2, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 8
+	store32	GR3, GR30, 7
+	movigl	GR4,0
+}
+{
+	movigh	GR4,16352
+}
+{
+	store32	GR4, GR30, 4
+	store32	GR4, GR30, 3
+}
+{
+	store32	GR16, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__fixdfsi
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR19,GR2
+}
+{
+	movg2g	GR4,GR19
+}
+{
+	call	__dsp_floatsidf
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR20,GR2
+}
+{
+	movg2g	GR29,GR3
+	movigl	GR2,11840
+}
+{
+	movigh	GR2,-16410
+}
+{
+	store32	GR2, GR30, 3
+}
+{
+	store32	GR16, GR30, 2
+}
+{
+	movg2g	GR4,GR20
+}
+{
+	movg2g	GR5,GR29
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR17,GR2
+}
+{
+	movg2g	GR18,GR3
+	movigl	GR2,-2095
+}
+{
+	movigh	GR2,-16713
+}
+{
+	store32	GR2, GR30, 3
+	movigl	GR2,-21558
+}
+{
+	movigh	GR2,-12423
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	movg2g	GR4,GR20
+}
+{
+	movg2g	GR5,GR29
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 6
+	store32	GR3, GR30, 5
+}
+{
+	store32	GR18, GR30, 3
+}
+{
+	store32	GR17, GR30, 2
+	load32	GR2, GR30, 7
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 15
+	load32	GR2, GR30, 8
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 14
+	store16	GR19, GR30, 26
+}
+{
+	store32	GR29, GR30, 15
+}
+{
+	store32	GR20, GR30, 14
+	load32	GR2, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR2, 0
+}
+{
+	nop
+}
+{
+	load32	GR5, GR2, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 5
+}                                       # 4-byte Folded Reload
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 3
+	load32	GR4, GR30, 6
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR17,GR2
+}
+{
+	movg2g	GR18,GR3
+	movigh	GR2,%hi(_Rteps)
+}
+{
+	movigl	GR2,%lo(_Rteps)
+}
+{
+	load32	GR3, GR2, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR30, 8
+	store32	GR3, GR30, 3
+}
+{
+	load32	GR29, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR29, GR30, 2
+	movigl	GR5,0
+}
+{
+	movigh	GR5,-32768
+	movg2g	GR4,GR16
+}
+{
+	call	__subdf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR19,GR2
+}
+{
+	movg2g	GR20,GR3
+}
+{
+	store32	GR18, GR30, 3
+}
+{
+	store32	GR17, GR30, 2
+}
+{
+	movg2g	GR4,GR19
+}
+{
+	movg2g	GR5,GR20
+}
+{
+	call	__gedf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR18, GR30, 3
+}
+{
+	store32	GR17, GR30, 2
+}
+{
+	store32	GR18, GR30, 15
+}
+{
+	store32	GR17, GR30, 14
+	load32	GR18, GR30, 9
+}
+{
+	gt	 GR2, GR18
+	movg2g	GR4,GR19
+}
+{
+	movg2g	GR5,GR20
+}
+{
+	call	__unorddf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	neq	 GR2, GR16
+}
+{
+	or	GR2, GR2, GR17
+}
+{
+	jc	 $BB0_12
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#10:                                # %land.lhs.true
+{
+	load32	GR20, GR30, 8
+}                                       # 4-byte Folded Reload
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR20, GR30, 3
+}
+{
+	store32	GR29, GR30, 2
+}
+{
+	load32	GR17, GR30, 14
+}
+{
+	movg2g	GR19,GR18
+}
+{
+	load32	GR18, GR30, 15
+}
+{
+	nop
+}
+{
+	movg2g	GR4,GR17
+}
+{
+	movg2g	GR5,GR18
+}
+{
+	call	__gedf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR20, GR30, 3
+}
+{
+	store32	GR29, GR30, 2
+	gt	 GR2, GR19
+}
+{
+	movg2g	GR4,GR17
+}
+{
+	movg2g	GR5,GR18
+}
+{
+	call	__unorddf2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	neq	 GR2, GR16
+}
+{
+	or	GR2, GR2, GR19
+}
+{
+	jc	 $BB0_12
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#11:                                # %if.then21
+{
+	load32	GR2, GR30, 19
+	movigl	GR3,0
+}
+{
+	movigh	GR3,16368
+}
+{
+	store32	GR3, GR2, 1
+}
+{
+	store32	GR16, GR2, 0
+}
+{
+	jmp	$BB0_13
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_12:                                # %if.else22
+{
+	load32	GR5, GR30, 15
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR5, GR30, 3
+}
+{
+	load32	GR4, GR30, 14
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 2
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR17,GR2
+}
+{
+	movg2g	GR18,GR3
+}
+{
+	store32	GR18, GR30, 3
+}
+{
+	store32	GR17, GR30, 2
+	movigh	GR19,%hi(p)
+}
+{
+	movigl	GR19,%lo(p)
+}
+{
+	load32	GR4, GR19, 0
+}
+{
+	nop
+}
+{
+	load32	GR5, GR19, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR19, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 3
+}
+{
+	load32	GR4, GR19, 2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR18, GR30, 3
+}
+{
+	store32	GR17, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR19, 5
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 3
+}
+{
+	load32	GR4, GR19, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR30, 3
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	store32	GR18, GR30, 11
+}
+{
+	store32	GR17, GR30, 10
+	load32	GR4, GR30, 14
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 15
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR17,GR2
+}
+{
+	movg2g	GR18,GR3
+}
+{
+	store32	GR18, GR30, 15
+}
+{
+	store32	GR17, GR30, 14
+	load32	GR19, GR30, 11
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR19, GR30, 3
+}
+{
+	load32	GR20, GR30, 10
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR20, GR30, 2
+	movigh	GR29,%hi(q)
+}
+{
+	movigl	GR29,%lo(q)
+}
+{
+	load32	GR4, GR29, 0
+}
+{
+	nop
+}
+{
+	load32	GR5, GR29, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR29, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 3
+}
+{
+	load32	GR4, GR29, 2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR19, GR30, 3
+}
+{
+	store32	GR20, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR29, 5
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 3
+}
+{
+	load32	GR4, GR29, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR19, GR30, 3
+}
+{
+	store32	GR20, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__muldf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR29, 7
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 3
+}
+{
+	load32	GR4, GR29, 6
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR18, GR30, 3
+}
+{
+	store32	GR17, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__subdf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR30, 3
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	movg2g	GR4,GR17
+}
+{
+	movg2g	GR5,GR18
+}
+{
+	call	__divdf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 4
+}                                       # 4-byte Folded Reload
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR4, GR30, 3
+}
+{
+	store32	GR16, GR30, 2
+}
+{
+	movg2g	GR4,GR2
+}
+{
+	movg2g	GR5,GR3
+}
+{
+	call	__adddf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR4, 1
+}
+{
+	store32	GR2, GR4, 0
+}
+{
+	load16	GR2, GR30, 26
+}
+{
+	addi	GR2, GR2, 1
+}
+{
+	store16	GR2, GR30, 26
+}
+$BB0_13:                                # %if.end37
+{
+	load32	GR2, GR30, 17
+}
+{
+	nop
+}
+{
+	eqi	 GR2, 0
+}
+{
+	jc	 $BB0_15
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#14:                                # %if.then39
+{
+	load32	GR17, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR2, GR17, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 3
+}
+{
+	load32	GR2, GR17, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+	movigl	GR5,0
+}
+{
+	movigh	GR5,16368
+	movg2g	GR4,GR16
+}
+{
+	call	__divdf3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR17, 1
+}
+{
+	store32	GR2, GR17, 0
+}
+{
+	load16	GR2, GR30, 26
+}
+{
+	sub	GR2, GR16, GR2
+}
+{
+	store16	GR2, GR30, 26
+}
+$BB0_15:                                # %if.end44
+{
+	load16	GR2, GR30, 26
+	load16	GR3, GR30, 36
+}
+{
+	add	GR2, GR3, GR2
+	movigl	GR3,16
+}
+{
+	movigh	GR3,0
+}
+{
+	sl	GR2, GR2, GR3
+}
+{
+	sra	GR5, GR2, GR3
+	load32	GR4, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	_Dscale
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store16	GR2, GR30, 40
+}
+{
+	jmp	$BB0_16
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_6:                                 # %if.else4
+{
+	movigh	GR2,%hi(_Inf)
+}
+{
+	movigl	GR2,%lo(_Inf)
+}
+{
+	load32	GR3, GR2, 1
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 19
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR4, 1
+}
+{
+	load32	GR2, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR4, 0
+}
+$BB0_7:                                 # %if.end5
+{
+	load32	GR2, GR30, 17
+}
+{
+	nop
+}
+{
+	eqi	 GR2, 0
+}
+{
+	jc	 $BB0_16
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#8:                                 # %if.then7
+{
+	store16	GR16, GR30, 40
+}
+$BB0_16:                                # %if.end49
+{
+	load16	GR2, GR30, 40
+	load32	GR16, GR30, 21
+}
+{
+	load32	GR17, GR30, 22
+	load32	GR18, GR30, 23
+}
+{
+	load32	GR19, GR30, 24
+	load32	GR20, GR30, 25
+}
+{
+	load32	GR29, GR30, 26
+	load32	GR31, GR30, 27
+	addi	GR30, GR30, 112
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	_Exp, ($tmp0)-_Exp
+
+	.type	p,@object               # @p
+	.section	.rodata,"a",@progbits
+	.align	3
+p:
+	.8byte	4539781549283250718     # double 3.155519e-05
+	.8byte	4575383769198498470     # double 7.575318e-03
+	.8byte	4598175219545276416     # double 2.500000e-01
+	.size	p, 24
+
+	.type	q,@object               # @q
+	.align	3
+q:
+	.8byte	4515196601926747221     # double 7.510403e-07
+	.8byte	4558961190426432735     # double 6.312189e-04
+	.8byte	4588349057300158975     # double 5.681730e-02
+	.8byte	4602678819172646912     # double 5.000000e-01
+	.size	q, 32
+
+

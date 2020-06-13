@@ -1,0 +1,33 @@
+当前目录：./c_standard_lib-master/CTYPE
+
+ISALNUM.C:
+Time Elapsed 0.311748s
+读取ASM文件中的指令出错ISALPHA.C:
+Time Elapsed 0.293989s
+读取ASM文件中的指令出错ISCNTRL.C:
+Time Elapsed 0.271614s
+读取ASM文件中的指令出错ISDIGIT.C:
+Time Elapsed 0.291676s
+读取ASM文件中的指令出错ISGRAPH.C:
+Time Elapsed 0.308277s
+读取ASM文件中的指令出错ISLOWER.C:
+Time Elapsed 0.277760s
+读取ASM文件中的指令出错ISPRINT.C:
+Time Elapsed 0.301059s
+读取ASM文件中的指令出错ISPUNCT.C:
+Time Elapsed 0.278493s
+读取ASM文件中的指令出错ISSPACE.C:
+Time Elapsed 0.284028s
+读取ASM文件中的指令出错ISUPPER.C:
+Time Elapsed 0.272332s
+读取ASM文件中的指令出错ISXDIGIT.C:
+Time Elapsed 0.274854s
+读取ASM文件中的指令出错TOLOWER.C:
+Time Elapsed 0.293998s
+读取ASM文件中的指令出错TOUPPER.C:
+Time Elapsed 0.277717s
+读取ASM文件中的指令出错XTOLOWER.C:
+Time Elapsed 0.417619s
+读取ASM文件中的指令出错XTOUPPER.C:
+Time Elapsed 0.342961s
+读取ASM文件中的指令出错

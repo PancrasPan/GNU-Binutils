@@ -1,0 +1,83 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 2; CPURegs:%vreg1
+	ST %vreg1<kill>, <fi#1>, 0; mem:ST4[%k] CPURegs:%vreg1
+	%vreg2<def> = MovIGH %ZERO, <ga:@gI2>[TF=3]; CPURegs:%vreg2
+	%vreg3<def,tied1> = MovIGL %vreg2<tied0>, <ga:@gI2>[TF=4]; CPURegs:%vreg3,%vreg2
+	%vreg4<def> = LD %vreg3<kill>, 0; mem:LD4[@gI2] CPURegs:%vreg4,%vreg3
+	%vreg5<def> = MovIGH %ZERO, <ga:@gI>[TF=3]; CPURegs:%vreg5
+	%vreg6<def,tied1> = MovIGL %vreg5<tied0>, <ga:@gI>[TF=4]; CPURegs:%vreg6,%vreg5
+	%vreg7<def> = LD %vreg6<kill>, 0; mem:LD4[@gI] CPURegs:%vreg7,%vreg6
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg4<kill>; CPURegs:%vreg8,%vreg7,%vreg4
+	%vreg9<def> = ADDiu %vreg8<kill>, 2; CPURegs:%vreg9,%vreg8
+	ST %vreg9, <fi#2>, 0; mem:ST4[%a] CPURegs:%vreg9
+	%vreg10<def> = MovIGH %ZERO, <ga:@gI3>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@gI3>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg12<def> = LD %vreg11<kill>, 0; mem:LD4[@gI3] CPURegs:%vreg12,%vreg11
+	%vreg13<def> = ADDu %vreg9, %vreg12<kill>; CPURegs:%vreg13,%vreg9,%vreg12
+	%vreg14<def> = MovIGH %ZERO, <ga:@gI4>[TF=3]; CPURegs:%vreg14
+	%vreg15<def,tied1> = MovIGL %vreg14<tied0>, <ga:@gI4>[TF=4]; CPURegs:%vreg15,%vreg14
+	%vreg16<def> = LD %vreg15<kill>, 0; mem:LD4[@gI4] CPURegs:%vreg16,%vreg15
+	%vreg17<def> = ADDu %vreg13<kill>, %vreg16<kill>; CPURegs:%vreg17,%vreg13,%vreg16
+	%vreg18<def> = MovIGH %ZERO, <ga:@gI5>[TF=3]; CPURegs:%vreg18
+	%vreg19<def,tied1> = MovIGL %vreg18<tied0>, <ga:@gI5>[TF=4]; CPURegs:%vreg19,%vreg18
+	%vreg20<def> = LD %vreg19<kill>, 0; mem:LD4[@gI5] CPURegs:%vreg20,%vreg19
+	%vreg21<def> = ADDu %vreg17<kill>, %vreg20<kill>; CPURegs:%vreg21,%vreg17,%vreg20
+	ST %vreg21, <fi#2>, 0; mem:ST4[%a] CPURegs:%vreg21
+	%V0<def> = COPY %vreg21; CPURegs:%vreg21
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 2; CPURegs:%vreg1
+	ST %vreg1<kill>, <fi#1>, 0; mem:ST4[%k] CPURegs:%vreg1
+	%vreg2<def> = MovIGH %ZERO, <ga:@gI2>[TF=3]; CPURegs:%vreg2
+	%vreg3<def,tied1> = MovIGL %vreg2<tied0>, <ga:@gI2>[TF=4]; CPURegs:%vreg3,%vreg2
+	%vreg4<def> = LD %vreg3<kill>, 0; mem:LD4[@gI2] CPURegs:%vreg4,%vreg3
+	%vreg5<def> = MovIGH %ZERO, <ga:@gI>[TF=3]; CPURegs:%vreg5
+	%vreg6<def,tied1> = MovIGL %vreg5<tied0>, <ga:@gI>[TF=4]; CPURegs:%vreg6,%vreg5
+	%vreg7<def> = LD %vreg6<kill>, 0; mem:LD4[@gI] CPURegs:%vreg7,%vreg6
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg4<kill>; CPURegs:%vreg8,%vreg7,%vreg4
+	%vreg9<def> = ADDiu %vreg8<kill>, 2; CPURegs:%vreg9,%vreg8
+	ST %vreg9, <fi#2>, 0; mem:ST4[%a] CPURegs:%vreg9
+	%vreg10<def> = MovIGH %ZERO, <ga:@gI3>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@gI3>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg12<def> = LD %vreg11<kill>, 0; mem:LD4[@gI3] CPURegs:%vreg12,%vreg11
+	%vreg13<def> = ADDu %vreg9, %vreg12<kill>; CPURegs:%vreg13,%vreg9,%vreg12
+	%vreg14<def> = MovIGH %ZERO, <ga:@gI4>[TF=3]; CPURegs:%vreg14
+	%vreg15<def,tied1> = MovIGL %vreg14<tied0>, <ga:@gI4>[TF=4]; CPURegs:%vreg15,%vreg14
+	%vreg16<def> = LD %vreg15<kill>, 0; mem:LD4[@gI4] CPURegs:%vreg16,%vreg15
+	%vreg17<def> = ADDu %vreg13<kill>, %vreg16<kill>; CPURegs:%vreg17,%vreg13,%vreg16
+	%vreg18<def> = MovIGH %ZERO, <ga:@gI5>[TF=3]; CPURegs:%vreg18
+	%vreg19<def,tied1> = MovIGL %vreg18<tied0>, <ga:@gI5>[TF=4]; CPURegs:%vreg19,%vreg18
+	%vreg20<def> = LD %vreg19<kill>, 0; mem:LD4[@gI5] CPURegs:%vreg20,%vreg19
+	%vreg21<def> = ADDu %vreg17<kill>, %vreg20<kill>; CPURegs:%vreg21,%vreg17,%vreg20
+	ST %vreg21, <fi#2>, 0; mem:ST4[%a] CPURegs:%vreg21
+	%V0<def> = COPY %vreg21; CPURegs:%vreg21
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

@@ -1,0 +1,31 @@
+当前目录：./c_standard_lib-master/STDLIB
+
+ABORT.C:
+Time Elapsed 0.322468s
+读取ASM文件中的指令出错ABS.C:
+Time Elapsed 0.296928s
+读取ASM文件中的指令出错ATEXIT.C:
+Time Elapsed 0.324984s
+读取ASM文件中的指令出错BSEARCH.C:
+Time Elapsed 0.406624s
+读取ASM文件中的指令出错CALLOC.C:
+Time Elapsed 0.348990s
+读取ASM文件中的指令出错EXIT.C:
+Time Elapsed 0.434289s
+读取ASM文件中的指令出错LABS.C:
+Time Elapsed 0.311180s
+读取ASM文件中的指令出错MBTOWC.C:
+Time Elapsed 0.336612s
+读取ASM文件中的指令出错RAND.C:
+Time Elapsed 0.322588s
+读取ASM文件中的指令出错SRAND.C:
+Time Elapsed 0.321065s
+读取ASM文件中的指令出错STRTOD.C:
+Time Elapsed 0.294994s
+读取ASM文件中的指令出错STRTOUL.C:
+Time Elapsed 0.337762s
+读取ASM文件中的指令出错WCSTOMBS.C:
+Time Elapsed 0.557704s
+读取ASM文件中的指令出错WCTOMB.C:
+Time Elapsed 0.317763s
+读取ASM文件中的指令出错

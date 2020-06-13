@@ -1,0 +1,99 @@
+	.text
+	.file	"./testcase_8slots/funco1.ll"
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -24
+}
+{
+	store32	GR31, GR30, 5
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 4
+	movigl	GR2,1
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 3
+	movigl	GR2,2
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 2
+	movigh	GR2,%hi(gO1)
+}
+{
+	movigl	GR2,%lo(gO1)
+}
+{
+	load32	GR5, GR2, 0
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	funcO
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movigh	GR3,%hi(gO2)
+}
+{
+	movigl	GR3,%lo(gO2)
+	store32	GR2, GR30, 2
+}
+{
+	load32	GR3, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR2, GR2, GR3
+}
+{
+	store32	GR2, GR30, 2
+	load32	GR31, GR30, 5
+	addi	GR30, GR30, 24
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	main, ($tmp0)-main
+
+

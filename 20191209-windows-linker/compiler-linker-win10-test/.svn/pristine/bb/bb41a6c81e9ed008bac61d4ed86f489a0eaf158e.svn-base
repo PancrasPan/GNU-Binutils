@@ -1,0 +1,89 @@
+	.text
+	.file	"./testcase_4slots/hello2.ll"
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -16
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 3
+	store32	GR2, GR30, 2
+	movigl	GR3,1
+}
+{
+	movigh	GR3,0
+}
+{
+	store32	GR3, GR30, 1
+	movigl	GR4,-1
+}
+{
+	movigh	GR4,-1
+}
+{
+	store32	GR4, GR30, 0
+	load32	GR4, GR30, 1
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 2
+}
+{
+	le	 GR5, GR4
+}
+{
+	jc	 $BB0_2
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#1:                                 # %cond.true
+{
+	store32	GR3, GR30, 0
+}
+{
+	jmp	$BB0_3
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_2:                                 # %cond.false
+{
+	store32	GR2, GR30, 0
+}
+$BB0_3:                                 # %cond.end
+{
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+	addi	GR30, GR30, 16
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:                                  # EmittedInsts:23
+	.size	main, ($tmp0)-main
+
+

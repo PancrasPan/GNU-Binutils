@@ -1,0 +1,63 @@
+; ModuleID = './testcase_8slots/nestfor1.c'
+target datalayout = "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64"
+target triple = "dsp"
+
+; Function Attrs: nounwind
+define i32 @main() #0 {
+entry:
+  %retval = alloca i32, align 4
+  %retval1 = alloca i32, align 4
+  %i = alloca i32, align 4
+  %j = alloca i32, align 4
+  store i32 0, i32* %retval
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %0 = load i32* %i, align 4
+  %cmp = icmp slt i32 %0, 3
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %1 = load i32* %retval1, align 4
+  %inc = add nsw i32 %1, 1
+  store i32 %inc, i32* %retval1, align 4
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %2 = load i32* %i, align 4
+  %inc2 = add nsw i32 %2, 1
+  store i32 %inc2, i32* %i, align 4
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  store i32 5, i32* %j, align 4
+  br label %for.cond3
+
+for.cond3:                                        ; preds = %for.inc6, %for.end
+  %3 = load i32* %j, align 4
+  %cmp4 = icmp sgt i32 %3, 3
+  br i1 %cmp4, label %for.body5, label %for.end8
+
+for.body5:                                        ; preds = %for.cond3
+  %4 = load i32* %retval1, align 4
+  %dec = add nsw i32 %4, -1
+  store i32 %dec, i32* %retval1, align 4
+  br label %for.inc6
+
+for.inc6:                                         ; preds = %for.body5
+  %5 = load i32* %j, align 4
+  %dec7 = add nsw i32 %5, -1
+  store i32 %dec7, i32* %j, align 4
+  br label %for.cond3
+
+for.end8:                                         ; preds = %for.cond3
+  %6 = load i32* %retval1, align 4
+  ret i32 %6
+}
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}

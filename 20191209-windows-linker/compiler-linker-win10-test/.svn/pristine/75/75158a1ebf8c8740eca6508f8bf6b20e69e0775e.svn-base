@@ -1,0 +1,4739 @@
+	.text
+	.file	"./testcase_8slots/SIMD_Intrinsic/SIMD_Intrinsic_Testcase.ll"
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008:
+	.byte	8                       # 0x8
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006463626100090807060504030201:
+	.byte	1                       # 0x1
+	.byte	2                       # 0x2
+	.byte	3                       # 0x3
+	.byte	4                       # 0x4
+	.byte	5                       # 0x5
+	.byte	6                       # 0x6
+	.byte	7                       # 0x7
+	.byte	8                       # 0x8
+	.byte	9                       # 0x9
+	.byte	0                       # 0x0
+	.byte	97                      # 0x61
+	.byte	98                      # 0x62
+	.byte	99                      # 0x63
+	.byte	100                     # 0x64
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000333231300a5a594e43382d22170c:
+	.byte	12                      # 0xc
+	.byte	23                      # 0x17
+	.byte	34                      # 0x22
+	.byte	45                      # 0x2d
+	.byte	56                      # 0x38
+	.byte	67                      # 0x43
+	.byte	78                      # 0x4e
+	.byte	89                      # 0x59
+	.byte	90                      # 0x5a
+	.byte	10                      # 0xa
+	.byte	48                      # 0x30
+	.byte	49                      # 0x31
+	.byte	50                      # 0x32
+	.byte	51                      # 0x33
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010:
+	.2byte	16                      # 0x10
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090008000700060005000400030002000100660385037a031502a6023701c8015900ea007b:
+	.2byte	123                     # 0x7b
+	.2byte	234                     # 0xea
+	.2byte	345                     # 0x159
+	.2byte	456                     # 0x1c8
+	.2byte	567                     # 0x237
+	.2byte	678                     # 0x2a6
+	.2byte	789                     # 0x315
+	.2byte	890                     # 0x37a
+	.2byte	901                     # 0x385
+	.2byte	102                     # 0x66
+	.2byte	1                       # 0x1
+	.2byte	2                       # 0x2
+	.2byte	3                       # 0x3
+	.2byte	4                       # 0x4
+	.2byte	5                       # 0x5
+	.2byte	6                       # 0x6
+	.2byte	7                       # 0x7
+	.2byte	8                       # 0x8
+	.2byte	9                       # 0x9
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090008000700060005000400030002000100660385037a031502a6023701c8015900ea007b000a005a0059004e00430038002d00220017000c:
+	.2byte	12                      # 0xc
+	.2byte	23                      # 0x17
+	.2byte	34                      # 0x22
+	.2byte	45                      # 0x2d
+	.2byte	56                      # 0x38
+	.2byte	67                      # 0x43
+	.2byte	78                      # 0x4e
+	.2byte	89                      # 0x59
+	.2byte	90                      # 0x5a
+	.2byte	10                      # 0xa
+	.2byte	123                     # 0x7b
+	.2byte	234                     # 0xea
+	.2byte	345                     # 0x159
+	.2byte	456                     # 0x1c8
+	.2byte	567                     # 0x237
+	.2byte	678                     # 0x2a6
+	.2byte	789                     # 0x315
+	.2byte	890                     # 0x37a
+	.2byte	901                     # 0x385
+	.2byte	102                     # 0x66
+	.2byte	1                       # 0x1
+	.2byte	2                       # 0x2
+	.2byte	3                       # 0x3
+	.2byte	4                       # 0x4
+	.2byte	5                       # 0x5
+	.2byte	6                       # 0x6
+	.2byte	7                       # 0x7
+	.2byte	8                       # 0x8
+	.2byte	9                       # 0x9
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.2byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020:
+	.4byte	32                      # 0x20
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c0000000000000009000000080000000700000006000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000001c800000159000000ea0000007b0000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c:
+	.4byte	12                      # 0xc
+	.4byte	23                      # 0x17
+	.4byte	34                      # 0x22
+	.4byte	45                      # 0x2d
+	.4byte	56                      # 0x38
+	.4byte	67                      # 0x43
+	.4byte	78                      # 0x4e
+	.4byte	89                      # 0x59
+	.4byte	90                      # 0x5a
+	.4byte	10                      # 0xa
+	.4byte	123                     # 0x7b
+	.4byte	234                     # 0xea
+	.4byte	345                     # 0x159
+	.4byte	456                     # 0x1c8
+	.4byte	567                     # 0x237
+	.4byte	678                     # 0x2a6
+	.4byte	789                     # 0x315
+	.4byte	890                     # 0x37a
+	.4byte	901                     # 0x385
+	.4byte	102                     # 0x66
+	.4byte	1                       # 0x1
+	.4byte	2                       # 0x2
+	.4byte	3                       # 0x3
+	.4byte	4                       # 0x4
+	.4byte	5                       # 0x5
+	.4byte	6                       # 0x6
+	.4byte	7                       # 0x7
+	.4byte	8                       # 0x8
+	.4byte	9                       # 0x9
+	.4byte	0                       # 0x0
+	.4byte	12                      # 0xc
+	.4byte	23                      # 0x17
+	.4byte	34                      # 0x22
+	.4byte	45                      # 0x2d
+	.4byte	56                      # 0x38
+	.4byte	67                      # 0x43
+	.4byte	78                      # 0x4e
+	.4byte	89                      # 0x59
+	.4byte	90                      # 0x5a
+	.4byte	10                      # 0xa
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.section	.rodata,"awM",@progbits
+	.align	8
+__DSPVector@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000000380000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c0000000000000009000000080000000700000006000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000001c800000159000000ea0000007b0000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c:
+	.4byte	12                      # 0xc
+	.4byte	23                      # 0x17
+	.4byte	34                      # 0x22
+	.4byte	45                      # 0x2d
+	.4byte	56                      # 0x38
+	.4byte	67                      # 0x43
+	.4byte	78                      # 0x4e
+	.4byte	89                      # 0x59
+	.4byte	90                      # 0x5a
+	.4byte	10                      # 0xa
+	.4byte	123                     # 0x7b
+	.4byte	234                     # 0xea
+	.4byte	345                     # 0x159
+	.4byte	456                     # 0x1c8
+	.4byte	567                     # 0x237
+	.4byte	678                     # 0x2a6
+	.4byte	789                     # 0x315
+	.4byte	890                     # 0x37a
+	.4byte	901                     # 0x385
+	.4byte	102                     # 0x66
+	.4byte	1                       # 0x1
+	.4byte	2                       # 0x2
+	.4byte	3                       # 0x3
+	.4byte	4                       # 0x4
+	.4byte	5                       # 0x5
+	.4byte	6                       # 0x6
+	.4byte	7                       # 0x7
+	.4byte	8                       # 0x8
+	.4byte	9                       # 0x9
+	.4byte	0                       # 0x0
+	.4byte	12                      # 0xc
+	.4byte	23                      # 0x17
+	.4byte	34                      # 0x22
+	.4byte	45                      # 0x2d
+	.4byte	56                      # 0x38
+	.4byte	67                      # 0x43
+	.4byte	78                      # 0x4e
+	.4byte	89                      # 0x59
+	.4byte	90                      # 0x5a
+	.4byte	10                      # 0xa
+	.4byte	56                      # 0x38
+	.4byte	567                     # 0x237
+	.4byte	678                     # 0x2a6
+	.4byte	789                     # 0x315
+	.4byte	890                     # 0x37a
+	.4byte	901                     # 0x385
+	.4byte	102                     # 0x66
+	.4byte	1                       # 0x1
+	.4byte	2                       # 0x2
+	.4byte	3                       # 0x3
+	.4byte	4                       # 0x4
+	.4byte	5                       # 0x5
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.text
+	.globl	SIMD_Intrinsic_Testcase0
+	.align	2
+	.type	SIMD_Intrinsic_Testcase0,@function
+SIMD_Intrinsic_Testcase0:               # @SIMD_Intrinsic_Testcase0
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -2816
+}
+{
+	addi	GR28, GR30, 2812
+}
+{
+	store32	GR31, GR28, 0
+	movigh	GR2,%hi(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008)
+}
+{
+	movigl	GR2,%lo(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008)
+}
+{
+	vload8	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR26, GR30, 2304
+}
+{
+	vstore10	VR0, GR26, 0
+	movigh	GR2,%hi(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006463626100090807060504030201)
+}
+{
+	movigl	GR2,%lo(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006463626100090807060504030201)
+}
+{
+	vload8	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR27, GR30, 2048
+}
+{
+	vstore10	VR0, GR27, 0
+	movigh	GR2,%hi(__DSPVector@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000333231300a5a594e43382d22170c)
+}
+{
+	movigl	GR2,%lo(__DSPVector@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000333231300a5a594e43382d22170c)
+}
+{
+	vload8	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore10	VR0, GR30, 1792
+	movigh	GR2,%hi(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010)
+}
+{
+	movigl	GR2,%lo(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010)
+}
+{
+	vload16	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	movigh	GR2,%hi(__DSPVector@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090008000700060005000400030002000100660385037a031502a6023701c8015900ea007b)
+}
+{
+	movigl	GR2,%lo(__DSPVector@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090008000700060005000400030002000100660385037a031502a6023701c8015900ea007b)
+}
+{
+	vload16	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1280
+	movigh	GR2,%hi(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090008000700060005000400030002000100660385037a031502a6023701c8015900ea007b000a005a0059004e00430038002d00220017000c)
+}
+{
+	movigl	GR2,%lo(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000090008000700060005000400030002000100660385037a031502a6023701c8015900ea007b000a005a0059004e00430038002d00220017000c)
+}
+{
+	vload16	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1024
+	movigh	GR2,%hi(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020)
+}
+{
+	movigl	GR2,%lo(__DSPVector@00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020)
+}
+{
+	vload32	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	movigh	GR2,%hi(__DSPVector@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c0000000000000009000000080000000700000006000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000001c800000159000000ea0000007b0000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c)
+}
+{
+	movigl	GR2,%lo(__DSPVector@0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c0000000000000009000000080000000700000006000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000001c800000159000000ea0000007b0000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c)
+}
+{
+	vload32	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 512
+	movigh	GR2,%hi(__DSPVector@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000000380000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c0000000000000009000000080000000700000006000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000001c800000159000000ea0000007b0000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c)
+}
+{
+	movigl	GR2,%lo(__DSPVector@000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000000380000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c0000000000000009000000080000000700000006000000050000000400000003000000020000000100000066000003850000037a00000315000002a600000237000001c800000159000000ea0000007b0000000a0000005a000000590000004e00000043000000380000002d00000022000000170000000c)
+}
+{
+	vload32	VR0, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 256
+	movigl	GR2,1
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 63
+	movigl	GR2,22
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 62
+	movigl	GR2,333
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 61
+	movigl	GR2,4444
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 60
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR4, GR30, 2048
+}
+{
+	vload8	VR2, GR4, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vmax_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vmax_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vmax_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vmin_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vmin_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vmin_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsum_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsum_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsum_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vnot_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR26, GR30, 2048
+}
+{
+	vload8	VR2, GR26, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vand_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR26, GR30, 2048
+}
+{
+	vload8	VR2, GR26, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vor_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR26, GR30, 2048
+}
+{
+	vload8	VR2, GR26, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vxor_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR4, GR30, 62
+	addi	GR26, GR30, 2048
+}
+{
+	vload8	VR2, GR26, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vmovcv2v_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vltl_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vlth_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loadu_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loadu_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loadu_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loado_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loado_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storeo_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storeo_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	veq_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	veq_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	veq_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vgt_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vgt_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vgt_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vlt_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vlt_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vlt_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vge_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vge_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vge_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vle_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vle_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vle_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vadd_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vadd_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vadd_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsub_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsub_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsub_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsl_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsl_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsl_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsls_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsls_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsls_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsra_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsra_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsra_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsrl_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsrl_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vsrl_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vabs_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vabs_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vabs_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vfmul_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vfmul_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vfmul_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vfmac_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vfmac_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vfmac_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload8	VR3, GR30, 1792
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2048
+}
+{
+	vload8	VR2, GR28, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vcmac_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vcmac_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload16	VR3, GR30, 1024
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload16	VR2, GR30, 1280
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vcmul_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vcmulr_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	vload32	VR3, GR30, 256
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vload32	VR2, GR30, 512
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vcmuli_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadr_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadr_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadr_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadu_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadu_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadu_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadur_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadur_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloadur_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storeu_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storeu_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storeu_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+	load32	GR4, GR30, 63
+}
+{
+	load32	GR2, GR30, 61
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	call	storeu_void_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 62
+	load32	GR4, GR30, 63
+}
+{
+	load32	GR2, GR30, 61
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	call	storeu_void_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 62
+	load32	GR4, GR30, 63
+}
+{
+	load32	GR2, GR30, 61
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	call	storeu_void_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vstoreu_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vstoreu_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vstoreu_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loadvh_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loadvl_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storevh_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storevl_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loaduvh_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	loaduvl_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storeuvh_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	storeuvl_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloado_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloado_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vloado_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vstoreo_c
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR28, GR30, 2304
+}
+{
+	vstore10	VR0, GR28, 0
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vstoreo_s
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore20	VR0, GR30, 1536
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	vstoreo_i
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR30, 768
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	abs_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	test_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	testi_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	cbw_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	chw_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+	load32	GR4, GR30, 63
+}
+{
+	load32	GR2, GR30, 61
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	call	bfext_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+	load32	GR4, GR30, 63
+}
+{
+	load32	GR2, GR30, 61
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	call	bfextu_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+	load32	GR4, GR30, 63
+}
+{
+	load32	GR2, GR30, 61
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	call	bfst_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	bst_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	bclr_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	max_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR5, GR30, 62
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	mim_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	load32	GR4, GR30, 63
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	not_qb
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 60
+	addi	GR28, GR30, 2812
+}
+{
+	load32	GR31, GR28, 0
+	addi	GR30, GR30, 2816
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	SIMD_Intrinsic_Testcase0, ($tmp0)-SIMD_Intrinsic_Testcase0
+
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -24
+}
+{
+	store32	GR31, GR30, 5
+	store32	GR16, GR30, 4
+	movigl	GR16,0
+}
+{
+	movigh	GR16,0
+}
+{
+	store32	GR16, GR30, 3
+}
+{
+	call	SIMD_Intrinsic_Testcase0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movg2g	GR2,GR16
+}
+{
+	load32	GR16, GR30, 4
+	load32	GR31, GR30, 5
+	addi	GR30, GR30, 24
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp1:
+	.size	main, ($tmp1)-main
+
+

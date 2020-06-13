@@ -1,0 +1,32 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name mergesort_norecur.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/mergesort_norecur.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/mergesort_norecur.ll -x c ./testcase_8slots/mergesort_norecur.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+LLVM ERROR: Cannot select: 0x2914df18548: i32 = select 0x2914df16598, 0x2914df169b8, 0x2914df16ee0 [ORD=3] [ID=17]
+  0x2914df16598: i32 = setcc 0x2914df16ee0, 0x2914df169b8, 0x2914df168b0 [ORD=2] [ID=15]
+    0x2914df16ee0: i32,ch = CopyFromReg 0x2914dee4800, 0x2914df18230 [ORD=2] [ID=11]
+      0x2914df18230: i32 = Register %vreg4 [ID=1]
+    0x2914df169b8: i32,ch = CopyFromReg 0x2914dee4800, 0x2914df18758 [ORD=2] [ID=12]
+      0x2914df18758: i32 = Register %vreg64 [ID=2]
+  0x2914df169b8: i32,ch = CopyFromReg 0x2914dee4800, 0x2914df18758 [ORD=2] [ID=12]
+    0x2914df18758: i32 = Register %vreg64 [ID=2]
+  0x2914df16ee0: i32,ch = CopyFromReg 0x2914dee4800, 0x2914df18230 [ORD=2] [ID=11]
+    0x2914df18230: i32 = Register %vreg4 [ID=1]
+In function: merge_sort
+Stack dump:
+0.	Program arguments: D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\llc ./testcase_8slots/mergesort_norecur.ll -filetype=asm -o ./testcase_8slots/mergesort_norecur.s -march=dsp -mcpu=dspse -disable-dsp-hwloops -relocation-model=static 
+1.	Running pass 'Function Pass Manager' on module './testcase_8slots/mergesort_norecur.ll'.
+2.	Running pass 'DSP DAG->DAG Pattern Instruction Selection' on function '@merge_sort'

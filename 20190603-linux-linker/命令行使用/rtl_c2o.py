@@ -1,0 +1,275 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 31 10:30:48 2016
+
+@author: Shawn
+"""
+from rtl_o2dat import change_machine_code
+from rtl_data import ParseASM, ParseELF
+from rtl_sco import sco
+
+CLANG_PARAMETER = ['-S', '--target=dsp', '-fno-unroll-loops',
+                   '-fno-builtin', '-O2', '-emit-llvm']
+# CLANG_PARAMETER = ['-S', '--target=dsp', '-fno-unroll-loops', '-emit-llvm']
+LLC_PARAMETER = ['-march=dsp', '-mcpu=dspse', '-relocation-model=static',
+                  '-nopack', '-disable-dsp-hwloops' ]
+
+ASM = ParseASM()
+ELF = ParseELF()
+
+
+def get_variables_num_and_size(elf):
+    """
+    读取 .o 文件中全局变量和 static 变量的数目和它们的 size
+    :return: variables_dict{}
+    """
+
+    # 定位 .o 文件中 .symtab 所在段
+    symtab_dict = elf.get_symtab_dict()
+
+    variables_dict = {
+        'global_num': 0,
+        'global_size': 0,
+        'static_num': 0,
+        'static_size': 0
+    }
+
+    for i in symtab_dict:
+        st_size = symtab_dict[i]['size']
+        st_type = symtab_dict[i]['type']
+        st_bind = symtab_dict[i]['bind']
+
+        if st_type == 'OBJECT':
+            if st_bind == 'LOCAL':
+                variables_dict['static_num'] += 1
+                variables_dict['static_size'] += st_size
+            elif st_bind == 'GLOBAL' or st_bind == 'WEAK':
+                variables_dict['global_num'] += 1
+                variables_dict['global_size'] += st_size
+
+    print()
+    print('全局变量 数目：', variables_dict['global_num'])
+    print('　　　　 大小：', variables_dict['global_size'], 'bytes')
+    print('静态变量 数目：', variables_dict['static_num'])
+    print('　　　　 大小：', variables_dict['static_size'], 'bytes')
+    print()
+
+
+def operation(asm_file, obj_file):
+    '''
+    operation
+    '''
+    asm = ASM.open_file(asm_file)
+    obj = ELF.open_file(obj_file)
+
+    get_variables_num_and_size(obj)
+
+    # maximum_size = asm.get_maximum_stack_size()
+    # print('调用链过程的最大堆栈大小为：', maximum_size)
+    # print()
+
+    sco(asm, obj)
+
+    global INST_NUM
+    INST_NUM = len(asm.asm_inst)
+
+
+def c2o(source_file, target_file):
+    """
+    generate obj file from .c file
+    :param source_file: str
+    :param target_file: str
+    :return: (bool, str)
+    """
+    import time
+    import subprocess as sp
+
+    object_file = target_file + '_NoZOLandVLIW.o'
+    middle_file = target_file + '.ll'
+    asm_file = target_file + '.s'
+
+    stderr_mid = None
+    stderr_asm = None
+    stderr_obj = None
+
+    start = time.perf_counter()
+    cmd = [CLANG, source_file, '-o', middle_file] + CLANG_PARAMETER
+    print('Generating .ll file...')
+
+    try:
+        completed_process = sp.run(cmd, stdout=sp.PIPE, stderr=sp.PIPE,
+                                   universal_newlines=True)
+        print('Done!')
+        stderr_mid = completed_process.stderr
+
+        cmd = [LLC, middle_file, '-o', asm_file] + LLC_PARAMETER
+        print('Generating asm file...')
+        completed_process = sp.run(cmd, stdout=sp.PIPE, stderr=sp.PIPE,
+                                   universal_newlines=True)
+        print('Done!')
+        stderr_asm = completed_process.stderr
+
+        if completed_process.returncode == 0:
+            cmd = [LLC, middle_file, '-filetype=obj', '-o', object_file] + LLC_PARAMETER
+            print('Generating obj file...')
+            completed_process = sp.run(cmd, stdout=sp.PIPE, stderr=sp.PIPE,
+                                       universal_newlines=True)
+            print('Done!')
+            stderr_obj = completed_process.stderr
+
+            try:
+                operation(asm_file, object_file)
+                change_machine_code(object_file)
+            except FileNotFoundError as error:
+                print(error)
+                return (None, source_file)
+            except ValueError:
+                return (False, source_file)
+            else:
+                return (True,)
+            finally:
+                elapsed = time.perf_counter() - start
+                with open(LOG_FILE, mode='a', newline=None) as log:
+                    sentence = '%s:\nTime Elapsed %fs\n' % (
+                        os.path.basename(source_file), elapsed)
+                    log.write(sentence)
+                    try:
+                        sentence = '\n指令个数：%d\t平均耗时：%fs\n\n' % (INST_NUM, elapsed / INST_NUM)
+                        log.write(sentence)
+                    except ZeroDivisionError:
+                        log.write('读取ASM文件中的指令出错')
+        else:
+            return (None, source_file)
+    except OSError as error:
+        print('\n', cmd[0], '调用错误 :', error)
+        return (None, source_file)
+    finally:
+        if stderr_mid is not None or stderr_asm is not None or stderr_obj is not None:
+            with open(target_file + '.log', mode='w', newline=None) as log:
+                if stderr_mid is not None:
+                    log.write('\n#####==========stderr_mid==========#####:\n')
+                    log.write(stderr_mid)
+                if stderr_asm is not None:
+                    log.write('\n#####==========stderr_asm==========#####:\n')
+                    log.write(stderr_asm)
+                if stderr_obj is not None:
+                    log.write('\n#####==========stderr_obj==========#####:\n')
+                    log.write(stderr_obj)
+
+
+def generate_file(source_file, file_name):
+    """
+
+    :param source_file: str, with directory name
+    :param file_name: str, without directory name
+    :return: bool
+    """
+    try:
+        target_file = os.path.join(
+            TARGET_DIRECTORY, os.path.splitext(file_name)[0])
+    except TypeError:
+        target_file = os.path.splitext(source_file)[0]
+    return c2o(source_file, target_file)
+
+
+def main():
+    """
+
+    :return: None
+    """
+    import re
+    import time
+
+    global LOG_FILE
+
+    wrong_file = []
+    fail_num = 0
+    success_num = 0
+    other_num = 0
+
+    start = time.perf_counter()
+    if os.path.isdir(SOURCE):
+        for root, dirs, files in os.walk(SOURCE):
+            source_files = re.findall(r'[^\\/:\*\?"<>\|,\']+\.c(?=\')', str(files))
+            # print(source_files)
+            file_num = len(source_files)
+            if file_num > 0:
+                LOG_FILE = os.path.join(root, '0.log')
+                with open(LOG_FILE, mode='w', newline=None) as log:
+                    log.write('当前目录：%s\n\n' % root)
+                number = 1
+                for each_file in source_files:
+                    source_file = os.path.join(root, each_file)
+                    print('\ntesting %s: %d/%d' %
+                          (source_file, number, file_num))
+                    flag = generate_file(source_file, each_file)
+                    if flag[0] is False:
+                        fail_num += 1
+                        wrong_file.append(flag[1])
+                    elif flag[0] is True:
+                        success_num += 1
+                    else:
+                        other_num += 1
+                        wrong_file.append(flag[1])
+                    number += 1
+    else:
+        LOG_FILE = os.path.join(os.path.dirname(SOURCE), '0.log')
+        with open(LOG_FILE, mode='w', newline=None) as log:
+            log.write('当前目录：%s\n\n' % os.path.basename(SOURCE))
+        print('\ntesting %s:' % SOURCE)
+        flag = generate_file(SOURCE, os.path.basename(SOURCE))
+        if flag[0] is False:
+            fail_num += 1
+            wrong_file.append(flag[1])
+        elif flag[0] is True:
+            success_num += 1
+        else:
+            other_num += 1
+            wrong_file.append(flag[1])
+
+    elapsed = time.perf_counter() - start
+    print()
+    print('成功：%d个，错误：%d个，其它错误：%d个，总用时：%fs' %
+          (success_num, fail_num, other_num, elapsed))
+    if len(wrong_file) > 0:
+        print('\n总出错源文件（.c文件）：')
+        for i in wrong_file:
+            print(i)
+        print('\n请在对应目录下检查对应的 log 文件！\n')
+
+
+if __name__ == '__main__':
+    import os
+    import argparse
+
+    '''
+        设置命令行选项
+    '''
+    PARSER = argparse.ArgumentParser(
+        description='通过遍历，将一个目录底下的 .c 文件批量生成 .o 文件的脚本。',
+        epilog=r'示例：python .\rtl_c2o.py .\vector\global_array.c .\output\ ')
+    PARSER.add_argument('input', metavar='input', nargs='?',
+                        default=os.curdir, help='源目录|源文件，默认为当前目录')
+    PARSER.add_argument('target', metavar='target', nargs='?',
+                        default=None, help='目标目录，默认为源文件目录')
+    PARSER.add_argument('-t', '--test', help='dev use.', action='store_true')
+    PARSER.add_argument('-v', '--version', action='version',
+                        version='%(prog)s 5.5 2017.07.21 author:@lengyanyu258')
+    RESULTS = PARSER.parse_args()
+
+    SOURCE = RESULTS.input
+    TARGET_DIRECTORY = RESULTS.target
+
+    if RESULTS.test:
+        CLANG = r'C:\Users\Shawn\Source\421Laboratory\dsp_compiler.build\Debug\bin\clang'
+        LLC = r'C:\Users\Shawn\Source\421Laboratory\dsp_compiler.build\Debug\bin\llc'
+    else:
+        CLANG = 'clang'
+        LLC = 'llc'
+
+    # defined global variables
+    LOG_FILE = '0.log'  # any str
+    INST_NUM = 0
+
+    main()

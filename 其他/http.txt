@@ -1,0 +1,1 @@
+ Linux下的lds链接脚本详解 ：https://www.cnblogs.com/li-hao/p/4107964.html  转载自：http://linux.chinaunix.net/techdoc/beginner/2009/08/12/1129972.shtml

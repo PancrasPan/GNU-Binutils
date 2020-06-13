@@ -1,0 +1,63 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name funco1.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/funco1.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/funco1.ll -x c ./testcase_8slots/funco1.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <ga:@gO1>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <ga:@gO1>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = LD %vreg1<kill>, 0; mem:LD4[@gO1](tbaa=<badref>) CPURegs:%vreg2,%vreg1
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = MovGR %ZERO, 1; CPURegs:%vreg3
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg2; CPURegs:%vreg2
+	CALL <ga:@funcO>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg4<def> = COPY %V0; CPURegs:%vreg4
+	%vreg5<def> = MovIGH %ZERO, <ga:@gO2>[TF=3]; CPURegs:%vreg5
+	%vreg6<def,tied1> = MovIGL %vreg5<tied0>, <ga:@gO2>[TF=4]; CPURegs:%vreg6,%vreg5
+	%vreg7<def> = LD %vreg6<kill>, 0; mem:LD4[@gO2](tbaa=<badref>) CPURegs:%vreg7,%vreg6
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg4; CPURegs:%vreg8,%vreg7,%vreg4
+	%V0<def> = COPY %vreg8; CPURegs:%vreg8
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <ga:@gO1>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <ga:@gO1>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = LD %vreg1<kill>, 0; mem:LD4[@gO1](tbaa=<badref>) CPURegs:%vreg2,%vreg1
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = MovGR %ZERO, 1; CPURegs:%vreg3
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg2; CPURegs:%vreg2
+	CALL <ga:@funcO>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg4<def> = COPY %V0; CPURegs:%vreg4
+	%vreg5<def> = MovIGH %ZERO, <ga:@gO2>[TF=3]; CPURegs:%vreg5
+	%vreg6<def,tied1> = MovIGL %vreg5<tied0>, <ga:@gO2>[TF=4]; CPURegs:%vreg6,%vreg5
+	%vreg7<def> = LD %vreg6<kill>, 0; mem:LD4[@gO2](tbaa=<badref>) CPURegs:%vreg7,%vreg6
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg4; CPURegs:%vreg8,%vreg7,%vreg4
+	%V0<def> = COPY %vreg8; CPURegs:%vreg8
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

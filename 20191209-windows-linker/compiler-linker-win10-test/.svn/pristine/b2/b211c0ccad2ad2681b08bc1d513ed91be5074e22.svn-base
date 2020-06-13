@@ -1,0 +1,18 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+LLVM ERROR: Cannot select: 0xecc8d8: v16i32 = scalar_to_vector 0xecc4e8 [ORD=10] [ID=48]
+  0xecc4e8: i32,ch = load 0xecc458, 0xecd248, 0xeca898<LD4[@vgb](align=16)> [ORD=10] [ID=46]
+    0xecd248: i32 = add 0xecd1b8, 0xecc3c8 [ORD=10] [ID=31]
+      0xecd1b8: i32 = DSPISD::Hi 0xecb078 [ORD=10] [ID=26]
+        0xecb078: i32 = TargetGlobalAddress<<4 x i32>* @vgb> 0 [TF=3] [ORD=10] [ID=16]
+      0xecc3c8: i32 = DSPISD::Lo 0xecb108 [ORD=10] [ID=27]
+        0xecb108: i32 = TargetGlobalAddress<<4 x i32>* @vgb> 0 [TF=4] [ORD=10] [ID=17]
+    0xeca898: i32 = undef [ID=5]
+In function: main
+Stack dump:
+0.	Program arguments: D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_4slots\build-4slots\Debug\bin\llc ./testcase_4slots/local_vector.ll -filetype=asm -o ./testcase_4slots/local_vector.s -march=dsp -mcpu=dspse -relocation-model=static -disable-dsp-hwloops 
+1.	Running pass 'Function Pass Manager' on module './testcase_4slots/local_vector.ll'.
+2.	Running pass 'DSP DAG->DAG Pattern Instruction Selection' on function '@main'

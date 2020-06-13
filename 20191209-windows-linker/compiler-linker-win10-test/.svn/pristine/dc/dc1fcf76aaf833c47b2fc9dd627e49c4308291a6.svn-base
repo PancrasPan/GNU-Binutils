@@ -1,0 +1,40 @@
+	.text
+	.file	"./testcase_8slots/compound_condition.ll"
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -16
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 3
+	store32	GR2, GR30, 2
+	movigl	GR3,4
+}
+{
+	movigh	GR3,0
+}
+{
+	store32	GR3, GR30, 1
+	movigl	GR3,2
+}
+{
+	movigh	GR3,0
+}
+{
+	jmp	$BB0_1
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_4:                                 # %while.body
+                              

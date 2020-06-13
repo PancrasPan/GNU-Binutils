@@ -1,0 +1,511 @@
+
+#####==========stderr_mid==========#####:
+./testcase_8slots/matrix1.c:119:9: warning: expression result unused [-Wunused-value]
+               *p_c++  ;   
+               ^~~~~~
+'' is not a recognized processor for this target (ignoring processor)
+1 warning generated.
+
+#####==========stderr_asm==========#####:
+# Machine code for function pin_down: SSA
+Frame Objects:
+  fi#-1: size=4, align=8, fixed, at location [SP+8]
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	%vreg2<def> = LD <fi#-1>, 0; mem:LD4[FixedStack-1](align=8) CPURegs:%vreg2
+	ST %vreg0, <fi#0>, 0; mem:ST4[%A.addr] CPURegs:%vreg0
+	ST %vreg1, <fi#1>, 0; mem:ST4[%B.addr] CPURegs:%vreg1
+	ST %vreg2<kill>, <fi#2>, 0; mem:ST4[%C.addr] CPURegs:%vreg2
+	%vreg3<def> = MovGR %ZERO, 0; CPURegs:%vreg3
+	ST %vreg3, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg3
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#3
+	%vreg4<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg4
+	%vreg5<def> = LTI %vreg4<kill>, 100; CPURegs:%vreg5,%vreg4
+	JNC %vreg5<kill>, <BB#4>; CPURegs:%vreg5
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#4(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	%vreg29<def> = MovGR %ZERO, 2; CPURegs:%vreg29
+	%vreg30<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg30
+	%vreg31<def> = SHL %vreg30<kill>, %vreg29<kill>; CPURegs:%vreg31,%vreg30,%vreg29
+	%vreg32<def> = LD <fi#0>, 0; mem:LD4[%A.addr] CPURegs:%vreg32
+	%vreg33<def> = ADDu %vreg32<kill>, %vreg31<kill>; CPURegs:%vreg33,%vreg32,%vreg31
+	%vreg34<def> = MovGR %ZERO, 1; CPURegs:%vreg34
+	ST %vreg34<kill>, %vreg33<kill>, 0; mem:ST4[%arrayidx] CPURegs:%vreg34,%vreg33
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#2
+	%vreg35<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg35
+	%vreg36<def> = ADDiu %vreg35<kill>, 1; CPURegs:%vreg36,%vreg35
+	ST %vreg36<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg36
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#4: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#1
+	ST %vreg3, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg3
+    Successors according to CFG: BB#5
+
+BB#5: derived from LLVM BB %for.cond1
+    Predecessors according to CFG: BB#4 BB#7
+	%vreg7<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg7
+	%vreg8<def> = LTI %vreg7<kill>, 100; CPURegs:%vreg8,%vreg7
+	JNC %vreg8<kill>, <BB#8>; CPURegs:%vreg8
+	Jmp <BB#6>
+    Successors according to CFG: BB#6(124) BB#8(4)
+
+BB#6: derived from LLVM BB %for.body3
+    Predecessors according to CFG: BB#5
+	%vreg21<def> = MovGR %ZERO, 2; CPURegs:%vreg21
+	%vreg22<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg22
+	%vreg23<def> = SHL %vreg22<kill>, %vreg21<kill>; CPURegs:%vreg23,%vreg22,%vreg21
+	%vreg24<def> = LD <fi#1>, 0; mem:LD4[%B.addr] CPURegs:%vreg24
+	%vreg25<def> = ADDu %vreg24<kill>, %vreg23<kill>; CPURegs:%vreg25,%vreg24,%vreg23
+	%vreg26<def> = MovGR %ZERO, 1; CPURegs:%vreg26
+	ST %vreg26<kill>, %vreg25<kill>, 0; mem:ST4[%arrayidx4] CPURegs:%vreg26,%vreg25
+    Successors according to CFG: BB#7
+
+BB#7: derived from LLVM BB %for.inc5
+    Predecessors according to CFG: BB#6
+	%vreg27<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg27
+	%vreg28<def> = ADDiu %vreg27<kill>, 1; CPURegs:%vreg28,%vreg27
+	ST %vreg28<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg28
+	Jmp <BB#5>
+    Successors according to CFG: BB#5
+
+BB#8: derived from LLVM BB %for.end7
+    Predecessors according to CFG: BB#5
+	ST %vreg3, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg3
+    Successors according to CFG: BB#9
+
+BB#9: derived from LLVM BB %for.cond8
+    Predecessors according to CFG: BB#8 BB#11
+	%vreg10<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg10
+	%vreg11<def> = LTI %vreg10<kill>, 100; CPURegs:%vreg11,%vreg10
+	JNC %vreg11<kill>, <BB#12>; CPURegs:%vreg11
+	Jmp <BB#10>
+    Successors according to CFG: BB#10(124) BB#12(4)
+
+BB#10: derived from LLVM BB %for.body10
+    Predecessors according to CFG: BB#9
+	%vreg13<def> = MovGR %ZERO, 2; CPURegs:%vreg13
+	%vreg14<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg14
+	%vreg15<def> = SHL %vreg14<kill>, %vreg13<kill>; CPURegs:%vreg15,%vreg14,%vreg13
+	%vreg16<def> = LD <fi#2>, 0; mem:LD4[%C.addr] CPURegs:%vreg16
+	%vreg17<def> = ADDu %vreg16<kill>, %vreg15<kill>; CPURegs:%vreg17,%vreg16,%vreg15
+	ST %vreg3, %vreg17<kill>, 0; mem:ST4[%arrayidx11] CPURegs:%vreg3,%vreg17
+    Successors according to CFG: BB#11
+
+BB#11: derived from LLVM BB %for.inc12
+    Predecessors according to CFG: BB#10
+	%vreg19<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg19
+	%vreg20<def> = ADDiu %vreg19<kill>, 1; CPURegs:%vreg20,%vreg19
+	ST %vreg20<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg20
+	Jmp <BB#9>
+    Successors according to CFG: BB#9
+
+BB#12: derived from LLVM BB %for.end14
+    Predecessors according to CFG: BB#9
+	%vreg12<def> = MovGR %ZERO, 0; CPURegs:%vreg12
+	%V0<def> = COPY %vreg12; CPURegs:%vreg12
+	RetLR %V0<imp-use>
+
+# End machine code for function pin_down.
+
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+  fi#4: size=4, align=4, at location [SP]
+  fi#5: size=4, align=4, at location [SP]
+  fi#6: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovIGH %ZERO, <ga:@main.A>[TF=3]; CPURegs:%vreg1
+	%vreg2<def,tied1> = MovIGL %vreg1<tied0>, <ga:@main.A>[TF=4]; CPURegs:%vreg2,%vreg1
+	ST %vreg2, <fi#1>, 0; mem:ST4[%p_a] CPURegs:%vreg2
+	%vreg3<def> = MovIGH %ZERO, <ga:@main.B>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <ga:@main.B>[TF=4]; CPURegs:%vreg4,%vreg3
+	ST %vreg4, <fi#2>, 0; mem:ST4[%p_b] CPURegs:%vreg4
+	%vreg5<def> = MovIGH %ZERO, <ga:@main.C>[TF=3]; CPURegs:%vreg5
+	%vreg6<def,tied1> = MovIGL %vreg5<tied0>, <ga:@main.C>[TF=4]; CPURegs:%vreg6,%vreg5
+	ST %vreg6, <fi#3>, 0; mem:ST4[%p_c] CPURegs:%vreg6
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg7<def> = COPY %SP; CPURegs:%vreg7
+	ST %vreg6, %vreg7, 8; mem:ST4[<unknown>] CPURegs:%vreg6,%vreg7
+	%A0<def> = COPY %vreg2; CPURegs:%vreg2
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@pin_down>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	ST %vreg0, <fi#6>, 0; mem:ST4[%k] CPURegs:%vreg0
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#8
+	%vreg9<def> = LD <fi#6>, 0; mem:LD4[%k] CPURegs:%vreg9
+	%vreg10<def> = LTI %vreg9<kill>, 10; CPURegs:%vreg10,%vreg9
+	JNC %vreg10<kill>, <BB#9>; CPURegs:%vreg10
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#9(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	ST %vreg2, <fi#1>, 0; mem:ST4[%p_a] CPURegs:%vreg2
+	ST %vreg0, <fi#5>, 0; mem:ST4[%i] CPURegs:%vreg0
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.cond1
+    Predecessors according to CFG: BB#2 BB#7
+	%vreg23<def> = LD <fi#5>, 0; mem:LD4[%i] CPURegs:%vreg23
+	%vreg24<def> = LTI %vreg23<kill>, 10; CPURegs:%vreg24,%vreg23
+	JNC %vreg24<kill>, <BB#8>; CPURegs:%vreg24
+	Jmp <BB#4>
+    Successors according to CFG: BB#4(124) BB#8(4)
+
+BB#4: derived from LLVM BB %for.body3
+    Predecessors according to CFG: BB#3
+	%vreg27<def> = MovGR %ZERO, 10; CPURegs:%vreg27
+	%vreg28<def> = LD <fi#6>, 0; mem:LD4[%k] CPURegs:%vreg28
+	%vreg29<def> = MUL32 %vreg28<kill>, %vreg27<kill>; CPURegs:%vreg29,%vreg28,%vreg27
+	%vreg30<def> = MovGR %ZERO, 2; CPURegs:%vreg30
+	%vreg31<def> = SHL %vreg29<kill>, %vreg30<kill>; CPURegs:%vreg31,%vreg29,%vreg30
+	%vreg34<def> = ADDu %vreg4, %vreg31<kill>; CPURegs:%vreg34,%vreg4,%vreg31
+	ST %vreg34<kill>, <fi#2>, 0; mem:ST4[%p_b] CPURegs:%vreg34
+	%vreg36<def> = LD <fi#3>, 0; mem:LD4[%p_c] CPURegs:%vreg36
+	ST %vreg0, %vreg36<kill>, 0; mem:ST4[%3] CPURegs:%vreg0,%vreg36
+	ST %vreg0, <fi#4>, 0; mem:ST4[%f] CPURegs:%vreg0
+    Successors according to CFG: BB#5
+
+BB#5: derived from LLVM BB %for.cond4
+    Predecessors according to CFG: BB#4 BB#6
+	%vreg37<def> = LD <fi#4>, 0; mem:LD4[%f] CPURegs:%vreg37
+	%vreg38<def> = LTI %vreg37<kill>, 10; CPURegs:%vreg38,%vreg37
+	JNC %vreg38<kill>, <BB#7>; CPURegs:%vreg38
+	Jmp <BB#6>
+    Successors according to CFG: BB#6(124) BB#7(4)
+
+BB#6: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#5
+	%vreg43<def> = LD <fi#1>, 0; mem:LD4[%p_a] CPURegs:%vreg43
+	%vreg44<def> = ADDiu %vreg43, 4; CPURegs:%vreg44,%vreg43
+	ST %vreg44<kill>, <fi#1>, 0; mem:ST4[%p_a] CPURegs:%vreg44
+	%vreg45<def> = LD %vreg43, 0; mem:LD4[%5] CPURegs:%vreg45,%vreg43
+	%vreg46<def> = LD <fi#2>, 0; mem:LD4[%p_b] CPURegs:%vreg46
+	%vreg47<def> = ADDiu %vreg46, 4; CPURegs:%vreg47,%vreg46
+	ST %vreg47<kill>, <fi#2>, 0; mem:ST4[%p_b] CPURegs:%vreg47
+	%vreg48<def> = LD %vreg46, 0; mem:LD4[%7] CPURegs:%vreg48,%vreg46
+	%vreg49<def> = MUL32 %vreg45<kill>, %vreg48<kill>; CPURegs:%vreg49,%vreg45,%vreg48
+	%vreg50<def> = LD <fi#3>, 0; mem:LD4[%p_c] CPURegs:%vreg50
+	%vreg51<def> = LD %vreg50, 0; mem:LD4[%9] CPURegs:%vreg51,%vreg50
+	%vreg52<def> = ADDu %vreg51<kill>, %vreg49<kill>; CPURegs:%vreg52,%vreg51,%vreg49
+	ST %vreg52<kill>, %vreg50, 0; mem:ST4[%9] CPURegs:%vreg52,%vreg50
+	%vreg53<def> = LD <fi#4>, 0; mem:LD4[%f] CPURegs:%vreg53
+	%vreg54<def> = ADDiu %vreg53<kill>, 1; CPURegs:%vreg54,%vreg53
+	ST %vreg54<kill>, <fi#4>, 0; mem:ST4[%f] CPURegs:%vreg54
+	Jmp <BB#5>
+    Successors according to CFG: BB#5
+
+BB#7: derived from LLVM BB %for.inc10
+    Predecessors according to CFG: BB#5
+	%vreg39<def> = LD <fi#3>, 0; mem:LD4[%p_c] CPURegs:%vreg39
+	%vreg40<def> = ADDiu %vreg39<kill>, 4; CPURegs:%vreg40,%vreg39
+	ST %vreg40<kill>, <fi#3>, 0; mem:ST4[%p_c] CPURegs:%vreg40
+	%vreg41<def> = LD <fi#5>, 0; mem:LD4[%i] CPURegs:%vreg41
+	%vreg42<def> = ADDiu %vreg41<kill>, 1; CPURegs:%vreg42,%vreg41
+	ST %vreg42<kill>, <fi#5>, 0; mem:ST4[%i] CPURegs:%vreg42
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#8: derived from LLVM BB %for.inc13
+    Predecessors according to CFG: BB#3
+	%vreg25<def> = LD <fi#6>, 0; mem:LD4[%k] CPURegs:%vreg25
+	%vreg26<def> = ADDiu %vreg25<kill>, 1; CPURegs:%vreg26,%vreg25
+	ST %vreg26<kill>, <fi#6>, 0; mem:ST4[%k] CPURegs:%vreg26
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#9: derived from LLVM BB %for.end15
+    Predecessors according to CFG: BB#1
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg13<def> = COPY %SP; CPURegs:%vreg13
+	ST %vreg6, %vreg13, 8; mem:ST4[<unknown>] CPURegs:%vreg6,%vreg13
+	%A0<def> = COPY %vreg2; CPURegs:%vreg2
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@pin_down>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg19<def> = MovGR %ZERO, 0; CPURegs:%vreg19
+	%V0<def> = COPY %vreg19; CPURegs:%vreg19
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function pin_down: SSA
+Frame Objects:
+  fi#-1: size=4, align=8, fixed, at location [SP+8]
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	%vreg2<def> = LD <fi#-1>, 0; mem:LD4[FixedStack-1](align=8) CPURegs:%vreg2
+	ST %vreg0, <fi#0>, 0; mem:ST4[%A.addr] CPURegs:%vreg0
+	ST %vreg1, <fi#1>, 0; mem:ST4[%B.addr] CPURegs:%vreg1
+	ST %vreg2<kill>, <fi#2>, 0; mem:ST4[%C.addr] CPURegs:%vreg2
+	%vreg3<def> = MovGR %ZERO, 0; CPURegs:%vreg3
+	ST %vreg3, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg3
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#3
+	%vreg4<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg4
+	%vreg5<def> = LTI %vreg4<kill>, 100; CPURegs:%vreg5,%vreg4
+	JNC %vreg5<kill>, <BB#4>; CPURegs:%vreg5
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#4(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	%vreg29<def> = MovGR %ZERO, 2; CPURegs:%vreg29
+	%vreg30<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg30
+	%vreg31<def> = SHL %vreg30<kill>, %vreg29<kill>; CPURegs:%vreg31,%vreg30,%vreg29
+	%vreg32<def> = LD <fi#0>, 0; mem:LD4[%A.addr] CPURegs:%vreg32
+	%vreg33<def> = ADDu %vreg32<kill>, %vreg31<kill>; CPURegs:%vreg33,%vreg32,%vreg31
+	%vreg34<def> = MovGR %ZERO, 1; CPURegs:%vreg34
+	ST %vreg34<kill>, %vreg33<kill>, 0; mem:ST4[%arrayidx] CPURegs:%vreg34,%vreg33
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#2
+	%vreg35<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg35
+	%vreg36<def> = ADDiu %vreg35<kill>, 1; CPURegs:%vreg36,%vreg35
+	ST %vreg36<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg36
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#4: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#1
+	ST %vreg3, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg3
+    Successors according to CFG: BB#5
+
+BB#5: derived from LLVM BB %for.cond1
+    Predecessors according to CFG: BB#4 BB#7
+	%vreg7<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg7
+	%vreg8<def> = LTI %vreg7<kill>, 100; CPURegs:%vreg8,%vreg7
+	JNC %vreg8<kill>, <BB#8>; CPURegs:%vreg8
+	Jmp <BB#6>
+    Successors according to CFG: BB#6(124) BB#8(4)
+
+BB#6: derived from LLVM BB %for.body3
+    Predecessors according to CFG: BB#5
+	%vreg21<def> = MovGR %ZERO, 2; CPURegs:%vreg21
+	%vreg22<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg22
+	%vreg23<def> = SHL %vreg22<kill>, %vreg21<kill>; CPURegs:%vreg23,%vreg22,%vreg21
+	%vreg24<def> = LD <fi#1>, 0; mem:LD4[%B.addr] CPURegs:%vreg24
+	%vreg25<def> = ADDu %vreg24<kill>, %vreg23<kill>; CPURegs:%vreg25,%vreg24,%vreg23
+	%vreg26<def> = MovGR %ZERO, 1; CPURegs:%vreg26
+	ST %vreg26<kill>, %vreg25<kill>, 0; mem:ST4[%arrayidx4] CPURegs:%vreg26,%vreg25
+    Successors according to CFG: BB#7
+
+BB#7: derived from LLVM BB %for.inc5
+    Predecessors according to CFG: BB#6
+	%vreg27<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg27
+	%vreg28<def> = ADDiu %vreg27<kill>, 1; CPURegs:%vreg28,%vreg27
+	ST %vreg28<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg28
+	Jmp <BB#5>
+    Successors according to CFG: BB#5
+
+BB#8: derived from LLVM BB %for.end7
+    Predecessors according to CFG: BB#5
+	ST %vreg3, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg3
+    Successors according to CFG: BB#9
+
+BB#9: derived from LLVM BB %for.cond8
+    Predecessors according to CFG: BB#8 BB#11
+	%vreg10<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg10
+	%vreg11<def> = LTI %vreg10<kill>, 100; CPURegs:%vreg11,%vreg10
+	JNC %vreg11<kill>, <BB#12>; CPURegs:%vreg11
+	Jmp <BB#10>
+    Successors according to CFG: BB#10(124) BB#12(4)
+
+BB#10: derived from LLVM BB %for.body10
+    Predecessors according to CFG: BB#9
+	%vreg13<def> = MovGR %ZERO, 2; CPURegs:%vreg13
+	%vreg14<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg14
+	%vreg15<def> = SHL %vreg14<kill>, %vreg13<kill>; CPURegs:%vreg15,%vreg14,%vreg13
+	%vreg16<def> = LD <fi#2>, 0; mem:LD4[%C.addr] CPURegs:%vreg16
+	%vreg17<def> = ADDu %vreg16<kill>, %vreg15<kill>; CPURegs:%vreg17,%vreg16,%vreg15
+	ST %vreg3, %vreg17<kill>, 0; mem:ST4[%arrayidx11] CPURegs:%vreg3,%vreg17
+    Successors according to CFG: BB#11
+
+BB#11: derived from LLVM BB %for.inc12
+    Predecessors according to CFG: BB#10
+	%vreg19<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg19
+	%vreg20<def> = ADDiu %vreg19<kill>, 1; CPURegs:%vreg20,%vreg19
+	ST %vreg20<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg20
+	Jmp <BB#9>
+    Successors according to CFG: BB#9
+
+BB#12: derived from LLVM BB %for.end14
+    Predecessors according to CFG: BB#9
+	%vreg12<def> = MovGR %ZERO, 0; CPURegs:%vreg12
+	%V0<def> = COPY %vreg12; CPURegs:%vreg12
+	RetLR %V0<imp-use>
+
+# End machine code for function pin_down.
+
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+  fi#4: size=4, align=4, at location [SP]
+  fi#5: size=4, align=4, at location [SP]
+  fi#6: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovIGH %ZERO, <ga:@main.A>[TF=3]; CPURegs:%vreg1
+	%vreg2<def,tied1> = MovIGL %vreg1<tied0>, <ga:@main.A>[TF=4]; CPURegs:%vreg2,%vreg1
+	ST %vreg2, <fi#1>, 0; mem:ST4[%p_a] CPURegs:%vreg2
+	%vreg3<def> = MovIGH %ZERO, <ga:@main.B>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <ga:@main.B>[TF=4]; CPURegs:%vreg4,%vreg3
+	ST %vreg4, <fi#2>, 0; mem:ST4[%p_b] CPURegs:%vreg4
+	%vreg5<def> = MovIGH %ZERO, <ga:@main.C>[TF=3]; CPURegs:%vreg5
+	%vreg6<def,tied1> = MovIGL %vreg5<tied0>, <ga:@main.C>[TF=4]; CPURegs:%vreg6,%vreg5
+	ST %vreg6, <fi#3>, 0; mem:ST4[%p_c] CPURegs:%vreg6
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg7<def> = COPY %SP; CPURegs:%vreg7
+	ST %vreg6, %vreg7, 8; mem:ST4[<unknown>] CPURegs:%vreg6,%vreg7
+	%A0<def> = COPY %vreg2; CPURegs:%vreg2
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@pin_down>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	ST %vreg0, <fi#6>, 0; mem:ST4[%k] CPURegs:%vreg0
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#8
+	%vreg9<def> = LD <fi#6>, 0; mem:LD4[%k] CPURegs:%vreg9
+	%vreg10<def> = LTI %vreg9<kill>, 10; CPURegs:%vreg10,%vreg9
+	JNC %vreg10<kill>, <BB#9>; CPURegs:%vreg10
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#9(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	ST %vreg2, <fi#1>, 0; mem:ST4[%p_a] CPURegs:%vreg2
+	ST %vreg0, <fi#5>, 0; mem:ST4[%i] CPURegs:%vreg0
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.cond1
+    Predecessors according to CFG: BB#2 BB#7
+	%vreg23<def> = LD <fi#5>, 0; mem:LD4[%i] CPURegs:%vreg23
+	%vreg24<def> = LTI %vreg23<kill>, 10; CPURegs:%vreg24,%vreg23
+	JNC %vreg24<kill>, <BB#8>; CPURegs:%vreg24
+	Jmp <BB#4>
+    Successors according to CFG: BB#4(124) BB#8(4)
+
+BB#4: derived from LLVM BB %for.body3
+    Predecessors according to CFG: BB#3
+	%vreg27<def> = MovGR %ZERO, 10; CPURegs:%vreg27
+	%vreg28<def> = LD <fi#6>, 0; mem:LD4[%k] CPURegs:%vreg28
+	%vreg29<def> = MUL32 %vreg28<kill>, %vreg27<kill>; CPURegs:%vreg29,%vreg28,%vreg27
+	%vreg30<def> = MovGR %ZERO, 2; CPURegs:%vreg30
+	%vreg31<def> = SHL %vreg29<kill>, %vreg30<kill>; CPURegs:%vreg31,%vreg29,%vreg30
+	%vreg34<def> = ADDu %vreg4, %vreg31<kill>; CPURegs:%vreg34,%vreg4,%vreg31
+	ST %vreg34<kill>, <fi#2>, 0; mem:ST4[%p_b] CPURegs:%vreg34
+	%vreg36<def> = LD <fi#3>, 0; mem:LD4[%p_c] CPURegs:%vreg36
+	ST %vreg0, %vreg36<kill>, 0; mem:ST4[%3] CPURegs:%vreg0,%vreg36
+	ST %vreg0, <fi#4>, 0; mem:ST4[%f] CPURegs:%vreg0
+    Successors according to CFG: BB#5
+
+BB#5: derived from LLVM BB %for.cond4
+    Predecessors according to CFG: BB#4 BB#6
+	%vreg37<def> = LD <fi#4>, 0; mem:LD4[%f] CPURegs:%vreg37
+	%vreg38<def> = LTI %vreg37<kill>, 10; CPURegs:%vreg38,%vreg37
+	JNC %vreg38<kill>, <BB#7>; CPURegs:%vreg38
+	Jmp <BB#6>
+    Successors according to CFG: BB#6(124) BB#7(4)
+
+BB#6: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#5
+	%vreg43<def> = LD <fi#1>, 0; mem:LD4[%p_a] CPURegs:%vreg43
+	%vreg44<def> = ADDiu %vreg43, 4; CPURegs:%vreg44,%vreg43
+	ST %vreg44<kill>, <fi#1>, 0; mem:ST4[%p_a] CPURegs:%vreg44
+	%vreg45<def> = LD %vreg43, 0; mem:LD4[%5] CPURegs:%vreg45,%vreg43
+	%vreg46<def> = LD <fi#2>, 0; mem:LD4[%p_b] CPURegs:%vreg46
+	%vreg47<def> = ADDiu %vreg46, 4; CPURegs:%vreg47,%vreg46
+	ST %vreg47<kill>, <fi#2>, 0; mem:ST4[%p_b] CPURegs:%vreg47
+	%vreg48<def> = LD %vreg46, 0; mem:LD4[%7] CPURegs:%vreg48,%vreg46
+	%vreg49<def> = MUL32 %vreg45<kill>, %vreg48<kill>; CPURegs:%vreg49,%vreg45,%vreg48
+	%vreg50<def> = LD <fi#3>, 0; mem:LD4[%p_c] CPURegs:%vreg50
+	%vreg51<def> = LD %vreg50, 0; mem:LD4[%9] CPURegs:%vreg51,%vreg50
+	%vreg52<def> = ADDu %vreg51<kill>, %vreg49<kill>; CPURegs:%vreg52,%vreg51,%vreg49
+	ST %vreg52<kill>, %vreg50, 0; mem:ST4[%9] CPURegs:%vreg52,%vreg50
+	%vreg53<def> = LD <fi#4>, 0; mem:LD4[%f] CPURegs:%vreg53
+	%vreg54<def> = ADDiu %vreg53<kill>, 1; CPURegs:%vreg54,%vreg53
+	ST %vreg54<kill>, <fi#4>, 0; mem:ST4[%f] CPURegs:%vreg54
+	Jmp <BB#5>
+    Successors according to CFG: BB#5
+
+BB#7: derived from LLVM BB %for.inc10
+    Predecessors according to CFG: BB#5
+	%vreg39<def> = LD <fi#3>, 0; mem:LD4[%p_c] CPURegs:%vreg39
+	%vreg40<def> = ADDiu %vreg39<kill>, 4; CPURegs:%vreg40,%vreg39
+	ST %vreg40<kill>, <fi#3>, 0; mem:ST4[%p_c] CPURegs:%vreg40
+	%vreg41<def> = LD <fi#5>, 0; mem:LD4[%i] CPURegs:%vreg41
+	%vreg42<def> = ADDiu %vreg41<kill>, 1; CPURegs:%vreg42,%vreg41
+	ST %vreg42<kill>, <fi#5>, 0; mem:ST4[%i] CPURegs:%vreg42
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#8: derived from LLVM BB %for.inc13
+    Predecessors according to CFG: BB#3
+	%vreg25<def> = LD <fi#6>, 0; mem:LD4[%k] CPURegs:%vreg25
+	%vreg26<def> = ADDiu %vreg25<kill>, 1; CPURegs:%vreg26,%vreg25
+	ST %vreg26<kill>, <fi#6>, 0; mem:ST4[%k] CPURegs:%vreg26
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#9: derived from LLVM BB %for.end15
+    Predecessors according to CFG: BB#1
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg13<def> = COPY %SP; CPURegs:%vreg13
+	ST %vreg6, %vreg13, 8; mem:ST4[<unknown>] CPURegs:%vreg6,%vreg13
+	%A0<def> = COPY %vreg2; CPURegs:%vreg2
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@pin_down>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg19<def> = MovGR %ZERO, 0; CPURegs:%vreg19
+	%V0<def> = COPY %vreg19; CPURegs:%vreg19
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

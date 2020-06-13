@@ -1,0 +1,22 @@
+
+#####==========stderr_mid==========#####:
+./testcase_4slots/func_vector.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+'' is not a recognized processor for this target (ignoring processor)
+1 warning generated.
+
+#####==========stderr_asm==========#####:
+LLVM ERROR: Cannot select: 0x17b440: v16i32 = scalar_to_vector 0x17b050 [ORD=14] [ID=79]
+  0x17b050: i32,ch = load 0x17afc0, 0x1783e0, 0x177ed0<LD4[@init_vgb](align=16)> [ORD=14] [ID=75]
+    0x1783e0: i32 = add 0x178a10, 0x17b7f0 [ORD=14] [ID=45]
+      0x178a10: i32 = DSPISD::Hi 0x17c210 [ORD=14] [ID=31]
+        0x17c210: i32 = TargetGlobalAddress<<4 x i32>* @init_vgb> 0 [TF=3] [ORD=14] [ID=17]
+      0x17b7f0: i32 = DSPISD::Lo 0x17bd00 [ORD=14] [ID=32]
+        0x17bd00: i32 = TargetGlobalAddress<<4 x i32>* @init_vgb> 0 [TF=4] [ORD=14] [ID=18]
+    0x177ed0: i32 = undef [ID=4]
+In function: vsum
+Stack dump:
+0.	Program arguments: D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_4slots\build-4slots\Debug\bin\llc ./testcase_4slots/func_vector.ll -filetype=asm -o ./testcase_4slots/func_vector.s -march=dsp -mcpu=dspse -relocation-model=static -disable-dsp-hwloops 
+1.	Running pass 'Function Pass Manager' on module './testcase_4slots/func_vector.ll'.
+2.	Running pass 'DSP DAG->DAG Pattern Instruction Selection' on function '@vsum'

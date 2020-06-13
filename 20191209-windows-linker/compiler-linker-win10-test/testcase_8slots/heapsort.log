@@ -1,0 +1,194 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name heapsort.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/heapsort.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/heapsort.ll -x c ./testcase_8slots/heapsort.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function heapsort: SSA
+Frame Objects:
+  fi#-1: size=4, align=8, fixed, at location [SP+8]
+Function Live Ins: %A0 in %vreg4, %A1 in %vreg5
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg5<def> = COPY %A1; CPURegs:%vreg5
+	%vreg4<def> = COPY %A0; CPURegs:%vreg4
+	%vreg8<def> = LD <fi#-1>, 0; mem:LD4[FixedStack-1](align=8) CPURegs:%vreg8
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg10<def> = COPY %SP; CPURegs:%vreg10
+	ST %vreg8, %vreg10, 0; mem:ST4[<unknown>] CPURegs:%vreg8,%vreg10
+	%A0<def> = COPY %vreg4; CPURegs:%vreg4
+	%A1<def> = COPY %vreg5; CPURegs:%vreg5
+	CALL <ga:@buildheap>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg11<def> = COPY %V0; CPURegs:%vreg11
+	%vreg7<def> = COPY %vreg5; CPURegs:%vreg7,%vreg5
+	%vreg6<def> = COPY %vreg4; CPURegs:%vreg6,%vreg4
+	%vreg9<def> = MovGR %ZERO, -1; CPURegs:%vreg9
+	%vreg12<def> = NEQI %vreg11, 0; CPURegs:%vreg12,%vreg11
+	JC %vreg12<kill>, <BB#4>; CPURegs:%vreg12
+	Jmp <BB#1>
+    Successors according to CFG: BB#1(12) BB#4(20)
+
+BB#1: derived from LLVM BB %for.cond.preheader
+    Predecessors according to CFG: BB#0
+	%vreg14<def> = LE %vreg8, %vreg7; CPURegs:%vreg14,%vreg8,%vreg7
+	%vreg13<def> = MovGR %ZERO, 0; CPURegs:%vreg13
+	JC %vreg14<kill>, <BB#4>; CPURegs:%vreg14
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(16) BB#4(16)
+
+BB#2: derived from LLVM BB %for.body.lr.ph
+    Predecessors according to CFG: BB#1
+	%vreg15<def> = MovGR %ZERO, 2; CPURegs:%vreg15
+	%vreg16<def> = SHL %vreg7, %vreg15<kill>; CPURegs:%vreg16,%vreg7,%vreg15
+	%vreg0<def> = ADDu %vreg6, %vreg16<kill>; CPURegs:%vreg0,%vreg6,%vreg16
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#2 BB#3
+	%vreg1<def> = PHI %vreg8, <BB#2>, %vreg2, <BB#3>; CPURegs:%vreg1,%vreg8,%vreg2
+	%vreg18<def> = MovGR %ZERO, 2; CPURegs:%vreg18
+	%vreg19<def> = SHL %vreg1, %vreg18<kill>; CPURegs:%vreg19,%vreg1,%vreg18
+	%vreg20<def> = ADDu %vreg6, %vreg19<kill>; CPURegs:%vreg20,%vreg6,%vreg19
+	%vreg21<def> = LD %vreg20, 0; mem:LD4[%arrayidx](tbaa=<badref>) CPURegs:%vreg21,%vreg20
+	%vreg22<def> = LD %vreg0, 0; mem:LD4[%arrayidx1](tbaa=<badref>) CPURegs:%vreg22,%vreg0
+	ST %vreg22<kill>, %vreg20, 0; mem:ST4[%arrayidx](tbaa=<badref>) CPURegs:%vreg22,%vreg20
+	ST %vreg21<kill>, %vreg0, 0; mem:ST4[%arrayidx1](tbaa=<badref>) CPURegs:%vreg21,%vreg0
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg2<def> = ADDiu %vreg1, -1; CPURegs:%vreg2,%vreg1
+	%vreg23<def> = COPY %SP; CPURegs:%vreg23
+	ST %vreg2, %vreg23, 4; mem:ST4[<unknown>] CPURegs:%vreg2,%vreg23
+	ST %vreg7, %vreg23, 0; mem:ST4[<unknown>] CPURegs:%vreg7,%vreg23
+	%A0<def> = COPY %vreg6; CPURegs:%vreg6
+	%A1<def> = COPY %vreg7; CPURegs:%vreg7
+	CALL <ga:@adjustdown>, %A0, %A1, <regmask>, %SP<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg17<def> = MovGR %ZERO, 0; CPURegs:%vreg17
+	%vreg24<def> = GT %vreg2, %vreg7; CPURegs:%vreg24,%vreg2,%vreg7
+	JC %vreg24<kill>, <BB#3>; CPURegs:%vreg24
+	Jmp <BB#4>
+    Successors according to CFG: BB#3(124) BB#4(4)
+
+BB#4: derived from LLVM BB %return
+    Predecessors according to CFG: BB#0 BB#1 BB#3
+	%vreg3<def> = PHI %vreg9, <BB#0>, %vreg13, <BB#1>, %vreg17, <BB#3>; CPURegs:%vreg3,%vreg9,%vreg13,%vreg17
+	%V0<def> = COPY %vreg3; CPURegs:%vreg3
+	RetLR %V0<imp-use>
+
+# End machine code for function heapsort.
+
+# Machine code for function buildheap: SSA
+Frame Objects:
+  fi#-1: size=4, align=8, fixed, at location [SP]
+Function Live Ins: %A0 in %vreg5, %A1 in %vreg6
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg6<def> = COPY %A1; CPURegs:%vreg6
+	%vreg5<def> = COPY %A0; CPURegs:%vreg5
+	%vreg7<def> = COPY %vreg5; CPURegs:%vreg7,%vreg5
+	%vreg10<def> = MovGR %ZERO, -1; CPURegs:%vreg10
+	%vreg8<def> = COPY %vreg6; CPURegs:%vreg8,%vreg6
+	%vreg9<def> = LD <fi#-1>, 0; mem:LD4[FixedStack-1](align=8) CPURegs:%vreg9
+	%vreg11<def> = LT %vreg9, %vreg6; CPURegs:%vreg11,%vreg9,%vreg6
+	JC %vreg11<kill>, <BB#4>; CPURegs:%vreg11
+	Jmp <BB#1>
+    Successors according to CFG: BB#4(16) BB#1(16)
+
+BB#1: derived from LLVM BB %if.end
+    Predecessors according to CFG: BB#0
+	%vreg13<def> = MovGR %ZERO, 1; CPURegs:%vreg13
+	%vreg14<def> = SUBu %vreg13<kill>, %vreg8; CPURegs:%vreg14,%vreg13,%vreg8
+	%vreg0<def> = ADDu %vreg14<kill>, %vreg9; CPURegs:%vreg0,%vreg14,%vreg9
+	%vreg12<def> = MovGR %ZERO, 0; CPURegs:%vreg12
+	%vreg15<def> = MovGR %ZERO, 2; CPURegs:%vreg15
+	%vreg16<def> = LT %vreg0, %vreg15<kill>; CPURegs:%vreg16,%vreg0,%vreg15
+	JC %vreg16<kill>, <BB#4>; CPURegs:%vreg16
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(16) BB#4(16)
+
+BB#2: derived from LLVM BB %for.body.lr.ph
+    Predecessors according to CFG: BB#1
+	%vreg17<def> = MovGR %ZERO, 31; CPURegs:%vreg17
+	%vreg18<def> = SRL %vreg0, %vreg17<kill>; CPURegs:%vreg18,%vreg0,%vreg17
+	%vreg19<def> = ADDu %vreg0, %vreg18<kill>; CPURegs:%vreg19,%vreg0,%vreg18
+	%vreg20<def> = MovGR %ZERO, 1; CPURegs:%vreg20
+	%vreg1<def> = SRA %vreg19<kill>, %vreg20<kill>; CPURegs:%vreg1,%vreg19,%vreg20
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#2 BB#3
+	%vreg2<def> = PHI %vreg1, <BB#2>, %vreg3, <BB#3>; CPURegs:%vreg2,%vreg1,%vreg3
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg22<def> = COPY %SP; CPURegs:%vreg22
+	ST %vreg9, %vreg22, 4; mem:ST4[<unknown>] CPURegs:%vreg9,%vreg22
+	ST %vreg8, %vreg22, 0; mem:ST4[<unknown>] CPURegs:%vreg8,%vreg22
+	%vreg3<def> = ADDiu %vreg2, -1; CPURegs:%vreg3,%vreg2
+	%vreg23<def> = ADDu %vreg3, %vreg8; CPURegs:%vreg23,%vreg3,%vreg8
+	%A0<def> = COPY %vreg7; CPURegs:%vreg7
+	%A1<def> = COPY %vreg23; CPURegs:%vreg23
+	CALL <ga:@adjustdown>, %A0, %A1, <regmask>, %SP<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg21<def> = MovGR %ZERO, 0; CPURegs:%vreg21
+	%vreg24<def> = LTI %vreg3, 1; CPURegs:%vreg24,%vreg3
+	JNC %vreg24<kill>, <BB#3>; CPURegs:%vreg24
+	Jmp <BB#4>
+    Successors according to CFG: BB#3(124) BB#4(4)
+
+BB#4: derived from LLVM BB %return
+    Predecessors according to CFG: BB#0 BB#1 BB#3
+	%vreg4<def> = PHI %vreg10, <BB#0>, %vreg12, <BB#1>, %vreg21, <BB#3>; CPURegs:%vreg4,%vreg10,%vreg12,%vreg21
+	%V0<def> = COPY %vreg4; CPURegs:%vreg4
+	RetLR %V0<imp-use>
+
+# End machine code for function buildheap.
+
+LLVM ERROR: Cannot select: 0x22574940d08: i32 = select 0x2257494f248, 0x225749430f0, 0x22574941440 [ORD=9] [ID=25]
+  0x2257494f248: i32 = setcc 0x22574945d20, 0x22574946560, 0x22574940e10 [ORD=8] [ID=24]
+    0x22574945d20: i32,ch = load 0x22574913c50, 0x22574941230, 0x2257494ef30<LD4[%arrayidx12](tbaa=<badref>)> [ORD=4] [ID=22]
+      0x22574941230: i32 = add 0x225749429b8, 0x2257494f038 [ORD=3] [ID=20]
+        0x225749429b8: i32,ch = CopyFromReg 0x22574913c50, 0x225749428b0 [ORD=3] [ID=13]
+          0x225749428b0: i32 = Register %vreg18 [ID=3]
+        0x2257494f038: i32 = shl 0x225749407e0, 0x22574942dd8 [ORD=3] [ID=18]
+          0x225749407e0: i32 = add 0x22574941440, 0x2257494ee28 [ORD=2] [ID=16]
+            0x22574941440: i32,ch = CopyFromReg 0x22574913c50, 0x22574943300 [ORD=2] [ID=11]
+              0x22574943300: i32 = Register %vreg7 [ID=1]
+            0x2257494ee28: i32,ch = CopyFromReg 0x22574913c50, 0x22574946458 [ORD=2] [ID=12]
+              0x22574946458: i32 = Register %vreg20 [ID=2]
+          0x22574942dd8: i32 = Constant<2> [ID=4]
+      0x2257494ef30: i32 = undef [ID=5]
+    0x22574946560: i32,ch = load 0x22574913c50, 0x2257494f140, 0x2257494ef30<LD4[%arrayidx15](tbaa=<badref>)> [ORD=7] [ID=23]
+      0x2257494f140: i32 = add 0x225749429b8, 0x22574941548 [ORD=6] [ID=21]
+        0x225749429b8: i32,ch = CopyFromReg 0x22574913c50, 0x225749428b0 [ORD=3] [ID=13]
+          0x225749428b0: i32 = Register %vreg18 [ID=3]
+        0x22574941548: i32 = shl 0x2257494f350, 0x22574942dd8 [ORD=6] [ID=19]
+          0x2257494f350: i32 = add 0x22574946248, 0x22574941440 [ORD=5] [ID=17]
+            0x22574946248: i32,ch = CopyFromReg 0x22574913c50, 0x2257494ed20 [ORD=5] [ID=14]
+              0x2257494ed20: i32 = Register %vreg6 [ID=6]
+            0x22574941440: i32,ch = CopyFromReg 0x22574913c50, 0x22574943300 [ORD=2] [ID=11]
+              0x22574943300: i32 = Register %vreg7 [ID=1]
+          0x22574942dd8: i32 = Constant<2> [ID=4]
+      0x2257494ef30: i32 = undef [ID=5]
+  0x225749430f0: i32,ch = CopyFromReg 0x22574913c50, 0x22574945b10 [ORD=9] [ID=15]
+    0x22574945b10: i32 = Register %vreg9 [ID=8]
+  0x22574941440: i32,ch = CopyFromReg 0x22574913c50, 0x22574943300 [ORD=2] [ID=11]
+    0x22574943300: i32 = Register %vreg7 [ID=1]
+In function: adjustdown
+Stack dump:
+0.	Program arguments: D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\llc ./testcase_8slots/heapsort.ll -filetype=asm -o ./testcase_8slots/heapsort.s -march=dsp -mcpu=dspse -disable-dsp-hwloops -relocation-model=static 
+1.	Running pass 'Function Pass Manager' on module './testcase_8slots/heapsort.ll'.
+2.	Running pass 'DSP DAG->DAG Pattern Instruction Selection' on function '@adjustdown'

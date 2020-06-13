@@ -1,0 +1,221 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function bubblesort: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <ga:@size>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <ga:@size>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = LD %vreg1<kill>, 0; mem:LD4[@size] CPURegs:%vreg2,%vreg1
+	%vreg3<def> = ADDiu %vreg2<kill>, -1; CPURegs:%vreg3,%vreg2
+	ST %vreg3<kill>, <fi#2>, 0; mem:ST4[%Sortpos] CPURegs:%vreg3
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#8
+	%vreg4<def> = MovGR %ZERO, 1; CPURegs:%vreg4
+	%vreg5<def> = LD <fi#2>, 0; mem:LD4[%Sortpos] CPURegs:%vreg5
+	%vreg6<def> = LT %vreg5<kill>, %vreg4; CPURegs:%vreg6,%vreg5,%vreg4
+	JC %vreg6<kill>, <BB#9>; CPURegs:%vreg6
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#9(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	%vreg7<def> = MovGR %ZERO, 0; CPURegs:%vreg7
+	ST %vreg7, <fi#1>, 0; mem:ST4[%hasOutOrder] CPURegs:%vreg7
+	ST %vreg7, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg7
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.cond1
+    Predecessors according to CFG: BB#2 BB#6
+	%vreg8<def> = LD <fi#2>, 0; mem:LD4[%Sortpos] CPURegs:%vreg8
+	%vreg9<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg9
+	%vreg10<def> = GE %vreg9<kill>, %vreg8<kill>; CPURegs:%vreg10,%vreg9,%vreg8
+	JC %vreg10<kill>, <BB#7>; CPURegs:%vreg10
+	Jmp <BB#4>
+    Successors according to CFG: BB#4(124) BB#7(4)
+
+BB#4: derived from LLVM BB %for.body3
+    Predecessors according to CFG: BB#3
+	%vreg16<def> = MovGR %ZERO, 2; CPURegs:%vreg16
+	%vreg17<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg17
+	%vreg18<def> = SHL %vreg17<kill>, %vreg16; CPURegs:%vreg18,%vreg17,%vreg16
+	%vreg19<def> = MovIGH %ZERO, <ga:@Array>[TF=3]; CPURegs:%vreg19
+	%vreg20<def,tied1> = MovIGL %vreg19<tied0>, <ga:@Array>[TF=4]; CPURegs:%vreg20,%vreg19
+	%vreg21<def> = ADDu %vreg20, %vreg18<kill>; CPURegs:%vreg21,%vreg20,%vreg18
+	%vreg22<def> = LD %vreg21, 4; mem:LD4[%arrayidx4] CPURegs:%vreg22,%vreg21
+	%vreg23<def> = LD %vreg21, 0; mem:LD4[%arrayidx] CPURegs:%vreg23,%vreg21
+	%vreg24<def> = LE %vreg23<kill>, %vreg22<kill>; CPURegs:%vreg24,%vreg23,%vreg22
+	JC %vreg24<kill>, <BB#6>; CPURegs:%vreg24
+	Jmp <BB#5>
+    Successors according to CFG: BB#5(16) BB#6(16)
+
+BB#5: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#4
+	ST %vreg4, <fi#1>, 0; mem:ST4[%hasOutOrder] CPURegs:%vreg4
+	%vreg27<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg27
+	%vreg28<def> = SHL %vreg27<kill>, %vreg16; CPURegs:%vreg28,%vreg27,%vreg16
+	%vreg31<def> = ADDu %vreg20, %vreg28<kill>; CPURegs:%vreg31,%vreg20,%vreg28
+	%vreg32<def> = LD %vreg31<kill>, 0; mem:LD4[%arrayidx6] CPURegs:%vreg32,%vreg31
+	ST %vreg32<kill>, <fi#0>, 0; mem:ST4[%Temp] CPURegs:%vreg32
+	%vreg33<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg33
+	%vreg34<def> = SHL %vreg33<kill>, %vreg16; CPURegs:%vreg34,%vreg33,%vreg16
+	%vreg35<def> = ADDu %vreg20, %vreg34<kill>; CPURegs:%vreg35,%vreg20,%vreg34
+	%vreg36<def> = LD %vreg35, 4; mem:LD4[%arrayidx8] CPURegs:%vreg36,%vreg35
+	ST %vreg36<kill>, %vreg35, 0; mem:ST4[%arrayidx9] CPURegs:%vreg36,%vreg35
+	%vreg37<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg37
+	%vreg38<def> = SHL %vreg37<kill>, %vreg16; CPURegs:%vreg38,%vreg37,%vreg16
+	%vreg39<def> = ADDu %vreg38<kill>, %vreg20; CPURegs:%vreg39,%vreg38,%vreg20
+	%vreg40<def> = LD <fi#0>, 0; mem:LD4[%Temp] CPURegs:%vreg40
+	ST %vreg40<kill>, %vreg39<kill>, 4; mem:ST4[%arrayidx11] CPURegs:%vreg40,%vreg39
+    Successors according to CFG: BB#6
+
+BB#6: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#4 BB#5
+	%vreg41<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg41
+	%vreg42<def> = ADDiu %vreg41<kill>, 1; CPURegs:%vreg42,%vreg41
+	ST %vreg42<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg42
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#7: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#3
+	%vreg11<def> = LD <fi#1>, 0; mem:LD4[%hasOutOrder] CPURegs:%vreg11
+	%vreg12<def> = EQI %vreg11<kill>, 0; CPURegs:%vreg12,%vreg11
+	JC %vreg12<kill>, <BB#9>; CPURegs:%vreg12
+	Jmp <BB#8>
+    Successors according to CFG: BB#8(124) BB#9(4)
+
+BB#8: derived from LLVM BB %for.inc14
+    Predecessors according to CFG: BB#7
+	%vreg14<def> = LD <fi#2>, 0; mem:LD4[%Sortpos] CPURegs:%vreg14
+	%vreg15<def> = ADDiu %vreg14<kill>, -1; CPURegs:%vreg15,%vreg14
+	ST %vreg15<kill>, <fi#2>, 0; mem:ST4[%Sortpos] CPURegs:%vreg15
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#9: derived from LLVM BB %for.end15
+    Predecessors according to CFG: BB#1 BB#7
+	%vreg13<def> = MovGR %ZERO, 0; CPURegs:%vreg13
+	%V0<def> = COPY %vreg13; CPURegs:%vreg13
+	RetLR %V0<imp-use>
+
+# End machine code for function bubblesort.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function bubblesort: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <ga:@size>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <ga:@size>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = LD %vreg1<kill>, 0; mem:LD4[@size] CPURegs:%vreg2,%vreg1
+	%vreg3<def> = ADDiu %vreg2<kill>, -1; CPURegs:%vreg3,%vreg2
+	ST %vreg3<kill>, <fi#2>, 0; mem:ST4[%Sortpos] CPURegs:%vreg3
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#8
+	%vreg4<def> = MovGR %ZERO, 1; CPURegs:%vreg4
+	%vreg5<def> = LD <fi#2>, 0; mem:LD4[%Sortpos] CPURegs:%vreg5
+	%vreg6<def> = LT %vreg5<kill>, %vreg4; CPURegs:%vreg6,%vreg5,%vreg4
+	JC %vreg6<kill>, <BB#9>; CPURegs:%vreg6
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#9(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	%vreg7<def> = MovGR %ZERO, 0; CPURegs:%vreg7
+	ST %vreg7, <fi#1>, 0; mem:ST4[%hasOutOrder] CPURegs:%vreg7
+	ST %vreg7, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg7
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %for.cond1
+    Predecessors according to CFG: BB#2 BB#6
+	%vreg8<def> = LD <fi#2>, 0; mem:LD4[%Sortpos] CPURegs:%vreg8
+	%vreg9<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg9
+	%vreg10<def> = GE %vreg9<kill>, %vreg8<kill>; CPURegs:%vreg10,%vreg9,%vreg8
+	JC %vreg10<kill>, <BB#7>; CPURegs:%vreg10
+	Jmp <BB#4>
+    Successors according to CFG: BB#4(124) BB#7(4)
+
+BB#4: derived from LLVM BB %for.body3
+    Predecessors according to CFG: BB#3
+	%vreg16<def> = MovGR %ZERO, 2; CPURegs:%vreg16
+	%vreg17<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg17
+	%vreg18<def> = SHL %vreg17<kill>, %vreg16; CPURegs:%vreg18,%vreg17,%vreg16
+	%vreg19<def> = MovIGH %ZERO, <ga:@Array>[TF=3]; CPURegs:%vreg19
+	%vreg20<def,tied1> = MovIGL %vreg19<tied0>, <ga:@Array>[TF=4]; CPURegs:%vreg20,%vreg19
+	%vreg21<def> = ADDu %vreg20, %vreg18<kill>; CPURegs:%vreg21,%vreg20,%vreg18
+	%vreg22<def> = LD %vreg21, 4; mem:LD4[%arrayidx4] CPURegs:%vreg22,%vreg21
+	%vreg23<def> = LD %vreg21, 0; mem:LD4[%arrayidx] CPURegs:%vreg23,%vreg21
+	%vreg24<def> = LE %vreg23<kill>, %vreg22<kill>; CPURegs:%vreg24,%vreg23,%vreg22
+	JC %vreg24<kill>, <BB#6>; CPURegs:%vreg24
+	Jmp <BB#5>
+    Successors according to CFG: BB#5(16) BB#6(16)
+
+BB#5: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#4
+	ST %vreg4, <fi#1>, 0; mem:ST4[%hasOutOrder] CPURegs:%vreg4
+	%vreg27<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg27
+	%vreg28<def> = SHL %vreg27<kill>, %vreg16; CPURegs:%vreg28,%vreg27,%vreg16
+	%vreg31<def> = ADDu %vreg20, %vreg28<kill>; CPURegs:%vreg31,%vreg20,%vreg28
+	%vreg32<def> = LD %vreg31<kill>, 0; mem:LD4[%arrayidx6] CPURegs:%vreg32,%vreg31
+	ST %vreg32<kill>, <fi#0>, 0; mem:ST4[%Temp] CPURegs:%vreg32
+	%vreg33<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg33
+	%vreg34<def> = SHL %vreg33<kill>, %vreg16; CPURegs:%vreg34,%vreg33,%vreg16
+	%vreg35<def> = ADDu %vreg20, %vreg34<kill>; CPURegs:%vreg35,%vreg20,%vreg34
+	%vreg36<def> = LD %vreg35, 4; mem:LD4[%arrayidx8] CPURegs:%vreg36,%vreg35
+	ST %vreg36<kill>, %vreg35, 0; mem:ST4[%arrayidx9] CPURegs:%vreg36,%vreg35
+	%vreg37<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg37
+	%vreg38<def> = SHL %vreg37<kill>, %vreg16; CPURegs:%vreg38,%vreg37,%vreg16
+	%vreg39<def> = ADDu %vreg38<kill>, %vreg20; CPURegs:%vreg39,%vreg38,%vreg20
+	%vreg40<def> = LD <fi#0>, 0; mem:LD4[%Temp] CPURegs:%vreg40
+	ST %vreg40<kill>, %vreg39<kill>, 4; mem:ST4[%arrayidx11] CPURegs:%vreg40,%vreg39
+    Successors according to CFG: BB#6
+
+BB#6: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#4 BB#5
+	%vreg41<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg41
+	%vreg42<def> = ADDiu %vreg41<kill>, 1; CPURegs:%vreg42,%vreg41
+	ST %vreg42<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg42
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#7: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#3
+	%vreg11<def> = LD <fi#1>, 0; mem:LD4[%hasOutOrder] CPURegs:%vreg11
+	%vreg12<def> = EQI %vreg11<kill>, 0; CPURegs:%vreg12,%vreg11
+	JC %vreg12<kill>, <BB#9>; CPURegs:%vreg12
+	Jmp <BB#8>
+    Successors according to CFG: BB#8(124) BB#9(4)
+
+BB#8: derived from LLVM BB %for.inc14
+    Predecessors according to CFG: BB#7
+	%vreg14<def> = LD <fi#2>, 0; mem:LD4[%Sortpos] CPURegs:%vreg14
+	%vreg15<def> = ADDiu %vreg14<kill>, -1; CPURegs:%vreg15,%vreg14
+	ST %vreg15<kill>, <fi#2>, 0; mem:ST4[%Sortpos] CPURegs:%vreg15
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#9: derived from LLVM BB %for.end15
+    Predecessors according to CFG: BB#1 BB#7
+	%vreg13<def> = MovGR %ZERO, 0; CPURegs:%vreg13
+	%V0<def> = COPY %vreg13; CPURegs:%vreg13
+	RetLR %V0<imp-use>
+
+# End machine code for function bubblesort.
+

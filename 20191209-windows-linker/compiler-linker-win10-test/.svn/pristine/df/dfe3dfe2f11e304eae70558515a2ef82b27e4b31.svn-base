@@ -1,0 +1,133 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 5; CPURegs:%vreg1
+	ST %vreg1, <fi#1>, 0; mem:ST4[%n] CPURegs:%vreg1
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%A0<def> = COPY %vreg1; CPURegs:%vreg1
+	CALL <ga:@sum>, %A0, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg2<def> = COPY %V0; CPURegs:%vreg2
+	%V0<def> = COPY %vreg2; CPURegs:%vreg2
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+# Machine code for function sum: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+Function Live Ins: %A0 in %vreg0
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	ST %vreg0, <fi#1>, 0; mem:ST4[%x.addr] CPURegs:%vreg0
+	%vreg1<def> = LTI %vreg0, 2; CPURegs:%vreg1,%vreg0
+	JNC %vreg1<kill>, <BB#2>; CPURegs:%vreg1
+	Jmp <BB#1>
+    Successors according to CFG: BB#1(16) BB#2(16)
+
+BB#1: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#0
+	%vreg6<def> = LD <fi#1>, 0; mem:LD4[%x.addr] CPURegs:%vreg6
+	ST %vreg6<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg6
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#2: derived from LLVM BB %if.else
+    Predecessors according to CFG: BB#0
+	%vreg2<def> = LD <fi#1>, 0; mem:LD4[%x.addr] CPURegs:%vreg2
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = ADDiu %vreg2, -1; CPURegs:%vreg3,%vreg2
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	CALL <ga:@sum>, %A0, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg4<def> = COPY %V0; CPURegs:%vreg4
+	%vreg5<def> = ADDu %vreg2, %vreg4; CPURegs:%vreg5,%vreg2,%vreg4
+	ST %vreg5<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg5
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %return
+    Predecessors according to CFG: BB#2 BB#1
+	%vreg7<def> = LD <fi#0>, 0; mem:LD4[%retval] CPURegs:%vreg7
+	%V0<def> = COPY %vreg7; CPURegs:%vreg7
+	RetLR %V0<imp-use>
+
+# End machine code for function sum.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 5; CPURegs:%vreg1
+	ST %vreg1, <fi#1>, 0; mem:ST4[%n] CPURegs:%vreg1
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%A0<def> = COPY %vreg1; CPURegs:%vreg1
+	CALL <ga:@sum>, %A0, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg2<def> = COPY %V0; CPURegs:%vreg2
+	%V0<def> = COPY %vreg2; CPURegs:%vreg2
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+# Machine code for function sum: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+Function Live Ins: %A0 in %vreg0
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	ST %vreg0, <fi#1>, 0; mem:ST4[%x.addr] CPURegs:%vreg0
+	%vreg1<def> = LTI %vreg0, 2; CPURegs:%vreg1,%vreg0
+	JNC %vreg1<kill>, <BB#2>; CPURegs:%vreg1
+	Jmp <BB#1>
+    Successors according to CFG: BB#1(16) BB#2(16)
+
+BB#1: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#0
+	%vreg6<def> = LD <fi#1>, 0; mem:LD4[%x.addr] CPURegs:%vreg6
+	ST %vreg6<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg6
+	Jmp <BB#3>
+    Successors according to CFG: BB#3
+
+BB#2: derived from LLVM BB %if.else
+    Predecessors according to CFG: BB#0
+	%vreg2<def> = LD <fi#1>, 0; mem:LD4[%x.addr] CPURegs:%vreg2
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = ADDiu %vreg2, -1; CPURegs:%vreg3,%vreg2
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	CALL <ga:@sum>, %A0, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg4<def> = COPY %V0; CPURegs:%vreg4
+	%vreg5<def> = ADDu %vreg2, %vreg4; CPURegs:%vreg5,%vreg2,%vreg4
+	ST %vreg5<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg5
+    Successors according to CFG: BB#3
+
+BB#3: derived from LLVM BB %return
+    Predecessors according to CFG: BB#2 BB#1
+	%vreg7<def> = LD <fi#0>, 0; mem:LD4[%retval] CPURegs:%vreg7
+	%V0<def> = COPY %vreg7; CPURegs:%vreg7
+	RetLR %V0<imp-use>
+
+# End machine code for function sum.
+

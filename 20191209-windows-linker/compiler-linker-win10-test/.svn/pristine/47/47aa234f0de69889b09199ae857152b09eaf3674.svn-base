@@ -1,0 +1,422 @@
+	.text
+	.file	"./testcase_4slots/division.ll"
+	.globl	integer_div
+	.align	2
+	.type	integer_div,@function
+integer_div:                            # @integer_div
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -24
+}
+{
+	store32	GR4, GR30, 4
+	store32	GR5, GR30, 3
+}
+{
+	load32	GR2, GR30, 4
+}
+{
+	nop
+}
+{
+	geu	 GR2, GR5
+}
+{
+	jc	 $BB0_2
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#1:                                 # %if.then
+{
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	jmp	$BB0_11
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_2:                                 # %if.end
+{
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 0
+}
+{
+	jmp	$BB0_3
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_9:                                 # %if.end10
+                                        #   in Loop: Header=BB0_3 Depth=1
+{
+	load32	GR3, GR30, 2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR3, GR3, -1
+	movigl	GR4,1
+}
+{
+	movigh	GR4,0
+}
+{
+	sl	GR3, GR4, GR3
+	load32	GR5, GR30, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR3, GR5, GR3
+}
+{
+	store32	GR3, GR30, 0
+	load32	GR3, GR30, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	srl	GR3, GR3, GR4
+	load32	GR4, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sub	GR3, GR4, GR3
+}
+{
+	store32	GR3, GR30, 4
+}
+$BB0_3:                                 # %while.cond
+                                        # =>This Loop Header: Depth=1
+                                        #     Child Loop BB0_5 Depth 2
+{
+	load32	GR3, GR30, 3
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 4
+}
+{
+	leu	 GR4, GR3
+}
+{
+	jc	 $BB0_10
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#4:                                 # %while.body
+                                        #   in Loop: Header=BB0_3 Depth=1
+{
+	store32	GR2, GR30, 2
+	load32	GR3, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR30, 1
+}
+{
+	jmp	$BB0_5
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_12:                                # %for.inc
+                                        #   in Loop: Header=BB0_5 Depth=2
+{
+	movigl	GR3,1
+}
+{
+	movigh	GR3,0
+	load32	GR4, GR30, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sl	GR3, GR4, GR3
+}
+{
+	store32	GR3, GR30, 1
+	load32	GR3, GR30, 2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR3, GR3, 1
+}
+{
+	store32	GR3, GR30, 2
+}
+$BB0_5:                                 # %for.cond
+                                        #   Parent Loop BB0_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+{
+	load32	GR3, GR30, 1
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 4
+}
+{
+	ltu	 GR4, GR3
+}
+{
+	jc	 $BB0_8
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#6:                                 # %for.body
+                                        #   in Loop: Header=BB0_5 Depth=2
+{
+	load32	GR3, GR30, 1
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sub	GR3, GR4, GR3
+	load32	GR4, GR30, 3
+}
+{
+	geu	 GR3, GR4
+}
+{
+	jc	 $BB0_12
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#7:                                 # %if.then4
+                                        #   in Loop: Header=BB0_3 Depth=1
+{
+	load32	GR3, GR30, 2
+	movigl	GR4,1
+}
+{
+	movigh	GR4,0
+}
+{
+	sl	GR3, GR4, GR3
+	load32	GR4, GR30, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR3, GR4, GR3
+}
+{
+	store32	GR3, GR30, 0
+}
+$BB0_8:                                 # %for.end
+                                        #   in Loop: Header=BB0_3 Depth=1
+{
+	load32	GR3, GR30, 1
+}
+{
+	nop
+}
+{
+	load32	GR4, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sub	GR3, GR4, GR3
+	load32	GR4, GR30, 3
+}
+{
+	ltu	 GR3, GR4
+}
+{
+	jnc	 $BB0_9
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_10:                                # %while.end
+{
+	load32	GR2, GR30, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_11:                                # %return
+{
+	store32	GR2, GR30, 5
+}
+{
+	load32	GR2, GR30, 5
+	addi	GR30, GR30, 24
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:                                  # EmittedInsts:102
+	.size	integer_div, ($tmp0)-integer_div
+
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -32
+}
+{
+	store32	GR31, GR30, 7
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 2
+	store32	GR2, GR30, 6
+	movigl	GR4,7
+}
+{
+	movigh	GR4,0
+	movigl	GR5,3
+}
+{
+	movigh	GR5,0
+}
+{
+	call	integer_div
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 5
+	movigl	GR2,1
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 4
+	movigl	GR2,2
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 3
+	load32	GR2, GR30, 2
+}
+{
+	load32	GR31, GR30, 7
+	addi	GR30, GR30, 32
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp1:                                  # EmittedInsts:120
+	.size	main, ($tmp1)-main
+
+

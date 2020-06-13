@@ -1,0 +1,497 @@
+当前目录：./testcase_4slots/
+
+addition.c:
+Time Elapsed 0.439484s
+
+指令个数：30	平均耗时：0.014649s
+
+argument_fir.c:
+Time Elapsed 1.278085s
+
+指令个数：73	平均耗时：0.017508s
+
+bestoptim.c:
+Time Elapsed 0.290469s
+
+指令个数：34	平均耗时：0.008543s
+
+binary_insert.c:
+Time Elapsed 0.663124s
+
+指令个数：140	平均耗时：0.004737s
+
+binary_search.c:
+Time Elapsed 0.384751s
+
+指令个数：96	平均耗时：0.004008s
+
+biquad_N_sections.c:
+Time Elapsed 0.864199s
+
+指令个数：204	平均耗时：0.004236s
+
+bound_immoimm.c:
+Time Elapsed 0.296649s
+
+指令个数：35	平均耗时：0.008476s
+
+bound_immtoreg.c:
+Time Elapsed 0.280610s
+
+指令个数：37	平均耗时：0.007584s
+
+bound_immtoreg_closedinterval.c:
+Time Elapsed 0.275226s
+
+指令个数：37	平均耗时：0.007439s
+
+bound_regtoimm.c:
+Time Elapsed 0.332069s
+
+指令个数：37	平均耗时：0.008975s
+
+bound_regtoreg.c:
+Time Elapsed 0.269959s
+
+指令个数：39	平均耗时：0.006922s
+
+bound_regtoreg_defwithconst.c:
+Time Elapsed 0.305058s
+
+指令个数：39	平均耗时：0.007822s
+
+bubblemain.c:
+Time Elapsed 0.447176s
+
+指令个数：47	平均耗时：0.009514s
+
+bubblesort.c:
+Time Elapsed 0.522974s
+
+指令个数：88	平均耗时：0.005943s
+
+bump_neg.c:
+Time Elapsed 0.284785s
+
+指令个数：34	平均耗时：0.008376s
+
+bump_not2power_immbound.c:
+Time Elapsed 0.290603s
+
+指令个数：35	平均耗时：0.008303s
+
+bump_not2power_regbound.c:
+Time Elapsed 0.390436s
+
+指令个数：37	平均耗时：0.010552s
+
+bump_notaddi.c:
+Time Elapsed 0.346260s
+
+指令个数：36	平均耗时：0.009618s
+
+bump_reg.c:
+Time Elapsed 0.304884s
+
+指令个数：39	平均耗时：0.007818s
+
+ch6_1.c:
+Time Elapsed 0.248143s
+
+指令个数：14	平均耗时：0.017724s
+
+ch6_1p.c:
+Time Elapsed 0.310732s
+
+指令个数：33	平均耗时：0.009416s
+
+comcond5.c:
+Time Elapsed 0.445209s
+
+指令个数：61	平均耗时：0.007299s
+
+compound_condition.c:
+Time Elapsed 0.295393s
+
+指令个数：48	平均耗时：0.006154s
+
+compound_condition1.c:
+Time Elapsed 0.290520s
+
+指令个数：48	平均耗时：0.006052s
+
+compound_condition2.c:
+Time Elapsed 0.407852s
+
+指令个数：53	平均耗时：0.007695s
+
+compound_condition3.c:
+Time Elapsed 0.363940s
+
+指令个数：53	平均耗时：0.006867s
+
+compound_condition4.c:
+Time Elapsed 0.318370s
+
+指令个数：66	平均耗时：0.004824s
+
+condition_neq.c:
+Time Elapsed 0.281623s
+
+指令个数：35	平均耗时：0.008046s
+
+convolution.c:
+Time Elapsed 0.457917s
+
+指令个数：86	平均耗时：0.005325s
+
+datarel1.c:
+Time Elapsed 0.420292s
+
+指令个数：33	平均耗时：0.012736s
+
+datarel2.c:
+Time Elapsed 0.443963s
+
+指令个数：28	平均耗时：0.015856s
+
+division.c:
+Time Elapsed 0.502586s
+
+指令个数：120	平均耗时：0.004188s
+
+dot_product.c:
+Time Elapsed 0.387896s
+
+指令个数：68	平均耗时：0.005704s
+
+doublenestedloop.c:
+Time Elapsed 0.295187s
+
+指令个数：59	平均耗时：0.005003s
+
+emptyblockinO3.c:
+Time Elapsed 0.429640s
+
+指令个数：133	平均耗时：0.003230s
+
+exitnotfallthrough.c:
+Time Elapsed 0.481084s
+
+指令个数：57	平均耗时：0.008440s
+
+externbound_sumarray.c:
+Time Elapsed 0.382062s
+
+指令个数：53	平均耗时：0.007209s
+
+fir.c:
+Time Elapsed 0.451738s
+
+指令个数：132	平均耗时：0.003422s
+
+fir2dim.c:
+Time Elapsed 1.017616s
+
+指令个数：393	平均耗时：0.002589s
+
+fixup_bumpaftercmp.c:
+Time Elapsed 0.428046s
+
+指令个数：30	平均耗时：0.014268s
+
+fixup_bumpaftercmp_withreg.c:
+Time Elapsed 0.296416s
+
+指令个数：31	平均耗时：0.009562s
+
+fixup_bumpbeforecmp.c:
+Time Elapsed 0.276634s
+
+指令个数：35	平均耗时：0.007904s
+
+funco1.c:
+Time Elapsed 0.295879s
+
+指令个数：27	平均耗时：0.010958s
+
+funco2.c:
+Time Elapsed 0.427814s
+
+指令个数：9	平均耗时：0.047535s
+
+global.c:
+Time Elapsed 0.370782s
+
+指令个数：61	平均耗时：0.006078s
+
+global_array.c:
+Time Elapsed 0.368836s
+
+指令个数：54	平均耗时：0.006830s
+
+global_fir.c:
+Time Elapsed 0.505239s
+
+指令个数：139	平均耗时：0.003635s
+
+global_var_args.c:
+Time Elapsed 0.276507s
+
+指令个数：22	平均耗时：0.012569s
+
+go1.c:
+Time Elapsed 0.272275s
+
+指令个数：16	平均耗时：0.017017s
+
+go2.c:
+Time Elapsed 0.257285s
+
+指令个数：9	平均耗时：0.028587s
+
+heapsort.c:
+Time Elapsed 0.812071s
+
+指令个数：308	平均耗时：0.002637s
+
+hello2.c:
+Time Elapsed 0.278735s
+
+指令个数：23	平均耗时：0.012119s
+
+iltj_if.c:
+Time Elapsed 0.330556s
+
+指令个数：75	平均耗时：0.004407s
+
+iltj_while.c:
+Time Elapsed 0.442980s
+
+指令个数：72	平均耗时：0.006153s
+
+iltj_while1.c:
+Time Elapsed 0.348988s
+
+指令个数：64	平均耗时：0.005453s
+
+latchwithoutInd.c:
+Time Elapsed 0.377387s
+
+指令个数：43	平均耗时：0.008776s
+
+linklist.c:
+Time Elapsed 0.780865s
+
+指令个数：57	平均耗时：0.013699s
+
+lms.c:
+Time Elapsed 0.618478s
+
+指令个数：163	平均耗时：0.003794s
+
+localsumarray.c:
+Time Elapsed 0.287845s
+
+指令个数：50	平均耗时：0.005757s
+
+local_array.c:
+Time Elapsed 0.299967s
+
+指令个数：49	平均耗时：0.006122s
+
+local_var_args.c:
+Time Elapsed 0.289528s
+
+指令个数：20	平均耗时：0.014476s
+
+loop.c:
+Time Elapsed 0.340896s
+
+指令个数：34	平均耗时：0.010026s
+
+loopbranch.c:
+Time Elapsed 0.460979s
+
+指令个数：79	平均耗时：0.005835s
+
+loopCountUnderflow.c:
+Time Elapsed 0.312992s
+
+指令个数：30	平均耗时：0.010433s
+
+loopCountUnderflow1.c:
+Time Elapsed 0.299314s
+
+指令个数：30	平均耗时：0.009977s
+
+loopif.c:
+Time Elapsed 0.493802s
+
+指令个数：77	平均耗时：0.006413s
+
+loopifmain.c:
+Time Elapsed 0.421976s
+
+指令个数：70	平均耗时：0.006028s
+
+loopmain.c:
+Time Elapsed 0.393667s
+
+指令个数：70	平均耗时：0.005624s
+
+main.c:
+Time Elapsed 0.375891s
+
+指令个数：11	平均耗时：0.034172s
+
+mainsort.c:
+Time Elapsed 0.542923s
+
+指令个数：92	平均耗时：0.005901s
+
+mat1x3.c:
+Time Elapsed 0.451949s
+
+指令个数：71	平均耗时：0.006365s
+
+matrix1.c:
+Time Elapsed 0.704060s
+
+指令个数：207	平均耗时：0.003401s
+
+mergesortR.c:
+Time Elapsed 0.570064s
+
+指令个数：229	平均耗时：0.002489s
+
+mergesort_norecur.c:
+Time Elapsed 0.665218s
+
+指令个数：302	平均耗时：0.002203s
+
+nestfor.c:
+Time Elapsed 0.333384s
+
+指令个数：65	平均耗时：0.005129s
+
+nestfor1.c:
+Time Elapsed 0.308926s
+
+指令个数：44	平均耗时：0.007021s
+
+notcondition.c:
+Time Elapsed 0.318273s
+
+指令个数：37	平均耗时：0.008602s
+
+n_complex_updates.c:
+Time Elapsed 0.574396s
+
+指令个数：219	平均耗时：0.002623s
+
+n_real_updates.c:
+Time Elapsed 0.534051s
+
+指令个数：124	平均耗时：0.004307s
+
+parallelandnestedloop.c:
+Time Elapsed 0.385027s
+
+指令个数：102	平均耗时：0.003775s
+
+pointer_global_var_args.c:
+Time Elapsed 0.329043s
+
+指令个数：20	平均耗时：0.016452s
+
+pointer_local_var_args.c:
+Time Elapsed 0.442403s
+
+指令个数：54	平均耗时：0.008193s
+
+qsort.c:
+Time Elapsed 0.426194s
+
+指令个数：177	平均耗时：0.002408s
+
+quicksort.c:
+Time Elapsed 0.593758s
+
+指令个数：216	平均耗时：0.002749s
+
+quicksort1.c:
+Time Elapsed 0.422041s
+
+指令个数：183	平均耗时：0.002306s
+
+recursion.c:
+Time Elapsed 0.337672s
+
+指令个数：40	平均耗时：0.008442s
+
+referenceIndOut.c:
+Time Elapsed 0.274899s
+
+指令个数：41	平均耗时：0.006705s
+
+sample3.c:
+Time Elapsed 0.295202s
+
+指令个数：43	平均耗时：0.006865s
+
+select.c:
+Time Elapsed 0.355385s
+
+指令个数：60	平均耗时：0.005923s
+
+sqlist.c:
+Time Elapsed 0.315674s
+
+指令个数：33	平均耗时：0.009566s
+
+startup.c:
+Time Elapsed 0.778016s
+
+指令个数：322	平均耗时：0.002416s
+
+staticvar.c:
+Time Elapsed 0.279598s
+
+指令个数：28	平均耗时：0.009986s
+
+static_func.c:
+Time Elapsed 0.370584s
+
+指令个数：37	平均耗时：0.010016s
+
+sumarray.c:
+Time Elapsed 0.285115s
+
+指令个数：34	平均耗时：0.008386s
+
+summain.c:
+Time Elapsed 0.266349s
+
+指令个数：11	平均耗时：0.024214s
+
+testa.c:
+Time Elapsed 0.266967s
+
+指令个数：25	平均耗时：0.010679s
+
+testb.c:
+Time Elapsed 0.336102s
+
+指令个数：74	平均耗时：0.004542s
+
+while.c:
+Time Elapsed 0.274590s
+
+指令个数：36	平均耗时：0.007628s
+
+whiletrue.c:
+Time Elapsed 0.444483s
+
+指令个数：52	平均耗时：0.008548s
+

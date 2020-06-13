@@ -1,0 +1,7 @@
+
+#####==========stderr_mid==========#####:
+clang.exe: error: no such file or directory: './testcase_4slots/.func_vector.c'
+clang.exe: error: no input files
+
+#####==========stderr_asm==========#####:
+D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_4slots\build-4slots\Debug\bin\llc: ./testcase_4slots/.func_vector.ll: error: Could not open input file: no such file or directory

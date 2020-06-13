@@ -1,0 +1,729 @@
+; ModuleID = './testcase_8slots/SIMD_Intrinsic/SIMD_Intrinsic_Testcase.c'
+target datalayout = "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64"
+target triple = "dsp"
+
+; Function Attrs: nounwind
+define void @SIMD_Intrinsic_Testcase0() #0 {
+entry:
+  %dspvi8_dst = alloca <256 x i8>, align 256
+  %dspvi8_a = alloca <256 x i8>, align 256
+  %dspvi8_b = alloca <256 x i8>, align 256
+  %dspvi16_dst = alloca <128 x i16>, align 256
+  %dspvi16_a = alloca <128 x i16>, align 256
+  %dspvi16_b = alloca <128 x i16>, align 256
+  %dspvi32_dst = alloca <64 x i32>, align 256
+  %dspvi32_a = alloca <64 x i32>, align 256
+  %dspvi32_b = alloca <64 x i32>, align 256
+  %int_a = alloca i32, align 4
+  %int_b = alloca i32, align 4
+  %int_c = alloca i32, align 4
+  %int_dst = alloca i32, align 4
+  store <256 x i8> <i8 8, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, <256 x i8>* %dspvi8_dst, align 256
+  store <256 x i8> <i8 1, i8 2, i8 3, i8 4, i8 5, i8 6, i8 7, i8 8, i8 9, i8 0, i8 97, i8 98, i8 99, i8 100, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, <256 x i8>* %dspvi8_a, align 256
+  store <256 x i8> <i8 12, i8 23, i8 34, i8 45, i8 56, i8 67, i8 78, i8 89, i8 90, i8 10, i8 48, i8 49, i8 50, i8 51, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, <256 x i8>* %dspvi8_b, align 256
+  store <128 x i16> <i16 16, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, <128 x i16>* %dspvi16_dst, align 256
+  store <128 x i16> <i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 1, i16 2, i16 3, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, <128 x i16>* %dspvi16_a, align 256
+  store <128 x i16> <i16 12, i16 23, i16 34, i16 45, i16 56, i16 67, i16 78, i16 89, i16 90, i16 10, i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 1, i16 2, i16 3, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, <128 x i16>* %dspvi16_b, align 256
+  store <64 x i32> <i32 32, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, <64 x i32>* %dspvi32_dst, align 256
+  store <64 x i32> <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 1, i32 2, i32 3, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, <64 x i32>* %dspvi32_a, align 256
+  store <64 x i32> <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 1, i32 2, i32 3, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 56, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 1, i32 2, i32 3, i32 4, i32 5, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, <64 x i32>* %dspvi32_b, align 256
+  store i32 1, i32* %int_a, align 4
+  store i32 22, i32* %int_b, align 4
+  store i32 333, i32* %int_c, align 4
+  store i32 4444, i32* %int_dst, align 4
+  %0 = load <256 x i8>* %dspvi8_a, align 256
+  %1 = load <256 x i8>* %dspvi8_b, align 256
+  %call = call <256 x i8> @vmax_c(<256 x i8> %0, <256 x i8> %1)
+  store <256 x i8> %call, <256 x i8>* %dspvi8_dst, align 256
+  %2 = load <128 x i16>* %dspvi16_a, align 256
+  %3 = load <128 x i16>* %dspvi16_b, align 256
+  %call1 = call <128 x i16> @vmax_s(<128 x i16> %2, <128 x i16> %3)
+  store <128 x i16> %call1, <128 x i16>* %dspvi16_dst, align 256
+  %4 = load <64 x i32>* %dspvi32_a, align 256
+  %5 = load <64 x i32>* %dspvi32_b, align 256
+  %call2 = call <64 x i32> @vmax_i(<64 x i32> %4, <64 x i32> %5)
+  store <64 x i32> %call2, <64 x i32>* %dspvi32_dst, align 256
+  %6 = load <256 x i8>* %dspvi8_a, align 256
+  %7 = load <256 x i8>* %dspvi8_b, align 256
+  %call3 = call <256 x i8> @vmin_c(<256 x i8> %6, <256 x i8> %7)
+  store <256 x i8> %call3, <256 x i8>* %dspvi8_dst, align 256
+  %8 = load <128 x i16>* %dspvi16_a, align 256
+  %9 = load <128 x i16>* %dspvi16_b, align 256
+  %call4 = call <128 x i16> @vmin_s(<128 x i16> %8, <128 x i16> %9)
+  store <128 x i16> %call4, <128 x i16>* %dspvi16_dst, align 256
+  %10 = load <64 x i32>* %dspvi32_a, align 256
+  %11 = load <64 x i32>* %dspvi32_b, align 256
+  %call5 = call <64 x i32> @vmin_i(<64 x i32> %10, <64 x i32> %11)
+  store <64 x i32> %call5, <64 x i32>* %dspvi32_dst, align 256
+  %12 = load <256 x i8>* %dspvi8_a, align 256
+  %call6 = call <256 x i8> @vsum_c(<256 x i8> %12)
+  store <256 x i8> %call6, <256 x i8>* %dspvi8_dst, align 256
+  %13 = load <128 x i16>* %dspvi16_a, align 256
+  %call7 = call <128 x i16> @vsum_s(<128 x i16> %13)
+  store <128 x i16> %call7, <128 x i16>* %dspvi16_dst, align 256
+  %14 = load <64 x i32>* %dspvi32_a, align 256
+  %call8 = call <64 x i32> @vsum_i(<64 x i32> %14)
+  store <64 x i32> %call8, <64 x i32>* %dspvi32_dst, align 256
+  %15 = load <256 x i8>* %dspvi8_a, align 256
+  %call9 = call <256 x i8> @vnot_c(<256 x i8> %15)
+  store <256 x i8> %call9, <256 x i8>* %dspvi8_dst, align 256
+  %16 = load <256 x i8>* %dspvi8_a, align 256
+  %17 = load <256 x i8>* %dspvi8_b, align 256
+  %call10 = call <256 x i8> @vand_c(<256 x i8> %16, <256 x i8> %17)
+  store <256 x i8> %call10, <256 x i8>* %dspvi8_dst, align 256
+  %18 = load <256 x i8>* %dspvi8_a, align 256
+  %19 = load <256 x i8>* %dspvi8_b, align 256
+  %call11 = call <256 x i8> @vor_c(<256 x i8> %18, <256 x i8> %19)
+  store <256 x i8> %call11, <256 x i8>* %dspvi8_dst, align 256
+  %20 = load <256 x i8>* %dspvi8_a, align 256
+  %21 = load <256 x i8>* %dspvi8_b, align 256
+  %call12 = call <256 x i8> @vxor_c(<256 x i8> %20, <256 x i8> %21)
+  store <256 x i8> %call12, <256 x i8>* %dspvi8_dst, align 256
+  %22 = load <256 x i8>* %dspvi8_a, align 256
+  %23 = load i32* %int_b, align 4
+  %call13 = call <256 x i8> @vmovcv2v_c(<256 x i8> %22, i32 %23)
+  store <256 x i8> %call13, <256 x i8>* %dspvi8_dst, align 256
+  %24 = load <128 x i16>* %dspvi16_a, align 256
+  %25 = load <128 x i16>* %dspvi16_b, align 256
+  %call14 = call <128 x i16> @vltl_s(<128 x i16> %24, <128 x i16> %25)
+  store <128 x i16> %call14, <128 x i16>* %dspvi16_dst, align 256
+  %26 = load <128 x i16>* %dspvi16_a, align 256
+  %27 = load <128 x i16>* %dspvi16_b, align 256
+  %call15 = call <128 x i16> @vlth_s(<128 x i16> %26, <128 x i16> %27)
+  store <128 x i16> %call15, <128 x i16>* %dspvi16_dst, align 256
+  %28 = load i32* %int_a, align 4
+  %29 = load i32* %int_b, align 4
+  %call16 = call i32 @loadu_c(i32 %28, i32 %29)
+  store i32 %call16, i32* %int_dst, align 4
+  %30 = load i32* %int_a, align 4
+  %31 = load i32* %int_b, align 4
+  %call17 = call i32 @loadu_s(i32 %30, i32 %31)
+  store i32 %call17, i32* %int_dst, align 4
+  %32 = load i32* %int_a, align 4
+  %33 = load i32* %int_b, align 4
+  %call18 = call i32 @loadu_i(i32 %32, i32 %33)
+  store i32 %call18, i32* %int_dst, align 4
+  %34 = load i32* %int_a, align 4
+  %35 = load i32* %int_b, align 4
+  %call19 = call i32 @loado_s(i32 %34, i32 %35)
+  store i32 %call19, i32* %int_dst, align 4
+  %36 = load i32* %int_a, align 4
+  %37 = load i32* %int_b, align 4
+  %call20 = call i32 @loado_i(i32 %36, i32 %37)
+  store i32 %call20, i32* %int_dst, align 4
+  %38 = load i32* %int_a, align 4
+  %39 = load i32* %int_b, align 4
+  %call21 = call i32 @storeo_s(i32 %38, i32 %39)
+  store i32 %call21, i32* %int_dst, align 4
+  %40 = load i32* %int_a, align 4
+  %41 = load i32* %int_b, align 4
+  %call22 = call i32 @storeo_i(i32 %40, i32 %41)
+  store i32 %call22, i32* %int_dst, align 4
+  %42 = load <256 x i8>* %dspvi8_a, align 256
+  %43 = load <256 x i8>* %dspvi8_b, align 256
+  %call23 = call <256 x i8> @veq_c(<256 x i8> %42, <256 x i8> %43)
+  store <256 x i8> %call23, <256 x i8>* %dspvi8_dst, align 256
+  %44 = load <128 x i16>* %dspvi16_a, align 256
+  %45 = load <128 x i16>* %dspvi16_b, align 256
+  %call24 = call <128 x i16> @veq_s(<128 x i16> %44, <128 x i16> %45)
+  store <128 x i16> %call24, <128 x i16>* %dspvi16_dst, align 256
+  %46 = load <64 x i32>* %dspvi32_a, align 256
+  %47 = load <64 x i32>* %dspvi32_b, align 256
+  %call25 = call <64 x i32> @veq_i(<64 x i32> %46, <64 x i32> %47)
+  store <64 x i32> %call25, <64 x i32>* %dspvi32_dst, align 256
+  %48 = load <256 x i8>* %dspvi8_a, align 256
+  %49 = load <256 x i8>* %dspvi8_b, align 256
+  %call26 = call <256 x i8> @vgt_c(<256 x i8> %48, <256 x i8> %49)
+  store <256 x i8> %call26, <256 x i8>* %dspvi8_dst, align 256
+  %50 = load <128 x i16>* %dspvi16_a, align 256
+  %51 = load <128 x i16>* %dspvi16_b, align 256
+  %call27 = call <128 x i16> @vgt_s(<128 x i16> %50, <128 x i16> %51)
+  store <128 x i16> %call27, <128 x i16>* %dspvi16_dst, align 256
+  %52 = load <64 x i32>* %dspvi32_a, align 256
+  %53 = load <64 x i32>* %dspvi32_b, align 256
+  %call28 = call <64 x i32> @vgt_i(<64 x i32> %52, <64 x i32> %53)
+  store <64 x i32> %call28, <64 x i32>* %dspvi32_dst, align 256
+  %54 = load <256 x i8>* %dspvi8_a, align 256
+  %55 = load <256 x i8>* %dspvi8_b, align 256
+  %call29 = call <256 x i8> @vlt_c(<256 x i8> %54, <256 x i8> %55)
+  store <256 x i8> %call29, <256 x i8>* %dspvi8_dst, align 256
+  %56 = load <128 x i16>* %dspvi16_a, align 256
+  %57 = load <128 x i16>* %dspvi16_b, align 256
+  %call30 = call <128 x i16> @vlt_s(<128 x i16> %56, <128 x i16> %57)
+  store <128 x i16> %call30, <128 x i16>* %dspvi16_dst, align 256
+  %58 = load <64 x i32>* %dspvi32_a, align 256
+  %59 = load <64 x i32>* %dspvi32_b, align 256
+  %call31 = call <64 x i32> @vlt_i(<64 x i32> %58, <64 x i32> %59)
+  store <64 x i32> %call31, <64 x i32>* %dspvi32_dst, align 256
+  %60 = load <256 x i8>* %dspvi8_a, align 256
+  %61 = load <256 x i8>* %dspvi8_b, align 256
+  %call32 = call <256 x i8> @vge_c(<256 x i8> %60, <256 x i8> %61)
+  store <256 x i8> %call32, <256 x i8>* %dspvi8_dst, align 256
+  %62 = load <128 x i16>* %dspvi16_a, align 256
+  %63 = load <128 x i16>* %dspvi16_b, align 256
+  %call33 = call <128 x i16> @vge_s(<128 x i16> %62, <128 x i16> %63)
+  store <128 x i16> %call33, <128 x i16>* %dspvi16_dst, align 256
+  %64 = load <64 x i32>* %dspvi32_a, align 256
+  %65 = load <64 x i32>* %dspvi32_b, align 256
+  %call34 = call <64 x i32> @vge_i(<64 x i32> %64, <64 x i32> %65)
+  store <64 x i32> %call34, <64 x i32>* %dspvi32_dst, align 256
+  %66 = load <256 x i8>* %dspvi8_a, align 256
+  %67 = load <256 x i8>* %dspvi8_b, align 256
+  %call35 = call <256 x i8> @vle_c(<256 x i8> %66, <256 x i8> %67)
+  store <256 x i8> %call35, <256 x i8>* %dspvi8_dst, align 256
+  %68 = load <128 x i16>* %dspvi16_a, align 256
+  %69 = load <128 x i16>* %dspvi16_b, align 256
+  %call36 = call <128 x i16> @vle_s(<128 x i16> %68, <128 x i16> %69)
+  store <128 x i16> %call36, <128 x i16>* %dspvi16_dst, align 256
+  %70 = load <64 x i32>* %dspvi32_a, align 256
+  %71 = load <64 x i32>* %dspvi32_b, align 256
+  %call37 = call <64 x i32> @vle_i(<64 x i32> %70, <64 x i32> %71)
+  store <64 x i32> %call37, <64 x i32>* %dspvi32_dst, align 256
+  %72 = load <256 x i8>* %dspvi8_a, align 256
+  %73 = load <256 x i8>* %dspvi8_b, align 256
+  %call38 = call <256 x i8> @vadd_c(<256 x i8> %72, <256 x i8> %73)
+  store <256 x i8> %call38, <256 x i8>* %dspvi8_dst, align 256
+  %74 = load <128 x i16>* %dspvi16_a, align 256
+  %75 = load <128 x i16>* %dspvi16_b, align 256
+  %call39 = call <128 x i16> @vadd_s(<128 x i16> %74, <128 x i16> %75)
+  store <128 x i16> %call39, <128 x i16>* %dspvi16_dst, align 256
+  %76 = load <64 x i32>* %dspvi32_a, align 256
+  %77 = load <64 x i32>* %dspvi32_b, align 256
+  %call40 = call <64 x i32> @vadd_i(<64 x i32> %76, <64 x i32> %77)
+  store <64 x i32> %call40, <64 x i32>* %dspvi32_dst, align 256
+  %78 = load <256 x i8>* %dspvi8_a, align 256
+  %79 = load <256 x i8>* %dspvi8_b, align 256
+  %call41 = call <256 x i8> @vsub_c(<256 x i8> %78, <256 x i8> %79)
+  store <256 x i8> %call41, <256 x i8>* %dspvi8_dst, align 256
+  %80 = load <128 x i16>* %dspvi16_a, align 256
+  %81 = load <128 x i16>* %dspvi16_b, align 256
+  %call42 = call <128 x i16> @vsub_s(<128 x i16> %80, <128 x i16> %81)
+  store <128 x i16> %call42, <128 x i16>* %dspvi16_dst, align 256
+  %82 = load <64 x i32>* %dspvi32_a, align 256
+  %83 = load <64 x i32>* %dspvi32_b, align 256
+  %call43 = call <64 x i32> @vsub_i(<64 x i32> %82, <64 x i32> %83)
+  store <64 x i32> %call43, <64 x i32>* %dspvi32_dst, align 256
+  %84 = load <256 x i8>* %dspvi8_a, align 256
+  %85 = load <256 x i8>* %dspvi8_b, align 256
+  %call44 = call <256 x i8> @vsl_c(<256 x i8> %84, <256 x i8> %85)
+  store <256 x i8> %call44, <256 x i8>* %dspvi8_dst, align 256
+  %86 = load <128 x i16>* %dspvi16_a, align 256
+  %87 = load <128 x i16>* %dspvi16_b, align 256
+  %call45 = call <128 x i16> @vsl_s(<128 x i16> %86, <128 x i16> %87)
+  store <128 x i16> %call45, <128 x i16>* %dspvi16_dst, align 256
+  %88 = load <64 x i32>* %dspvi32_a, align 256
+  %89 = load <64 x i32>* %dspvi32_b, align 256
+  %call46 = call <64 x i32> @vsl_i(<64 x i32> %88, <64 x i32> %89)
+  store <64 x i32> %call46, <64 x i32>* %dspvi32_dst, align 256
+  %90 = load <256 x i8>* %dspvi8_a, align 256
+  %91 = load <256 x i8>* %dspvi8_b, align 256
+  %call47 = call <256 x i8> @vsls_c(<256 x i8> %90, <256 x i8> %91)
+  store <256 x i8> %call47, <256 x i8>* %dspvi8_dst, align 256
+  %92 = load <128 x i16>* %dspvi16_a, align 256
+  %93 = load <128 x i16>* %dspvi16_b, align 256
+  %call48 = call <128 x i16> @vsls_s(<128 x i16> %92, <128 x i16> %93)
+  store <128 x i16> %call48, <128 x i16>* %dspvi16_dst, align 256
+  %94 = load <64 x i32>* %dspvi32_a, align 256
+  %95 = load <64 x i32>* %dspvi32_b, align 256
+  %call49 = call <64 x i32> @vsls_i(<64 x i32> %94, <64 x i32> %95)
+  store <64 x i32> %call49, <64 x i32>* %dspvi32_dst, align 256
+  %96 = load <256 x i8>* %dspvi8_a, align 256
+  %97 = load <256 x i8>* %dspvi8_b, align 256
+  %call50 = call <256 x i8> @vsra_c(<256 x i8> %96, <256 x i8> %97)
+  store <256 x i8> %call50, <256 x i8>* %dspvi8_dst, align 256
+  %98 = load <128 x i16>* %dspvi16_a, align 256
+  %99 = load <128 x i16>* %dspvi16_b, align 256
+  %call51 = call <128 x i16> @vsra_s(<128 x i16> %98, <128 x i16> %99)
+  store <128 x i16> %call51, <128 x i16>* %dspvi16_dst, align 256
+  %100 = load <64 x i32>* %dspvi32_a, align 256
+  %101 = load <64 x i32>* %dspvi32_b, align 256
+  %call52 = call <64 x i32> @vsra_i(<64 x i32> %100, <64 x i32> %101)
+  store <64 x i32> %call52, <64 x i32>* %dspvi32_dst, align 256
+  %102 = load <256 x i8>* %dspvi8_a, align 256
+  %103 = load <256 x i8>* %dspvi8_b, align 256
+  %call53 = call <256 x i8> @vsrl_c(<256 x i8> %102, <256 x i8> %103)
+  store <256 x i8> %call53, <256 x i8>* %dspvi8_dst, align 256
+  %104 = load <128 x i16>* %dspvi16_a, align 256
+  %105 = load <128 x i16>* %dspvi16_b, align 256
+  %call54 = call <128 x i16> @vsrl_s(<128 x i16> %104, <128 x i16> %105)
+  store <128 x i16> %call54, <128 x i16>* %dspvi16_dst, align 256
+  %106 = load <64 x i32>* %dspvi32_a, align 256
+  %107 = load <64 x i32>* %dspvi32_b, align 256
+  %call55 = call <64 x i32> @vsrl_i(<64 x i32> %106, <64 x i32> %107)
+  store <64 x i32> %call55, <64 x i32>* %dspvi32_dst, align 256
+  %108 = load <256 x i8>* %dspvi8_a, align 256
+  %call56 = call <256 x i8> @vabs_c(<256 x i8> %108)
+  store <256 x i8> %call56, <256 x i8>* %dspvi8_dst, align 256
+  %109 = load <128 x i16>* %dspvi16_a, align 256
+  %call57 = call <128 x i16> @vabs_s(<128 x i16> %109)
+  store <128 x i16> %call57, <128 x i16>* %dspvi16_dst, align 256
+  %110 = load <64 x i32>* %dspvi32_a, align 256
+  %call58 = call <64 x i32> @vabs_i(<64 x i32> %110)
+  store <64 x i32> %call58, <64 x i32>* %dspvi32_dst, align 256
+  %111 = load <256 x i8>* %dspvi8_a, align 256
+  %112 = load <256 x i8>* %dspvi8_b, align 256
+  %call59 = call <256 x i8> @vfmul_c(<256 x i8> %111, <256 x i8> %112)
+  store <256 x i8> %call59, <256 x i8>* %dspvi8_dst, align 256
+  %113 = load <128 x i16>* %dspvi16_a, align 256
+  %114 = load <128 x i16>* %dspvi16_b, align 256
+  %call60 = call <128 x i16> @vfmul_s(<128 x i16> %113, <128 x i16> %114)
+  store <128 x i16> %call60, <128 x i16>* %dspvi16_dst, align 256
+  %115 = load <64 x i32>* %dspvi32_a, align 256
+  %116 = load <64 x i32>* %dspvi32_b, align 256
+  %call61 = call <64 x i32> @vfmul_i(<64 x i32> %115, <64 x i32> %116)
+  store <64 x i32> %call61, <64 x i32>* %dspvi32_dst, align 256
+  %117 = load <256 x i8>* %dspvi8_a, align 256
+  %118 = load <256 x i8>* %dspvi8_b, align 256
+  %call62 = call <256 x i8> @vfmac_c(<256 x i8> %117, <256 x i8> %118)
+  store <256 x i8> %call62, <256 x i8>* %dspvi8_dst, align 256
+  %119 = load <128 x i16>* %dspvi16_a, align 256
+  %120 = load <128 x i16>* %dspvi16_b, align 256
+  %call63 = call <128 x i16> @vfmac_s(<128 x i16> %119, <128 x i16> %120)
+  store <128 x i16> %call63, <128 x i16>* %dspvi16_dst, align 256
+  %121 = load <64 x i32>* %dspvi32_a, align 256
+  %122 = load <64 x i32>* %dspvi32_b, align 256
+  %call64 = call <64 x i32> @vfmac_i(<64 x i32> %121, <64 x i32> %122)
+  store <64 x i32> %call64, <64 x i32>* %dspvi32_dst, align 256
+  %123 = load <256 x i8>* %dspvi8_a, align 256
+  %124 = load <256 x i8>* %dspvi8_b, align 256
+  %call65 = call <256 x i8> @vcmac_c(<256 x i8> %123, <256 x i8> %124)
+  store <256 x i8> %call65, <256 x i8>* %dspvi8_dst, align 256
+  %125 = load <128 x i16>* %dspvi16_a, align 256
+  %126 = load <128 x i16>* %dspvi16_b, align 256
+  %call66 = call <128 x i16> @vcmac_s(<128 x i16> %125, <128 x i16> %126)
+  store <128 x i16> %call66, <128 x i16>* %dspvi16_dst, align 256
+  %127 = load <128 x i16>* %dspvi16_a, align 256
+  %128 = load <128 x i16>* %dspvi16_b, align 256
+  %call67 = call <128 x i16> @vcmul_c(<128 x i16> %127, <128 x i16> %128)
+  store <128 x i16> %call67, <128 x i16>* %dspvi16_dst, align 256
+  %129 = load <64 x i32>* %dspvi32_a, align 256
+  %130 = load <64 x i32>* %dspvi32_b, align 256
+  %call68 = call <64 x i32> @vcmulr_i(<64 x i32> %129, <64 x i32> %130)
+  store <64 x i32> %call68, <64 x i32>* %dspvi32_dst, align 256
+  %131 = load <64 x i32>* %dspvi32_a, align 256
+  %132 = load <64 x i32>* %dspvi32_b, align 256
+  %call69 = call <64 x i32> @vcmuli_i(<64 x i32> %131, <64 x i32> %132)
+  store <64 x i32> %call69, <64 x i32>* %dspvi32_dst, align 256
+  %133 = load i32* %int_a, align 4
+  %134 = load i32* %int_b, align 4
+  %call70 = call <256 x i8> @vloadr_c(i32 %133, i32 %134)
+  store <256 x i8> %call70, <256 x i8>* %dspvi8_dst, align 256
+  %135 = load i32* %int_a, align 4
+  %136 = load i32* %int_b, align 4
+  %call71 = call <128 x i16> @vloadr_s(i32 %135, i32 %136)
+  store <128 x i16> %call71, <128 x i16>* %dspvi16_dst, align 256
+  %137 = load i32* %int_a, align 4
+  %138 = load i32* %int_b, align 4
+  %call72 = call <64 x i32> @vloadr_i(i32 %137, i32 %138)
+  store <64 x i32> %call72, <64 x i32>* %dspvi32_dst, align 256
+  %139 = load i32* %int_a, align 4
+  %140 = load i32* %int_b, align 4
+  %call73 = call <256 x i8> @vloadu_c(i32 %139, i32 %140)
+  store <256 x i8> %call73, <256 x i8>* %dspvi8_dst, align 256
+  %141 = load i32* %int_a, align 4
+  %142 = load i32* %int_b, align 4
+  %call74 = call <128 x i16> @vloadu_s(i32 %141, i32 %142)
+  store <128 x i16> %call74, <128 x i16>* %dspvi16_dst, align 256
+  %143 = load i32* %int_a, align 4
+  %144 = load i32* %int_b, align 4
+  %call75 = call <64 x i32> @vloadu_i(i32 %143, i32 %144)
+  store <64 x i32> %call75, <64 x i32>* %dspvi32_dst, align 256
+  %145 = load i32* %int_a, align 4
+  %146 = load i32* %int_b, align 4
+  %call76 = call <256 x i8> @vloadur_c(i32 %145, i32 %146)
+  store <256 x i8> %call76, <256 x i8>* %dspvi8_dst, align 256
+  %147 = load i32* %int_a, align 4
+  %148 = load i32* %int_b, align 4
+  %call77 = call <128 x i16> @vloadur_s(i32 %147, i32 %148)
+  store <128 x i16> %call77, <128 x i16>* %dspvi16_dst, align 256
+  %149 = load i32* %int_a, align 4
+  %150 = load i32* %int_b, align 4
+  %call78 = call <64 x i32> @vloadur_i(i32 %149, i32 %150)
+  store <64 x i32> %call78, <64 x i32>* %dspvi32_dst, align 256
+  %151 = load i32* %int_a, align 4
+  %152 = load i32* %int_b, align 4
+  %call79 = call <256 x i8> @storeu_c(i32 %151, i32 %152)
+  store <256 x i8> %call79, <256 x i8>* %dspvi8_dst, align 256
+  %153 = load i32* %int_a, align 4
+  %154 = load i32* %int_b, align 4
+  %call80 = call <128 x i16> @storeu_s(i32 %153, i32 %154)
+  store <128 x i16> %call80, <128 x i16>* %dspvi16_dst, align 256
+  %155 = load i32* %int_a, align 4
+  %156 = load i32* %int_b, align 4
+  %call81 = call <64 x i32> @storeu_i(i32 %155, i32 %156)
+  store <64 x i32> %call81, <64 x i32>* %dspvi32_dst, align 256
+  %157 = load i32* %int_a, align 4
+  %158 = load i32* %int_b, align 4
+  %159 = load i32* %int_c, align 4
+  call void @storeu_void_c(i32 %157, i32 %158, i32 %159)
+  %160 = load i32* %int_a, align 4
+  %161 = load i32* %int_b, align 4
+  %162 = load i32* %int_c, align 4
+  call void @storeu_void_s(i32 %160, i32 %161, i32 %162)
+  %163 = load i32* %int_a, align 4
+  %164 = load i32* %int_b, align 4
+  %165 = load i32* %int_c, align 4
+  call void @storeu_void_i(i32 %163, i32 %164, i32 %165)
+  %166 = load i32* %int_a, align 4
+  %167 = load i32* %int_b, align 4
+  %call82 = call <256 x i8> @vstoreu_c(i32 %166, i32 %167)
+  store <256 x i8> %call82, <256 x i8>* %dspvi8_dst, align 256
+  %168 = load i32* %int_a, align 4
+  %169 = load i32* %int_b, align 4
+  %call83 = call <128 x i16> @vstoreu_s(i32 %168, i32 %169)
+  store <128 x i16> %call83, <128 x i16>* %dspvi16_dst, align 256
+  %170 = load i32* %int_a, align 4
+  %171 = load i32* %int_b, align 4
+  %call84 = call <64 x i32> @vstoreu_i(i32 %170, i32 %171)
+  store <64 x i32> %call84, <64 x i32>* %dspvi32_dst, align 256
+  %172 = load i32* %int_a, align 4
+  %173 = load i32* %int_b, align 4
+  %call85 = call <64 x i32> @loadvh_i(i32 %172, i32 %173)
+  store <64 x i32> %call85, <64 x i32>* %dspvi32_dst, align 256
+  %174 = load i32* %int_a, align 4
+  %175 = load i32* %int_b, align 4
+  %call86 = call <64 x i32> @loadvl_i(i32 %174, i32 %175)
+  store <64 x i32> %call86, <64 x i32>* %dspvi32_dst, align 256
+  %176 = load i32* %int_a, align 4
+  %177 = load i32* %int_b, align 4
+  %call87 = call <64 x i32> @storevh_i(i32 %176, i32 %177)
+  store <64 x i32> %call87, <64 x i32>* %dspvi32_dst, align 256
+  %178 = load i32* %int_a, align 4
+  %179 = load i32* %int_b, align 4
+  %call88 = call <64 x i32> @storevl_i(i32 %178, i32 %179)
+  store <64 x i32> %call88, <64 x i32>* %dspvi32_dst, align 256
+  %180 = load i32* %int_a, align 4
+  %181 = load i32* %int_b, align 4
+  %call89 = call <64 x i32> @loaduvh_i(i32 %180, i32 %181)
+  store <64 x i32> %call89, <64 x i32>* %dspvi32_dst, align 256
+  %182 = load i32* %int_a, align 4
+  %183 = load i32* %int_b, align 4
+  %call90 = call <64 x i32> @loaduvl_i(i32 %182, i32 %183)
+  store <64 x i32> %call90, <64 x i32>* %dspvi32_dst, align 256
+  %184 = load i32* %int_a, align 4
+  %185 = load i32* %int_b, align 4
+  %call91 = call <64 x i32> @storeuvh_i(i32 %184, i32 %185)
+  store <64 x i32> %call91, <64 x i32>* %dspvi32_dst, align 256
+  %186 = load i32* %int_a, align 4
+  %187 = load i32* %int_b, align 4
+  %call92 = call <64 x i32> @storeuvl_i(i32 %186, i32 %187)
+  store <64 x i32> %call92, <64 x i32>* %dspvi32_dst, align 256
+  %188 = load i32* %int_a, align 4
+  %189 = load i32* %int_b, align 4
+  %call93 = call <256 x i8> @vloado_c(i32 %188, i32 %189)
+  store <256 x i8> %call93, <256 x i8>* %dspvi8_dst, align 256
+  %190 = load i32* %int_a, align 4
+  %191 = load i32* %int_b, align 4
+  %call94 = call <128 x i16> @vloado_s(i32 %190, i32 %191)
+  store <128 x i16> %call94, <128 x i16>* %dspvi16_dst, align 256
+  %192 = load i32* %int_a, align 4
+  %193 = load i32* %int_b, align 4
+  %call95 = call <64 x i32> @vloado_i(i32 %192, i32 %193)
+  store <64 x i32> %call95, <64 x i32>* %dspvi32_dst, align 256
+  %194 = load i32* %int_a, align 4
+  %195 = load i32* %int_b, align 4
+  %call96 = call <256 x i8> @vstoreo_c(i32 %194, i32 %195)
+  store <256 x i8> %call96, <256 x i8>* %dspvi8_dst, align 256
+  %196 = load i32* %int_a, align 4
+  %197 = load i32* %int_b, align 4
+  %call97 = call <128 x i16> @vstoreo_s(i32 %196, i32 %197)
+  store <128 x i16> %call97, <128 x i16>* %dspvi16_dst, align 256
+  %198 = load i32* %int_a, align 4
+  %199 = load i32* %int_b, align 4
+  %call98 = call <64 x i32> @vstoreo_i(i32 %198, i32 %199)
+  store <64 x i32> %call98, <64 x i32>* %dspvi32_dst, align 256
+  %200 = load i32* %int_a, align 4
+  %call99 = call i32 @abs_qb(i32 %200)
+  store i32 %call99, i32* %int_dst, align 4
+  %201 = load i32* %int_a, align 4
+  %call100 = call i32 @test_qb(i32 %201)
+  store i32 %call100, i32* %int_dst, align 4
+  %202 = load i32* %int_a, align 4
+  %call101 = call i32 @testi_qb(i32 %202)
+  store i32 %call101, i32* %int_dst, align 4
+  %203 = load i32* %int_a, align 4
+  %call102 = call i32 @cbw_qb(i32 %203)
+  store i32 %call102, i32* %int_dst, align 4
+  %204 = load i32* %int_a, align 4
+  %call103 = call i32 @chw_qb(i32 %204)
+  store i32 %call103, i32* %int_dst, align 4
+  %205 = load i32* %int_a, align 4
+  %206 = load i32* %int_b, align 4
+  %207 = load i32* %int_c, align 4
+  %call104 = call i32 @bfext_qb(i32 %205, i32 %206, i32 %207)
+  store i32 %call104, i32* %int_dst, align 4
+  %208 = load i32* %int_a, align 4
+  %209 = load i32* %int_b, align 4
+  %210 = load i32* %int_c, align 4
+  %call105 = call i32 @bfextu_qb(i32 %208, i32 %209, i32 %210)
+  store i32 %call105, i32* %int_dst, align 4
+  %211 = load i32* %int_a, align 4
+  %212 = load i32* %int_b, align 4
+  %213 = load i32* %int_c, align 4
+  %call106 = call i32 @bfst_qb(i32 %211, i32 %212, i32 %213)
+  store i32 %call106, i32* %int_dst, align 4
+  %214 = load i32* %int_a, align 4
+  %call107 = call i32 @bst_qb(i32 %214)
+  store i32 %call107, i32* %int_dst, align 4
+  %215 = load i32* %int_a, align 4
+  %call108 = call i32 @bclr_qb(i32 %215)
+  store i32 %call108, i32* %int_dst, align 4
+  %216 = load i32* %int_a, align 4
+  %217 = load i32* %int_b, align 4
+  %call109 = call i32 @max_qb(i32 %216, i32 %217)
+  store i32 %call109, i32* %int_dst, align 4
+  %218 = load i32* %int_a, align 4
+  %219 = load i32* %int_b, align 4
+  %call110 = call i32 @mim_qb(i32 %218, i32 %219)
+  store i32 %call110, i32* %int_dst, align 4
+  %220 = load i32* %int_a, align 4
+  %call111 = call i32 @not_qb(i32 %220)
+  store i32 %call111, i32* %int_dst, align 4
+  ret void
+}
+
+declare <256 x i8> @vmax_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vmax_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vmax_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vmin_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vmin_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vmin_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vsum_c(<256 x i8>) #1
+
+declare <128 x i16> @vsum_s(<128 x i16>) #1
+
+declare <64 x i32> @vsum_i(<64 x i32>) #1
+
+declare <256 x i8> @vnot_c(<256 x i8>) #1
+
+declare <256 x i8> @vand_c(<256 x i8>, <256 x i8>) #1
+
+declare <256 x i8> @vor_c(<256 x i8>, <256 x i8>) #1
+
+declare <256 x i8> @vxor_c(<256 x i8>, <256 x i8>) #1
+
+declare <256 x i8> @vmovcv2v_c(<256 x i8>, i32) #1
+
+declare <128 x i16> @vltl_s(<128 x i16>, <128 x i16>) #1
+
+declare <128 x i16> @vlth_s(<128 x i16>, <128 x i16>) #1
+
+declare i32 @loadu_c(i32, i32) #1
+
+declare i32 @loadu_s(i32, i32) #1
+
+declare i32 @loadu_i(i32, i32) #1
+
+declare i32 @loado_s(i32, i32) #1
+
+declare i32 @loado_i(i32, i32) #1
+
+declare i32 @storeo_s(i32, i32) #1
+
+declare i32 @storeo_i(i32, i32) #1
+
+declare <256 x i8> @veq_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @veq_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @veq_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vgt_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vgt_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vgt_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vlt_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vlt_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vlt_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vge_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vge_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vge_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vle_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vle_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vle_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vadd_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vadd_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vadd_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vsub_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vsub_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vsub_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vsl_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vsl_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vsl_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vsls_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vsls_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vsls_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vsra_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vsra_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vsra_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vsrl_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vsrl_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vsrl_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vabs_c(<256 x i8>) #1
+
+declare <128 x i16> @vabs_s(<128 x i16>) #1
+
+declare <64 x i32> @vabs_i(<64 x i32>) #1
+
+declare <256 x i8> @vfmul_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vfmul_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vfmul_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vfmac_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vfmac_s(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vfmac_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vcmac_c(<256 x i8>, <256 x i8>) #1
+
+declare <128 x i16> @vcmac_s(<128 x i16>, <128 x i16>) #1
+
+declare <128 x i16> @vcmul_c(<128 x i16>, <128 x i16>) #1
+
+declare <64 x i32> @vcmulr_i(<64 x i32>, <64 x i32>) #1
+
+declare <64 x i32> @vcmuli_i(<64 x i32>, <64 x i32>) #1
+
+declare <256 x i8> @vloadr_c(i32, i32) #1
+
+declare <128 x i16> @vloadr_s(i32, i32) #1
+
+declare <64 x i32> @vloadr_i(i32, i32) #1
+
+declare <256 x i8> @vloadu_c(i32, i32) #1
+
+declare <128 x i16> @vloadu_s(i32, i32) #1
+
+declare <64 x i32> @vloadu_i(i32, i32) #1
+
+declare <256 x i8> @vloadur_c(i32, i32) #1
+
+declare <128 x i16> @vloadur_s(i32, i32) #1
+
+declare <64 x i32> @vloadur_i(i32, i32) #1
+
+declare <256 x i8> @storeu_c(i32, i32) #1
+
+declare <128 x i16> @storeu_s(i32, i32) #1
+
+declare <64 x i32> @storeu_i(i32, i32) #1
+
+declare void @storeu_void_c(i32, i32, i32) #1
+
+declare void @storeu_void_s(i32, i32, i32) #1
+
+declare void @storeu_void_i(i32, i32, i32) #1
+
+declare <256 x i8> @vstoreu_c(i32, i32) #1
+
+declare <128 x i16> @vstoreu_s(i32, i32) #1
+
+declare <64 x i32> @vstoreu_i(i32, i32) #1
+
+declare <64 x i32> @loadvh_i(i32, i32) #1
+
+declare <64 x i32> @loadvl_i(i32, i32) #1
+
+declare <64 x i32> @storevh_i(i32, i32) #1
+
+declare <64 x i32> @storevl_i(i32, i32) #1
+
+declare <64 x i32> @loaduvh_i(i32, i32) #1
+
+declare <64 x i32> @loaduvl_i(i32, i32) #1
+
+declare <64 x i32> @storeuvh_i(i32, i32) #1
+
+declare <64 x i32> @storeuvl_i(i32, i32) #1
+
+declare <256 x i8> @vloado_c(i32, i32) #1
+
+declare <128 x i16> @vloado_s(i32, i32) #1
+
+declare <64 x i32> @vloado_i(i32, i32) #1
+
+declare <256 x i8> @vstoreo_c(i32, i32) #1
+
+declare <128 x i16> @vstoreo_s(i32, i32) #1
+
+declare <64 x i32> @vstoreo_i(i32, i32) #1
+
+declare i32 @abs_qb(i32) #1
+
+declare i32 @test_qb(i32) #1
+
+declare i32 @testi_qb(i32) #1
+
+declare i32 @cbw_qb(i32) #1
+
+declare i32 @chw_qb(i32) #1
+
+declare i32 @bfext_qb(i32, i32, i32) #1
+
+declare i32 @bfextu_qb(i32, i32, i32) #1
+
+declare i32 @bfst_qb(i32, i32, i32) #1
+
+declare i32 @bst_qb(i32) #1
+
+declare i32 @bclr_qb(i32) #1
+
+declare i32 @max_qb(i32, i32) #1
+
+declare i32 @mim_qb(i32, i32) #1
+
+declare i32 @not_qb(i32) #1
+
+; Function Attrs: nounwind
+define i32 @main() #0 {
+entry:
+  %retval = alloca i32, align 4
+  store i32 0, i32* %retval
+  call void @SIMD_Intrinsic_Testcase0()
+  ret i32 0
+}
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}

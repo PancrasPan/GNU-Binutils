@@ -1,0 +1,45 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name bump_notaddi.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/bump_notaddi.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/bump_notaddi.ll -x c ./testcase_8slots/bump_notaddi.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function add: SSA
+
+BB#0: derived from LLVM BB %entry
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#0 BB#1
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+# End machine code for function add.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function add: SSA
+
+BB#0: derived from LLVM BB %entry
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#0 BB#1
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+# End machine code for function add.
+

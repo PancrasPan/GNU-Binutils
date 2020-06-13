@@ -1,0 +1,63 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg1
+	%vreg2<def,tied1> = MovIGL %vreg1<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg2,%vreg1
+	%vreg3<def> = LD %vreg2<kill>, 0; mem:LD4[@a] CPURegs:%vreg3,%vreg2
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg4<def> = MovIGH %ZERO, <ga:@c>[TF=3]; CPURegs:%vreg4
+	%vreg5<def,tied1> = MovIGL %vreg4<tied0>, <ga:@c>[TF=4]; CPURegs:%vreg5,%vreg4
+	%vreg6<def> = COPY %SP; CPURegs:%vreg6
+	ST %vreg5<kill>, %vreg6, 8; mem:ST4[<unknown>] CPURegs:%vreg5,%vreg6
+	%vreg7<def> = MovIGH %ZERO, <ga:@b>[TF=3]; CPURegs:%vreg7
+	%vreg8<def,tied1> = MovIGL %vreg7<tied0>, <ga:@b>[TF=4]; CPURegs:%vreg8,%vreg7
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg8; CPURegs:%vreg8
+	CALL <ga:@outFunct>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg9<def> = COPY %V0; CPURegs:%vreg9
+	ST %vreg9, %vreg8, 0; mem:ST4[@b] CPURegs:%vreg9,%vreg8
+	%V0<def> = COPY %vreg9; CPURegs:%vreg9
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg1
+	%vreg2<def,tied1> = MovIGL %vreg1<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg2,%vreg1
+	%vreg3<def> = LD %vreg2<kill>, 0; mem:LD4[@a] CPURegs:%vreg3,%vreg2
+	ADJCALLSTACKDOWN 16, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg4<def> = MovIGH %ZERO, <ga:@c>[TF=3]; CPURegs:%vreg4
+	%vreg5<def,tied1> = MovIGL %vreg4<tied0>, <ga:@c>[TF=4]; CPURegs:%vreg5,%vreg4
+	%vreg6<def> = COPY %SP; CPURegs:%vreg6
+	ST %vreg5<kill>, %vreg6, 8; mem:ST4[<unknown>] CPURegs:%vreg5,%vreg6
+	%vreg7<def> = MovIGH %ZERO, <ga:@b>[TF=3]; CPURegs:%vreg7
+	%vreg8<def,tied1> = MovIGL %vreg7<tied0>, <ga:@b>[TF=4]; CPURegs:%vreg8,%vreg7
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg8; CPURegs:%vreg8
+	CALL <ga:@outFunct>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 16, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg9<def> = COPY %V0; CPURegs:%vreg9
+	ST %vreg9, %vreg8, 0; mem:ST4[@b] CPURegs:%vreg9,%vreg8
+	%V0<def> = COPY %vreg9; CPURegs:%vreg9
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

@@ -1,0 +1,914 @@
+; ModuleID = './testcase_8slots/SIMD_Intrinsic/SIMD_Intrinsic_Testcase.c'
+target datalayout = "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64"
+target triple = "dsp"
+
+; Function Attrs: nounwind
+define void @SIMD_Intrinsic_Testcase0() #0 {
+entry:
+  %a.addr.i194 = alloca <128 x i16>, align 256
+  %b.addr.i195 = alloca <128 x i16>, align 256
+  %a.addr.i192 = alloca <64 x i32>, align 256
+  %b.addr.i193 = alloca <64 x i32>, align 256
+  %a.addr.i190 = alloca <256 x i8>, align 256
+  %b.addr.i191 = alloca <256 x i8>, align 256
+  %a.addr.i188 = alloca <128 x i16>, align 256
+  %b.addr.i189 = alloca <128 x i16>, align 256
+  %a.addr.i186 = alloca <64 x i32>, align 256
+  %b.addr.i187 = alloca <64 x i32>, align 256
+  %a.addr.i185 = alloca <256 x i8>, align 256
+  %a.addr.i184 = alloca <128 x i16>, align 256
+  %a.addr.i183 = alloca <64 x i32>, align 256
+  %a.addr.i182 = alloca <256 x i8>, align 256
+  %a.addr.i180 = alloca <256 x i8>, align 256
+  %b.addr.i181 = alloca <256 x i8>, align 256
+  %a.addr.i178 = alloca <256 x i8>, align 256
+  %b.addr.i179 = alloca <256 x i8>, align 256
+  %a.addr.i176 = alloca <256 x i8>, align 256
+  %b.addr.i177 = alloca <256 x i8>, align 256
+  %a.addr.i174 = alloca <256 x i8>, align 256
+  %b.addr.i175 = alloca i32, align 4
+  %a.addr.i172 = alloca <128 x i16>, align 256
+  %b.addr.i173 = alloca <128 x i16>, align 256
+  %a.addr.i170 = alloca <128 x i16>, align 256
+  %b.addr.i171 = alloca <128 x i16>, align 256
+  %a.addr.i168 = alloca <256 x i8>, align 256
+  %b.addr.i169 = alloca <256 x i8>, align 256
+  %a.addr.i166 = alloca <128 x i16>, align 256
+  %b.addr.i167 = alloca <128 x i16>, align 256
+  %a.addr.i164 = alloca <64 x i32>, align 256
+  %b.addr.i165 = alloca <64 x i32>, align 256
+  %a.addr.i162 = alloca <256 x i8>, align 256
+  %b.addr.i163 = alloca <256 x i8>, align 256
+  %a.addr.i160 = alloca <128 x i16>, align 256
+  %b.addr.i161 = alloca <128 x i16>, align 256
+  %a.addr.i158 = alloca <64 x i32>, align 256
+  %b.addr.i159 = alloca <64 x i32>, align 256
+  %a.addr.i156 = alloca <256 x i8>, align 256
+  %b.addr.i157 = alloca <256 x i8>, align 256
+  %a.addr.i154 = alloca <128 x i16>, align 256
+  %b.addr.i155 = alloca <128 x i16>, align 256
+  %a.addr.i152 = alloca <64 x i32>, align 256
+  %b.addr.i153 = alloca <64 x i32>, align 256
+  %a.addr.i150 = alloca <256 x i8>, align 256
+  %b.addr.i151 = alloca <256 x i8>, align 256
+  %a.addr.i148 = alloca <128 x i16>, align 256
+  %b.addr.i149 = alloca <128 x i16>, align 256
+  %a.addr.i146 = alloca <64 x i32>, align 256
+  %b.addr.i147 = alloca <64 x i32>, align 256
+  %a.addr.i144 = alloca <256 x i8>, align 256
+  %b.addr.i145 = alloca <256 x i8>, align 256
+  %a.addr.i142 = alloca <128 x i16>, align 256
+  %b.addr.i143 = alloca <128 x i16>, align 256
+  %a.addr.i140 = alloca <64 x i32>, align 256
+  %b.addr.i141 = alloca <64 x i32>, align 256
+  %a.addr.i138 = alloca <256 x i8>, align 256
+  %b.addr.i139 = alloca <256 x i8>, align 256
+  %a.addr.i136 = alloca <128 x i16>, align 256
+  %b.addr.i137 = alloca <128 x i16>, align 256
+  %a.addr.i134 = alloca <64 x i32>, align 256
+  %b.addr.i135 = alloca <64 x i32>, align 256
+  %a.addr.i132 = alloca <256 x i8>, align 256
+  %b.addr.i133 = alloca <256 x i8>, align 256
+  %a.addr.i130 = alloca <128 x i16>, align 256
+  %b.addr.i131 = alloca <128 x i16>, align 256
+  %a.addr.i128 = alloca <64 x i32>, align 256
+  %b.addr.i129 = alloca <64 x i32>, align 256
+  %a.addr.i126 = alloca <256 x i8>, align 256
+  %b.addr.i127 = alloca <256 x i8>, align 256
+  %a.addr.i124 = alloca <128 x i16>, align 256
+  %b.addr.i125 = alloca <128 x i16>, align 256
+  %a.addr.i122 = alloca <64 x i32>, align 256
+  %b.addr.i123 = alloca <64 x i32>, align 256
+  %a.addr.i120 = alloca <256 x i8>, align 256
+  %b.addr.i121 = alloca <256 x i8>, align 256
+  %a.addr.i118 = alloca <128 x i16>, align 256
+  %b.addr.i119 = alloca <128 x i16>, align 256
+  %a.addr.i116 = alloca <64 x i32>, align 256
+  %b.addr.i117 = alloca <64 x i32>, align 256
+  %a.addr.i114 = alloca <256 x i8>, align 256
+  %b.addr.i115 = alloca <256 x i8>, align 256
+  %a.addr.i112 = alloca <128 x i16>, align 256
+  %b.addr.i113 = alloca <128 x i16>, align 256
+  %a.addr.i110 = alloca <64 x i32>, align 256
+  %b.addr.i111 = alloca <64 x i32>, align 256
+  %a.addr.i108 = alloca <256 x i8>, align 256
+  %b.addr.i109 = alloca <256 x i8>, align 256
+  %a.addr.i106 = alloca <128 x i16>, align 256
+  %b.addr.i107 = alloca <128 x i16>, align 256
+  %a.addr.i104 = alloca <64 x i32>, align 256
+  %b.addr.i105 = alloca <64 x i32>, align 256
+  %a.addr.i103 = alloca <256 x i8>, align 256
+  %a.addr.i102 = alloca <128 x i16>, align 256
+  %a.addr.i101 = alloca <64 x i32>, align 256
+  %a.addr.i99 = alloca <256 x i8>, align 256
+  %b.addr.i100 = alloca <256 x i8>, align 256
+  %a.addr.i97 = alloca <128 x i16>, align 256
+  %b.addr.i98 = alloca <128 x i16>, align 256
+  %a.addr.i95 = alloca <64 x i32>, align 256
+  %b.addr.i96 = alloca <64 x i32>, align 256
+  %a.addr.i93 = alloca <256 x i8>, align 256
+  %b.addr.i94 = alloca <256 x i8>, align 256
+  %a.addr.i91 = alloca <128 x i16>, align 256
+  %b.addr.i92 = alloca <128 x i16>, align 256
+  %a.addr.i89 = alloca <64 x i32>, align 256
+  %b.addr.i90 = alloca <64 x i32>, align 256
+  %a.addr.i87 = alloca <256 x i8>, align 256
+  %b.addr.i88 = alloca <256 x i8>, align 256
+  %a.addr.i85 = alloca <128 x i16>, align 256
+  %b.addr.i86 = alloca <128 x i16>, align 256
+  %a.addr.i83 = alloca <128 x i16>, align 256
+  %b.addr.i84 = alloca <128 x i16>, align 256
+  %a.addr.i81 = alloca <64 x i32>, align 256
+  %b.addr.i82 = alloca <64 x i32>, align 256
+  %a.addr.i79 = alloca <64 x i32>, align 256
+  %b.addr.i80 = alloca <64 x i32>, align 256
+  %a.addr.i78 = alloca i32, align 4
+  %a.addr.i77 = alloca i32, align 4
+  %a.addr.i76 = alloca i32, align 4
+  %a.addr.i75 = alloca i32, align 4
+  %a.addr.i73 = alloca i32, align 4
+  %b.addr.i74 = alloca i32, align 4
+  %a.addr.i71 = alloca i32, align 4
+  %b.addr.i72 = alloca i32, align 4
+  %a.addr.i70 = alloca i32, align 4
+  %a.addr.i = alloca <256 x i8>, align 256
+  %b.addr.i = alloca <256 x i8>, align 256
+  %dspvi8_dst = alloca <256 x i8>, align 256
+  %dspvi8_a = alloca <256 x i8>, align 256
+  %dspvi8_b = alloca <256 x i8>, align 256
+  %dspvi16_dst = alloca <128 x i16>, align 256
+  %dspvi16_a = alloca <128 x i16>, align 256
+  %dspvi16_b = alloca <128 x i16>, align 256
+  %dspvi32_dst = alloca <64 x i32>, align 256
+  %dspvi32_a = alloca <64 x i32>, align 256
+  %dspvi32_b = alloca <64 x i32>, align 256
+  %int_a = alloca i32, align 4
+  %int_b = alloca i32, align 4
+  %int_c = alloca i32, align 4
+  %int_dst = alloca i32, align 4
+  store <256 x i8> <i8 8, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, <256 x i8>* %dspvi8_dst, align 256
+  store <256 x i8> <i8 1, i8 2, i8 3, i8 4, i8 5, i8 6, i8 7, i8 8, i8 9, i8 0, i8 97, i8 98, i8 99, i8 100, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, <256 x i8>* %dspvi8_a, align 256
+  store <256 x i8> <i8 12, i8 23, i8 34, i8 45, i8 56, i8 67, i8 78, i8 89, i8 90, i8 10, i8 48, i8 49, i8 50, i8 51, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, <256 x i8>* %dspvi8_b, align 256
+  store <128 x i16> <i16 16, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, <128 x i16>* %dspvi16_dst, align 256
+  store <128 x i16> <i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 1, i16 2, i16 3, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, <128 x i16>* %dspvi16_a, align 256
+  store <128 x i16> <i16 12, i16 23, i16 34, i16 45, i16 56, i16 67, i16 78, i16 89, i16 90, i16 10, i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 1, i16 2, i16 3, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, <128 x i16>* %dspvi16_b, align 256
+  store <64 x i32> <i32 32, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, <64 x i32>* %dspvi32_dst, align 256
+  store <64 x i32> <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 1, i32 2, i32 3, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, <64 x i32>* %dspvi32_a, align 256
+  store <64 x i32> <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 1, i32 2, i32 3, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 56, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 1, i32 2, i32 3, i32 4, i32 5, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, <64 x i32>* %dspvi32_b, align 256
+  store i32 1, i32* %int_a, align 4
+  store i32 22, i32* %int_b, align 4
+  store i32 333, i32* %int_c, align 4
+  store i32 4444, i32* %int_dst, align 4
+  %0 = load <256 x i8>* %dspvi8_a, align 256
+  %1 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %0, <256 x i8>* %a.addr.i, align 256
+  store <256 x i8> %1, <256 x i8>* %b.addr.i, align 256
+  %2 = load <256 x i8>* %a.addr.i, align 256
+  %3 = load <256 x i8>* %b.addr.i, align 256
+  %4 = call <256 x i8> @llvm.dsp.vmax.10(<256 x i8> %2, <256 x i8> %3) #2
+  store <256 x i8> %4, <256 x i8>* %dspvi8_dst, align 256
+  %5 = load <128 x i16>* %dspvi16_a, align 256
+  %6 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %5, <128 x i16>* %a.addr.i194, align 256
+  store <128 x i16> %6, <128 x i16>* %b.addr.i195, align 256
+  %7 = load <128 x i16>* %a.addr.i194, align 256
+  %8 = load <128 x i16>* %b.addr.i195, align 256
+  %9 = call <128 x i16> @llvm.dsp.vmax.20(<128 x i16> %7, <128 x i16> %8) #2
+  store <128 x i16> %9, <128 x i16>* %dspvi16_dst, align 256
+  %10 = load <64 x i32>* %dspvi32_a, align 256
+  %11 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %10, <64 x i32>* %a.addr.i192, align 256
+  store <64 x i32> %11, <64 x i32>* %b.addr.i193, align 256
+  %12 = load <64 x i32>* %a.addr.i192, align 256
+  %13 = load <64 x i32>* %b.addr.i193, align 256
+  %14 = call <64 x i32> @llvm.dsp.vmax.40(<64 x i32> %12, <64 x i32> %13) #2
+  store <64 x i32> %14, <64 x i32>* %dspvi32_dst, align 256
+  %15 = load <256 x i8>* %dspvi8_a, align 256
+  %16 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %15, <256 x i8>* %a.addr.i190, align 256
+  store <256 x i8> %16, <256 x i8>* %b.addr.i191, align 256
+  %17 = load <256 x i8>* %a.addr.i190, align 256
+  %18 = load <256 x i8>* %b.addr.i191, align 256
+  %19 = call <256 x i8> @llvm.dsp.vmin.10(<256 x i8> %17, <256 x i8> %18) #2
+  store <256 x i8> %19, <256 x i8>* %dspvi8_dst, align 256
+  %20 = load <128 x i16>* %dspvi16_a, align 256
+  %21 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %20, <128 x i16>* %a.addr.i188, align 256
+  store <128 x i16> %21, <128 x i16>* %b.addr.i189, align 256
+  %22 = load <128 x i16>* %a.addr.i188, align 256
+  %23 = load <128 x i16>* %b.addr.i189, align 256
+  %24 = call <128 x i16> @llvm.dsp.vmin.20(<128 x i16> %22, <128 x i16> %23) #2
+  store <128 x i16> %24, <128 x i16>* %dspvi16_dst, align 256
+  %25 = load <64 x i32>* %dspvi32_a, align 256
+  %26 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %25, <64 x i32>* %a.addr.i186, align 256
+  store <64 x i32> %26, <64 x i32>* %b.addr.i187, align 256
+  %27 = load <64 x i32>* %a.addr.i186, align 256
+  %28 = load <64 x i32>* %b.addr.i187, align 256
+  %29 = call <64 x i32> @llvm.dsp.vmin.40(<64 x i32> %27, <64 x i32> %28) #2
+  store <64 x i32> %29, <64 x i32>* %dspvi32_dst, align 256
+  %30 = load <256 x i8>* %dspvi8_a, align 256
+  store <256 x i8> %30, <256 x i8>* %a.addr.i185, align 256
+  %31 = load <256 x i8>* %a.addr.i185, align 256
+  %32 = call <256 x i8> @llvm.dsp.vsum.10(<256 x i8> %31) #2
+  store <256 x i8> %32, <256 x i8>* %dspvi8_dst, align 256
+  %33 = load <128 x i16>* %dspvi16_a, align 256
+  store <128 x i16> %33, <128 x i16>* %a.addr.i184, align 256
+  %34 = load <128 x i16>* %a.addr.i184, align 256
+  %35 = call <128 x i16> @llvm.dsp.vsum.20(<128 x i16> %34) #2
+  store <128 x i16> %35, <128 x i16>* %dspvi16_dst, align 256
+  %36 = load <64 x i32>* %dspvi32_a, align 256
+  store <64 x i32> %36, <64 x i32>* %a.addr.i183, align 256
+  %37 = load <64 x i32>* %a.addr.i183, align 256
+  %38 = call <64 x i32> @llvm.dsp.vsum.40(<64 x i32> %37) #2
+  store <64 x i32> %38, <64 x i32>* %dspvi32_dst, align 256
+  %39 = load <256 x i8>* %dspvi8_a, align 256
+  store <256 x i8> %39, <256 x i8>* %a.addr.i182, align 256
+  %40 = load <256 x i8>* %a.addr.i182, align 256
+  %41 = call <256 x i8> @llvm.dsp.vnot(<256 x i8> %40) #2
+  store <256 x i8> %41, <256 x i8>* %dspvi8_dst, align 256
+  %42 = load <256 x i8>* %dspvi8_a, align 256
+  %43 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %42, <256 x i8>* %a.addr.i180, align 256
+  store <256 x i8> %43, <256 x i8>* %b.addr.i181, align 256
+  %44 = load <256 x i8>* %a.addr.i180, align 256
+  %45 = load <256 x i8>* %b.addr.i181, align 256
+  %46 = call <256 x i8> @llvm.dsp.vand(<256 x i8> %44, <256 x i8> %45) #2
+  store <256 x i8> %46, <256 x i8>* %dspvi8_dst, align 256
+  %47 = load <256 x i8>* %dspvi8_a, align 256
+  %48 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %47, <256 x i8>* %a.addr.i178, align 256
+  store <256 x i8> %48, <256 x i8>* %b.addr.i179, align 256
+  %49 = load <256 x i8>* %a.addr.i178, align 256
+  %50 = load <256 x i8>* %b.addr.i179, align 256
+  %51 = call <256 x i8> @llvm.dsp.vor(<256 x i8> %49, <256 x i8> %50) #2
+  store <256 x i8> %51, <256 x i8>* %dspvi8_dst, align 256
+  %52 = load <256 x i8>* %dspvi8_a, align 256
+  %53 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %52, <256 x i8>* %a.addr.i176, align 256
+  store <256 x i8> %53, <256 x i8>* %b.addr.i177, align 256
+  %54 = load <256 x i8>* %a.addr.i176, align 256
+  %55 = load <256 x i8>* %b.addr.i177, align 256
+  %56 = call <256 x i8> @llvm.dsp.vxor(<256 x i8> %54, <256 x i8> %55) #2
+  store <256 x i8> %56, <256 x i8>* %dspvi8_dst, align 256
+  %57 = load <256 x i8>* %dspvi8_a, align 256
+  %58 = load i32* %int_b, align 4
+  store <256 x i8> %57, <256 x i8>* %a.addr.i174, align 256
+  store i32 %58, i32* %b.addr.i175, align 4
+  %59 = load <256 x i8>* %a.addr.i174, align 256
+  %60 = load i32* %b.addr.i175, align 4
+  %61 = call <256 x i8> @llvm.dsp.vmovcv2v(<256 x i8> %59, i32 %60) #2
+  store <256 x i8> %61, <256 x i8>* %dspvi8_dst, align 256
+  %62 = load <128 x i16>* %dspvi16_a, align 256
+  %63 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %62, <128 x i16>* %a.addr.i172, align 256
+  store <128 x i16> %63, <128 x i16>* %b.addr.i173, align 256
+  %64 = load <128 x i16>* %a.addr.i172, align 256
+  %65 = load <128 x i16>* %b.addr.i173, align 256
+  %66 = call <128 x i16> @llvm.dsp.vltl(<128 x i16> %64, <128 x i16> %65) #2
+  store <128 x i16> %66, <128 x i16>* %dspvi16_dst, align 256
+  %67 = load <128 x i16>* %dspvi16_a, align 256
+  %68 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %67, <128 x i16>* %a.addr.i170, align 256
+  store <128 x i16> %68, <128 x i16>* %b.addr.i171, align 256
+  %69 = load <128 x i16>* %a.addr.i170, align 256
+  %70 = load <128 x i16>* %b.addr.i171, align 256
+  %71 = call <128 x i16> @llvm.dsp.vlth(<128 x i16> %69, <128 x i16> %70) #2
+  store <128 x i16> %71, <128 x i16>* %dspvi16_dst, align 256
+  %72 = load <256 x i8>* %dspvi8_a, align 256
+  %73 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %72, <256 x i8>* %a.addr.i168, align 256
+  store <256 x i8> %73, <256 x i8>* %b.addr.i169, align 256
+  %74 = load <256 x i8>* %a.addr.i168, align 256
+  %75 = load <256 x i8>* %b.addr.i169, align 256
+  %76 = call <256 x i8> @llvm.dsp.veq.10(<256 x i8> %74, <256 x i8> %75) #2
+  store <256 x i8> %76, <256 x i8>* %dspvi8_dst, align 256
+  %77 = load <128 x i16>* %dspvi16_a, align 256
+  %78 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %77, <128 x i16>* %a.addr.i166, align 256
+  store <128 x i16> %78, <128 x i16>* %b.addr.i167, align 256
+  %79 = load <128 x i16>* %a.addr.i166, align 256
+  %80 = load <128 x i16>* %b.addr.i167, align 256
+  %81 = call <128 x i16> @llvm.dsp.veq.20(<128 x i16> %79, <128 x i16> %80) #2
+  store <128 x i16> %81, <128 x i16>* %dspvi16_dst, align 256
+  %82 = load <64 x i32>* %dspvi32_a, align 256
+  %83 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %82, <64 x i32>* %a.addr.i164, align 256
+  store <64 x i32> %83, <64 x i32>* %b.addr.i165, align 256
+  %84 = load <64 x i32>* %a.addr.i164, align 256
+  %85 = load <64 x i32>* %b.addr.i165, align 256
+  %86 = call <64 x i32> @llvm.dsp.veq.40(<64 x i32> %84, <64 x i32> %85) #2
+  store <64 x i32> %86, <64 x i32>* %dspvi32_dst, align 256
+  %87 = load <256 x i8>* %dspvi8_a, align 256
+  %88 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %87, <256 x i8>* %a.addr.i162, align 256
+  store <256 x i8> %88, <256 x i8>* %b.addr.i163, align 256
+  %89 = load <256 x i8>* %a.addr.i162, align 256
+  %90 = load <256 x i8>* %b.addr.i163, align 256
+  %91 = call <256 x i8> @llvm.dsp.vgt.10(<256 x i8> %89, <256 x i8> %90) #2
+  store <256 x i8> %91, <256 x i8>* %dspvi8_dst, align 256
+  %92 = load <128 x i16>* %dspvi16_a, align 256
+  %93 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %92, <128 x i16>* %a.addr.i160, align 256
+  store <128 x i16> %93, <128 x i16>* %b.addr.i161, align 256
+  %94 = load <128 x i16>* %a.addr.i160, align 256
+  %95 = load <128 x i16>* %b.addr.i161, align 256
+  %96 = call <128 x i16> @llvm.dsp.vgt.20(<128 x i16> %94, <128 x i16> %95) #2
+  store <128 x i16> %96, <128 x i16>* %dspvi16_dst, align 256
+  %97 = load <64 x i32>* %dspvi32_a, align 256
+  %98 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %97, <64 x i32>* %a.addr.i158, align 256
+  store <64 x i32> %98, <64 x i32>* %b.addr.i159, align 256
+  %99 = load <64 x i32>* %a.addr.i158, align 256
+  %100 = load <64 x i32>* %b.addr.i159, align 256
+  %101 = call <64 x i32> @llvm.dsp.vgt.40(<64 x i32> %99, <64 x i32> %100) #2
+  store <64 x i32> %101, <64 x i32>* %dspvi32_dst, align 256
+  %102 = load <256 x i8>* %dspvi8_a, align 256
+  %103 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %102, <256 x i8>* %a.addr.i156, align 256
+  store <256 x i8> %103, <256 x i8>* %b.addr.i157, align 256
+  %104 = load <256 x i8>* %a.addr.i156, align 256
+  %105 = load <256 x i8>* %b.addr.i157, align 256
+  %106 = call <256 x i8> @llvm.dsp.vlt.10(<256 x i8> %104, <256 x i8> %105) #2
+  store <256 x i8> %106, <256 x i8>* %dspvi8_dst, align 256
+  %107 = load <128 x i16>* %dspvi16_a, align 256
+  %108 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %107, <128 x i16>* %a.addr.i154, align 256
+  store <128 x i16> %108, <128 x i16>* %b.addr.i155, align 256
+  %109 = load <128 x i16>* %a.addr.i154, align 256
+  %110 = load <128 x i16>* %b.addr.i155, align 256
+  %111 = call <128 x i16> @llvm.dsp.vlt.20(<128 x i16> %109, <128 x i16> %110) #2
+  store <128 x i16> %111, <128 x i16>* %dspvi16_dst, align 256
+  %112 = load <64 x i32>* %dspvi32_a, align 256
+  %113 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %112, <64 x i32>* %a.addr.i152, align 256
+  store <64 x i32> %113, <64 x i32>* %b.addr.i153, align 256
+  %114 = load <64 x i32>* %a.addr.i152, align 256
+  %115 = load <64 x i32>* %b.addr.i153, align 256
+  %116 = call <64 x i32> @llvm.dsp.vlt.40(<64 x i32> %114, <64 x i32> %115) #2
+  store <64 x i32> %116, <64 x i32>* %dspvi32_dst, align 256
+  %117 = load <256 x i8>* %dspvi8_a, align 256
+  %118 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %117, <256 x i8>* %a.addr.i150, align 256
+  store <256 x i8> %118, <256 x i8>* %b.addr.i151, align 256
+  %119 = load <256 x i8>* %a.addr.i150, align 256
+  %120 = load <256 x i8>* %b.addr.i151, align 256
+  %121 = call <256 x i8> @llvm.dsp.vge.10(<256 x i8> %119, <256 x i8> %120) #2
+  store <256 x i8> %121, <256 x i8>* %dspvi8_dst, align 256
+  %122 = load <128 x i16>* %dspvi16_a, align 256
+  %123 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %122, <128 x i16>* %a.addr.i148, align 256
+  store <128 x i16> %123, <128 x i16>* %b.addr.i149, align 256
+  %124 = load <128 x i16>* %a.addr.i148, align 256
+  %125 = load <128 x i16>* %b.addr.i149, align 256
+  %126 = call <128 x i16> @llvm.dsp.vge.20(<128 x i16> %124, <128 x i16> %125) #2
+  store <128 x i16> %126, <128 x i16>* %dspvi16_dst, align 256
+  %127 = load <64 x i32>* %dspvi32_a, align 256
+  %128 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %127, <64 x i32>* %a.addr.i146, align 256
+  store <64 x i32> %128, <64 x i32>* %b.addr.i147, align 256
+  %129 = load <64 x i32>* %a.addr.i146, align 256
+  %130 = load <64 x i32>* %b.addr.i147, align 256
+  %131 = call <64 x i32> @llvm.dsp.vge.40(<64 x i32> %129, <64 x i32> %130) #2
+  store <64 x i32> %131, <64 x i32>* %dspvi32_dst, align 256
+  %132 = load <256 x i8>* %dspvi8_a, align 256
+  %133 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %132, <256 x i8>* %a.addr.i144, align 256
+  store <256 x i8> %133, <256 x i8>* %b.addr.i145, align 256
+  %134 = load <256 x i8>* %a.addr.i144, align 256
+  %135 = load <256 x i8>* %b.addr.i145, align 256
+  %136 = call <256 x i8> @llvm.dsp.vle.10(<256 x i8> %134, <256 x i8> %135) #2
+  store <256 x i8> %136, <256 x i8>* %dspvi8_dst, align 256
+  %137 = load <128 x i16>* %dspvi16_a, align 256
+  %138 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %137, <128 x i16>* %a.addr.i142, align 256
+  store <128 x i16> %138, <128 x i16>* %b.addr.i143, align 256
+  %139 = load <128 x i16>* %a.addr.i142, align 256
+  %140 = load <128 x i16>* %b.addr.i143, align 256
+  %141 = call <128 x i16> @llvm.dsp.vle.20(<128 x i16> %139, <128 x i16> %140) #2
+  store <128 x i16> %141, <128 x i16>* %dspvi16_dst, align 256
+  %142 = load <64 x i32>* %dspvi32_a, align 256
+  %143 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %142, <64 x i32>* %a.addr.i140, align 256
+  store <64 x i32> %143, <64 x i32>* %b.addr.i141, align 256
+  %144 = load <64 x i32>* %a.addr.i140, align 256
+  %145 = load <64 x i32>* %b.addr.i141, align 256
+  %146 = call <64 x i32> @llvm.dsp.vle.40(<64 x i32> %144, <64 x i32> %145) #2
+  store <64 x i32> %146, <64 x i32>* %dspvi32_dst, align 256
+  %147 = load <256 x i8>* %dspvi8_a, align 256
+  %148 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %147, <256 x i8>* %a.addr.i138, align 256
+  store <256 x i8> %148, <256 x i8>* %b.addr.i139, align 256
+  %149 = load <256 x i8>* %a.addr.i138, align 256
+  %150 = load <256 x i8>* %b.addr.i139, align 256
+  %151 = call <256 x i8> @llvm.dsp.vadd.10(<256 x i8> %149, <256 x i8> %150) #2
+  store <256 x i8> %151, <256 x i8>* %dspvi8_dst, align 256
+  %152 = load <128 x i16>* %dspvi16_a, align 256
+  %153 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %152, <128 x i16>* %a.addr.i136, align 256
+  store <128 x i16> %153, <128 x i16>* %b.addr.i137, align 256
+  %154 = load <128 x i16>* %a.addr.i136, align 256
+  %155 = load <128 x i16>* %b.addr.i137, align 256
+  %156 = call <128 x i16> @llvm.dsp.vadd.20(<128 x i16> %154, <128 x i16> %155) #2
+  store <128 x i16> %156, <128 x i16>* %dspvi16_dst, align 256
+  %157 = load <64 x i32>* %dspvi32_a, align 256
+  %158 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %157, <64 x i32>* %a.addr.i134, align 256
+  store <64 x i32> %158, <64 x i32>* %b.addr.i135, align 256
+  %159 = load <64 x i32>* %a.addr.i134, align 256
+  %160 = load <64 x i32>* %b.addr.i135, align 256
+  %161 = call <64 x i32> @llvm.dsp.vadd.40(<64 x i32> %159, <64 x i32> %160) #2
+  store <64 x i32> %161, <64 x i32>* %dspvi32_dst, align 256
+  %162 = load <256 x i8>* %dspvi8_a, align 256
+  %163 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %162, <256 x i8>* %a.addr.i132, align 256
+  store <256 x i8> %163, <256 x i8>* %b.addr.i133, align 256
+  %164 = load <256 x i8>* %a.addr.i132, align 256
+  %165 = load <256 x i8>* %b.addr.i133, align 256
+  %166 = call <256 x i8> @llvm.dsp.vsub.10(<256 x i8> %164, <256 x i8> %165) #2
+  store <256 x i8> %166, <256 x i8>* %dspvi8_dst, align 256
+  %167 = load <128 x i16>* %dspvi16_a, align 256
+  %168 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %167, <128 x i16>* %a.addr.i130, align 256
+  store <128 x i16> %168, <128 x i16>* %b.addr.i131, align 256
+  %169 = load <128 x i16>* %a.addr.i130, align 256
+  %170 = load <128 x i16>* %b.addr.i131, align 256
+  %171 = call <128 x i16> @llvm.dsp.vsub.20(<128 x i16> %169, <128 x i16> %170) #2
+  store <128 x i16> %171, <128 x i16>* %dspvi16_dst, align 256
+  %172 = load <64 x i32>* %dspvi32_a, align 256
+  %173 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %172, <64 x i32>* %a.addr.i128, align 256
+  store <64 x i32> %173, <64 x i32>* %b.addr.i129, align 256
+  %174 = load <64 x i32>* %a.addr.i128, align 256
+  %175 = load <64 x i32>* %b.addr.i129, align 256
+  %176 = call <64 x i32> @llvm.dsp.vsub.40(<64 x i32> %174, <64 x i32> %175) #2
+  store <64 x i32> %176, <64 x i32>* %dspvi32_dst, align 256
+  %177 = load <256 x i8>* %dspvi8_a, align 256
+  %178 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %177, <256 x i8>* %a.addr.i126, align 256
+  store <256 x i8> %178, <256 x i8>* %b.addr.i127, align 256
+  %179 = load <256 x i8>* %a.addr.i126, align 256
+  %180 = load <256 x i8>* %b.addr.i127, align 256
+  %181 = call <256 x i8> @llvm.dsp.vsl.10(<256 x i8> %179, <256 x i8> %180) #2
+  store <256 x i8> %181, <256 x i8>* %dspvi8_dst, align 256
+  %182 = load <128 x i16>* %dspvi16_a, align 256
+  %183 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %182, <128 x i16>* %a.addr.i124, align 256
+  store <128 x i16> %183, <128 x i16>* %b.addr.i125, align 256
+  %184 = load <128 x i16>* %a.addr.i124, align 256
+  %185 = load <128 x i16>* %b.addr.i125, align 256
+  %186 = call <128 x i16> @llvm.dsp.vsl.20(<128 x i16> %184, <128 x i16> %185) #2
+  store <128 x i16> %186, <128 x i16>* %dspvi16_dst, align 256
+  %187 = load <64 x i32>* %dspvi32_a, align 256
+  %188 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %187, <64 x i32>* %a.addr.i122, align 256
+  store <64 x i32> %188, <64 x i32>* %b.addr.i123, align 256
+  %189 = load <64 x i32>* %a.addr.i122, align 256
+  %190 = load <64 x i32>* %b.addr.i123, align 256
+  %191 = call <64 x i32> @llvm.dsp.vsl.40(<64 x i32> %189, <64 x i32> %190) #2
+  store <64 x i32> %191, <64 x i32>* %dspvi32_dst, align 256
+  %192 = load <256 x i8>* %dspvi8_a, align 256
+  %193 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %192, <256 x i8>* %a.addr.i120, align 256
+  store <256 x i8> %193, <256 x i8>* %b.addr.i121, align 256
+  %194 = load <256 x i8>* %a.addr.i120, align 256
+  %195 = load <256 x i8>* %b.addr.i121, align 256
+  %196 = call <256 x i8> @llvm.dsp.vsls.10(<256 x i8> %194, <256 x i8> %195) #2
+  store <256 x i8> %196, <256 x i8>* %dspvi8_dst, align 256
+  %197 = load <128 x i16>* %dspvi16_a, align 256
+  %198 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %197, <128 x i16>* %a.addr.i118, align 256
+  store <128 x i16> %198, <128 x i16>* %b.addr.i119, align 256
+  %199 = load <128 x i16>* %a.addr.i118, align 256
+  %200 = load <128 x i16>* %b.addr.i119, align 256
+  %201 = call <128 x i16> @llvm.dsp.vsls.20(<128 x i16> %199, <128 x i16> %200) #2
+  store <128 x i16> %201, <128 x i16>* %dspvi16_dst, align 256
+  %202 = load <64 x i32>* %dspvi32_a, align 256
+  %203 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %202, <64 x i32>* %a.addr.i116, align 256
+  store <64 x i32> %203, <64 x i32>* %b.addr.i117, align 256
+  %204 = load <64 x i32>* %a.addr.i116, align 256
+  %205 = load <64 x i32>* %b.addr.i117, align 256
+  %206 = call <64 x i32> @llvm.dsp.vsls.40(<64 x i32> %204, <64 x i32> %205) #2
+  store <64 x i32> %206, <64 x i32>* %dspvi32_dst, align 256
+  %207 = load <256 x i8>* %dspvi8_a, align 256
+  %208 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %207, <256 x i8>* %a.addr.i114, align 256
+  store <256 x i8> %208, <256 x i8>* %b.addr.i115, align 256
+  %209 = load <256 x i8>* %a.addr.i114, align 256
+  %210 = load <256 x i8>* %b.addr.i115, align 256
+  %211 = call <256 x i8> @llvm.dsp.vsra.10(<256 x i8> %209, <256 x i8> %210) #2
+  store <256 x i8> %211, <256 x i8>* %dspvi8_dst, align 256
+  %212 = load <128 x i16>* %dspvi16_a, align 256
+  %213 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %212, <128 x i16>* %a.addr.i112, align 256
+  store <128 x i16> %213, <128 x i16>* %b.addr.i113, align 256
+  %214 = load <128 x i16>* %a.addr.i112, align 256
+  %215 = load <128 x i16>* %b.addr.i113, align 256
+  %216 = call <128 x i16> @llvm.dsp.vsra.20(<128 x i16> %214, <128 x i16> %215) #2
+  store <128 x i16> %216, <128 x i16>* %dspvi16_dst, align 256
+  %217 = load <64 x i32>* %dspvi32_a, align 256
+  %218 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %217, <64 x i32>* %a.addr.i110, align 256
+  store <64 x i32> %218, <64 x i32>* %b.addr.i111, align 256
+  %219 = load <64 x i32>* %a.addr.i110, align 256
+  %220 = load <64 x i32>* %b.addr.i111, align 256
+  %221 = call <64 x i32> @llvm.dsp.vsra.40(<64 x i32> %219, <64 x i32> %220) #2
+  store <64 x i32> %221, <64 x i32>* %dspvi32_dst, align 256
+  %222 = load <256 x i8>* %dspvi8_a, align 256
+  %223 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %222, <256 x i8>* %a.addr.i108, align 256
+  store <256 x i8> %223, <256 x i8>* %b.addr.i109, align 256
+  %224 = load <256 x i8>* %a.addr.i108, align 256
+  %225 = load <256 x i8>* %b.addr.i109, align 256
+  %226 = call <256 x i8> @llvm.dsp.vsrl.10(<256 x i8> %224, <256 x i8> %225) #2
+  store <256 x i8> %226, <256 x i8>* %dspvi8_dst, align 256
+  %227 = load <128 x i16>* %dspvi16_a, align 256
+  %228 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %227, <128 x i16>* %a.addr.i106, align 256
+  store <128 x i16> %228, <128 x i16>* %b.addr.i107, align 256
+  %229 = load <128 x i16>* %a.addr.i106, align 256
+  %230 = load <128 x i16>* %b.addr.i107, align 256
+  %231 = call <128 x i16> @llvm.dsp.vsrl.20(<128 x i16> %229, <128 x i16> %230) #2
+  store <128 x i16> %231, <128 x i16>* %dspvi16_dst, align 256
+  %232 = load <64 x i32>* %dspvi32_a, align 256
+  %233 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %232, <64 x i32>* %a.addr.i104, align 256
+  store <64 x i32> %233, <64 x i32>* %b.addr.i105, align 256
+  %234 = load <64 x i32>* %a.addr.i104, align 256
+  %235 = load <64 x i32>* %b.addr.i105, align 256
+  %236 = call <64 x i32> @llvm.dsp.vsrl.40(<64 x i32> %234, <64 x i32> %235) #2
+  store <64 x i32> %236, <64 x i32>* %dspvi32_dst, align 256
+  %237 = load <256 x i8>* %dspvi8_a, align 256
+  store <256 x i8> %237, <256 x i8>* %a.addr.i103, align 256
+  %238 = load <256 x i8>* %a.addr.i103, align 256
+  %239 = call <256 x i8> @llvm.dsp.vabs.10(<256 x i8> %238) #2
+  store <256 x i8> %239, <256 x i8>* %dspvi8_dst, align 256
+  %240 = load <128 x i16>* %dspvi16_a, align 256
+  store <128 x i16> %240, <128 x i16>* %a.addr.i102, align 256
+  %241 = load <128 x i16>* %a.addr.i102, align 256
+  %242 = call <128 x i16> @llvm.dsp.vabs.20(<128 x i16> %241) #2
+  store <128 x i16> %242, <128 x i16>* %dspvi16_dst, align 256
+  %243 = load <64 x i32>* %dspvi32_a, align 256
+  store <64 x i32> %243, <64 x i32>* %a.addr.i101, align 256
+  %244 = load <64 x i32>* %a.addr.i101, align 256
+  %245 = call <64 x i32> @llvm.dsp.vabs.40(<64 x i32> %244) #2
+  store <64 x i32> %245, <64 x i32>* %dspvi32_dst, align 256
+  %246 = load <256 x i8>* %dspvi8_a, align 256
+  %247 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %246, <256 x i8>* %a.addr.i99, align 256
+  store <256 x i8> %247, <256 x i8>* %b.addr.i100, align 256
+  %248 = load <256 x i8>* %a.addr.i99, align 256
+  %249 = load <256 x i8>* %b.addr.i100, align 256
+  %250 = call <256 x i8> @llvm.dsp.vfmul.10(<256 x i8> %248, <256 x i8> %249) #2
+  store <256 x i8> %250, <256 x i8>* %dspvi8_dst, align 256
+  %251 = load <128 x i16>* %dspvi16_a, align 256
+  %252 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %251, <128 x i16>* %a.addr.i97, align 256
+  store <128 x i16> %252, <128 x i16>* %b.addr.i98, align 256
+  %253 = load <128 x i16>* %a.addr.i97, align 256
+  %254 = load <128 x i16>* %b.addr.i98, align 256
+  %255 = call <128 x i16> @llvm.dsp.vfmul.20(<128 x i16> %253, <128 x i16> %254) #2
+  store <128 x i16> %255, <128 x i16>* %dspvi16_dst, align 256
+  %256 = load <64 x i32>* %dspvi32_a, align 256
+  %257 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %256, <64 x i32>* %a.addr.i95, align 256
+  store <64 x i32> %257, <64 x i32>* %b.addr.i96, align 256
+  %258 = load <64 x i32>* %a.addr.i95, align 256
+  %259 = load <64 x i32>* %b.addr.i96, align 256
+  %260 = call <64 x i32> @llvm.dsp.vfmul.40(<64 x i32> %258, <64 x i32> %259) #2
+  store <64 x i32> %260, <64 x i32>* %dspvi32_dst, align 256
+  %261 = load <256 x i8>* %dspvi8_a, align 256
+  %262 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %261, <256 x i8>* %a.addr.i93, align 256
+  store <256 x i8> %262, <256 x i8>* %b.addr.i94, align 256
+  %263 = load <256 x i8>* %a.addr.i93, align 256
+  %264 = load <256 x i8>* %b.addr.i94, align 256
+  %265 = call <256 x i8> @llvm.dsp.vfmac.10(<256 x i8> %263, <256 x i8> %264) #2
+  store <256 x i8> %265, <256 x i8>* %dspvi8_dst, align 256
+  %266 = load <128 x i16>* %dspvi16_a, align 256
+  %267 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %266, <128 x i16>* %a.addr.i91, align 256
+  store <128 x i16> %267, <128 x i16>* %b.addr.i92, align 256
+  %268 = load <128 x i16>* %a.addr.i91, align 256
+  %269 = load <128 x i16>* %b.addr.i92, align 256
+  %270 = call <128 x i16> @llvm.dsp.vfmac.20(<128 x i16> %268, <128 x i16> %269) #2
+  store <128 x i16> %270, <128 x i16>* %dspvi16_dst, align 256
+  %271 = load <64 x i32>* %dspvi32_a, align 256
+  %272 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %271, <64 x i32>* %a.addr.i89, align 256
+  store <64 x i32> %272, <64 x i32>* %b.addr.i90, align 256
+  %273 = load <64 x i32>* %a.addr.i89, align 256
+  %274 = load <64 x i32>* %b.addr.i90, align 256
+  %275 = call <64 x i32> @llvm.dsp.vfmac.40(<64 x i32> %273, <64 x i32> %274) #2
+  store <64 x i32> %275, <64 x i32>* %dspvi32_dst, align 256
+  %276 = load <256 x i8>* %dspvi8_a, align 256
+  %277 = load <256 x i8>* %dspvi8_b, align 256
+  store <256 x i8> %276, <256 x i8>* %a.addr.i87, align 256
+  store <256 x i8> %277, <256 x i8>* %b.addr.i88, align 256
+  %278 = load <256 x i8>* %a.addr.i87, align 256
+  %279 = load <256 x i8>* %b.addr.i88, align 256
+  %280 = call <256 x i8> @llvm.dsp.vcmac.10(<256 x i8> %278, <256 x i8> %279) #2
+  store <256 x i8> %280, <256 x i8>* %dspvi8_dst, align 256
+  %281 = load <128 x i16>* %dspvi16_a, align 256
+  %282 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %281, <128 x i16>* %a.addr.i85, align 256
+  store <128 x i16> %282, <128 x i16>* %b.addr.i86, align 256
+  %283 = load <128 x i16>* %a.addr.i85, align 256
+  %284 = load <128 x i16>* %b.addr.i86, align 256
+  %285 = call <128 x i16> @llvm.dsp.vcmac.20(<128 x i16> %283, <128 x i16> %284) #2
+  store <128 x i16> %285, <128 x i16>* %dspvi16_dst, align 256
+  %286 = load <128 x i16>* %dspvi16_a, align 256
+  %287 = load <128 x i16>* %dspvi16_b, align 256
+  store <128 x i16> %286, <128 x i16>* %a.addr.i83, align 256
+  store <128 x i16> %287, <128 x i16>* %b.addr.i84, align 256
+  %288 = load <128 x i16>* %a.addr.i83, align 256
+  %289 = load <128 x i16>* %b.addr.i84, align 256
+  %290 = call <128 x i16> @llvm.dsp.vcmul.20(<128 x i16> %288, <128 x i16> %289) #2
+  store <128 x i16> %290, <128 x i16>* %dspvi16_dst, align 256
+  %291 = load <64 x i32>* %dspvi32_a, align 256
+  %292 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %291, <64 x i32>* %a.addr.i81, align 256
+  store <64 x i32> %292, <64 x i32>* %b.addr.i82, align 256
+  %293 = load <64 x i32>* %a.addr.i81, align 256
+  %294 = load <64 x i32>* %b.addr.i82, align 256
+  %295 = call <64 x i32> @llvm.dsp.vcmulr.40(<64 x i32> %293, <64 x i32> %294) #2
+  store <64 x i32> %295, <64 x i32>* %dspvi32_dst, align 256
+  %296 = load <64 x i32>* %dspvi32_a, align 256
+  %297 = load <64 x i32>* %dspvi32_b, align 256
+  store <64 x i32> %296, <64 x i32>* %a.addr.i79, align 256
+  store <64 x i32> %297, <64 x i32>* %b.addr.i80, align 256
+  %298 = load <64 x i32>* %a.addr.i79, align 256
+  %299 = load <64 x i32>* %b.addr.i80, align 256
+  %300 = call <64 x i32> @llvm.dsp.vcmuli.40(<64 x i32> %298, <64 x i32> %299) #2
+  store <64 x i32> %300, <64 x i32>* %dspvi32_dst, align 256
+  %301 = load i32* %int_a, align 4
+  store i32 %301, i32* %a.addr.i78, align 4
+  %302 = load i32* %a.addr.i78, align 4
+  %303 = call i32 @llvm.dsp.cbw.qb(i32 %302) #2
+  store i32 %303, i32* %int_dst, align 4
+  %304 = load i32* %int_a, align 4
+  store i32 %304, i32* %a.addr.i77, align 4
+  %305 = load i32* %a.addr.i77, align 4
+  %306 = call i32 @llvm.dsp.chw.qb(i32 %305) #2
+  store i32 %306, i32* %int_dst, align 4
+  %307 = load i32* %int_a, align 4
+  store i32 %307, i32* %a.addr.i76, align 4
+  %308 = load i32* %a.addr.i76, align 4
+  %309 = call i32 @llvm.dsp.abs.qb(i32 %308) #2
+  store i32 %309, i32* %int_dst, align 4
+  %310 = load i32* %int_a, align 4
+  store i32 %310, i32* %a.addr.i75, align 4
+  %311 = load i32* %a.addr.i75, align 4
+  %312 = call i32 @llvm.dsp.test.qb(i32 %311) #2
+  store i32 %312, i32* %int_dst, align 4
+  %313 = load i32* %int_a, align 4
+  %314 = load i32* %int_b, align 4
+  store i32 %313, i32* %a.addr.i73, align 4
+  store i32 %314, i32* %b.addr.i74, align 4
+  %315 = load i32* %a.addr.i73, align 4
+  %316 = load i32* %b.addr.i74, align 4
+  %317 = call i32 @llvm.dsp.max(i32 %315, i32 %316) #2
+  store i32 %317, i32* %int_dst, align 4
+  %318 = load i32* %int_a, align 4
+  %319 = load i32* %int_b, align 4
+  store i32 %318, i32* %a.addr.i71, align 4
+  store i32 %319, i32* %b.addr.i72, align 4
+  %320 = load i32* %a.addr.i71, align 4
+  %321 = load i32* %b.addr.i72, align 4
+  %322 = call i32 @llvm.dsp.min(i32 %320, i32 %321) #2
+  store i32 %322, i32* %int_dst, align 4
+  %323 = load i32* %int_a, align 4
+  store i32 %323, i32* %a.addr.i70, align 4
+  %324 = load i32* %a.addr.i70, align 4
+  %325 = call i32 @llvm.dsp.not(i32 %324) #2
+  store i32 %325, i32* %int_dst, align 4
+  ret void
+}
+
+; Function Attrs: nounwind
+define i32 @main() #0 {
+entry:
+  %retval = alloca i32, align 4
+  store i32 0, i32* %retval
+  call void @SIMD_Intrinsic_Testcase0()
+  ret i32 0
+}
+
+; Function Attrs: nounwind readnone
+declare i32 @llvm.dsp.not(i32) #1
+
+; Function Attrs: nounwind readnone
+declare i32 @llvm.dsp.min(i32, i32) #1
+
+; Function Attrs: nounwind readnone
+declare i32 @llvm.dsp.max(i32, i32) #1
+
+; Function Attrs: nounwind
+declare i32 @llvm.dsp.test.qb(i32) #2
+
+; Function Attrs: nounwind
+declare i32 @llvm.dsp.abs.qb(i32) #2
+
+; Function Attrs: nounwind
+declare i32 @llvm.dsp.chw.qb(i32) #2
+
+; Function Attrs: nounwind
+declare i32 @llvm.dsp.cbw.qb(i32) #2
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vcmuli.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vcmulr.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vcmul.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vcmac.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vcmac.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vfmac.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vfmac.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vfmac.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vfmul.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vfmul.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vfmul.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vabs.40(<64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vabs.20(<128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vabs.10(<256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vsrl.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vsrl.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vsrl.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vsra.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vsra.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vsra.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vsls.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vsls.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vsls.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vsl.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vsl.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vsl.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vsub.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vsub.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vsub.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vadd.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vadd.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vadd.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vle.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vle.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vle.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vge.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vge.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vge.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vlt.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vlt.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vlt.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vgt.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vgt.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vgt.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.veq.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.veq.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.veq.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vlth(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vltl(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vmovcv2v(<256 x i8>, i32) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vxor(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vor(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vand(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vnot(<256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vsum.40(<64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vsum.20(<128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vsum.10(<256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vmin.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vmin.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vmin.10(<256 x i8>, <256 x i8>) #1
+
+; Function Attrs: nounwind readnone
+declare <64 x i32> @llvm.dsp.vmax.40(<64 x i32>, <64 x i32>) #1
+
+; Function Attrs: nounwind readnone
+declare <128 x i16> @llvm.dsp.vmax.20(<128 x i16>, <128 x i16>) #1
+
+; Function Attrs: nounwind readnone
+declare <256 x i8> @llvm.dsp.vmax.10(<256 x i8>, <256 x i8>) #1
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind readnone }
+attributes #2 = { nounwind }
+
+!llvm.ident = !{!0}
+
+!0 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}

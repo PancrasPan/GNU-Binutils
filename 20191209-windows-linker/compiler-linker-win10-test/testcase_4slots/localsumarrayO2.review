@@ -1,0 +1,8 @@
+For global variables, storing in static storing area.
+Even though they are initialized in this file, they may
+be modified before the execution of function in this file.
+Thus, Compiler cannot compute them directly but view them
+as unknown (volatile)when compiling this file and load from memory.
+For local variables, storing in stack of function. They are
+private data for this function and known when compiling this
+file. Hence, compiler sum them up when compiling optimizing.

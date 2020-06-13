@@ -1,0 +1,196 @@
+	.text
+	.file	"./testcase_4slots/exitnotfallthrough.ll"
+	.globl	add
+	.align	2
+	.type	add,@function
+add:                                    # @add
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -8
+}
+{
+	store32	GR4, GR30, 1
+}
+{
+	eqi	 GR4, 0
+}
+{
+	jc	 $BB0_4
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#1:                                 # %if.then
+{
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	jmp	$BB0_2
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_3:                                 # %for.inc
+                                        #   in Loop: Header=BB0_2 Depth=1
+{
+	movigl	GR2,2
+}
+{
+	movigh	GR2,0
+	load32	GR3, GR30, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sl	GR2, GR3, GR2
+	movigh	GR3,%hi(a)
+}
+{
+	movigl	GR3,%lo(a)
+}
+{
+	add	GR2, GR3, GR2
+}
+{
+	load32	GR2, GR2, 0
+	movigh	GR3,%hi(sum)
+}
+{
+	movigl	GR3,%lo(sum)
+}
+{
+	load32	GR4, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR2, GR4, GR2
+}
+{
+	store32	GR2, GR3, 0
+	load32	GR2, GR30, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR2, GR2, 2
+}
+$BB0_2:                                 # %for.cond
+                                        # =>This Inner Loop Header: Depth=1
+{
+	store32	GR2, GR30, 0
+}
+{
+	load32	GR2, GR30, 0
+}
+{
+	nop
+}
+{
+	lti	 GR2, 256
+}
+{
+	jc	 $BB0_3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	jmp	$BB0_5
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_4:                                 # %if.else
+{
+	movigh	GR2,%hi(sum)
+}
+{
+	movigl	GR2,%lo(sum)
+	movigh	GR3,%hi(a)
+}
+{
+	movigl	GR3,%lo(a)
+}
+{
+	load32	GR3, GR3, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR2, 0
+}
+$BB0_5:                                 # %if.end
+{
+	movigh	GR2,%hi(a)
+}
+{
+	movigl	GR2,%lo(a)
+}
+{
+	load32	GR2, GR2, 255
+	movigh	GR3,%hi(sum)
+}
+{
+	movigl	GR3,%lo(sum)
+}
+{
+	load32	GR4, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR2, GR4, GR2
+}
+{
+	store32	GR2, GR3, 0
+	addi	GR30, GR30, 8
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:                                  # EmittedInsts:57
+	.size	add, ($tmp0)-add
+
+

@@ -1,0 +1,163 @@
+; ModuleID = './testcase_4slots/lms.c'
+target datalayout = "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64"
+target triple = "dsp"
+
+@main.H = internal global [16 x i32] zeroinitializer, align 4
+@main.X = internal global [16 x i32] zeroinitializer, align 4
+
+; Function Attrs: nounwind
+define void @pin_down(i32* %d, i32* %x, i32* %delta, i32* %p_H, i32* %p_X) #0 {
+entry:
+  %d.addr = alloca i32*, align 4
+  %x.addr = alloca i32*, align 4
+  %delta.addr = alloca i32*, align 4
+  %p_H.addr = alloca i32*, align 4
+  %p_X.addr = alloca i32*, align 4
+  %f = alloca i32, align 4
+  store i32* %d, i32** %d.addr, align 4
+  store i32* %x, i32** %x.addr, align 4
+  store i32* %delta, i32** %delta.addr, align 4
+  store i32* %p_H, i32** %p_H.addr, align 4
+  store i32* %p_X, i32** %p_X.addr, align 4
+  %0 = load i32** %d.addr, align 4
+  store i32 7, i32* %0, align 4
+  %1 = load i32** %x.addr, align 4
+  store i32 8, i32* %1, align 4
+  %2 = load i32** %delta.addr, align 4
+  store i32 1, i32* %2, align 4
+  store i32 0, i32* %f, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %3 = load i32* %f, align 4
+  %cmp = icmp slt i32 %3, 16
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %4 = load i32** %p_H.addr, align 4
+  %incdec.ptr = getelementptr inbounds i32* %4, i32 1
+  store i32* %incdec.ptr, i32** %p_H.addr, align 4
+  store i32 1, i32* %4, align 4
+  %5 = load i32** %p_X.addr, align 4
+  %incdec.ptr1 = getelementptr inbounds i32* %5, i32 1
+  store i32* %incdec.ptr1, i32** %p_X.addr, align 4
+  store i32 1, i32* %5, align 4
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %6 = load i32* %f, align 4
+  %inc = add nsw i32 %6, 1
+  store i32 %inc, i32* %f, align 4
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  ret void
+}
+
+; Function Attrs: nounwind
+define i32 @main() #0 {
+entry:
+  %retval = alloca i32, align 4
+  %delta = alloca i32, align 4
+  %d = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  %error = alloca i32, align 4
+  %f = alloca i32, align 4
+  %p_H = alloca i32*, align 4
+  %p_X = alloca i32*, align 4
+  %p_X2 = alloca i32*, align 4
+  store i32 0, i32* %retval
+  call void @pin_down(i32* %d, i32* %x, i32* %delta, i32* getelementptr inbounds ([16 x i32]* @main.H, i32 0, i32 0), i32* getelementptr inbounds ([16 x i32]* @main.X, i32 0, i32 0))
+  store i32* getelementptr inbounds ([16 x i32]* @main.H, i32 0, i32 15), i32** %p_H, align 4
+  store i32* getelementptr inbounds ([16 x i32]* @main.X, i32 0, i32 15), i32** %p_X, align 4
+  store i32* getelementptr inbounds ([16 x i32]* @main.X, i32 0, i32 14), i32** %p_X2, align 4
+  store i32 0, i32* %y, align 4
+  store i32 1, i32* %f, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %0 = load i32* %f, align 4
+  %cmp = icmp slt i32 %0, 16
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %1 = load i32** %p_H, align 4
+  %incdec.ptr = getelementptr inbounds i32* %1, i32 -1
+  store i32* %incdec.ptr, i32** %p_H, align 4
+  %2 = load i32* %1, align 4
+  %3 = load i32** %p_X2, align 4
+  %incdec.ptr1 = getelementptr inbounds i32* %3, i32 -1
+  store i32* %incdec.ptr1, i32** %p_X2, align 4
+  %4 = load i32* %3, align 4
+  %5 = load i32** %p_X, align 4
+  %incdec.ptr2 = getelementptr inbounds i32* %5, i32 -1
+  store i32* %incdec.ptr2, i32** %p_X, align 4
+  store i32 %4, i32* %5, align 4
+  %mul = mul nsw i32 %2, %4
+  %6 = load i32* %y, align 4
+  %add = add nsw i32 %6, %mul
+  store i32 %add, i32* %y, align 4
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %7 = load i32* %f, align 4
+  %inc = add nsw i32 %7, 1
+  store i32 %inc, i32* %f, align 4
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  %8 = load i32** %p_H, align 4
+  %9 = load i32* %8, align 4
+  %10 = load i32* %x, align 4
+  %11 = load i32** %p_X, align 4
+  store i32 %10, i32* %11, align 4
+  %mul3 = mul nsw i32 %9, %10
+  %12 = load i32* %y, align 4
+  %add4 = add nsw i32 %12, %mul3
+  store i32 %add4, i32* %y, align 4
+  %13 = load i32* %d, align 4
+  %14 = load i32* %y, align 4
+  %sub = sub nsw i32 %13, %14
+  %15 = load i32* %delta, align 4
+  %mul5 = mul nsw i32 %sub, %15
+  store i32 %mul5, i32* %error, align 4
+  store i32 0, i32* %f, align 4
+  br label %for.cond6
+
+for.cond6:                                        ; preds = %for.inc13, %for.end
+  %16 = load i32* %f, align 4
+  %cmp7 = icmp slt i32 %16, 16
+  br i1 %cmp7, label %for.body8, label %for.end15
+
+for.body8:                                        ; preds = %for.cond6
+  %17 = load i32* %error, align 4
+  %18 = load i32** %p_X, align 4
+  %incdec.ptr9 = getelementptr inbounds i32* %18, i32 1
+  store i32* %incdec.ptr9, i32** %p_X, align 4
+  %19 = load i32* %18, align 4
+  %mul10 = mul nsw i32 %17, %19
+  %20 = load i32** %p_H, align 4
+  %incdec.ptr11 = getelementptr inbounds i32* %20, i32 1
+  store i32* %incdec.ptr11, i32** %p_H, align 4
+  %21 = load i32* %20, align 4
+  %add12 = add nsw i32 %21, %mul10
+  store i32 %add12, i32* %20, align 4
+  br label %for.inc13
+
+for.inc13:                                        ; preds = %for.body8
+  %22 = load i32* %f, align 4
+  %inc14 = add nsw i32 %22, 1
+  store i32 %inc14, i32* %f, align 4
+  br label %for.cond6
+
+for.end15:                                        ; preds = %for.cond6
+  call void @pin_down(i32* %d, i32* %x, i32* %y, i32* getelementptr inbounds ([16 x i32]* @main.H, i32 0, i32 0), i32* getelementptr inbounds ([16 x i32]* @main.X, i32 0, i32 0))
+  ret i32 0
+}
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}

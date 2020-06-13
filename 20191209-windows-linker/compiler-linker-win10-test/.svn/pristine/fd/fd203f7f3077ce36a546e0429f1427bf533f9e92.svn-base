@@ -1,0 +1,11 @@
+当前目录：./c_standard_lib-master/TIME
+
+ASCTIME.C:
+Time Elapsed 0.376819s
+读取ASM文件中的指令出错DIFFTIME.C:
+Time Elapsed 0.327098s
+读取ASM文件中的指令出错STRFTIME.C:
+Time Elapsed 0.321343s
+读取ASM文件中的指令出错XGETTIME.C:
+Time Elapsed 0.441591s
+读取ASM文件中的指令出错

@@ -1,0 +1,101 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=44, align=8, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = LEA <fi#1>, 0; CPURegs:%vreg1
+	ST %vreg1, <fi#2>, 0; mem:ST4[%p] CPURegs:%vreg1
+	ST %vreg0, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg0
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#2
+	%vreg2<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg2
+	%vreg3<def> = LTI %vreg2<kill>, 10; CPURegs:%vreg3,%vreg2
+	JNC %vreg3<kill>, <BB#3>; CPURegs:%vreg3
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#3(4)
+
+BB#2: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#1
+	%vreg7<def> = MovGR %ZERO, 2; CPURegs:%vreg7
+	%vreg8<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg8
+	%vreg9<def> = SHL %vreg8, %vreg7<kill>; CPURegs:%vreg9,%vreg8,%vreg7
+	%vreg11<def> = ADDu %vreg1, %vreg9<kill>; CPURegs:%vreg11,%vreg1,%vreg9
+	ST %vreg8, %vreg11<kill>, 0; mem:ST4[%arrayidx] CPURegs:%vreg8,%vreg11
+	%vreg12<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg12
+	%vreg13<def> = ADDiu %vreg12<kill>, 1; CPURegs:%vreg13,%vreg12
+	ST %vreg13<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg13
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#3: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#1
+	%vreg4<def> = MovGR %ZERO, 10; CPURegs:%vreg4
+	ST %vreg4<kill>, <fi#1>, 40; mem:ST4[%length](align=8) CPURegs:%vreg4
+	%vreg5<def> = LD <fi#2>, 0; mem:LD4[%p] CPURegs:%vreg5
+	%vreg6<def> = LD %vreg5<kill>, 40; mem:LD4[%length1] CPURegs:%vreg6,%vreg5
+	%V0<def> = COPY %vreg6; CPURegs:%vreg6
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=44, align=8, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+  fi#3: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = LEA <fi#1>, 0; CPURegs:%vreg1
+	ST %vreg1, <fi#2>, 0; mem:ST4[%p] CPURegs:%vreg1
+	ST %vreg0, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg0
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#2
+	%vreg2<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg2
+	%vreg3<def> = LTI %vreg2<kill>, 10; CPURegs:%vreg3,%vreg2
+	JNC %vreg3<kill>, <BB#3>; CPURegs:%vreg3
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#3(4)
+
+BB#2: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#1
+	%vreg7<def> = MovGR %ZERO, 2; CPURegs:%vreg7
+	%vreg8<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg8
+	%vreg9<def> = SHL %vreg8, %vreg7<kill>; CPURegs:%vreg9,%vreg8,%vreg7
+	%vreg11<def> = ADDu %vreg1, %vreg9<kill>; CPURegs:%vreg11,%vreg1,%vreg9
+	ST %vreg8, %vreg11<kill>, 0; mem:ST4[%arrayidx] CPURegs:%vreg8,%vreg11
+	%vreg12<def> = LD <fi#3>, 0; mem:LD4[%i] CPURegs:%vreg12
+	%vreg13<def> = ADDiu %vreg12<kill>, 1; CPURegs:%vreg13,%vreg12
+	ST %vreg13<kill>, <fi#3>, 0; mem:ST4[%i] CPURegs:%vreg13
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#3: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#1
+	%vreg4<def> = MovGR %ZERO, 10; CPURegs:%vreg4
+	ST %vreg4<kill>, <fi#1>, 40; mem:ST4[%length](align=8) CPURegs:%vreg4
+	%vreg5<def> = LD <fi#2>, 0; mem:LD4[%p] CPURegs:%vreg5
+	%vreg6<def> = LD %vreg5<kill>, 40; mem:LD4[%length1] CPURegs:%vreg6,%vreg5
+	%V0<def> = COPY %vreg6; CPURegs:%vreg6
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

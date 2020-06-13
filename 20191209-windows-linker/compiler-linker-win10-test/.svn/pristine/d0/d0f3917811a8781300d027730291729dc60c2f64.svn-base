@@ -1,0 +1,114 @@
+	.text
+	.file	"./testcase_4slots/fixup_bumpaftercmp_withreg.ll"
+	.globl	add
+	.align	2
+	.type	add,@function
+add:                                    # @add
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -8
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 1
+}
+$BB0_1:                                 # %do.body
+                                        # =>This Inner Loop Header: Depth=1
+{
+	movigl	GR2,2
+}
+{
+	movigh	GR2,0
+	load32	GR3, GR30, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sl	GR2, GR3, GR2
+	movigh	GR3,%hi(a)
+}
+{
+	movigl	GR3,%lo(a)
+}
+{
+	add	GR2, GR3, GR2
+}
+{
+	load32	GR3, GR2, 0
+	movigh	GR2,%hi(sum)
+}
+{
+	movigl	GR2,%lo(sum)
+}
+{
+	load32	GR4, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR3, GR4, GR3
+}
+{
+	store32	GR3, GR2, 0
+	load32	GR3, GR30, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR4, GR3, 1
+}
+{
+	store32	GR4, GR30, 1
+	movigh	GR4,%hi(bound)
+}
+{
+	movigl	GR4,%lo(bound)
+}
+{
+	load32	GR4, GR4, 0
+}
+{
+	lt	 GR3, GR4
+}
+{
+	jc	 $BB0_1
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#2:                                 # %do.end
+{
+	load32	GR2, GR2, 0
+	addi	GR30, GR30, 8
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	add, ($tmp0)-add
+
+

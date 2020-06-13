@@ -1,0 +1,154 @@
+	.text
+	.file	"./testcase_4slots/Intrinsic/global_vector.ll"
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -16
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 3
+	store32	GR4, GR30, 2
+}
+{
+	store32	GR5, GR30, 1
+	movigh	GR3,%hi(init_vgb)
+}
+{
+	movigl	GR3,%lo(init_vgb)
+}
+{
+	vload32	VR0, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	movigh	GR3,%hi(uninit_vgb)
+}
+{
+	movigl	GR3,%lo(uninit_vgb)
+}
+{
+	vload32	VR1, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vadd40	VR0, VR1, VR0
+}
+{
+	vstore40	VR0, GR3, 0
+	movigh	GR3,%hi(uninit_vst)
+}
+{
+	movigl	GR3,%lo(uninit_vst)
+	movigh	GR4,%hi(main.init_vst)
+}
+{
+	movigl	GR4,%lo(main.init_vst)
+}
+{
+	vload32	VR0, GR4, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR0, GR3, 0
+	movigh	GR3,%hi(uninit_st)
+}
+{
+	movigl	GR3,%lo(uninit_st)
+	movigl	GR4,10
+}
+{
+	movigh	GR4,0
+}
+{
+	store32	GR4, GR3, 0
+	addi	GR30, GR30, 16
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:                                  # EmittedInsts:27
+	.size	main, ($tmp0)-main
+
+	.type	init_vgb,@object        # @init_vgb
+	.data
+	.globl	init_vgb
+	.align	6
+init_vgb:
+	.4byte	1                       # 0x1
+	.4byte	2                       # 0x2
+	.4byte	3                       # 0x3
+	.4byte	4                       # 0x4
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.size	init_vgb, 64
+
+	.type	main.init_vst,@object   # @main.init_vst
+	.align	6
+main.init_vst:
+	.4byte	1                       # 0x1
+	.4byte	1                       # 0x1
+	.4byte	1                       # 0x1
+	.4byte	1                       # 0x1
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.4byte	0                       # 0x0
+	.size	main.init_vst, 64
+
+	.type	uninit_vgb,@object      # @uninit_vgb
+	.comm	uninit_vgb,64,64
+	.type	uninit_vst,@object      # @uninit_vst
+	.local	uninit_vst
+	.comm	uninit_vst,64,64
+	.type	uninit_st,@object       # @uninit_st
+	.local	uninit_st
+	.comm	uninit_st,4,4
+	.type	uninit_gb,@object       # @uninit_gb
+	.comm	uninit_gb,4,4
+

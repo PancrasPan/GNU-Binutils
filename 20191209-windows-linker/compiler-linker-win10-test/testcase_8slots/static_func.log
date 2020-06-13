@@ -1,0 +1,109 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name static_func.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/static_func.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/static_func.ll -x c ./testcase_8slots/static_func.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	ADJCALLSTACKDOWN 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg0<def> = MovGR %ZERO, 1; CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 2; CPURegs:%vreg1
+	%A0<def> = COPY %vreg0; CPURegs:%vreg0
+	%A1<def> = COPY %vreg1; CPURegs:%vreg1
+	CALL <ga:@mul_sum>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 0, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg2<def> = COPY %V0; CPURegs:%vreg2
+	ADJCALLSTACKDOWN 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = MovGR %ZERO, -3; CPURegs:%vreg3
+	%vreg4<def> = MovGR %ZERO, -4; CPURegs:%vreg4
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@mul_sum>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 0, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg5<def> = COPY %V0; CPURegs:%vreg5
+	%vreg6<def> = ADDu %vreg5, %vreg2; CPURegs:%vreg6,%vreg5,%vreg2
+	%V0<def> = COPY %vreg6; CPURegs:%vreg6
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+# Machine code for function mul_sum: SSA
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	%vreg4<def> = MovIGH %ZERO, <ga:@mul_sum.sum>[TF=3]; CPURegs:%vreg4
+	%vreg5<def,tied1> = MovIGL %vreg4<tied0>, <ga:@mul_sum.sum>[TF=4]; CPURegs:%vreg5,%vreg4
+	%vreg6<def> = MUL32 %vreg1, %vreg0; CPURegs:%vreg6,%vreg1,%vreg0
+	%vreg7<def> = LD %vreg5, 0; mem:LD4[@mul_sum.sum](tbaa=<badref>) CPURegs:%vreg7,%vreg5
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg6<kill>; CPURegs:%vreg8,%vreg7,%vreg6
+	ST %vreg8, %vreg5, 0; mem:ST4[@mul_sum.sum](tbaa=<badref>) CPURegs:%vreg8,%vreg5
+	%vreg3<def> = COPY %vreg1; CPURegs:%vreg3,%vreg1
+	%vreg2<def> = COPY %vreg0; CPURegs:%vreg2,%vreg0
+	%V0<def> = COPY %vreg8; CPURegs:%vreg8
+	RetLR %V0<imp-use>
+
+# End machine code for function mul_sum.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	ADJCALLSTACKDOWN 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg0<def> = MovGR %ZERO, 1; CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 2; CPURegs:%vreg1
+	%A0<def> = COPY %vreg0; CPURegs:%vreg0
+	%A1<def> = COPY %vreg1; CPURegs:%vreg1
+	CALL <ga:@mul_sum>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 0, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg2<def> = COPY %V0; CPURegs:%vreg2
+	ADJCALLSTACKDOWN 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg3<def> = MovGR %ZERO, -3; CPURegs:%vreg3
+	%vreg4<def> = MovGR %ZERO, -4; CPURegs:%vreg4
+	%A0<def> = COPY %vreg3; CPURegs:%vreg3
+	%A1<def> = COPY %vreg4; CPURegs:%vreg4
+	CALL <ga:@mul_sum>, %A0, %A1, <regmask>, %SP<imp-def>, %V0<imp-def>
+	ADJCALLSTACKUP 0, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%vreg5<def> = COPY %V0; CPURegs:%vreg5
+	%vreg6<def> = ADDu %vreg5, %vreg2; CPURegs:%vreg6,%vreg5,%vreg2
+	%V0<def> = COPY %vreg6; CPURegs:%vreg6
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+# Machine code for function mul_sum: SSA
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	%vreg4<def> = MovIGH %ZERO, <ga:@mul_sum.sum>[TF=3]; CPURegs:%vreg4
+	%vreg5<def,tied1> = MovIGL %vreg4<tied0>, <ga:@mul_sum.sum>[TF=4]; CPURegs:%vreg5,%vreg4
+	%vreg6<def> = MUL32 %vreg1, %vreg0; CPURegs:%vreg6,%vreg1,%vreg0
+	%vreg7<def> = LD %vreg5, 0; mem:LD4[@mul_sum.sum](tbaa=<badref>) CPURegs:%vreg7,%vreg5
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg6<kill>; CPURegs:%vreg8,%vreg7,%vreg6
+	ST %vreg8, %vreg5, 0; mem:ST4[@mul_sum.sum](tbaa=<badref>) CPURegs:%vreg8,%vreg5
+	%vreg3<def> = COPY %vreg1; CPURegs:%vreg3,%vreg1
+	%vreg2<def> = COPY %vreg0; CPURegs:%vreg2,%vreg0
+	%V0<def> = COPY %vreg8; CPURegs:%vreg8
+	RetLR %V0<imp-use>
+
+# End machine code for function mul_sum.
+

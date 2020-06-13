@@ -1,0 +1,189 @@
+; ModuleID = './testcase_8slots/matrix1.c'
+target datalayout = "e-m:m-p:32:32-i8:8:32-i16:16:32-i64:64-n32-S64"
+target triple = "dsp"
+
+@main.A = internal global [100 x i32] zeroinitializer, align 4
+@main.B = internal global [100 x i32] zeroinitializer, align 4
+@main.C = internal global [100 x i32] zeroinitializer, align 4
+
+; Function Attrs: nounwind
+define i32 @pin_down(i32* %A, i32* %B, i32* %C) #0 {
+entry:
+  %A.addr = alloca i32*, align 4
+  %B.addr = alloca i32*, align 4
+  %C.addr = alloca i32*, align 4
+  %i = alloca i32, align 4
+  store i32* %A, i32** %A.addr, align 4
+  store i32* %B, i32** %B.addr, align 4
+  store i32* %C, i32** %C.addr, align 4
+  store i32 0, i32* %i, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %0 = load i32* %i, align 4
+  %cmp = icmp slt i32 %0, 100
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %1 = load i32* %i, align 4
+  %2 = load i32** %A.addr, align 4
+  %arrayidx = getelementptr inbounds i32* %2, i32 %1
+  store i32 1, i32* %arrayidx, align 4
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %3 = load i32* %i, align 4
+  %inc = add nsw i32 %3, 1
+  store i32 %inc, i32* %i, align 4
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  store i32 0, i32* %i, align 4
+  br label %for.cond1
+
+for.cond1:                                        ; preds = %for.inc5, %for.end
+  %4 = load i32* %i, align 4
+  %cmp2 = icmp slt i32 %4, 100
+  br i1 %cmp2, label %for.body3, label %for.end7
+
+for.body3:                                        ; preds = %for.cond1
+  %5 = load i32* %i, align 4
+  %6 = load i32** %B.addr, align 4
+  %arrayidx4 = getelementptr inbounds i32* %6, i32 %5
+  store i32 1, i32* %arrayidx4, align 4
+  br label %for.inc5
+
+for.inc5:                                         ; preds = %for.body3
+  %7 = load i32* %i, align 4
+  %inc6 = add nsw i32 %7, 1
+  store i32 %inc6, i32* %i, align 4
+  br label %for.cond1
+
+for.end7:                                         ; preds = %for.cond1
+  store i32 0, i32* %i, align 4
+  br label %for.cond8
+
+for.cond8:                                        ; preds = %for.inc12, %for.end7
+  %8 = load i32* %i, align 4
+  %cmp9 = icmp slt i32 %8, 100
+  br i1 %cmp9, label %for.body10, label %for.end14
+
+for.body10:                                       ; preds = %for.cond8
+  %9 = load i32* %i, align 4
+  %10 = load i32** %C.addr, align 4
+  %arrayidx11 = getelementptr inbounds i32* %10, i32 %9
+  store i32 0, i32* %arrayidx11, align 4
+  br label %for.inc12
+
+for.inc12:                                        ; preds = %for.body10
+  %11 = load i32* %i, align 4
+  %inc13 = add nsw i32 %11, 1
+  store i32 %inc13, i32* %i, align 4
+  br label %for.cond8
+
+for.end14:                                        ; preds = %for.cond8
+  ret i32 0
+}
+
+; Function Attrs: nounwind
+define i32 @main() #0 {
+entry:
+  %retval = alloca i32, align 4
+  %p_a = alloca i32*, align 4
+  %p_b = alloca i32*, align 4
+  %p_c = alloca i32*, align 4
+  %f = alloca i32, align 4
+  %i = alloca i32, align 4
+  %k = alloca i32, align 4
+  store i32 0, i32* %retval
+  store i32* getelementptr inbounds ([100 x i32]* @main.A, i32 0, i32 0), i32** %p_a, align 4
+  store i32* getelementptr inbounds ([100 x i32]* @main.B, i32 0, i32 0), i32** %p_b, align 4
+  store i32* getelementptr inbounds ([100 x i32]* @main.C, i32 0, i32 0), i32** %p_c, align 4
+  %call = call i32 @pin_down(i32* getelementptr inbounds ([100 x i32]* @main.A, i32 0, i32 0), i32* getelementptr inbounds ([100 x i32]* @main.B, i32 0, i32 0), i32* getelementptr inbounds ([100 x i32]* @main.C, i32 0, i32 0))
+  store i32 0, i32* %k, align 4
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc13, %entry
+  %0 = load i32* %k, align 4
+  %cmp = icmp slt i32 %0, 10
+  br i1 %cmp, label %for.body, label %for.end15
+
+for.body:                                         ; preds = %for.cond
+  store i32* getelementptr inbounds ([100 x i32]* @main.A, i32 0, i32 0), i32** %p_a, align 4
+  store i32 0, i32* %i, align 4
+  br label %for.cond1
+
+for.cond1:                                        ; preds = %for.inc10, %for.body
+  %1 = load i32* %i, align 4
+  %cmp2 = icmp slt i32 %1, 10
+  br i1 %cmp2, label %for.body3, label %for.end12
+
+for.body3:                                        ; preds = %for.cond1
+  %2 = load i32* %k, align 4
+  %mul = mul nsw i32 %2, 10
+  %arrayidx = getelementptr inbounds [100 x i32]* @main.B, i32 0, i32 %mul
+  store i32* %arrayidx, i32** %p_b, align 4
+  %3 = load i32** %p_c, align 4
+  store i32 0, i32* %3, align 4
+  store i32 0, i32* %f, align 4
+  br label %for.cond4
+
+for.cond4:                                        ; preds = %for.inc, %for.body3
+  %4 = load i32* %f, align 4
+  %cmp5 = icmp slt i32 %4, 10
+  br i1 %cmp5, label %for.body6, label %for.end
+
+for.body6:                                        ; preds = %for.cond4
+  %5 = load i32** %p_a, align 4
+  %incdec.ptr = getelementptr inbounds i32* %5, i32 1
+  store i32* %incdec.ptr, i32** %p_a, align 4
+  %6 = load i32* %5, align 4
+  %7 = load i32** %p_b, align 4
+  %incdec.ptr7 = getelementptr inbounds i32* %7, i32 1
+  store i32* %incdec.ptr7, i32** %p_b, align 4
+  %8 = load i32* %7, align 4
+  %mul8 = mul nsw i32 %6, %8
+  %9 = load i32** %p_c, align 4
+  %10 = load i32* %9, align 4
+  %add = add nsw i32 %10, %mul8
+  store i32 %add, i32* %9, align 4
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body6
+  %11 = load i32* %f, align 4
+  %inc = add nsw i32 %11, 1
+  store i32 %inc, i32* %f, align 4
+  br label %for.cond4
+
+for.end:                                          ; preds = %for.cond4
+  %12 = load i32** %p_c, align 4
+  %incdec.ptr9 = getelementptr inbounds i32* %12, i32 1
+  store i32* %incdec.ptr9, i32** %p_c, align 4
+  %13 = load i32* %12, align 4
+  br label %for.inc10
+
+for.inc10:                                        ; preds = %for.end
+  %14 = load i32* %i, align 4
+  %inc11 = add nsw i32 %14, 1
+  store i32 %inc11, i32* %i, align 4
+  br label %for.cond1
+
+for.end12:                                        ; preds = %for.cond1
+  br label %for.inc13
+
+for.inc13:                                        ; preds = %for.end12
+  %15 = load i32* %k, align 4
+  %inc14 = add nsw i32 %15, 1
+  store i32 %inc14, i32* %k, align 4
+  br label %for.cond
+
+for.end15:                                        ; preds = %for.cond
+  %call16 = call i32 @pin_down(i32* getelementptr inbounds ([100 x i32]* @main.A, i32 0, i32 0), i32* getelementptr inbounds ([100 x i32]* @main.B, i32 0, i32 0), i32* getelementptr inbounds ([100 x i32]* @main.C, i32 0, i32 0))
+  ret i32 0
+}
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.ident = !{!0}
+
+!0 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}

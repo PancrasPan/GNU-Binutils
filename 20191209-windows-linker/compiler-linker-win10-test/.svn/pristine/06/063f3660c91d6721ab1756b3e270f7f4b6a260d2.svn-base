@@ -1,0 +1,119 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovIGH %ZERO, <ga:@main.local_b>[TF=3]; CPURegs:%vreg1
+	%vreg2<def,tied1> = MovIGL %vreg1<tied0>, <ga:@main.local_b>[TF=4]; CPURegs:%vreg2,%vreg1
+	%vreg3<def> = MovIGH %ZERO, <ga:@b>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <ga:@b>[TF=4]; CPURegs:%vreg4,%vreg3
+	%vreg5<def> = LD %vreg4, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @b, i32 0, i32 0)] CPURegs:%vreg5,%vreg4
+	ST %vreg5<kill>, %vreg2, 0; mem:ST4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 0)] CPURegs:%vreg5,%vreg2
+	%vreg6<def> = LD %vreg4, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @b, i32 0, i32 1)] CPURegs:%vreg6,%vreg4
+	ST %vreg6<kill>, %vreg2, 4; mem:ST4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 1)] CPURegs:%vreg6,%vreg2
+	%vreg7<def> = LD %vreg4, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @b, i32 0, i32 2)] CPURegs:%vreg7,%vreg4
+	ST %vreg7, %vreg2, 8; mem:ST4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 2)] CPURegs:%vreg7,%vreg2
+	%vreg8<def> = LD %vreg2, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 1)] CPURegs:%vreg8,%vreg2
+	%vreg9<def> = LD %vreg2, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 0)] CPURegs:%vreg9,%vreg2
+	%vreg10<def> = ADDu %vreg9<kill>, %vreg8<kill>; CPURegs:%vreg10,%vreg9,%vreg8
+	%vreg11<def> = ADDu %vreg10<kill>, %vreg7; CPURegs:%vreg11,%vreg10,%vreg7
+	%vreg12<def> = MovIGH %ZERO, <ga:@main.local_sum2>[TF=3]; CPURegs:%vreg12
+	%vreg13<def,tied1> = MovIGL %vreg12<tied0>, <ga:@main.local_sum2>[TF=4]; CPURegs:%vreg13,%vreg12
+	ST %vreg11, %vreg13<kill>, 0; mem:ST4[@main.local_sum2] CPURegs:%vreg11,%vreg13
+	%vreg14<def> = MovIGH %ZERO, <ga:@sum2>[TF=3]; CPURegs:%vreg14
+	%vreg15<def,tied1> = MovIGL %vreg14<tied0>, <ga:@sum2>[TF=4]; CPURegs:%vreg15,%vreg14
+	ST %vreg11, %vreg15<kill>, 0; mem:ST4[@sum2] CPURegs:%vreg11,%vreg15
+	%vreg16<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg16
+	%vreg17<def,tied1> = MovIGL %vreg16<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg17,%vreg16
+	%vreg18<def> = LD %vreg17, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)] CPURegs:%vreg18,%vreg17
+	%vreg19<def> = LD %vreg17, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)] CPURegs:%vreg19,%vreg17
+	%vreg20<def> = ADDu %vreg19<kill>, %vreg18<kill>; CPURegs:%vreg20,%vreg19,%vreg18
+	%vreg21<def> = LD %vreg17, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)] CPURegs:%vreg21,%vreg17
+	%vreg22<def> = ADDu %vreg20<kill>, %vreg21<kill>; CPURegs:%vreg22,%vreg20,%vreg21
+	%vreg23<def> = MovIGH %ZERO, <ga:@sum1>[TF=3]; CPURegs:%vreg23
+	%vreg24<def,tied1> = MovIGL %vreg23<tied0>, <ga:@sum1>[TF=4]; CPURegs:%vreg24,%vreg23
+	ST %vreg22<kill>, %vreg24<kill>, 0; mem:ST4[@sum1] CPURegs:%vreg22,%vreg24
+	%vreg25<def> = MovIGH %ZERO, <ga:@c>[TF=3]; CPURegs:%vreg25
+	%vreg26<def,tied1> = MovIGL %vreg25<tied0>, <ga:@c>[TF=4]; CPURegs:%vreg26,%vreg25
+	%vreg27<def> = LD %vreg26, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 0)] CPURegs:%vreg27,%vreg26
+	%vreg28<def> = LD %vreg17, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)] CPURegs:%vreg28,%vreg17
+	%vreg29<def> = ADDu %vreg28<kill>, %vreg27<kill>; CPURegs:%vreg29,%vreg28,%vreg27
+	ST %vreg29<kill>, %vreg17, 0; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)] CPURegs:%vreg29,%vreg17
+	%vreg30<def> = LD %vreg26, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 1)] CPURegs:%vreg30,%vreg26
+	%vreg31<def> = LD %vreg17, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)] CPURegs:%vreg31,%vreg17
+	%vreg32<def> = ADDu %vreg31<kill>, %vreg30<kill>; CPURegs:%vreg32,%vreg31,%vreg30
+	ST %vreg32<kill>, %vreg17, 4; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)] CPURegs:%vreg32,%vreg17
+	%vreg33<def> = LD %vreg26, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 2)] CPURegs:%vreg33,%vreg26
+	%vreg34<def> = LD %vreg17, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)] CPURegs:%vreg34,%vreg17
+	%vreg35<def> = ADDu %vreg34<kill>, %vreg33<kill>; CPURegs:%vreg35,%vreg34,%vreg33
+	ST %vreg35<kill>, %vreg17, 8; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)] CPURegs:%vreg35,%vreg17
+	%V0<def> = COPY %vreg0; CPURegs:%vreg0
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	%vreg1<def> = MovIGH %ZERO, <ga:@main.local_b>[TF=3]; CPURegs:%vreg1
+	%vreg2<def,tied1> = MovIGL %vreg1<tied0>, <ga:@main.local_b>[TF=4]; CPURegs:%vreg2,%vreg1
+	%vreg3<def> = MovIGH %ZERO, <ga:@b>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <ga:@b>[TF=4]; CPURegs:%vreg4,%vreg3
+	%vreg5<def> = LD %vreg4, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @b, i32 0, i32 0)] CPURegs:%vreg5,%vreg4
+	ST %vreg5<kill>, %vreg2, 0; mem:ST4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 0)] CPURegs:%vreg5,%vreg2
+	%vreg6<def> = LD %vreg4, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @b, i32 0, i32 1)] CPURegs:%vreg6,%vreg4
+	ST %vreg6<kill>, %vreg2, 4; mem:ST4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 1)] CPURegs:%vreg6,%vreg2
+	%vreg7<def> = LD %vreg4, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @b, i32 0, i32 2)] CPURegs:%vreg7,%vreg4
+	ST %vreg7, %vreg2, 8; mem:ST4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 2)] CPURegs:%vreg7,%vreg2
+	%vreg8<def> = LD %vreg2, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 1)] CPURegs:%vreg8,%vreg2
+	%vreg9<def> = LD %vreg2, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @main.local_b, i32 0, i32 0)] CPURegs:%vreg9,%vreg2
+	%vreg10<def> = ADDu %vreg9<kill>, %vreg8<kill>; CPURegs:%vreg10,%vreg9,%vreg8
+	%vreg11<def> = ADDu %vreg10<kill>, %vreg7; CPURegs:%vreg11,%vreg10,%vreg7
+	%vreg12<def> = MovIGH %ZERO, <ga:@main.local_sum2>[TF=3]; CPURegs:%vreg12
+	%vreg13<def,tied1> = MovIGL %vreg12<tied0>, <ga:@main.local_sum2>[TF=4]; CPURegs:%vreg13,%vreg12
+	ST %vreg11, %vreg13<kill>, 0; mem:ST4[@main.local_sum2] CPURegs:%vreg11,%vreg13
+	%vreg14<def> = MovIGH %ZERO, <ga:@sum2>[TF=3]; CPURegs:%vreg14
+	%vreg15<def,tied1> = MovIGL %vreg14<tied0>, <ga:@sum2>[TF=4]; CPURegs:%vreg15,%vreg14
+	ST %vreg11, %vreg15<kill>, 0; mem:ST4[@sum2] CPURegs:%vreg11,%vreg15
+	%vreg16<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg16
+	%vreg17<def,tied1> = MovIGL %vreg16<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg17,%vreg16
+	%vreg18<def> = LD %vreg17, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)] CPURegs:%vreg18,%vreg17
+	%vreg19<def> = LD %vreg17, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)] CPURegs:%vreg19,%vreg17
+	%vreg20<def> = ADDu %vreg19<kill>, %vreg18<kill>; CPURegs:%vreg20,%vreg19,%vreg18
+	%vreg21<def> = LD %vreg17, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)] CPURegs:%vreg21,%vreg17
+	%vreg22<def> = ADDu %vreg20<kill>, %vreg21<kill>; CPURegs:%vreg22,%vreg20,%vreg21
+	%vreg23<def> = MovIGH %ZERO, <ga:@sum1>[TF=3]; CPURegs:%vreg23
+	%vreg24<def,tied1> = MovIGL %vreg23<tied0>, <ga:@sum1>[TF=4]; CPURegs:%vreg24,%vreg23
+	ST %vreg22<kill>, %vreg24<kill>, 0; mem:ST4[@sum1] CPURegs:%vreg22,%vreg24
+	%vreg25<def> = MovIGH %ZERO, <ga:@c>[TF=3]; CPURegs:%vreg25
+	%vreg26<def,tied1> = MovIGL %vreg25<tied0>, <ga:@c>[TF=4]; CPURegs:%vreg26,%vreg25
+	%vreg27<def> = LD %vreg26, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 0)] CPURegs:%vreg27,%vreg26
+	%vreg28<def> = LD %vreg17, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)] CPURegs:%vreg28,%vreg17
+	%vreg29<def> = ADDu %vreg28<kill>, %vreg27<kill>; CPURegs:%vreg29,%vreg28,%vreg27
+	ST %vreg29<kill>, %vreg17, 0; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)] CPURegs:%vreg29,%vreg17
+	%vreg30<def> = LD %vreg26, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 1)] CPURegs:%vreg30,%vreg26
+	%vreg31<def> = LD %vreg17, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)] CPURegs:%vreg31,%vreg17
+	%vreg32<def> = ADDu %vreg31<kill>, %vreg30<kill>; CPURegs:%vreg32,%vreg31,%vreg30
+	ST %vreg32<kill>, %vreg17, 4; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)] CPURegs:%vreg32,%vreg17
+	%vreg33<def> = LD %vreg26, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 2)] CPURegs:%vreg33,%vreg26
+	%vreg34<def> = LD %vreg17, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)] CPURegs:%vreg34,%vreg17
+	%vreg35<def> = ADDu %vreg34<kill>, %vreg33<kill>; CPURegs:%vreg35,%vreg34,%vreg33
+	ST %vreg35<kill>, %vreg17, 8; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)] CPURegs:%vreg35,%vreg17
+	%V0<def> = COPY %vreg0; CPURegs:%vreg0
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

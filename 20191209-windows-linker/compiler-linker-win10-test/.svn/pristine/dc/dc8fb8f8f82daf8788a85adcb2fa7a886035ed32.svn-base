@@ -1,0 +1,35 @@
+当前目录：./testcase_8slots/string
+
+memchr.c:
+Time Elapsed 0.801496s
+读取ASM文件中的指令出错memcpy.c:
+Time Elapsed 0.320119s
+读取ASM文件中的指令出错memmove.c:
+Time Elapsed 0.389213s
+读取ASM文件中的指令出错memset.c:
+Time Elapsed 0.297677s
+读取ASM文件中的指令出错strchr.c:
+Time Elapsed 0.339472s
+读取ASM文件中的指令出错strcmp.c:
+Time Elapsed 0.349497s
+读取ASM文件中的指令出错strcpy.c:
+Time Elapsed 0.311786s
+读取ASM文件中的指令出错strcspn.c:
+Time Elapsed 0.398356s
+读取ASM文件中的指令出错strlen.c:
+Time Elapsed 0.342121s
+读取ASM文件中的指令出错strncmp.c:
+Time Elapsed 0.383279s
+读取ASM文件中的指令出错strncpy.c:
+Time Elapsed 0.312922s
+读取ASM文件中的指令出错strpbrk.c:
+Time Elapsed 0.386617s
+读取ASM文件中的指令出错strrchr.c:
+Time Elapsed 0.344615s
+读取ASM文件中的指令出错strspn.c:
+Time Elapsed 0.385591s
+读取ASM文件中的指令出错strstr.c:
+Time Elapsed 0.404256s
+读取ASM文件中的指令出错strtok.c:
+Time Elapsed 0.343764s
+读取ASM文件中的指令出错

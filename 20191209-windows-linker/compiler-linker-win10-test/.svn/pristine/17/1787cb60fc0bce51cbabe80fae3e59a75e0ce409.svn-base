@@ -1,0 +1,138 @@
+	.text
+	.file	"./c_standard_lib-master/STRING/STRRCHR.ll"
+	.globl	strrchr
+	.align	2
+	.type	strrchr,@function
+strrchr:                                # @strrchr
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -16
+}
+{
+	store32	GR4, GR30, 3
+	store32	GR5, GR30, 2
+}
+{
+	load8	GR2, GR30, 2
+}
+{
+	store8	GR2, GR30, 1
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 0
+}
+{
+	jmp	$BB0_1
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_5:                                 # %for.inc
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR2, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR2, GR2, 1
+}
+{
+	store32	GR2, GR30, 3
+}
+$BB0_1:                                 # %for.cond
+                                        # =>This Inner Loop Header: Depth=1
+{
+	load32	GR2, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load8	GR2, GR2, 0
+	load8	GR3, GR30, 1
+}
+{
+	neq	 GR2, GR3
+}
+{
+	jc	 $BB0_3
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#2:                                 # %if.then
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR2, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 0
+}
+$BB0_3:                                 # %if.end
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR2, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load8	GR2, GR2, 0
+}
+{
+	neqi	 GR2, 0
+}
+{
+	jc	 $BB0_5
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#4:                                 # %if.then7
+{
+	load32	GR2, GR30, 0
+	addi	GR30, GR30, 16
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	strrchr, ($tmp0)-strrchr
+
+

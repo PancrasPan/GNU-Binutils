@@ -1,0 +1,77 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name SIMD_Intrinsic_Testcase.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/SIMD_Intrinsic_Testcase.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/SIMD_Intrinsic_Testcase.ll -x c "./testcase_8slots/SIMD_Intrinsic\\SIMD_Intrinsic_Testcase.c"
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function SIMD_Intrinsic_Testcase0: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 1; CPURegs:%vreg0
+	%vreg1<def> = ABS %vreg0; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = loadu_8 %vreg0, 1; CPURegs:%vreg2,%vreg0
+	%vreg3<def> = loadu_16 %vreg0, 1; CPURegs:%vreg3,%vreg0
+	%vreg4<def> = loadu_32 %vreg0, 1; CPURegs:%vreg4,%vreg0
+	%vreg5<def> = MovGR %ZERO, 2; CPURegs:%vreg5
+	%vreg6<def> = loado_16 %vreg0, %vreg5; CPURegs:%vreg6,%vreg0,%vreg5
+	%vreg7<def> = loado_32 %vreg0, %vreg5; CPURegs:%vreg7,%vreg0,%vreg5
+	%vreg8<def> = storeo_16 %vreg0, %vreg5; CPURegs:%vreg8,%vreg0,%vreg5
+	%vreg9<def> = storeo_32 %vreg0, %vreg5; CPURegs:%vreg9,%vreg0,%vreg5
+	%vreg10<def> = storeu_10 %vreg0, 1; CPUVecRegs:%vreg10 CPURegs:%vreg0
+	%vreg11<def> = storeu_20 %vreg0, 1; CPUVecRegs:%vreg11 CPURegs:%vreg0
+	%vreg12<def> = storeu_40 %vreg0, 1; CPUVecRegs:%vreg12 CPURegs:%vreg0
+	storeu_8 %vreg0, %vreg5, 1; CPURegs:%vreg0,%vreg5
+
+# End machine code for function SIMD_Intrinsic_Testcase0.
+
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	CALL <ga:@SIMD_Intrinsic_Testcase0>, <regmask>, %SP<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function SIMD_Intrinsic_Testcase0: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 1; CPURegs:%vreg0
+	%vreg1<def> = ABS %vreg0; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = loadu_8 %vreg0, 1; CPURegs:%vreg2,%vreg0
+	%vreg3<def> = loadu_16 %vreg0, 1; CPURegs:%vreg3,%vreg0
+	%vreg4<def> = loadu_32 %vreg0, 1; CPURegs:%vreg4,%vreg0
+	%vreg5<def> = MovGR %ZERO, 2; CPURegs:%vreg5
+	%vreg6<def> = loado_16 %vreg0, %vreg5; CPURegs:%vreg6,%vreg0,%vreg5
+	%vreg7<def> = loado_32 %vreg0, %vreg5; CPURegs:%vreg7,%vreg0,%vreg5
+	%vreg8<def> = storeo_16 %vreg0, %vreg5; CPURegs:%vreg8,%vreg0,%vreg5
+	%vreg9<def> = storeo_32 %vreg0, %vreg5; CPURegs:%vreg9,%vreg0,%vreg5
+	%vreg10<def> = storeu_10 %vreg0, 1; CPUVecRegs:%vreg10 CPURegs:%vreg0
+	%vreg11<def> = storeu_20 %vreg0, 1; CPUVecRegs:%vreg11 CPURegs:%vreg0
+	%vreg12<def> = storeu_40 %vreg0, 1; CPUVecRegs:%vreg12 CPURegs:%vreg0
+	storeu_8 %vreg0, %vreg5, 1; CPURegs:%vreg0,%vreg5
+
+# End machine code for function SIMD_Intrinsic_Testcase0.
+
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	CALL <ga:@SIMD_Intrinsic_Testcase0>, <regmask>, %SP<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+
+# End machine code for function main.
+

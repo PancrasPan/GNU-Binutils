@@ -1,0 +1,267 @@
+	.text
+	.file	"./testcase_4slots/argument_fir.ll"
+	.globl	fir
+	.align	2
+	.type	fir,@function
+fir:                                    # @fir
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -24
+}
+{
+	load32	GR2, GR30, 8
+	store32	GR4, GR30, 5
+}
+{
+	store32	GR5, GR30, 4
+	store32	GR2, GR30, 3
+	movigh	GR2,%hi(nSamples)
+}
+{
+	movigl	GR2,%lo(nSamples)
+}
+{
+	load32	GR2, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR2, GR2, -1
+}
+{
+	store32	GR2, GR30, 2
+	movigl	GR5,2
+}
+{
+	movigh	GR5,0
+}
+{
+	jmp	$BB0_1
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_4:                                 # %while.end
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR2, GR30, 2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR2, GR2, -1
+}
+{
+	store32	GR2, GR30, 2
+}
+$BB0_1:                                 # %while.cond
+                                        # =>This Loop Header: Depth=1
+                                        #     Child Loop BB0_2 Depth 2
+{
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+	load32	GR3, GR30, 2
+}
+{
+	nop
+}
+{
+	lt	 GR3, GR2
+}
+{
+	jnc	 $BB0_2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	jmp	$BB0_5
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_3:                                 # %while.body3
+                                        #   in Loop: Header=BB0_2 Depth=2
+{
+	load32	GR2, GR30, 1
+}
+{
+	nop
+}
+{
+	load32	GR3, GR30, 2
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sub	GR4, GR3, GR2
+}
+{
+	sl	GR4, GR4, GR5
+	load32	GR6, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR4, GR6, GR4
+	sl	GR2, GR2, GR5
+	load32	GR6, GR30, 5
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR2, GR6, GR2
+}
+{
+	load32	GR2, GR2, 0
+}
+{
+	nop
+}
+{
+	load32	GR4, GR4, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	mul32	GR2, GR2, GR4
+	sl	GR3, GR3, GR5
+	load32	GR4, GR30, 3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR3, GR4, GR3
+}
+{
+	load32	GR4, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR2, GR4, GR2
+}
+{
+	store32	GR2, GR3, 0
+}
+{
+	load32	GR2, GR30, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR2, GR2, 1
+}
+$BB0_2:                                 # %while.body
+                                        #   Parent Loop BB0_1 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+{
+	store32	GR2, GR30, 1
+}
+{
+	load32	GR2, GR30, 1
+}
+{
+	nop
+}
+{
+	lti	 GR2, 16
+}
+{
+	jc	 $BB0_3
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	jmp	$BB0_4
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_5:                                 # %while.end7
+{
+	addi	GR30, GR30, 24
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:                                  # EmittedInsts:73
+	.size	fir, ($tmp0)-fir
+
+	.type	nSamples,@object        # @nSamples
+	.data
+	.globl	nSamples
+	.align	2
+nSamples:
+	.4byte	40                      # 0x28
+	.size	nSamples, 4
+
+	.type	nTaps,@object           # @nTaps
+	.section	.rodata,"a",@progbits
+	.globl	nTaps
+	.align	2
+nTaps:
+	.4byte	16                      # 0x10
+	.size	nTaps, 4
+
+

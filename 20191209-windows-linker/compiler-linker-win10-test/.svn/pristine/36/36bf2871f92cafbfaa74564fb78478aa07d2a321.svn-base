@@ -1,0 +1,23 @@
+当前目录：./c_standard_lib-master/_DUMMY/
+
+REMOVE.c:
+Time Elapsed 0.356622s
+读取ASM文件中的指令出错RENAME.c:
+Time Elapsed 0.314113s
+读取ASM文件中的指令出错SYSTEM.c:
+Time Elapsed 0.321455s
+读取ASM文件中的指令出错test-div.c:
+Time Elapsed 0.309977s
+读取ASM文件中的指令出错TIME.c:
+Time Elapsed 0.376086s
+读取ASM文件中的指令出错TMPNAM.c:
+Time Elapsed 0.453330s
+读取ASM文件中的指令出错XFGPOS.c:
+Time Elapsed 0.304787s
+读取ASM文件中的指令出错XFOPEN.c:
+Time Elapsed 0.307245s
+读取ASM文件中的指令出错XFSPOS.c:
+Time Elapsed 0.321612s
+读取ASM文件中的指令出错XGETMEM.c:
+Time Elapsed 0.285751s
+读取ASM文件中的指令出错

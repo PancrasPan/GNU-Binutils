@@ -1,0 +1,163 @@
+	.text
+	.file	"./testcase_8slots/1\\udivrem_sdivrem.ll"
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -56
+}
+{
+	store32	GR31, GR30, 13
+	store32	GR19, GR30, 12
+}
+{
+	store32	GR18, GR30, 11
+	store32	GR17, GR30, 10
+}
+{
+	store32	GR16, GR30, 9
+	movigl	GR16,0
+}
+{
+	movigh	GR16,0
+}
+{
+	store32	GR16, GR30, 8
+	movigl	GR17,6
+}
+{
+	movigh	GR17,0
+}
+{
+	store32	GR17, GR30, 7
+	movigl	GR18,4
+}
+{
+	movigh	GR18,0
+}
+{
+	store32	GR18, GR30, 6
+	movigl	GR2,31
+}
+{
+	movigh	GR2,0
+	load32	GR3, GR30, 7
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	sra	GR2, GR3, GR2
+	movigl	GR4,30
+}
+{
+	movigh	GR4,0
+}
+{
+	srl	GR2, GR2, GR4
+}
+{
+	add	GR2, GR3, GR2
+	movigl	GR19,2
+}
+{
+	movigh	GR19,0
+}
+{
+	sra	GR2, GR2, GR19
+}
+{
+	store32	GR2, GR30, 5
+	load32	GR4, GR30, 7
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 6
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	call	__dsp_i32srem
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 5
+	store32	GR17, GR30, 4
+}
+{
+	store32	GR18, GR30, 3
+	load32	GR2, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	srl	GR2, GR2, GR19
+}
+{
+	store32	GR2, GR30, 2
+	movigl	GR2,3
+}
+{
+	movigh	GR2,0
+	load32	GR3, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	and	GR2, GR3, GR2
+}
+{
+	store32	GR2, GR30, 2
+}
+{
+	movg2g	GR2,GR16
+}
+{
+	load32	GR16, GR30, 9
+	load32	GR17, GR30, 10
+}
+{
+	load32	GR18, GR30, 11
+	load32	GR19, GR30, 12
+}
+{
+	load32	GR31, GR30, 13
+	addi	GR30, GR30, 56
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	main, ($tmp0)-main
+
+

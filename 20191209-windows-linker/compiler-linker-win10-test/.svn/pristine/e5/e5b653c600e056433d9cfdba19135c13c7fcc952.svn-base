@@ -1,0 +1,75 @@
+当前目录：./c_standard_lib-master/MATH/
+
+ACOS.c:
+Time Elapsed 0.323956s
+读取ASM文件中的指令出错ASIN.c:
+Time Elapsed 0.274368s
+读取ASM文件中的指令出错ATAN.c:
+Time Elapsed 0.498096s
+读取ASM文件中的指令出错ATAN2.c:
+Time Elapsed 0.778282s
+读取ASM文件中的指令出错CEIL.c:
+Time Elapsed 0.365844s
+读取ASM文件中的指令出错COS.c:
+Time Elapsed 0.278071s
+读取ASM文件中的指令出错COSH.c:
+Time Elapsed 0.508481s
+读取ASM文件中的指令出错EXP.c:
+Time Elapsed 0.408585s
+读取ASM文件中的指令出错FABS.c:
+Time Elapsed 0.407548s
+读取ASM文件中的指令出错FLOOR.c:
+Time Elapsed 0.355747s
+读取ASM文件中的指令出错FMOD.c:
+Time Elapsed 0.692746s
+读取ASM文件中的指令出错FREXP.c:
+Time Elapsed 0.381791s
+读取ASM文件中的指令出错LDEXP.c:
+Time Elapsed 0.359262s
+读取ASM文件中的指令出错LOG.c:
+Time Elapsed 0.284082s
+读取ASM文件中的指令出错LOG10.c:
+Time Elapsed 0.294377s
+读取ASM文件中的指令出错MODF.c:
+Time Elapsed 0.348371s
+读取ASM文件中的指令出错POW.c:
+Time Elapsed 1.705221s
+读取ASM文件中的指令出错SIN.c:
+Time Elapsed 0.294743s
+读取ASM文件中的指令出错SINH.c:
+Time Elapsed 0.819208s
+读取ASM文件中的指令出错SQRT.c:
+Time Elapsed 0.627110s
+读取ASM文件中的指令出错TAN.c:
+Time Elapsed 0.952450s
+读取ASM文件中的指令出错TANH.c:
+Time Elapsed 0.789032s
+读取ASM文件中的指令出错XASIN.c:
+Time Elapsed 0.943597s
+读取ASM文件中的指令出错XATAN.c:
+Time Elapsed 0.718485s
+读取ASM文件中的指令出错XDINT.c:
+Time Elapsed 0.652145s
+读取ASM文件中的指令出错XDNORM.c:
+Time Elapsed 0.593166s
+读取ASM文件中的指令出错XDSCALE.c:
+Time Elapsed 0.798477s
+读取ASM文件中的指令出错XDTENTO.c:
+Time Elapsed 0.841706s
+读取ASM文件中的指令出错XDTEST.c:
+Time Elapsed 0.413223s
+读取ASM文件中的指令出错XDUNSCAL.c:
+Time Elapsed 0.433028s
+读取ASM文件中的指令出错XEXP.c:
+Time Elapsed 0.880760s
+读取ASM文件中的指令出错XLDUNSCA.c:
+Time Elapsed 0.629613s
+读取ASM文件中的指令出错XLOG.c:
+Time Elapsed 0.856686s
+读取ASM文件中的指令出错XPOLY.c:
+Time Elapsed 0.348543s
+读取ASM文件中的指令出错XSIN.c:
+Time Elapsed 0.857775s
+读取ASM文件中的指令出错XVALUES.c:
+Time Elapsed 0.290746s
+读取ASM文件中的指令出错

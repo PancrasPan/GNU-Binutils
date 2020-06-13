@@ -1,0 +1,1827 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name SIMD_Intrinsic_Testcase.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/SIMD_Intrinsic/SIMD_Intrinsic_Testcase.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/SIMD_Intrinsic/SIMD_Intrinsic_Testcase.ll -x c ./testcase_8slots/SIMD_Intrinsic/SIMD_Intrinsic_Testcase.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function SIMD_Intrinsic_Testcase0: SSA
+Frame Objects:
+  fi#0: size=256, align=256, at location [SP]
+  fi#1: size=256, align=256, at location [SP]
+  fi#2: size=256, align=256, at location [SP]
+  fi#3: size=256, align=256, at location [SP]
+  fi#4: size=256, align=256, at location [SP]
+  fi#5: size=256, align=256, at location [SP]
+  fi#6: size=256, align=256, at location [SP]
+  fi#7: size=256, align=256, at location [SP]
+  fi#8: size=256, align=256, at location [SP]
+  fi#9: size=256, align=256, at location [SP]
+  fi#10: size=256, align=256, at location [SP]
+  fi#11: size=256, align=256, at location [SP]
+  fi#12: size=256, align=256, at location [SP]
+  fi#13: size=256, align=256, at location [SP]
+  fi#14: size=256, align=256, at location [SP]
+  fi#15: size=256, align=256, at location [SP]
+  fi#16: size=256, align=256, at location [SP]
+  fi#17: size=256, align=256, at location [SP]
+  fi#18: size=256, align=256, at location [SP]
+  fi#19: size=256, align=256, at location [SP]
+  fi#20: size=256, align=256, at location [SP]
+  fi#21: size=256, align=256, at location [SP]
+  fi#22: size=256, align=256, at location [SP]
+  fi#23: size=256, align=256, at location [SP]
+  fi#24: size=256, align=256, at location [SP]
+  fi#25: size=256, align=256, at location [SP]
+  fi#26: size=256, align=256, at location [SP]
+  fi#27: size=4, align=4, at location [SP]
+  fi#28: size=256, align=256, at location [SP]
+  fi#29: size=256, align=256, at location [SP]
+  fi#30: size=256, align=256, at location [SP]
+  fi#31: size=256, align=256, at location [SP]
+  fi#32: size=256, align=256, at location [SP]
+  fi#33: size=256, align=256, at location [SP]
+  fi#34: size=256, align=256, at location [SP]
+  fi#35: size=256, align=256, at location [SP]
+  fi#36: size=256, align=256, at location [SP]
+  fi#37: size=256, align=256, at location [SP]
+  fi#38: size=256, align=256, at location [SP]
+  fi#39: size=256, align=256, at location [SP]
+  fi#40: size=256, align=256, at location [SP]
+  fi#41: size=256, align=256, at location [SP]
+  fi#42: size=256, align=256, at location [SP]
+  fi#43: size=256, align=256, at location [SP]
+  fi#44: size=256, align=256, at location [SP]
+  fi#45: size=256, align=256, at location [SP]
+  fi#46: size=256, align=256, at location [SP]
+  fi#47: size=256, align=256, at location [SP]
+  fi#48: size=256, align=256, at location [SP]
+  fi#49: size=256, align=256, at location [SP]
+  fi#50: size=256, align=256, at location [SP]
+  fi#51: size=256, align=256, at location [SP]
+  fi#52: size=256, align=256, at location [SP]
+  fi#53: size=256, align=256, at location [SP]
+  fi#54: size=256, align=256, at location [SP]
+  fi#55: size=256, align=256, at location [SP]
+  fi#56: size=256, align=256, at location [SP]
+  fi#57: size=256, align=256, at location [SP]
+  fi#58: size=256, align=256, at location [SP]
+  fi#59: size=256, align=256, at location [SP]
+  fi#60: size=256, align=256, at location [SP]
+  fi#61: size=256, align=256, at location [SP]
+  fi#62: size=256, align=256, at location [SP]
+  fi#63: size=256, align=256, at location [SP]
+  fi#64: size=256, align=256, at location [SP]
+  fi#65: size=256, align=256, at location [SP]
+  fi#66: size=256, align=256, at location [SP]
+  fi#67: size=256, align=256, at location [SP]
+  fi#68: size=256, align=256, at location [SP]
+  fi#69: size=256, align=256, at location [SP]
+  fi#70: size=256, align=256, at location [SP]
+  fi#71: size=256, align=256, at location [SP]
+  fi#72: size=256, align=256, at location [SP]
+  fi#73: size=256, align=256, at location [SP]
+  fi#74: size=256, align=256, at location [SP]
+  fi#75: size=256, align=256, at location [SP]
+  fi#76: size=256, align=256, at location [SP]
+  fi#77: size=256, align=256, at location [SP]
+  fi#78: size=256, align=256, at location [SP]
+  fi#79: size=256, align=256, at location [SP]
+  fi#80: size=256, align=256, at location [SP]
+  fi#81: size=256, align=256, at location [SP]
+  fi#82: size=256, align=256, at location [SP]
+  fi#83: size=256, align=256, at location [SP]
+  fi#84: size=256, align=256, at location [SP]
+  fi#85: size=256, align=256, at location [SP]
+  fi#86: size=256, align=256, at location [SP]
+  fi#87: size=256, align=256, at location [SP]
+  fi#88: size=256, align=256, at location [SP]
+  fi#89: size=256, align=256, at location [SP]
+  fi#90: size=256, align=256, at location [SP]
+  fi#91: size=256, align=256, at location [SP]
+  fi#92: size=256, align=256, at location [SP]
+  fi#93: size=256, align=256, at location [SP]
+  fi#94: size=256, align=256, at location [SP]
+  fi#95: size=256, align=256, at location [SP]
+  fi#96: size=256, align=256, at location [SP]
+  fi#97: size=256, align=256, at location [SP]
+  fi#98: size=256, align=256, at location [SP]
+  fi#99: size=256, align=256, at location [SP]
+  fi#100: size=256, align=256, at location [SP]
+  fi#101: size=256, align=256, at location [SP]
+  fi#102: size=256, align=256, at location [SP]
+  fi#103: size=256, align=256, at location [SP]
+  fi#104: size=256, align=256, at location [SP]
+  fi#105: size=256, align=256, at location [SP]
+  fi#106: size=256, align=256, at location [SP]
+  fi#107: size=256, align=256, at location [SP]
+  fi#108: size=256, align=256, at location [SP]
+  fi#109: size=256, align=256, at location [SP]
+  fi#110: size=256, align=256, at location [SP]
+  fi#111: size=256, align=256, at location [SP]
+  fi#112: size=256, align=256, at location [SP]
+  fi#113: size=256, align=256, at location [SP]
+  fi#114: size=256, align=256, at location [SP]
+  fi#115: size=256, align=256, at location [SP]
+  fi#116: size=256, align=256, at location [SP]
+  fi#117: size=256, align=256, at location [SP]
+  fi#118: size=256, align=256, at location [SP]
+  fi#119: size=256, align=256, at location [SP]
+  fi#120: size=256, align=256, at location [SP]
+  fi#121: size=256, align=256, at location [SP]
+  fi#122: size=256, align=256, at location [SP]
+  fi#123: size=4, align=4, at location [SP]
+  fi#124: size=4, align=4, at location [SP]
+  fi#125: size=4, align=4, at location [SP]
+  fi#126: size=4, align=4, at location [SP]
+  fi#127: size=4, align=4, at location [SP]
+  fi#128: size=4, align=4, at location [SP]
+  fi#129: size=4, align=4, at location [SP]
+  fi#130: size=4, align=4, at location [SP]
+  fi#131: size=4, align=4, at location [SP]
+  fi#132: size=4, align=4, at location [SP]
+  fi#133: size=4, align=4, at location [SP]
+  fi#134: size=4, align=4, at location [SP]
+  fi#135: size=4, align=4, at location [SP]
+  fi#136: size=4, align=4, at location [SP]
+  fi#137: size=4, align=4, at location [SP]
+  fi#138: size=4, align=4, at location [SP]
+  fi#139: size=4, align=4, at location [SP]
+  fi#140: size=4, align=4, at location [SP]
+  fi#141: size=4, align=4, at location [SP]
+  fi#142: size=4, align=4, at location [SP]
+  fi#143: size=4, align=4, at location [SP]
+  fi#144: size=4, align=4, at location [SP]
+  fi#145: size=4, align=4, at location [SP]
+  fi#146: size=4, align=4, at location [SP]
+  fi#147: size=4, align=4, at location [SP]
+  fi#148: size=4, align=4, at location [SP]
+  fi#149: size=4, align=4, at location [SP]
+  fi#150: size=4, align=4, at location [SP]
+  fi#151: size=4, align=4, at location [SP]
+  fi#152: size=4, align=4, at location [SP]
+  fi#153: size=4, align=4, at location [SP]
+  fi#154: size=4, align=4, at location [SP]
+  fi#155: size=4, align=4, at location [SP]
+  fi#156: size=4, align=4, at location [SP]
+  fi#157: size=4, align=4, at location [SP]
+  fi#158: size=4, align=4, at location [SP]
+  fi#159: size=4, align=4, at location [SP]
+  fi#160: size=4, align=4, at location [SP]
+  fi#161: size=4, align=4, at location [SP]
+  fi#162: size=4, align=4, at location [SP]
+  fi#163: size=4, align=4, at location [SP]
+  fi#164: size=4, align=4, at location [SP]
+  fi#165: size=4, align=4, at location [SP]
+  fi#166: size=4, align=4, at location [SP]
+  fi#167: size=4, align=4, at location [SP]
+  fi#168: size=4, align=4, at location [SP]
+  fi#169: size=4, align=4, at location [SP]
+  fi#170: size=256, align=256, at location [SP]
+  fi#171: size=4, align=4, at location [SP]
+  fi#172: size=256, align=256, at location [SP]
+  fi#173: size=4, align=4, at location [SP]
+  fi#174: size=256, align=256, at location [SP]
+  fi#175: size=4, align=4, at location [SP]
+  fi#176: size=256, align=256, at location [SP]
+  fi#177: size=256, align=256, at location [SP]
+  fi#178: size=256, align=256, at location [SP]
+  fi#179: size=4, align=4, at location [SP]
+  fi#180: size=4, align=4, at location [SP]
+  fi#181: size=4, align=4, at location [SP]
+  fi#182: size=256, align=256, at location [SP]
+  fi#183: size=256, align=256, at location [SP]
+  fi#184: size=256, align=256, at location [SP]
+  fi#185: size=256, align=256, at location [SP]
+  fi#186: size=256, align=256, at location [SP]
+  fi#187: size=256, align=256, at location [SP]
+  fi#188: size=256, align=256, at location [SP]
+  fi#189: size=256, align=256, at location [SP]
+  fi#190: size=256, align=256, at location [SP]
+  fi#191: size=256, align=256, at location [SP]
+  fi#192: size=256, align=256, at location [SP]
+  fi#193: size=4, align=4, at location [SP]
+  fi#194: size=4, align=4, at location [SP]
+  fi#195: size=4, align=4, at location [SP]
+  fi#196: size=4, align=4, at location [SP]
+Constant Pool:
+  cp#0: <i8 8, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, align=256
+  cp#1: <i8 1, i8 2, i8 3, i8 4, i8 5, i8 6, i8 7, i8 8, i8 9, i8 0, i8 97, i8 98, i8 99, i8 100, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, align=256
+  cp#2: <i8 12, i8 23, i8 34, i8 45, i8 56, i8 67, i8 78, i8 89, i8 90, i8 10, i8 48, i8 49, i8 50, i8 51, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, align=256
+  cp#3: <i16 16, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, align=256
+  cp#4: <i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 2, i16 3, i16 4, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, align=256
+  cp#5: <i16 12, i16 23, i16 34, i16 45, i16 56, i16 67, i16 78, i16 89, i16 90, i16 10, i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 5, i16 6, i16 6, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, align=256
+  cp#6: <i32 32, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, align=256
+  cp#7: <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 5, i32 5, i32 5, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, align=256
+  cp#8: <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 7, i32 7, i32 7, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 56, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 3, i32 1, i32 2, i32 4, i32 5, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, align=256
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <cp#0>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <cp#0>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = VLOAD8 %vreg1<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg2 CPURegs:%vreg1
+	VSTORE8 %vreg2<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg2
+	%vreg3<def> = MovIGH %ZERO, <cp#1>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <cp#1>[TF=4]; CPURegs:%vreg4,%vreg3
+	%vreg5<def> = VLOAD8 %vreg4<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg5 CPURegs:%vreg4
+	VSTORE8 %vreg5<kill>, <fi#185>, 0; mem:ST256[%i8x256_t_a] CPUVecRegs:%vreg5
+	%vreg6<def> = MovIGH %ZERO, <cp#2>[TF=3]; CPURegs:%vreg6
+	%vreg7<def,tied1> = MovIGL %vreg6<tied0>, <cp#2>[TF=4]; CPURegs:%vreg7,%vreg6
+	%vreg8<def> = VLOAD8 %vreg7<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg8 CPURegs:%vreg7
+	VSTORE8 %vreg8<kill>, <fi#186>, 0; mem:ST256[%i8x256_t_b] CPUVecRegs:%vreg8
+	%vreg9<def> = MovIGH %ZERO, <cp#3>[TF=3]; CPURegs:%vreg9
+	%vreg10<def,tied1> = MovIGL %vreg9<tied0>, <cp#3>[TF=4]; CPURegs:%vreg10,%vreg9
+	%vreg11<def> = VLOAD16 %vreg10<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg11 CPURegs:%vreg10
+	VSTORE16 %vreg11<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg11
+	%vreg12<def> = MovIGH %ZERO, <cp#4>[TF=3]; CPURegs:%vreg12
+	%vreg13<def,tied1> = MovIGL %vreg12<tied0>, <cp#4>[TF=4]; CPURegs:%vreg13,%vreg12
+	%vreg14<def> = VLOAD16 %vreg13<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg14 CPURegs:%vreg13
+	VSTORE16 %vreg14<kill>, <fi#188>, 0; mem:ST256[%i16x128_t_a] CPUVecRegs:%vreg14
+	%vreg15<def> = MovIGH %ZERO, <cp#5>[TF=3]; CPURegs:%vreg15
+	%vreg16<def,tied1> = MovIGL %vreg15<tied0>, <cp#5>[TF=4]; CPURegs:%vreg16,%vreg15
+	%vreg17<def> = VLOAD16 %vreg16<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg17 CPURegs:%vreg16
+	VSTORE16 %vreg17<kill>, <fi#189>, 0; mem:ST256[%i16x128_t_b] CPUVecRegs:%vreg17
+	%vreg18<def> = MovIGH %ZERO, <cp#6>[TF=3]; CPURegs:%vreg18
+	%vreg19<def,tied1> = MovIGL %vreg18<tied0>, <cp#6>[TF=4]; CPURegs:%vreg19,%vreg18
+	%vreg20<def> = VLOAD32 %vreg19<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg20 CPURegs:%vreg19
+	VSTORE32 %vreg20<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg20
+	%vreg21<def> = MovIGH %ZERO, <cp#7>[TF=3]; CPURegs:%vreg21
+	%vreg22<def,tied1> = MovIGL %vreg21<tied0>, <cp#7>[TF=4]; CPURegs:%vreg22,%vreg21
+	%vreg23<def> = VLOAD32 %vreg22<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg23 CPURegs:%vreg22
+	VSTORE32 %vreg23<kill>, <fi#191>, 0; mem:ST256[%i32x64_t_a] CPUVecRegs:%vreg23
+	%vreg24<def> = MovIGH %ZERO, <cp#8>[TF=3]; CPURegs:%vreg24
+	%vreg25<def,tied1> = MovIGL %vreg24<tied0>, <cp#8>[TF=4]; CPURegs:%vreg25,%vreg24
+	%vreg26<def> = VLOAD32 %vreg25<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg26 CPURegs:%vreg25
+	VSTORE32 %vreg26<kill>, <fi#192>, 0; mem:ST256[%i32x64_t_b] CPUVecRegs:%vreg26
+	%vreg27<def> = MovGR %ZERO, 1; CPURegs:%vreg27
+	ST %vreg27, <fi#194>, 0; mem:ST4[%int_a] CPURegs:%vreg27
+	%vreg28<def> = MovGR %ZERO, 2; CPURegs:%vreg28
+	ST %vreg28, <fi#195>, 0; mem:ST4[%int_b] CPURegs:%vreg28
+	%vreg29<def> = MovGR %ZERO, 3; CPURegs:%vreg29
+	ST %vreg29<kill>, <fi#196>, 0; mem:ST4[%int_c] CPURegs:%vreg29
+	%vreg30<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg30
+	%vreg31<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg31
+	VSTORE8 %vreg31<kill>, <fi#182>, 0; mem:ST256[%a.addr.i] CPUVecRegs:%vreg31
+	VSTORE8 %vreg30, <fi#183>, 0; mem:ST256[%b.addr.i] CPUVecRegs:%vreg30
+	%vreg32<def> = VLOAD8 <fi#182>, 0; mem:LD256[%a.addr.i] CPUVecRegs:%vreg32
+	%vreg33<def> = VMAX10 %vreg32<kill>, %vreg30; CPUVecRegs:%vreg33,%vreg32,%vreg30
+	VSTORE8 %vreg33<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg33
+	%vreg34<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg34
+	%vreg35<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg35
+	VSTORE16 %vreg35<kill>, <fi#0>, 0; mem:ST256[%a.addr.i275] CPUVecRegs:%vreg35
+	VSTORE16 %vreg34, <fi#1>, 0; mem:ST256[%b.addr.i276] CPUVecRegs:%vreg34
+	%vreg36<def> = VLOAD16 <fi#0>, 0; mem:LD256[%a.addr.i275] CPUVecRegs:%vreg36
+	%vreg37<def> = VMAX20 %vreg36<kill>, %vreg34; CPUVecRegs:%vreg37,%vreg36,%vreg34
+	VSTORE16 %vreg37<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg37
+	%vreg38<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg38
+	%vreg39<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg39
+	VSTORE32 %vreg39<kill>, <fi#2>, 0; mem:ST256[%a.addr.i273] CPUVecRegs:%vreg39
+	VSTORE32 %vreg38, <fi#3>, 0; mem:ST256[%b.addr.i274] CPUVecRegs:%vreg38
+	%vreg40<def> = VLOAD32 <fi#2>, 0; mem:LD256[%a.addr.i273] CPUVecRegs:%vreg40
+	%vreg41<def> = VMAX40 %vreg40<kill>, %vreg38; CPUVecRegs:%vreg41,%vreg40,%vreg38
+	VSTORE32 %vreg41<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg41
+	%vreg42<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg42
+	%vreg43<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg43
+	VSTORE8 %vreg43<kill>, <fi#4>, 0; mem:ST256[%a.addr.i271] CPUVecRegs:%vreg43
+	VSTORE8 %vreg42, <fi#5>, 0; mem:ST256[%b.addr.i272] CPUVecRegs:%vreg42
+	%vreg44<def> = VLOAD8 <fi#4>, 0; mem:LD256[%a.addr.i271] CPUVecRegs:%vreg44
+	%vreg45<def> = VMIN10 %vreg44<kill>, %vreg42; CPUVecRegs:%vreg45,%vreg44,%vreg42
+	VSTORE8 %vreg45<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg45
+	%vreg46<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg46
+	%vreg47<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg47
+	VSTORE16 %vreg47<kill>, <fi#6>, 0; mem:ST256[%a.addr.i269] CPUVecRegs:%vreg47
+	VSTORE16 %vreg46, <fi#7>, 0; mem:ST256[%b.addr.i270] CPUVecRegs:%vreg46
+	%vreg48<def> = VLOAD16 <fi#6>, 0; mem:LD256[%a.addr.i269] CPUVecRegs:%vreg48
+	%vreg49<def> = VMIN20 %vreg48<kill>, %vreg46; CPUVecRegs:%vreg49,%vreg48,%vreg46
+	VSTORE16 %vreg49<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg49
+	%vreg50<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg50
+	%vreg51<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg51
+	VSTORE32 %vreg51<kill>, <fi#8>, 0; mem:ST256[%a.addr.i267] CPUVecRegs:%vreg51
+	VSTORE32 %vreg50, <fi#9>, 0; mem:ST256[%b.addr.i268] CPUVecRegs:%vreg50
+	%vreg52<def> = VLOAD32 <fi#8>, 0; mem:LD256[%a.addr.i267] CPUVecRegs:%vreg52
+	%vreg53<def> = VMIN40 %vreg52<kill>, %vreg50; CPUVecRegs:%vreg53,%vreg52,%vreg50
+	VSTORE32 %vreg53<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg53
+	%vreg54<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg54
+	VSTORE8 %vreg54, <fi#10>, 0; mem:ST256[%a.addr.i266] CPUVecRegs:%vreg54
+	%vreg55<def> = vsum_10 %vreg54; CPUVecRegs:%vreg55,%vreg54
+	VSTORE8 %vreg55<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg55
+	%vreg56<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg56
+	VSTORE16 %vreg56, <fi#11>, 0; mem:ST256[%a.addr.i265] CPUVecRegs:%vreg56
+	%vreg57<def> = vsum_20 %vreg56; CPUVecRegs:%vreg57,%vreg56
+	VSTORE16 %vreg57<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg57
+	%vreg58<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg58
+	%vreg59<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg59
+	VSTORE8 %vreg59<kill>, <fi#12>, 0; mem:ST256[%a.addr.i263] CPUVecRegs:%vreg59
+	VSTORE8 %vreg58, <fi#13>, 0; mem:ST256[%b.addr.i264] CPUVecRegs:%vreg58
+	%vreg60<def> = VLOAD8 <fi#12>, 0; mem:LD256[%a.addr.i263] CPUVecRegs:%vreg60
+	%vreg61<def> = veq_10 %vreg60<kill>, %vreg58; CPUVecRegs:%vreg61,%vreg60,%vreg58
+	VSTORE8 %vreg61<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg61
+	%vreg62<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg62
+	%vreg63<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg63
+	VSTORE16 %vreg63<kill>, <fi#14>, 0; mem:ST256[%a.addr.i261] CPUVecRegs:%vreg63
+	VSTORE8 %vreg62, <fi#15>, 0; mem:ST256[%b.addr.i262] CPUVecRegs:%vreg62
+	%vreg64<def> = VLOAD16 <fi#14>, 0; mem:LD256[%a.addr.i261] CPUVecRegs:%vreg64
+	%vreg65<def> = vltl %vreg64<kill>, %vreg62; CPUVecRegs:%vreg65,%vreg64,%vreg62
+	VSTORE16 %vreg65<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg65
+	%vreg66<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg66
+	%vreg67<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg67
+	VSTORE16 %vreg67<kill>, <fi#16>, 0; mem:ST256[%a.addr.i259] CPUVecRegs:%vreg67
+	VSTORE8 %vreg66, <fi#17>, 0; mem:ST256[%b.addr.i260] CPUVecRegs:%vreg66
+	%vreg68<def> = VLOAD16 <fi#16>, 0; mem:LD256[%a.addr.i259] CPUVecRegs:%vreg68
+	%vreg69<def> = vlth %vreg68<kill>, %vreg66; CPUVecRegs:%vreg69,%vreg68,%vreg66
+	VSTORE16 %vreg69<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg69
+	%vreg70<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg70
+	VSTORE32 %vreg70, <fi#18>, 0; mem:ST256[%a.addr.i258] CPUVecRegs:%vreg70
+	%vreg71<def> = vsum_40 %vreg70; CPUVecRegs:%vreg71,%vreg70
+	VSTORE32 %vreg71<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg71
+	%vreg72<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg72
+	VSTORE8 %vreg72, <fi#19>, 0; mem:ST256[%a.addr.i257] CPUVecRegs:%vreg72
+	%vreg73<def> = vnot_0 %vreg72; CPUVecRegs:%vreg73,%vreg72
+	VSTORE8 %vreg73<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg73
+	%vreg74<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg74
+	%vreg75<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg75
+	VSTORE8 %vreg75<kill>, <fi#20>, 0; mem:ST256[%a.addr.i255] CPUVecRegs:%vreg75
+	VSTORE8 %vreg74, <fi#21>, 0; mem:ST256[%b.addr.i256] CPUVecRegs:%vreg74
+	%vreg76<def> = VLOAD8 <fi#20>, 0; mem:LD256[%a.addr.i255] CPUVecRegs:%vreg76
+	%vreg77<def> = vand %vreg76<kill>, %vreg74; CPUVecRegs:%vreg77,%vreg76,%vreg74
+	VSTORE8 %vreg77<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg77
+	%vreg78<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg78
+	%vreg79<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg79
+	VSTORE8 %vreg79<kill>, <fi#22>, 0; mem:ST256[%a.addr.i253] CPUVecRegs:%vreg79
+	VSTORE8 %vreg78, <fi#23>, 0; mem:ST256[%b.addr.i254] CPUVecRegs:%vreg78
+	%vreg80<def> = VLOAD8 <fi#22>, 0; mem:LD256[%a.addr.i253] CPUVecRegs:%vreg80
+	%vreg81<def> = vor %vreg80<kill>, %vreg78; CPUVecRegs:%vreg81,%vreg80,%vreg78
+	VSTORE8 %vreg81<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg81
+	%vreg82<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg82
+	%vreg83<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg83
+	VSTORE8 %vreg83<kill>, <fi#24>, 0; mem:ST256[%a.addr.i251] CPUVecRegs:%vreg83
+	VSTORE8 %vreg82, <fi#25>, 0; mem:ST256[%b.addr.i252] CPUVecRegs:%vreg82
+	%vreg84<def> = VLOAD8 <fi#24>, 0; mem:LD256[%a.addr.i251] CPUVecRegs:%vreg84
+	%vreg85<def> = vxor %vreg84<kill>, %vreg82; CPUVecRegs:%vreg85,%vreg84,%vreg82
+	VSTORE8 %vreg85<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg85
+	%vreg86<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg86
+	VSTORE8 %vreg86<kill>, <fi#26>, 0; mem:ST256[%a.addr.i249] CPUVecRegs:%vreg86
+	ST %vreg27, <fi#27>, 0; mem:ST4[%b.addr.i250] CPURegs:%vreg27
+	%vreg87<def> = VLOAD8 <fi#26>, 0; mem:LD256[%a.addr.i249] CPUVecRegs:%vreg87
+	%vreg88<def> = vmovcv2v %vreg87<kill>, %vreg27; CPUVecRegs:%vreg88,%vreg87 CPURegs:%vreg27
+	VSTORE8 %vreg88<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg88
+	%vreg89<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg89
+	%vreg90<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg90
+	VSTORE16 %vreg90<kill>, <fi#28>, 0; mem:ST256[%a.addr.i247] CPUVecRegs:%vreg90
+	VSTORE8 %vreg89, <fi#29>, 0; mem:ST256[%b.addr.i248] CPUVecRegs:%vreg89
+	%vreg91<def> = VLOAD16 <fi#28>, 0; mem:LD256[%a.addr.i247] CPUVecRegs:%vreg91
+	%vreg92<def> = vltl %vreg91<kill>, %vreg89; CPUVecRegs:%vreg92,%vreg91,%vreg89
+	VSTORE16 %vreg92<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg92
+	%vreg93<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg93
+	%vreg94<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg94
+	VSTORE16 %vreg94<kill>, <fi#30>, 0; mem:ST256[%a.addr.i245] CPUVecRegs:%vreg94
+	VSTORE8 %vreg93, <fi#31>, 0; mem:ST256[%b.addr.i246] CPUVecRegs:%vreg93
+	%vreg95<def> = VLOAD16 <fi#30>, 0; mem:LD256[%a.addr.i245] CPUVecRegs:%vreg95
+	%vreg96<def> = vlth %vreg95<kill>, %vreg93; CPUVecRegs:%vreg96,%vreg95,%vreg93
+	VSTORE16 %vreg96<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg96
+	%vreg97<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg97
+	%vreg98<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg98
+	VSTORE8 %vreg98<kill>, <fi#32>, 0; mem:ST256[%a.addr.i243] CPUVecRegs:%vreg98
+	VSTORE8 %vreg97, <fi#33>, 0; mem:ST256[%b.addr.i244] CPUVecRegs:%vreg97
+	%vreg99<def> = VLOAD8 <fi#32>, 0; mem:LD256[%a.addr.i243] CPUVecRegs:%vreg99
+	%vreg100<def> = veq_10 %vreg99<kill>, %vreg97; CPUVecRegs:%vreg100,%vreg99,%vreg97
+	VSTORE8 %vreg100<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg100
+	%vreg101<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg101
+	%vreg102<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg102
+	VSTORE16 %vreg102<kill>, <fi#34>, 0; mem:ST256[%a.addr.i241] CPUVecRegs:%vreg102
+	VSTORE16 %vreg101, <fi#35>, 0; mem:ST256[%b.addr.i242] CPUVecRegs:%vreg101
+	%vreg103<def> = VLOAD16 <fi#34>, 0; mem:LD256[%a.addr.i241] CPUVecRegs:%vreg103
+	%vreg104<def> = veq_20 %vreg103<kill>, %vreg101; CPUVecRegs:%vreg104,%vreg103,%vreg101
+	VSTORE16 %vreg104<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg104
+	%vreg105<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg105
+	%vreg106<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg106
+	VSTORE32 %vreg106<kill>, <fi#36>, 0; mem:ST256[%a.addr.i239] CPUVecRegs:%vreg106
+	VSTORE32 %vreg105, <fi#37>, 0; mem:ST256[%b.addr.i240] CPUVecRegs:%vreg105
+	%vreg107<def> = VLOAD32 <fi#36>, 0; mem:LD256[%a.addr.i239] CPUVecRegs:%vreg107
+	%vreg108<def> = veq_40 %vreg107<kill>, %vreg105; CPUVecRegs:%vreg108,%vreg107,%vreg105
+	VSTORE32 %vreg108<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg108
+	%vreg109<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg109
+	%vreg110<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg110
+	VSTORE8 %vreg110<kill>, <fi#38>, 0; mem:ST256[%a.addr.i237] CPUVecRegs:%vreg110
+	VSTORE8 %vreg109, <fi#39>, 0; mem:ST256[%b.addr.i238] CPUVecRegs:%vreg109
+	%vreg111<def> = VLOAD8 <fi#38>, 0; mem:LD256[%a.addr.i237] CPUVecRegs:%vreg111
+	%vreg112<def> = vgt_10 %vreg111<kill>, %vreg109; CPUVecRegs:%vreg112,%vreg111,%vreg109
+	VSTORE8 %vreg112<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg112
+	%vreg113<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg113
+	%vreg114<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg114
+	VSTORE16 %vreg114<kill>, <fi#40>, 0; mem:ST256[%a.addr.i235] CPUVecRegs:%vreg114
+	VSTORE16 %vreg113, <fi#41>, 0; mem:ST256[%b.addr.i236] CPUVecRegs:%vreg113
+	%vreg115<def> = VLOAD16 <fi#40>, 0; mem:LD256[%a.addr.i235] CPUVecRegs:%vreg115
+	%vreg116<def> = vgt_20 %vreg115<kill>, %vreg113; CPUVecRegs:%vreg116,%vreg115,%vreg113
+	VSTORE16 %vreg116<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg116
+	%vreg117<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg117
+	%vreg118<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg118
+	VSTORE32 %vreg118<kill>, <fi#42>, 0; mem:ST256[%a.addr.i233] CPUVecRegs:%vreg118
+	VSTORE32 %vreg117, <fi#43>, 0; mem:ST256[%b.addr.i234] CPUVecRegs:%vreg117
+	%vreg119<def> = VLOAD32 <fi#42>, 0; mem:LD256[%a.addr.i233] CPUVecRegs:%vreg119
+	%vreg120<def> = vgt_40 %vreg119<kill>, %vreg117; CPUVecRegs:%vreg120,%vreg119,%vreg117
+	VSTORE32 %vreg120<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg120
+	%vreg121<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg121
+	%vreg122<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg122
+	VSTORE8 %vreg122<kill>, <fi#44>, 0; mem:ST256[%a.addr.i231] CPUVecRegs:%vreg122
+	VSTORE8 %vreg121, <fi#45>, 0; mem:ST256[%b.addr.i232] CPUVecRegs:%vreg121
+	%vreg123<def> = VLOAD8 <fi#44>, 0; mem:LD256[%a.addr.i231] CPUVecRegs:%vreg123
+	%vreg124<def> = vlt_10 %vreg123<kill>, %vreg121; CPUVecRegs:%vreg124,%vreg123,%vreg121
+	VSTORE8 %vreg124<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg124
+	%vreg125<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg125
+	%vreg126<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg126
+	VSTORE16 %vreg126<kill>, <fi#46>, 0; mem:ST256[%a.addr.i229] CPUVecRegs:%vreg126
+	VSTORE16 %vreg125, <fi#47>, 0; mem:ST256[%b.addr.i230] CPUVecRegs:%vreg125
+	%vreg127<def> = VLOAD16 <fi#46>, 0; mem:LD256[%a.addr.i229] CPUVecRegs:%vreg127
+	%vreg128<def> = vlt_20 %vreg127<kill>, %vreg125; CPUVecRegs:%vreg128,%vreg127,%vreg125
+	VSTORE16 %vreg128<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg128
+	%vreg129<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg129
+	%vreg130<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg130
+	VSTORE32 %vreg130<kill>, <fi#48>, 0; mem:ST256[%a.addr.i227] CPUVecRegs:%vreg130
+	VSTORE32 %vreg129, <fi#49>, 0; mem:ST256[%b.addr.i228] CPUVecRegs:%vreg129
+	%vreg131<def> = VLOAD32 <fi#48>, 0; mem:LD256[%a.addr.i227] CPUVecRegs:%vreg131
+	%vreg132<def> = vlt_40 %vreg131<kill>, %vreg129; CPUVecRegs:%vreg132,%vreg131,%vreg129
+	VSTORE32 %vreg132<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg132
+	%vreg133<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg133
+	%vreg134<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg134
+	VSTORE8 %vreg134<kill>, <fi#50>, 0; mem:ST256[%a.addr.i225] CPUVecRegs:%vreg134
+	VSTORE8 %vreg133, <fi#51>, 0; mem:ST256[%b.addr.i226] CPUVecRegs:%vreg133
+	%vreg135<def> = VLOAD8 <fi#50>, 0; mem:LD256[%a.addr.i225] CPUVecRegs:%vreg135
+	%vreg136<def> = vge_10 %vreg135<kill>, %vreg133; CPUVecRegs:%vreg136,%vreg135,%vreg133
+	VSTORE8 %vreg136<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg136
+	%vreg137<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg137
+	%vreg138<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg138
+	VSTORE16 %vreg138<kill>, <fi#52>, 0; mem:ST256[%a.addr.i223] CPUVecRegs:%vreg138
+	VSTORE16 %vreg137, <fi#53>, 0; mem:ST256[%b.addr.i224] CPUVecRegs:%vreg137
+	%vreg139<def> = VLOAD16 <fi#52>, 0; mem:LD256[%a.addr.i223] CPUVecRegs:%vreg139
+	%vreg140<def> = vge_20 %vreg139<kill>, %vreg137; CPUVecRegs:%vreg140,%vreg139,%vreg137
+	VSTORE16 %vreg140<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg140
+	%vreg141<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg141
+	%vreg142<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg142
+	VSTORE32 %vreg142<kill>, <fi#54>, 0; mem:ST256[%a.addr.i221] CPUVecRegs:%vreg142
+	VSTORE32 %vreg141, <fi#55>, 0; mem:ST256[%b.addr.i222] CPUVecRegs:%vreg141
+	%vreg143<def> = VLOAD32 <fi#54>, 0; mem:LD256[%a.addr.i221] CPUVecRegs:%vreg143
+	%vreg144<def> = vge_40 %vreg143<kill>, %vreg141; CPUVecRegs:%vreg144,%vreg143,%vreg141
+	VSTORE32 %vreg144<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg144
+	%vreg145<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg145
+	%vreg146<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg146
+	VSTORE8 %vreg146<kill>, <fi#56>, 0; mem:ST256[%a.addr.i219] CPUVecRegs:%vreg146
+	VSTORE8 %vreg145, <fi#57>, 0; mem:ST256[%b.addr.i220] CPUVecRegs:%vreg145
+	%vreg147<def> = VLOAD8 <fi#56>, 0; mem:LD256[%a.addr.i219] CPUVecRegs:%vreg147
+	%vreg148<def> = vle_10 %vreg147<kill>, %vreg145; CPUVecRegs:%vreg148,%vreg147,%vreg145
+	VSTORE8 %vreg148<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg148
+	%vreg149<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg149
+	%vreg150<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg150
+	VSTORE16 %vreg150<kill>, <fi#58>, 0; mem:ST256[%a.addr.i217] CPUVecRegs:%vreg150
+	VSTORE16 %vreg149, <fi#59>, 0; mem:ST256[%b.addr.i218] CPUVecRegs:%vreg149
+	%vreg151<def> = VLOAD16 <fi#58>, 0; mem:LD256[%a.addr.i217] CPUVecRegs:%vreg151
+	%vreg152<def> = vle_20 %vreg151<kill>, %vreg149; CPUVecRegs:%vreg152,%vreg151,%vreg149
+	VSTORE16 %vreg152<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg152
+	%vreg153<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg153
+	%vreg154<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg154
+	VSTORE32 %vreg154<kill>, <fi#60>, 0; mem:ST256[%a.addr.i215] CPUVecRegs:%vreg154
+	VSTORE32 %vreg153, <fi#61>, 0; mem:ST256[%b.addr.i216] CPUVecRegs:%vreg153
+	%vreg155<def> = VLOAD32 <fi#60>, 0; mem:LD256[%a.addr.i215] CPUVecRegs:%vreg155
+	%vreg156<def> = vle_40 %vreg155<kill>, %vreg153; CPUVecRegs:%vreg156,%vreg155,%vreg153
+	VSTORE32 %vreg156<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg156
+	%vreg157<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg157
+	%vreg158<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg158
+	VSTORE8 %vreg158<kill>, <fi#62>, 0; mem:ST256[%a.addr.i213] CPUVecRegs:%vreg158
+	VSTORE8 %vreg157, <fi#63>, 0; mem:ST256[%b.addr.i214] CPUVecRegs:%vreg157
+	%vreg159<def> = VLOAD8 <fi#62>, 0; mem:LD256[%a.addr.i213] CPUVecRegs:%vreg159
+	%vreg160<def> = vadd_10 %vreg159<kill>, %vreg157; CPUVecRegs:%vreg160,%vreg159,%vreg157
+	VSTORE8 %vreg160<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg160
+	%vreg161<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg161
+	%vreg162<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg162
+	VSTORE16 %vreg162<kill>, <fi#64>, 0; mem:ST256[%a.addr.i211] CPUVecRegs:%vreg162
+	VSTORE16 %vreg161, <fi#65>, 0; mem:ST256[%b.addr.i212] CPUVecRegs:%vreg161
+	%vreg163<def> = VLOAD16 <fi#64>, 0; mem:LD256[%a.addr.i211] CPUVecRegs:%vreg163
+	%vreg164<def> = vadd_20 %vreg163<kill>, %vreg161; CPUVecRegs:%vreg164,%vreg163,%vreg161
+	VSTORE16 %vreg164<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg164
+	%vreg165<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg165
+	%vreg166<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg166
+	VSTORE32 %vreg166<kill>, <fi#66>, 0; mem:ST256[%a.addr.i209] CPUVecRegs:%vreg166
+	VSTORE32 %vreg165, <fi#67>, 0; mem:ST256[%b.addr.i210] CPUVecRegs:%vreg165
+	%vreg167<def> = VLOAD32 <fi#66>, 0; mem:LD256[%a.addr.i209] CPUVecRegs:%vreg167
+	%vreg168<def> = vadd_40 %vreg167<kill>, %vreg165; CPUVecRegs:%vreg168,%vreg167,%vreg165
+	VSTORE32 %vreg168<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg168
+	%vreg169<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg169
+	%vreg170<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg170
+	VSTORE8 %vreg170<kill>, <fi#68>, 0; mem:ST256[%a.addr.i207] CPUVecRegs:%vreg170
+	VSTORE8 %vreg169, <fi#69>, 0; mem:ST256[%b.addr.i208] CPUVecRegs:%vreg169
+	%vreg171<def> = VLOAD8 <fi#68>, 0; mem:LD256[%a.addr.i207] CPUVecRegs:%vreg171
+	%vreg172<def> = vsub_10 %vreg171<kill>, %vreg169; CPUVecRegs:%vreg172,%vreg171,%vreg169
+	VSTORE8 %vreg172<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg172
+	%vreg173<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg173
+	%vreg174<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg174
+	VSTORE16 %vreg174<kill>, <fi#70>, 0; mem:ST256[%a.addr.i205] CPUVecRegs:%vreg174
+	VSTORE16 %vreg173, <fi#71>, 0; mem:ST256[%b.addr.i206] CPUVecRegs:%vreg173
+	%vreg175<def> = VLOAD16 <fi#70>, 0; mem:LD256[%a.addr.i205] CPUVecRegs:%vreg175
+	%vreg176<def> = vsub_20 %vreg175<kill>, %vreg173; CPUVecRegs:%vreg176,%vreg175,%vreg173
+	VSTORE16 %vreg176<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg176
+	%vreg177<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg177
+	%vreg178<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg178
+	VSTORE32 %vreg178<kill>, <fi#72>, 0; mem:ST256[%a.addr.i203] CPUVecRegs:%vreg178
+	VSTORE32 %vreg177, <fi#73>, 0; mem:ST256[%b.addr.i204] CPUVecRegs:%vreg177
+	%vreg179<def> = VLOAD32 <fi#72>, 0; mem:LD256[%a.addr.i203] CPUVecRegs:%vreg179
+	%vreg180<def> = vsub_40 %vreg179<kill>, %vreg177; CPUVecRegs:%vreg180,%vreg179,%vreg177
+	VSTORE32 %vreg180<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg180
+	%vreg181<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg181
+	%vreg182<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg182
+	VSTORE8 %vreg182<kill>, <fi#74>, 0; mem:ST256[%a.addr.i201] CPUVecRegs:%vreg182
+	VSTORE8 %vreg181, <fi#75>, 0; mem:ST256[%b.addr.i202] CPUVecRegs:%vreg181
+	%vreg183<def> = VLOAD8 <fi#74>, 0; mem:LD256[%a.addr.i201] CPUVecRegs:%vreg183
+	%vreg184<def> = vsl_10 %vreg183<kill>, %vreg181; CPUVecRegs:%vreg184,%vreg183,%vreg181
+	VSTORE8 %vreg184<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg184
+	%vreg185<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg185
+	%vreg186<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg186
+	VSTORE16 %vreg186<kill>, <fi#76>, 0; mem:ST256[%a.addr.i199] CPUVecRegs:%vreg186
+	VSTORE16 %vreg185, <fi#77>, 0; mem:ST256[%b.addr.i200] CPUVecRegs:%vreg185
+	%vreg187<def> = VLOAD16 <fi#76>, 0; mem:LD256[%a.addr.i199] CPUVecRegs:%vreg187
+	%vreg188<def> = vsl_20 %vreg187<kill>, %vreg185; CPUVecRegs:%vreg188,%vreg187,%vreg185
+	VSTORE16 %vreg188<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg188
+	%vreg189<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg189
+	%vreg190<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg190
+	VSTORE32 %vreg190<kill>, <fi#78>, 0; mem:ST256[%a.addr.i197] CPUVecRegs:%vreg190
+	VSTORE32 %vreg189, <fi#79>, 0; mem:ST256[%b.addr.i198] CPUVecRegs:%vreg189
+	%vreg191<def> = VLOAD32 <fi#78>, 0; mem:LD256[%a.addr.i197] CPUVecRegs:%vreg191
+	%vreg192<def> = vsl_40 %vreg191<kill>, %vreg189; CPUVecRegs:%vreg192,%vreg191,%vreg189
+	VSTORE32 %vreg192<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg192
+	%vreg193<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg193
+	%vreg194<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg194
+	VSTORE8 %vreg194<kill>, <fi#80>, 0; mem:ST256[%a.addr.i195] CPUVecRegs:%vreg194
+	VSTORE8 %vreg193, <fi#81>, 0; mem:ST256[%b.addr.i196] CPUVecRegs:%vreg193
+	%vreg195<def> = VLOAD8 <fi#80>, 0; mem:LD256[%a.addr.i195] CPUVecRegs:%vreg195
+	%vreg196<def> = vsls_10 %vreg195<kill>, %vreg193; CPUVecRegs:%vreg196,%vreg195,%vreg193
+	VSTORE8 %vreg196<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg196
+	%vreg197<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg197
+	%vreg198<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg198
+	VSTORE16 %vreg198<kill>, <fi#82>, 0; mem:ST256[%a.addr.i193] CPUVecRegs:%vreg198
+	VSTORE16 %vreg197, <fi#83>, 0; mem:ST256[%b.addr.i194] CPUVecRegs:%vreg197
+	%vreg199<def> = VLOAD16 <fi#82>, 0; mem:LD256[%a.addr.i193] CPUVecRegs:%vreg199
+	%vreg200<def> = vsls_20 %vreg199<kill>, %vreg197; CPUVecRegs:%vreg200,%vreg199,%vreg197
+	VSTORE16 %vreg200<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg200
+	%vreg201<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg201
+	%vreg202<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg202
+	VSTORE32 %vreg202<kill>, <fi#84>, 0; mem:ST256[%a.addr.i191] CPUVecRegs:%vreg202
+	VSTORE32 %vreg201, <fi#85>, 0; mem:ST256[%b.addr.i192] CPUVecRegs:%vreg201
+	%vreg203<def> = VLOAD32 <fi#84>, 0; mem:LD256[%a.addr.i191] CPUVecRegs:%vreg203
+	%vreg204<def> = vsls_40 %vreg203<kill>, %vreg201; CPUVecRegs:%vreg204,%vreg203,%vreg201
+	VSTORE32 %vreg204<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg204
+	%vreg205<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg205
+	%vreg206<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg206
+	VSTORE8 %vreg206<kill>, <fi#86>, 0; mem:ST256[%a.addr.i189] CPUVecRegs:%vreg206
+	VSTORE8 %vreg205, <fi#87>, 0; mem:ST256[%b.addr.i190] CPUVecRegs:%vreg205
+	%vreg207<def> = VLOAD8 <fi#86>, 0; mem:LD256[%a.addr.i189] CPUVecRegs:%vreg207
+	%vreg208<def> = vsra_10 %vreg207<kill>, %vreg205; CPUVecRegs:%vreg208,%vreg207,%vreg205
+	VSTORE8 %vreg208<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg208
+	%vreg209<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg209
+	%vreg210<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg210
+	VSTORE16 %vreg210<kill>, <fi#88>, 0; mem:ST256[%a.addr.i187] CPUVecRegs:%vreg210
+	VSTORE16 %vreg209, <fi#89>, 0; mem:ST256[%b.addr.i188] CPUVecRegs:%vreg209
+	%vreg211<def> = VLOAD16 <fi#88>, 0; mem:LD256[%a.addr.i187] CPUVecRegs:%vreg211
+	%vreg212<def> = vsra_20 %vreg211<kill>, %vreg209; CPUVecRegs:%vreg212,%vreg211,%vreg209
+	VSTORE16 %vreg212<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg212
+	%vreg213<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg213
+	%vreg214<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg214
+	VSTORE32 %vreg214<kill>, <fi#90>, 0; mem:ST256[%a.addr.i185] CPUVecRegs:%vreg214
+	VSTORE32 %vreg213, <fi#91>, 0; mem:ST256[%b.addr.i186] CPUVecRegs:%vreg213
+	%vreg215<def> = VLOAD32 <fi#90>, 0; mem:LD256[%a.addr.i185] CPUVecRegs:%vreg215
+	%vreg216<def> = vsra_40 %vreg215<kill>, %vreg213; CPUVecRegs:%vreg216,%vreg215,%vreg213
+	VSTORE32 %vreg216<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg216
+	%vreg217<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg217
+	%vreg218<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg218
+	VSTORE8 %vreg218<kill>, <fi#92>, 0; mem:ST256[%a.addr.i183] CPUVecRegs:%vreg218
+	VSTORE8 %vreg217, <fi#93>, 0; mem:ST256[%b.addr.i184] CPUVecRegs:%vreg217
+	%vreg219<def> = VLOAD8 <fi#92>, 0; mem:LD256[%a.addr.i183] CPUVecRegs:%vreg219
+	%vreg220<def> = vsrl_10 %vreg219<kill>, %vreg217; CPUVecRegs:%vreg220,%vreg219,%vreg217
+	VSTORE8 %vreg220<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg220
+	%vreg221<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg221
+	%vreg222<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg222
+	VSTORE16 %vreg222<kill>, <fi#94>, 0; mem:ST256[%a.addr.i181] CPUVecRegs:%vreg222
+	VSTORE16 %vreg221, <fi#95>, 0; mem:ST256[%b.addr.i182] CPUVecRegs:%vreg221
+	%vreg223<def> = VLOAD16 <fi#94>, 0; mem:LD256[%a.addr.i181] CPUVecRegs:%vreg223
+	%vreg224<def> = vsrl_20 %vreg223<kill>, %vreg221; CPUVecRegs:%vreg224,%vreg223,%vreg221
+	VSTORE16 %vreg224<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg224
+	%vreg225<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg225
+	%vreg226<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg226
+	VSTORE32 %vreg226<kill>, <fi#96>, 0; mem:ST256[%a.addr.i179] CPUVecRegs:%vreg226
+	VSTORE32 %vreg225, <fi#97>, 0; mem:ST256[%b.addr.i180] CPUVecRegs:%vreg225
+	%vreg227<def> = VLOAD32 <fi#96>, 0; mem:LD256[%a.addr.i179] CPUVecRegs:%vreg227
+	%vreg228<def> = vsrl_40 %vreg227<kill>, %vreg225; CPUVecRegs:%vreg228,%vreg227,%vreg225
+	VSTORE32 %vreg228<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg228
+	%vreg229<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg229
+	VSTORE8 %vreg229, <fi#98>, 0; mem:ST256[%a.addr.i178] CPUVecRegs:%vreg229
+	%vreg230<def> = vabs_10 %vreg229; CPUVecRegs:%vreg230,%vreg229
+	VSTORE8 %vreg230<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg230
+	%vreg231<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg231
+	VSTORE16 %vreg231, <fi#99>, 0; mem:ST256[%a.addr.i177] CPUVecRegs:%vreg231
+	%vreg232<def> = vabs_20 %vreg231; CPUVecRegs:%vreg232,%vreg231
+	VSTORE16 %vreg232<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg232
+	%vreg233<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg233
+	VSTORE32 %vreg233, <fi#100>, 0; mem:ST256[%a.addr.i176] CPUVecRegs:%vreg233
+	%vreg234<def> = vabs_40 %vreg233; CPUVecRegs:%vreg234,%vreg233
+	VSTORE32 %vreg234<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg234
+	%vreg235<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg235
+	%vreg236<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg236
+	VSTORE8 %vreg236<kill>, <fi#101>, 0; mem:ST256[%a.addr.i174] CPUVecRegs:%vreg236
+	VSTORE8 %vreg235, <fi#102>, 0; mem:ST256[%b.addr.i175] CPUVecRegs:%vreg235
+	%vreg237<def> = VLOAD8 <fi#101>, 0; mem:LD256[%a.addr.i174] CPUVecRegs:%vreg237
+	%vreg238<def> = vfmul_10 %vreg237<kill>, %vreg235; CPUVecRegs:%vreg238,%vreg237,%vreg235
+	VSTORE8 %vreg238<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg238
+	%vreg239<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg239
+	%vreg240<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg240
+	VSTORE16 %vreg240<kill>, <fi#103>, 0; mem:ST256[%a.addr.i172] CPUVecRegs:%vreg240
+	VSTORE16 %vreg239, <fi#104>, 0; mem:ST256[%b.addr.i173] CPUVecRegs:%vreg239
+	%vreg241<def> = VLOAD16 <fi#103>, 0; mem:LD256[%a.addr.i172] CPUVecRegs:%vreg241
+	%vreg242<def> = vfmul_20 %vreg241<kill>, %vreg239; CPUVecRegs:%vreg242,%vreg241,%vreg239
+	VSTORE16 %vreg242<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg242
+	%vreg243<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg243
+	%vreg244<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg244
+	VSTORE32 %vreg244<kill>, <fi#105>, 0; mem:ST256[%a.addr.i170] CPUVecRegs:%vreg244
+	VSTORE32 %vreg243, <fi#106>, 0; mem:ST256[%b.addr.i171] CPUVecRegs:%vreg243
+	%vreg245<def> = VLOAD32 <fi#105>, 0; mem:LD256[%a.addr.i170] CPUVecRegs:%vreg245
+	%vreg246<def> = vfmul_40 %vreg245<kill>, %vreg243; CPUVecRegs:%vreg246,%vreg245,%vreg243
+	VSTORE32 %vreg246<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg246
+	%vreg247<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg247
+	%vreg248<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg248
+	VSTORE8 %vreg248<kill>, <fi#107>, 0; mem:ST256[%a.addr.i168] CPUVecRegs:%vreg248
+	VSTORE8 %vreg247, <fi#108>, 0; mem:ST256[%b.addr.i169] CPUVecRegs:%vreg247
+	%vreg249<def> = VLOAD8 <fi#107>, 0; mem:LD256[%a.addr.i168] CPUVecRegs:%vreg249
+	%vreg250<def> = vfmac_10 %vreg249<kill>, %vreg247; CPUVecRegs:%vreg250,%vreg249,%vreg247
+	VSTORE8 %vreg250<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg250
+	%vreg251<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg251
+	%vreg252<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg252
+	VSTORE16 %vreg252<kill>, <fi#109>, 0; mem:ST256[%a.addr.i166] CPUVecRegs:%vreg252
+	VSTORE16 %vreg251, <fi#110>, 0; mem:ST256[%b.addr.i167] CPUVecRegs:%vreg251
+	%vreg253<def> = VLOAD16 <fi#109>, 0; mem:LD256[%a.addr.i166] CPUVecRegs:%vreg253
+	%vreg254<def> = vfmac_20 %vreg253<kill>, %vreg251; CPUVecRegs:%vreg254,%vreg253,%vreg251
+	VSTORE16 %vreg254<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg254
+	%vreg255<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg255
+	%vreg256<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg256
+	VSTORE32 %vreg256<kill>, <fi#111>, 0; mem:ST256[%a.addr.i164] CPUVecRegs:%vreg256
+	VSTORE32 %vreg255, <fi#112>, 0; mem:ST256[%b.addr.i165] CPUVecRegs:%vreg255
+	%vreg257<def> = VLOAD32 <fi#111>, 0; mem:LD256[%a.addr.i164] CPUVecRegs:%vreg257
+	%vreg258<def> = vfmac_40 %vreg257<kill>, %vreg255; CPUVecRegs:%vreg258,%vreg257,%vreg255
+	VSTORE32 %vreg258<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg258
+	%vreg259<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg259
+	%vreg260<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg260
+	VSTORE8 %vreg260<kill>, <fi#113>, 0; mem:ST256[%a.addr.i162] CPUVecRegs:%vreg260
+	VSTORE8 %vreg259, <fi#114>, 0; mem:ST256[%b.addr.i163] CPUVecRegs:%vreg259
+	%vreg261<def> = VLOAD8 <fi#113>, 0; mem:LD256[%a.addr.i162] CPUVecRegs:%vreg261
+	%vreg262<def> = vcmac_10 %vreg261<kill>, %vreg259; CPUVecRegs:%vreg262,%vreg261,%vreg259
+	VSTORE8 %vreg262<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg262
+	%vreg263<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg263
+	%vreg264<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg264
+	VSTORE16 %vreg264<kill>, <fi#115>, 0; mem:ST256[%a.addr.i160] CPUVecRegs:%vreg264
+	VSTORE16 %vreg263, <fi#116>, 0; mem:ST256[%b.addr.i161] CPUVecRegs:%vreg263
+	%vreg265<def> = VLOAD16 <fi#115>, 0; mem:LD256[%a.addr.i160] CPUVecRegs:%vreg265
+	%vreg266<def> = vcmac_20 %vreg265<kill>, %vreg263; CPUVecRegs:%vreg266,%vreg265,%vreg263
+	VSTORE16 %vreg266<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg266
+	%vreg267<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg267
+	%vreg268<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg268
+	VSTORE16 %vreg268<kill>, <fi#117>, 0; mem:ST256[%a.addr.i158] CPUVecRegs:%vreg268
+	VSTORE16 %vreg267, <fi#118>, 0; mem:ST256[%b.addr.i159] CPUVecRegs:%vreg267
+	%vreg269<def> = VLOAD16 <fi#117>, 0; mem:LD256[%a.addr.i158] CPUVecRegs:%vreg269
+	%vreg270<def> = vcmul_20 %vreg269<kill>, %vreg267; CPUVecRegs:%vreg270,%vreg269,%vreg267
+	VSTORE16 %vreg270<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg270
+	%vreg271<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg271
+	%vreg272<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg272
+	VSTORE32 %vreg272<kill>, <fi#119>, 0; mem:ST256[%a.addr.i156] CPUVecRegs:%vreg272
+	VSTORE32 %vreg271, <fi#120>, 0; mem:ST256[%b.addr.i157] CPUVecRegs:%vreg271
+	%vreg273<def> = VLOAD32 <fi#119>, 0; mem:LD256[%a.addr.i156] CPUVecRegs:%vreg273
+	%vreg274<def> = vcmulr_40 %vreg273<kill>, %vreg271; CPUVecRegs:%vreg274,%vreg273,%vreg271
+	VSTORE32 %vreg274<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg274
+	%vreg275<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg275
+	%vreg276<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg276
+	VSTORE32 %vreg276<kill>, <fi#121>, 0; mem:ST256[%a.addr.i154] CPUVecRegs:%vreg276
+	VSTORE32 %vreg275, <fi#122>, 0; mem:ST256[%b.addr.i155] CPUVecRegs:%vreg275
+	%vreg277<def> = VLOAD32 <fi#121>, 0; mem:LD256[%a.addr.i154] CPUVecRegs:%vreg277
+	%vreg278<def> = vcmuli_40 %vreg277<kill>, %vreg275; CPUVecRegs:%vreg278,%vreg277,%vreg275
+	VSTORE32 %vreg278<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg278
+	%vreg279<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg279
+	ST %vreg279, <fi#123>, 0; mem:ST4[%a.addr.i153] CPURegs:%vreg279
+	%vreg280<def> = CBW %vreg279; CPURegs:%vreg280,%vreg279
+	ST %vreg280<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg280
+	%vreg281<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg281
+	ST %vreg281, <fi#124>, 0; mem:ST4[%a.addr.i152] CPURegs:%vreg281
+	%vreg282<def> = CHW %vreg281; CPURegs:%vreg282,%vreg281
+	ST %vreg282<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg282
+	%vreg283<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg283
+	ST %vreg283, <fi#125>, 0; mem:ST4[%a.addr.i151] CPURegs:%vreg283
+	%vreg284<def> = ABS %vreg283; CPURegs:%vreg284,%vreg283
+	ST %vreg284<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg284
+	%vreg285<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg285
+	ST %vreg285, <fi#126>, 0; mem:ST4[%a.addr.i150] CPURegs:%vreg285
+	%vreg286<def> = TEST %vreg285; CPURegs:%vreg286,%vreg285
+	ST %vreg286<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg286
+	%vreg287<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg287
+	%vreg288<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg288
+	ST %vreg288<kill>, <fi#127>, 0; mem:ST4[%a.addr.i148] CPURegs:%vreg288
+	ST %vreg287, <fi#128>, 0; mem:ST4[%b.addr.i149] CPURegs:%vreg287
+	%vreg289<def> = LD <fi#127>, 0; mem:LD4[%a.addr.i148] CPURegs:%vreg289
+	%vreg290<def> = MAX %vreg289<kill>, %vreg287; CPURegs:%vreg290,%vreg289,%vreg287
+	ST %vreg290<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg290
+	%vreg291<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg291
+	%vreg292<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg292
+	ST %vreg292<kill>, <fi#129>, 0; mem:ST4[%a.addr.i146] CPURegs:%vreg292
+	ST %vreg291, <fi#130>, 0; mem:ST4[%b.addr.i147] CPURegs:%vreg291
+	%vreg293<def> = LD <fi#129>, 0; mem:LD4[%a.addr.i146] CPURegs:%vreg293
+	%vreg294<def> = MIN %vreg293<kill>, %vreg291; CPURegs:%vreg294,%vreg293,%vreg291
+	ST %vreg294<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg294
+	%vreg295<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg295
+	ST %vreg295, <fi#131>, 0; mem:ST4[%a.addr.i145] CPURegs:%vreg295
+	%vreg296<def> = not_0 %vreg295; CPURegs:%vreg296,%vreg295
+	ST %vreg296<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg296
+	%vreg297<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg297
+	ST %vreg297<kill>, <fi#132>, 0; mem:ST4[%a.addr.i143] CPURegs:%vreg297
+	ST %vreg27, <fi#133>, 0; mem:ST4[%b.addr.i144] CPURegs:%vreg27
+	%vreg298<def> = LD <fi#132>, 0; mem:LD4[%a.addr.i143] CPURegs:%vreg298
+	%vreg299<def> = loadu_8 %vreg298<kill>, 1; CPURegs:%vreg299,%vreg298
+	ST %vreg299<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg299
+	%vreg300<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg300
+	ST %vreg300<kill>, <fi#134>, 0; mem:ST4[%a.addr.i141] CPURegs:%vreg300
+	ST %vreg27, <fi#135>, 0; mem:ST4[%b.addr.i142] CPURegs:%vreg27
+	%vreg301<def> = LD <fi#134>, 0; mem:LD4[%a.addr.i141] CPURegs:%vreg301
+	%vreg302<def> = loadu_16 %vreg301<kill>, 1; CPURegs:%vreg302,%vreg301
+	ST %vreg302<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg302
+	%vreg303<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg303
+	ST %vreg303<kill>, <fi#136>, 0; mem:ST4[%a.addr.i139] CPURegs:%vreg303
+	ST %vreg27, <fi#137>, 0; mem:ST4[%b.addr.i140] CPURegs:%vreg27
+	%vreg304<def> = LD <fi#136>, 0; mem:LD4[%a.addr.i139] CPURegs:%vreg304
+	%vreg305<def> = loadu_32 %vreg304<kill>, 1; CPURegs:%vreg305,%vreg304
+	ST %vreg305<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg305
+	%vreg306<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg306
+	%vreg307<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg307
+	ST %vreg307<kill>, <fi#138>, 0; mem:ST4[%a.addr.i137] CPURegs:%vreg307
+	ST %vreg306, <fi#139>, 0; mem:ST4[%b.addr.i138] CPURegs:%vreg306
+	%vreg308<def> = LD <fi#138>, 0; mem:LD4[%a.addr.i137] CPURegs:%vreg308
+	%vreg309<def> = loado_16 %vreg308<kill>, %vreg306; CPURegs:%vreg309,%vreg308,%vreg306
+	ST %vreg309<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg309
+	%vreg310<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg310
+	%vreg311<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg311
+	ST %vreg311<kill>, <fi#140>, 0; mem:ST4[%a.addr.i135] CPURegs:%vreg311
+	ST %vreg310, <fi#141>, 0; mem:ST4[%b.addr.i136] CPURegs:%vreg310
+	%vreg312<def> = LD <fi#140>, 0; mem:LD4[%a.addr.i135] CPURegs:%vreg312
+	%vreg313<def> = loado_32 %vreg312<kill>, %vreg310; CPURegs:%vreg313,%vreg312,%vreg310
+	ST %vreg313<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg313
+	%vreg314<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg314
+	%vreg315<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg315
+	ST %vreg315<kill>, <fi#142>, 0; mem:ST4[%a.addr.i133] CPURegs:%vreg315
+	ST %vreg314, <fi#143>, 0; mem:ST4[%b.addr.i134] CPURegs:%vreg314
+	%vreg316<def> = LD <fi#142>, 0; mem:LD4[%a.addr.i133] CPURegs:%vreg316
+	%vreg317<def> = storeo_16 %vreg316<kill>, %vreg314; CPURegs:%vreg317,%vreg316,%vreg314
+	ST %vreg317<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg317
+	%vreg318<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg318
+	%vreg319<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg319
+	ST %vreg319<kill>, <fi#144>, 0; mem:ST4[%a.addr.i131] CPURegs:%vreg319
+	ST %vreg318, <fi#145>, 0; mem:ST4[%b.addr.i132] CPURegs:%vreg318
+	%vreg320<def> = LD <fi#144>, 0; mem:LD4[%a.addr.i131] CPURegs:%vreg320
+	%vreg321<def> = storeo_32 %vreg320<kill>, %vreg318; CPURegs:%vreg321,%vreg320,%vreg318
+	ST %vreg321<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg321
+	%vreg322<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg322
+	ST %vreg322<kill>, <fi#146>, 0; mem:ST4[%a.addr.i129] CPURegs:%vreg322
+	ST %vreg27, <fi#147>, 0; mem:ST4[%b.addr.i130] CPURegs:%vreg27
+	%vreg323<def> = LD <fi#146>, 0; mem:LD4[%a.addr.i129] CPURegs:%vreg323
+	%vreg324<def> = storeu_10 %vreg323<kill>, 1; CPUVecRegs:%vreg324 CPURegs:%vreg323
+	VSTORE8 %vreg324<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg324
+	%vreg325<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg325
+	ST %vreg325<kill>, <fi#148>, 0; mem:ST4[%a.addr.i127] CPURegs:%vreg325
+	ST %vreg27, <fi#149>, 0; mem:ST4[%b.addr.i128] CPURegs:%vreg27
+	%vreg326<def> = LD <fi#148>, 0; mem:LD4[%a.addr.i127] CPURegs:%vreg326
+	%vreg327<def> = storeu_20 %vreg326<kill>, 1; CPUVecRegs:%vreg327 CPURegs:%vreg326
+	VSTORE16 %vreg327<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg327
+	%vreg328<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg328
+	ST %vreg328<kill>, <fi#150>, 0; mem:ST4[%a.addr.i125] CPURegs:%vreg328
+	ST %vreg27, <fi#151>, 0; mem:ST4[%b.addr.i126] CPURegs:%vreg27
+	%vreg329<def> = LD <fi#150>, 0; mem:LD4[%a.addr.i125] CPURegs:%vreg329
+	%vreg330<def> = storeu_40 %vreg329<kill>, 1; CPUVecRegs:%vreg330 CPURegs:%vreg329
+	VSTORE32 %vreg330<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg330
+	%vreg331<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg331
+	%vreg332<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg332
+	ST %vreg332<kill>, <fi#152>, 0; mem:ST4[%a.addr.i122] CPURegs:%vreg332
+	ST %vreg331<kill>, <fi#153>, 0; mem:ST4[%b.addr.i123] CPURegs:%vreg331
+	ST %vreg27, <fi#154>, 0; mem:ST4[%c.addr.i124] CPURegs:%vreg27
+	%vreg333<def> = LD <fi#153>, 0; mem:LD4[%b.addr.i123] CPURegs:%vreg333
+	%vreg334<def> = LD <fi#152>, 0; mem:LD4[%a.addr.i122] CPURegs:%vreg334
+	storeu_8 %vreg334<kill>, %vreg333<kill>, 1; CPURegs:%vreg334,%vreg333
+	%vreg335<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg335
+	%vreg336<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg336
+	ST %vreg336<kill>, <fi#155>, 0; mem:ST4[%a.addr.i119] CPURegs:%vreg336
+	ST %vreg335<kill>, <fi#156>, 0; mem:ST4[%b.addr.i120] CPURegs:%vreg335
+	ST %vreg27, <fi#157>, 0; mem:ST4[%c.addr.i121] CPURegs:%vreg27
+	%vreg337<def> = LD <fi#156>, 0; mem:LD4[%b.addr.i120] CPURegs:%vreg337
+	%vreg338<def> = LD <fi#155>, 0; mem:LD4[%a.addr.i119] CPURegs:%vreg338
+	storeu_16 %vreg338<kill>, %vreg337<kill>, 1; CPURegs:%vreg338,%vreg337
+	%vreg339<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg339
+	%vreg340<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg340
+	ST %vreg340<kill>, <fi#158>, 0; mem:ST4[%a.addr.i117] CPURegs:%vreg340
+	ST %vreg339<kill>, <fi#159>, 0; mem:ST4[%b.addr.i118] CPURegs:%vreg339
+	ST %vreg27, <fi#160>, 0; mem:ST4[%c.addr.i] CPURegs:%vreg27
+	%vreg341<def> = LD <fi#159>, 0; mem:LD4[%b.addr.i118] CPURegs:%vreg341
+	%vreg342<def> = LD <fi#158>, 0; mem:LD4[%a.addr.i117] CPURegs:%vreg342
+	storeu_32 %vreg342<kill>, %vreg341<kill>, 1; CPURegs:%vreg342,%vreg341
+	ST %vreg27, <fi#161>, 0; mem:ST4[%a.addr.i116] CPURegs:%vreg27
+	%vreg343<def> = TESTI 1; CPURegs:%vreg343
+	ST %vreg343<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg343
+	ST %vreg28, <fi#162>, 0; mem:ST4[%a.addr.i115] CPURegs:%vreg28
+	%vreg344<def> = BST 2; CPURegs:%vreg344
+	ST %vreg344<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg344
+	%vreg345<def> = BST 5; CPURegs:%vreg345
+	ST %vreg345<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg345
+	%vreg346<def> = MovGR %ZERO, 5; CPURegs:%vreg346
+	ST %vreg346<kill>, <fi#163>, 0; mem:ST4[%a.addr.i114] CPURegs:%vreg346
+	%vreg347<def> = BCLR 5; CPURegs:%vreg347
+	ST %vreg347<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg347
+	%vreg348<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg348
+	ST %vreg348<kill>, <fi#164>, 0; mem:ST4[%a.addr.i112] CPURegs:%vreg348
+	ST %vreg27, <fi#165>, 0; mem:ST4[%b.addr.i113] CPURegs:%vreg27
+	%vreg349<def> = LD <fi#164>, 0; mem:LD4[%a.addr.i112] CPURegs:%vreg349
+	%vreg350<def> = MovG2V40 %vreg349<kill>, 1; CPUVecRegs:%vreg350 CPURegs:%vreg349
+	VSTORE32 %vreg350<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg350
+	%vreg351<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg351
+	ST %vreg351<kill>, <fi#166>, 0; mem:ST4[%a.addr.i110] CPURegs:%vreg351
+	ST %vreg27, <fi#167>, 0; mem:ST4[%b.addr.i111] CPURegs:%vreg27
+	%vreg352<def> = LD <fi#166>, 0; mem:LD4[%a.addr.i110] CPURegs:%vreg352
+	%vreg353<def> = MovG2V20 %vreg352<kill>, 1; CPUVecRegs:%vreg353 CPURegs:%vreg352
+	VSTORE16 %vreg353<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg353
+	%vreg354<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg354
+	ST %vreg354<kill>, <fi#168>, 0; mem:ST4[%a.addr.i108] CPURegs:%vreg354
+	ST %vreg27, <fi#169>, 0; mem:ST4[%b.addr.i109] CPURegs:%vreg27
+	%vreg355<def> = LD <fi#168>, 0; mem:LD4[%a.addr.i108] CPURegs:%vreg355
+	%vreg356<def> = MovG2V10 %vreg355<kill>, 1; CPUVecRegs:%vreg356 CPURegs:%vreg355
+	VSTORE8 %vreg356<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg356
+	%vreg357<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg357
+	VSTORE32 %vreg357<kill>, <fi#170>, 0; mem:ST256[%a.addr.i106] CPUVecRegs:%vreg357
+	ST %vreg27, <fi#171>, 0; mem:ST4[%b.addr.i107] CPURegs:%vreg27
+	%vreg358<def> = VLOAD32 <fi#170>, 0; mem:LD256[%a.addr.i106] CPUVecRegs:%vreg358
+	%vreg359<def> = MovV2G40 %vreg358<kill>, 1; CPURegs:%vreg359 CPUVecRegs:%vreg358
+	ST %vreg359<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg359
+	%vreg360<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg360
+	VSTORE16 %vreg360<kill>, <fi#172>, 0; mem:ST256[%a.addr.i104] CPUVecRegs:%vreg360
+	ST %vreg27, <fi#173>, 0; mem:ST4[%b.addr.i105] CPURegs:%vreg27
+	%vreg361<def> = VLOAD16 <fi#172>, 0; mem:LD256[%a.addr.i104] CPUVecRegs:%vreg361
+	%vreg362<def> = MovV2G20 %vreg361<kill>, 1; CPURegs:%vreg362 CPUVecRegs:%vreg361
+	ST %vreg362<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg362
+	%vreg363<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg363
+	VSTORE8 %vreg363<kill>, <fi#174>, 0; mem:ST256[%a.addr.i102] CPUVecRegs:%vreg363
+	ST %vreg27, <fi#175>, 0; mem:ST4[%b.addr.i103] CPURegs:%vreg27
+	%vreg364<def> = VLOAD8 <fi#174>, 0; mem:LD256[%a.addr.i102] CPUVecRegs:%vreg364
+	%vreg365<def> = MovV2G10 %vreg364<kill>, 1; CPURegs:%vreg365 CPUVecRegs:%vreg364
+	ST %vreg365<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg365
+	%vreg366<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg366
+	VSTORE8 %vreg366, <fi#176>, 0; mem:ST256[%a.addr.i101] CPUVecRegs:%vreg366
+	MovL2V %vreg366; CPUVecRegs:%vreg366
+	%vreg367<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg367
+	VSTORE8 %vreg367, <fi#177>, 0; mem:ST256[%a.addr.i100] CPUVecRegs:%vreg367
+	MovV2L %vreg367; CPUVecRegs:%vreg367
+	%vreg368<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg368
+	VSTORE8 %vreg368, <fi#178>, 0; mem:ST256[%a.addr.i99] CPUVecRegs:%vreg368
+	%vreg369<def> = MovV2V %vreg368; CPUVecRegs:%vreg369,%vreg368
+	VSTORE8 %vreg369<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg369
+	%vreg370<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg370
+	ST %vreg370, <fi#179>, 0; mem:ST4[%a.addr.i98] CPURegs:%vreg370
+	%vreg371<def> = VMovG2V40 %vreg370; CPUVecRegs:%vreg371 CPURegs:%vreg370
+	VSTORE32 %vreg371<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg371
+	%vreg372<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg372
+	ST %vreg372, <fi#180>, 0; mem:ST4[%a.addr.i97] CPURegs:%vreg372
+	%vreg373<def> = VMovG2V20 %vreg372; CPUVecRegs:%vreg373 CPURegs:%vreg372
+	VSTORE16 %vreg373<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg373
+	%vreg374<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg374
+	ST %vreg374, <fi#181>, 0; mem:ST4[%a.addr.i96] CPURegs:%vreg374
+	%vreg375<def> = VMovG2V10 %vreg374; CPUVecRegs:%vreg375 CPURegs:%vreg374
+	VSTORE8 %vreg375<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg375
+	RetLR
+
+# End machine code for function SIMD_Intrinsic_Testcase0.
+
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	CALL <ga:@SIMD_Intrinsic_Testcase0>, <regmask>, %SP<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%V0<def> = COPY %vreg0; CPURegs:%vreg0
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function SIMD_Intrinsic_Testcase0: SSA
+Frame Objects:
+  fi#0: size=256, align=256, at location [SP]
+  fi#1: size=256, align=256, at location [SP]
+  fi#2: size=256, align=256, at location [SP]
+  fi#3: size=256, align=256, at location [SP]
+  fi#4: size=256, align=256, at location [SP]
+  fi#5: size=256, align=256, at location [SP]
+  fi#6: size=256, align=256, at location [SP]
+  fi#7: size=256, align=256, at location [SP]
+  fi#8: size=256, align=256, at location [SP]
+  fi#9: size=256, align=256, at location [SP]
+  fi#10: size=256, align=256, at location [SP]
+  fi#11: size=256, align=256, at location [SP]
+  fi#12: size=256, align=256, at location [SP]
+  fi#13: size=256, align=256, at location [SP]
+  fi#14: size=256, align=256, at location [SP]
+  fi#15: size=256, align=256, at location [SP]
+  fi#16: size=256, align=256, at location [SP]
+  fi#17: size=256, align=256, at location [SP]
+  fi#18: size=256, align=256, at location [SP]
+  fi#19: size=256, align=256, at location [SP]
+  fi#20: size=256, align=256, at location [SP]
+  fi#21: size=256, align=256, at location [SP]
+  fi#22: size=256, align=256, at location [SP]
+  fi#23: size=256, align=256, at location [SP]
+  fi#24: size=256, align=256, at location [SP]
+  fi#25: size=256, align=256, at location [SP]
+  fi#26: size=256, align=256, at location [SP]
+  fi#27: size=4, align=4, at location [SP]
+  fi#28: size=256, align=256, at location [SP]
+  fi#29: size=256, align=256, at location [SP]
+  fi#30: size=256, align=256, at location [SP]
+  fi#31: size=256, align=256, at location [SP]
+  fi#32: size=256, align=256, at location [SP]
+  fi#33: size=256, align=256, at location [SP]
+  fi#34: size=256, align=256, at location [SP]
+  fi#35: size=256, align=256, at location [SP]
+  fi#36: size=256, align=256, at location [SP]
+  fi#37: size=256, align=256, at location [SP]
+  fi#38: size=256, align=256, at location [SP]
+  fi#39: size=256, align=256, at location [SP]
+  fi#40: size=256, align=256, at location [SP]
+  fi#41: size=256, align=256, at location [SP]
+  fi#42: size=256, align=256, at location [SP]
+  fi#43: size=256, align=256, at location [SP]
+  fi#44: size=256, align=256, at location [SP]
+  fi#45: size=256, align=256, at location [SP]
+  fi#46: size=256, align=256, at location [SP]
+  fi#47: size=256, align=256, at location [SP]
+  fi#48: size=256, align=256, at location [SP]
+  fi#49: size=256, align=256, at location [SP]
+  fi#50: size=256, align=256, at location [SP]
+  fi#51: size=256, align=256, at location [SP]
+  fi#52: size=256, align=256, at location [SP]
+  fi#53: size=256, align=256, at location [SP]
+  fi#54: size=256, align=256, at location [SP]
+  fi#55: size=256, align=256, at location [SP]
+  fi#56: size=256, align=256, at location [SP]
+  fi#57: size=256, align=256, at location [SP]
+  fi#58: size=256, align=256, at location [SP]
+  fi#59: size=256, align=256, at location [SP]
+  fi#60: size=256, align=256, at location [SP]
+  fi#61: size=256, align=256, at location [SP]
+  fi#62: size=256, align=256, at location [SP]
+  fi#63: size=256, align=256, at location [SP]
+  fi#64: size=256, align=256, at location [SP]
+  fi#65: size=256, align=256, at location [SP]
+  fi#66: size=256, align=256, at location [SP]
+  fi#67: size=256, align=256, at location [SP]
+  fi#68: size=256, align=256, at location [SP]
+  fi#69: size=256, align=256, at location [SP]
+  fi#70: size=256, align=256, at location [SP]
+  fi#71: size=256, align=256, at location [SP]
+  fi#72: size=256, align=256, at location [SP]
+  fi#73: size=256, align=256, at location [SP]
+  fi#74: size=256, align=256, at location [SP]
+  fi#75: size=256, align=256, at location [SP]
+  fi#76: size=256, align=256, at location [SP]
+  fi#77: size=256, align=256, at location [SP]
+  fi#78: size=256, align=256, at location [SP]
+  fi#79: size=256, align=256, at location [SP]
+  fi#80: size=256, align=256, at location [SP]
+  fi#81: size=256, align=256, at location [SP]
+  fi#82: size=256, align=256, at location [SP]
+  fi#83: size=256, align=256, at location [SP]
+  fi#84: size=256, align=256, at location [SP]
+  fi#85: size=256, align=256, at location [SP]
+  fi#86: size=256, align=256, at location [SP]
+  fi#87: size=256, align=256, at location [SP]
+  fi#88: size=256, align=256, at location [SP]
+  fi#89: size=256, align=256, at location [SP]
+  fi#90: size=256, align=256, at location [SP]
+  fi#91: size=256, align=256, at location [SP]
+  fi#92: size=256, align=256, at location [SP]
+  fi#93: size=256, align=256, at location [SP]
+  fi#94: size=256, align=256, at location [SP]
+  fi#95: size=256, align=256, at location [SP]
+  fi#96: size=256, align=256, at location [SP]
+  fi#97: size=256, align=256, at location [SP]
+  fi#98: size=256, align=256, at location [SP]
+  fi#99: size=256, align=256, at location [SP]
+  fi#100: size=256, align=256, at location [SP]
+  fi#101: size=256, align=256, at location [SP]
+  fi#102: size=256, align=256, at location [SP]
+  fi#103: size=256, align=256, at location [SP]
+  fi#104: size=256, align=256, at location [SP]
+  fi#105: size=256, align=256, at location [SP]
+  fi#106: size=256, align=256, at location [SP]
+  fi#107: size=256, align=256, at location [SP]
+  fi#108: size=256, align=256, at location [SP]
+  fi#109: size=256, align=256, at location [SP]
+  fi#110: size=256, align=256, at location [SP]
+  fi#111: size=256, align=256, at location [SP]
+  fi#112: size=256, align=256, at location [SP]
+  fi#113: size=256, align=256, at location [SP]
+  fi#114: size=256, align=256, at location [SP]
+  fi#115: size=256, align=256, at location [SP]
+  fi#116: size=256, align=256, at location [SP]
+  fi#117: size=256, align=256, at location [SP]
+  fi#118: size=256, align=256, at location [SP]
+  fi#119: size=256, align=256, at location [SP]
+  fi#120: size=256, align=256, at location [SP]
+  fi#121: size=256, align=256, at location [SP]
+  fi#122: size=256, align=256, at location [SP]
+  fi#123: size=4, align=4, at location [SP]
+  fi#124: size=4, align=4, at location [SP]
+  fi#125: size=4, align=4, at location [SP]
+  fi#126: size=4, align=4, at location [SP]
+  fi#127: size=4, align=4, at location [SP]
+  fi#128: size=4, align=4, at location [SP]
+  fi#129: size=4, align=4, at location [SP]
+  fi#130: size=4, align=4, at location [SP]
+  fi#131: size=4, align=4, at location [SP]
+  fi#132: size=4, align=4, at location [SP]
+  fi#133: size=4, align=4, at location [SP]
+  fi#134: size=4, align=4, at location [SP]
+  fi#135: size=4, align=4, at location [SP]
+  fi#136: size=4, align=4, at location [SP]
+  fi#137: size=4, align=4, at location [SP]
+  fi#138: size=4, align=4, at location [SP]
+  fi#139: size=4, align=4, at location [SP]
+  fi#140: size=4, align=4, at location [SP]
+  fi#141: size=4, align=4, at location [SP]
+  fi#142: size=4, align=4, at location [SP]
+  fi#143: size=4, align=4, at location [SP]
+  fi#144: size=4, align=4, at location [SP]
+  fi#145: size=4, align=4, at location [SP]
+  fi#146: size=4, align=4, at location [SP]
+  fi#147: size=4, align=4, at location [SP]
+  fi#148: size=4, align=4, at location [SP]
+  fi#149: size=4, align=4, at location [SP]
+  fi#150: size=4, align=4, at location [SP]
+  fi#151: size=4, align=4, at location [SP]
+  fi#152: size=4, align=4, at location [SP]
+  fi#153: size=4, align=4, at location [SP]
+  fi#154: size=4, align=4, at location [SP]
+  fi#155: size=4, align=4, at location [SP]
+  fi#156: size=4, align=4, at location [SP]
+  fi#157: size=4, align=4, at location [SP]
+  fi#158: size=4, align=4, at location [SP]
+  fi#159: size=4, align=4, at location [SP]
+  fi#160: size=4, align=4, at location [SP]
+  fi#161: size=4, align=4, at location [SP]
+  fi#162: size=4, align=4, at location [SP]
+  fi#163: size=4, align=4, at location [SP]
+  fi#164: size=4, align=4, at location [SP]
+  fi#165: size=4, align=4, at location [SP]
+  fi#166: size=4, align=4, at location [SP]
+  fi#167: size=4, align=4, at location [SP]
+  fi#168: size=4, align=4, at location [SP]
+  fi#169: size=4, align=4, at location [SP]
+  fi#170: size=256, align=256, at location [SP]
+  fi#171: size=4, align=4, at location [SP]
+  fi#172: size=256, align=256, at location [SP]
+  fi#173: size=4, align=4, at location [SP]
+  fi#174: size=256, align=256, at location [SP]
+  fi#175: size=4, align=4, at location [SP]
+  fi#176: size=256, align=256, at location [SP]
+  fi#177: size=256, align=256, at location [SP]
+  fi#178: size=256, align=256, at location [SP]
+  fi#179: size=4, align=4, at location [SP]
+  fi#180: size=4, align=4, at location [SP]
+  fi#181: size=4, align=4, at location [SP]
+  fi#182: size=256, align=256, at location [SP]
+  fi#183: size=256, align=256, at location [SP]
+  fi#184: size=256, align=256, at location [SP]
+  fi#185: size=256, align=256, at location [SP]
+  fi#186: size=256, align=256, at location [SP]
+  fi#187: size=256, align=256, at location [SP]
+  fi#188: size=256, align=256, at location [SP]
+  fi#189: size=256, align=256, at location [SP]
+  fi#190: size=256, align=256, at location [SP]
+  fi#191: size=256, align=256, at location [SP]
+  fi#192: size=256, align=256, at location [SP]
+  fi#193: size=4, align=4, at location [SP]
+  fi#194: size=4, align=4, at location [SP]
+  fi#195: size=4, align=4, at location [SP]
+  fi#196: size=4, align=4, at location [SP]
+Constant Pool:
+  cp#0: <i8 8, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, align=256
+  cp#1: <i8 1, i8 2, i8 3, i8 4, i8 5, i8 6, i8 7, i8 8, i8 9, i8 0, i8 97, i8 98, i8 99, i8 100, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, align=256
+  cp#2: <i8 12, i8 23, i8 34, i8 45, i8 56, i8 67, i8 78, i8 89, i8 90, i8 10, i8 48, i8 49, i8 50, i8 51, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0, i8 0>, align=256
+  cp#3: <i16 16, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, align=256
+  cp#4: <i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 2, i16 3, i16 4, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, align=256
+  cp#5: <i16 12, i16 23, i16 34, i16 45, i16 56, i16 67, i16 78, i16 89, i16 90, i16 10, i16 123, i16 234, i16 345, i16 456, i16 567, i16 678, i16 789, i16 890, i16 901, i16 102, i16 5, i16 6, i16 6, i16 4, i16 5, i16 6, i16 7, i16 8, i16 9, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0, i16 0>, align=256
+  cp#6: <i32 32, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, align=256
+  cp#7: <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 5, i32 5, i32 5, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, align=256
+  cp#8: <i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 123, i32 234, i32 345, i32 456, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 7, i32 7, i32 7, i32 4, i32 5, i32 6, i32 7, i32 8, i32 9, i32 0, i32 12, i32 23, i32 34, i32 45, i32 56, i32 67, i32 78, i32 89, i32 90, i32 10, i32 56, i32 567, i32 678, i32 789, i32 890, i32 901, i32 102, i32 3, i32 1, i32 2, i32 4, i32 5, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0>, align=256
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <cp#0>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <cp#0>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = VLOAD8 %vreg1<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg2 CPURegs:%vreg1
+	VSTORE8 %vreg2<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg2
+	%vreg3<def> = MovIGH %ZERO, <cp#1>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <cp#1>[TF=4]; CPURegs:%vreg4,%vreg3
+	%vreg5<def> = VLOAD8 %vreg4<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg5 CPURegs:%vreg4
+	VSTORE8 %vreg5<kill>, <fi#185>, 0; mem:ST256[%i8x256_t_a] CPUVecRegs:%vreg5
+	%vreg6<def> = MovIGH %ZERO, <cp#2>[TF=3]; CPURegs:%vreg6
+	%vreg7<def,tied1> = MovIGL %vreg6<tied0>, <cp#2>[TF=4]; CPURegs:%vreg7,%vreg6
+	%vreg8<def> = VLOAD8 %vreg7<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg8 CPURegs:%vreg7
+	VSTORE8 %vreg8<kill>, <fi#186>, 0; mem:ST256[%i8x256_t_b] CPUVecRegs:%vreg8
+	%vreg9<def> = MovIGH %ZERO, <cp#3>[TF=3]; CPURegs:%vreg9
+	%vreg10<def,tied1> = MovIGL %vreg9<tied0>, <cp#3>[TF=4]; CPURegs:%vreg10,%vreg9
+	%vreg11<def> = VLOAD16 %vreg10<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg11 CPURegs:%vreg10
+	VSTORE16 %vreg11<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg11
+	%vreg12<def> = MovIGH %ZERO, <cp#4>[TF=3]; CPURegs:%vreg12
+	%vreg13<def,tied1> = MovIGL %vreg12<tied0>, <cp#4>[TF=4]; CPURegs:%vreg13,%vreg12
+	%vreg14<def> = VLOAD16 %vreg13<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg14 CPURegs:%vreg13
+	VSTORE16 %vreg14<kill>, <fi#188>, 0; mem:ST256[%i16x128_t_a] CPUVecRegs:%vreg14
+	%vreg15<def> = MovIGH %ZERO, <cp#5>[TF=3]; CPURegs:%vreg15
+	%vreg16<def,tied1> = MovIGL %vreg15<tied0>, <cp#5>[TF=4]; CPURegs:%vreg16,%vreg15
+	%vreg17<def> = VLOAD16 %vreg16<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg17 CPURegs:%vreg16
+	VSTORE16 %vreg17<kill>, <fi#189>, 0; mem:ST256[%i16x128_t_b] CPUVecRegs:%vreg17
+	%vreg18<def> = MovIGH %ZERO, <cp#6>[TF=3]; CPURegs:%vreg18
+	%vreg19<def,tied1> = MovIGL %vreg18<tied0>, <cp#6>[TF=4]; CPURegs:%vreg19,%vreg18
+	%vreg20<def> = VLOAD32 %vreg19<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg20 CPURegs:%vreg19
+	VSTORE32 %vreg20<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg20
+	%vreg21<def> = MovIGH %ZERO, <cp#7>[TF=3]; CPURegs:%vreg21
+	%vreg22<def,tied1> = MovIGL %vreg21<tied0>, <cp#7>[TF=4]; CPURegs:%vreg22,%vreg21
+	%vreg23<def> = VLOAD32 %vreg22<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg23 CPURegs:%vreg22
+	VSTORE32 %vreg23<kill>, <fi#191>, 0; mem:ST256[%i32x64_t_a] CPUVecRegs:%vreg23
+	%vreg24<def> = MovIGH %ZERO, <cp#8>[TF=3]; CPURegs:%vreg24
+	%vreg25<def,tied1> = MovIGL %vreg24<tied0>, <cp#8>[TF=4]; CPURegs:%vreg25,%vreg24
+	%vreg26<def> = VLOAD32 %vreg25<kill>, 0; mem:LD256[ConstantPool] CPUVecRegs:%vreg26 CPURegs:%vreg25
+	VSTORE32 %vreg26<kill>, <fi#192>, 0; mem:ST256[%i32x64_t_b] CPUVecRegs:%vreg26
+	%vreg27<def> = MovGR %ZERO, 1; CPURegs:%vreg27
+	ST %vreg27, <fi#194>, 0; mem:ST4[%int_a] CPURegs:%vreg27
+	%vreg28<def> = MovGR %ZERO, 2; CPURegs:%vreg28
+	ST %vreg28, <fi#195>, 0; mem:ST4[%int_b] CPURegs:%vreg28
+	%vreg29<def> = MovGR %ZERO, 3; CPURegs:%vreg29
+	ST %vreg29<kill>, <fi#196>, 0; mem:ST4[%int_c] CPURegs:%vreg29
+	%vreg30<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg30
+	%vreg31<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg31
+	VSTORE8 %vreg31<kill>, <fi#182>, 0; mem:ST256[%a.addr.i] CPUVecRegs:%vreg31
+	VSTORE8 %vreg30, <fi#183>, 0; mem:ST256[%b.addr.i] CPUVecRegs:%vreg30
+	%vreg32<def> = VLOAD8 <fi#182>, 0; mem:LD256[%a.addr.i] CPUVecRegs:%vreg32
+	%vreg33<def> = VMAX10 %vreg32<kill>, %vreg30; CPUVecRegs:%vreg33,%vreg32,%vreg30
+	VSTORE8 %vreg33<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg33
+	%vreg34<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg34
+	%vreg35<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg35
+	VSTORE16 %vreg35<kill>, <fi#0>, 0; mem:ST256[%a.addr.i275] CPUVecRegs:%vreg35
+	VSTORE16 %vreg34, <fi#1>, 0; mem:ST256[%b.addr.i276] CPUVecRegs:%vreg34
+	%vreg36<def> = VLOAD16 <fi#0>, 0; mem:LD256[%a.addr.i275] CPUVecRegs:%vreg36
+	%vreg37<def> = VMAX20 %vreg36<kill>, %vreg34; CPUVecRegs:%vreg37,%vreg36,%vreg34
+	VSTORE16 %vreg37<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg37
+	%vreg38<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg38
+	%vreg39<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg39
+	VSTORE32 %vreg39<kill>, <fi#2>, 0; mem:ST256[%a.addr.i273] CPUVecRegs:%vreg39
+	VSTORE32 %vreg38, <fi#3>, 0; mem:ST256[%b.addr.i274] CPUVecRegs:%vreg38
+	%vreg40<def> = VLOAD32 <fi#2>, 0; mem:LD256[%a.addr.i273] CPUVecRegs:%vreg40
+	%vreg41<def> = VMAX40 %vreg40<kill>, %vreg38; CPUVecRegs:%vreg41,%vreg40,%vreg38
+	VSTORE32 %vreg41<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg41
+	%vreg42<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg42
+	%vreg43<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg43
+	VSTORE8 %vreg43<kill>, <fi#4>, 0; mem:ST256[%a.addr.i271] CPUVecRegs:%vreg43
+	VSTORE8 %vreg42, <fi#5>, 0; mem:ST256[%b.addr.i272] CPUVecRegs:%vreg42
+	%vreg44<def> = VLOAD8 <fi#4>, 0; mem:LD256[%a.addr.i271] CPUVecRegs:%vreg44
+	%vreg45<def> = VMIN10 %vreg44<kill>, %vreg42; CPUVecRegs:%vreg45,%vreg44,%vreg42
+	VSTORE8 %vreg45<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg45
+	%vreg46<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg46
+	%vreg47<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg47
+	VSTORE16 %vreg47<kill>, <fi#6>, 0; mem:ST256[%a.addr.i269] CPUVecRegs:%vreg47
+	VSTORE16 %vreg46, <fi#7>, 0; mem:ST256[%b.addr.i270] CPUVecRegs:%vreg46
+	%vreg48<def> = VLOAD16 <fi#6>, 0; mem:LD256[%a.addr.i269] CPUVecRegs:%vreg48
+	%vreg49<def> = VMIN20 %vreg48<kill>, %vreg46; CPUVecRegs:%vreg49,%vreg48,%vreg46
+	VSTORE16 %vreg49<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg49
+	%vreg50<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg50
+	%vreg51<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg51
+	VSTORE32 %vreg51<kill>, <fi#8>, 0; mem:ST256[%a.addr.i267] CPUVecRegs:%vreg51
+	VSTORE32 %vreg50, <fi#9>, 0; mem:ST256[%b.addr.i268] CPUVecRegs:%vreg50
+	%vreg52<def> = VLOAD32 <fi#8>, 0; mem:LD256[%a.addr.i267] CPUVecRegs:%vreg52
+	%vreg53<def> = VMIN40 %vreg52<kill>, %vreg50; CPUVecRegs:%vreg53,%vreg52,%vreg50
+	VSTORE32 %vreg53<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg53
+	%vreg54<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg54
+	VSTORE8 %vreg54, <fi#10>, 0; mem:ST256[%a.addr.i266] CPUVecRegs:%vreg54
+	%vreg55<def> = vsum_10 %vreg54; CPUVecRegs:%vreg55,%vreg54
+	VSTORE8 %vreg55<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg55
+	%vreg56<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg56
+	VSTORE16 %vreg56, <fi#11>, 0; mem:ST256[%a.addr.i265] CPUVecRegs:%vreg56
+	%vreg57<def> = vsum_20 %vreg56; CPUVecRegs:%vreg57,%vreg56
+	VSTORE16 %vreg57<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg57
+	%vreg58<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg58
+	%vreg59<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg59
+	VSTORE8 %vreg59<kill>, <fi#12>, 0; mem:ST256[%a.addr.i263] CPUVecRegs:%vreg59
+	VSTORE8 %vreg58, <fi#13>, 0; mem:ST256[%b.addr.i264] CPUVecRegs:%vreg58
+	%vreg60<def> = VLOAD8 <fi#12>, 0; mem:LD256[%a.addr.i263] CPUVecRegs:%vreg60
+	%vreg61<def> = veq_10 %vreg60<kill>, %vreg58; CPUVecRegs:%vreg61,%vreg60,%vreg58
+	VSTORE8 %vreg61<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg61
+	%vreg62<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg62
+	%vreg63<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg63
+	VSTORE16 %vreg63<kill>, <fi#14>, 0; mem:ST256[%a.addr.i261] CPUVecRegs:%vreg63
+	VSTORE8 %vreg62, <fi#15>, 0; mem:ST256[%b.addr.i262] CPUVecRegs:%vreg62
+	%vreg64<def> = VLOAD16 <fi#14>, 0; mem:LD256[%a.addr.i261] CPUVecRegs:%vreg64
+	%vreg65<def> = vltl %vreg64<kill>, %vreg62; CPUVecRegs:%vreg65,%vreg64,%vreg62
+	VSTORE16 %vreg65<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg65
+	%vreg66<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg66
+	%vreg67<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg67
+	VSTORE16 %vreg67<kill>, <fi#16>, 0; mem:ST256[%a.addr.i259] CPUVecRegs:%vreg67
+	VSTORE8 %vreg66, <fi#17>, 0; mem:ST256[%b.addr.i260] CPUVecRegs:%vreg66
+	%vreg68<def> = VLOAD16 <fi#16>, 0; mem:LD256[%a.addr.i259] CPUVecRegs:%vreg68
+	%vreg69<def> = vlth %vreg68<kill>, %vreg66; CPUVecRegs:%vreg69,%vreg68,%vreg66
+	VSTORE16 %vreg69<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg69
+	%vreg70<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg70
+	VSTORE32 %vreg70, <fi#18>, 0; mem:ST256[%a.addr.i258] CPUVecRegs:%vreg70
+	%vreg71<def> = vsum_40 %vreg70; CPUVecRegs:%vreg71,%vreg70
+	VSTORE32 %vreg71<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg71
+	%vreg72<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg72
+	VSTORE8 %vreg72, <fi#19>, 0; mem:ST256[%a.addr.i257] CPUVecRegs:%vreg72
+	%vreg73<def> = vnot_0 %vreg72; CPUVecRegs:%vreg73,%vreg72
+	VSTORE8 %vreg73<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg73
+	%vreg74<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg74
+	%vreg75<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg75
+	VSTORE8 %vreg75<kill>, <fi#20>, 0; mem:ST256[%a.addr.i255] CPUVecRegs:%vreg75
+	VSTORE8 %vreg74, <fi#21>, 0; mem:ST256[%b.addr.i256] CPUVecRegs:%vreg74
+	%vreg76<def> = VLOAD8 <fi#20>, 0; mem:LD256[%a.addr.i255] CPUVecRegs:%vreg76
+	%vreg77<def> = vand %vreg76<kill>, %vreg74; CPUVecRegs:%vreg77,%vreg76,%vreg74
+	VSTORE8 %vreg77<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg77
+	%vreg78<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg78
+	%vreg79<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg79
+	VSTORE8 %vreg79<kill>, <fi#22>, 0; mem:ST256[%a.addr.i253] CPUVecRegs:%vreg79
+	VSTORE8 %vreg78, <fi#23>, 0; mem:ST256[%b.addr.i254] CPUVecRegs:%vreg78
+	%vreg80<def> = VLOAD8 <fi#22>, 0; mem:LD256[%a.addr.i253] CPUVecRegs:%vreg80
+	%vreg81<def> = vor %vreg80<kill>, %vreg78; CPUVecRegs:%vreg81,%vreg80,%vreg78
+	VSTORE8 %vreg81<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg81
+	%vreg82<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg82
+	%vreg83<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg83
+	VSTORE8 %vreg83<kill>, <fi#24>, 0; mem:ST256[%a.addr.i251] CPUVecRegs:%vreg83
+	VSTORE8 %vreg82, <fi#25>, 0; mem:ST256[%b.addr.i252] CPUVecRegs:%vreg82
+	%vreg84<def> = VLOAD8 <fi#24>, 0; mem:LD256[%a.addr.i251] CPUVecRegs:%vreg84
+	%vreg85<def> = vxor %vreg84<kill>, %vreg82; CPUVecRegs:%vreg85,%vreg84,%vreg82
+	VSTORE8 %vreg85<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg85
+	%vreg86<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg86
+	VSTORE8 %vreg86<kill>, <fi#26>, 0; mem:ST256[%a.addr.i249] CPUVecRegs:%vreg86
+	ST %vreg27, <fi#27>, 0; mem:ST4[%b.addr.i250] CPURegs:%vreg27
+	%vreg87<def> = VLOAD8 <fi#26>, 0; mem:LD256[%a.addr.i249] CPUVecRegs:%vreg87
+	%vreg88<def> = vmovcv2v %vreg87<kill>, %vreg27; CPUVecRegs:%vreg88,%vreg87 CPURegs:%vreg27
+	VSTORE8 %vreg88<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg88
+	%vreg89<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg89
+	%vreg90<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg90
+	VSTORE16 %vreg90<kill>, <fi#28>, 0; mem:ST256[%a.addr.i247] CPUVecRegs:%vreg90
+	VSTORE8 %vreg89, <fi#29>, 0; mem:ST256[%b.addr.i248] CPUVecRegs:%vreg89
+	%vreg91<def> = VLOAD16 <fi#28>, 0; mem:LD256[%a.addr.i247] CPUVecRegs:%vreg91
+	%vreg92<def> = vltl %vreg91<kill>, %vreg89; CPUVecRegs:%vreg92,%vreg91,%vreg89
+	VSTORE16 %vreg92<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg92
+	%vreg93<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg93
+	%vreg94<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg94
+	VSTORE16 %vreg94<kill>, <fi#30>, 0; mem:ST256[%a.addr.i245] CPUVecRegs:%vreg94
+	VSTORE8 %vreg93, <fi#31>, 0; mem:ST256[%b.addr.i246] CPUVecRegs:%vreg93
+	%vreg95<def> = VLOAD16 <fi#30>, 0; mem:LD256[%a.addr.i245] CPUVecRegs:%vreg95
+	%vreg96<def> = vlth %vreg95<kill>, %vreg93; CPUVecRegs:%vreg96,%vreg95,%vreg93
+	VSTORE16 %vreg96<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg96
+	%vreg97<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg97
+	%vreg98<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg98
+	VSTORE8 %vreg98<kill>, <fi#32>, 0; mem:ST256[%a.addr.i243] CPUVecRegs:%vreg98
+	VSTORE8 %vreg97, <fi#33>, 0; mem:ST256[%b.addr.i244] CPUVecRegs:%vreg97
+	%vreg99<def> = VLOAD8 <fi#32>, 0; mem:LD256[%a.addr.i243] CPUVecRegs:%vreg99
+	%vreg100<def> = veq_10 %vreg99<kill>, %vreg97; CPUVecRegs:%vreg100,%vreg99,%vreg97
+	VSTORE8 %vreg100<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg100
+	%vreg101<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg101
+	%vreg102<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg102
+	VSTORE16 %vreg102<kill>, <fi#34>, 0; mem:ST256[%a.addr.i241] CPUVecRegs:%vreg102
+	VSTORE16 %vreg101, <fi#35>, 0; mem:ST256[%b.addr.i242] CPUVecRegs:%vreg101
+	%vreg103<def> = VLOAD16 <fi#34>, 0; mem:LD256[%a.addr.i241] CPUVecRegs:%vreg103
+	%vreg104<def> = veq_20 %vreg103<kill>, %vreg101; CPUVecRegs:%vreg104,%vreg103,%vreg101
+	VSTORE16 %vreg104<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg104
+	%vreg105<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg105
+	%vreg106<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg106
+	VSTORE32 %vreg106<kill>, <fi#36>, 0; mem:ST256[%a.addr.i239] CPUVecRegs:%vreg106
+	VSTORE32 %vreg105, <fi#37>, 0; mem:ST256[%b.addr.i240] CPUVecRegs:%vreg105
+	%vreg107<def> = VLOAD32 <fi#36>, 0; mem:LD256[%a.addr.i239] CPUVecRegs:%vreg107
+	%vreg108<def> = veq_40 %vreg107<kill>, %vreg105; CPUVecRegs:%vreg108,%vreg107,%vreg105
+	VSTORE32 %vreg108<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg108
+	%vreg109<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg109
+	%vreg110<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg110
+	VSTORE8 %vreg110<kill>, <fi#38>, 0; mem:ST256[%a.addr.i237] CPUVecRegs:%vreg110
+	VSTORE8 %vreg109, <fi#39>, 0; mem:ST256[%b.addr.i238] CPUVecRegs:%vreg109
+	%vreg111<def> = VLOAD8 <fi#38>, 0; mem:LD256[%a.addr.i237] CPUVecRegs:%vreg111
+	%vreg112<def> = vgt_10 %vreg111<kill>, %vreg109; CPUVecRegs:%vreg112,%vreg111,%vreg109
+	VSTORE8 %vreg112<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg112
+	%vreg113<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg113
+	%vreg114<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg114
+	VSTORE16 %vreg114<kill>, <fi#40>, 0; mem:ST256[%a.addr.i235] CPUVecRegs:%vreg114
+	VSTORE16 %vreg113, <fi#41>, 0; mem:ST256[%b.addr.i236] CPUVecRegs:%vreg113
+	%vreg115<def> = VLOAD16 <fi#40>, 0; mem:LD256[%a.addr.i235] CPUVecRegs:%vreg115
+	%vreg116<def> = vgt_20 %vreg115<kill>, %vreg113; CPUVecRegs:%vreg116,%vreg115,%vreg113
+	VSTORE16 %vreg116<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg116
+	%vreg117<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg117
+	%vreg118<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg118
+	VSTORE32 %vreg118<kill>, <fi#42>, 0; mem:ST256[%a.addr.i233] CPUVecRegs:%vreg118
+	VSTORE32 %vreg117, <fi#43>, 0; mem:ST256[%b.addr.i234] CPUVecRegs:%vreg117
+	%vreg119<def> = VLOAD32 <fi#42>, 0; mem:LD256[%a.addr.i233] CPUVecRegs:%vreg119
+	%vreg120<def> = vgt_40 %vreg119<kill>, %vreg117; CPUVecRegs:%vreg120,%vreg119,%vreg117
+	VSTORE32 %vreg120<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg120
+	%vreg121<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg121
+	%vreg122<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg122
+	VSTORE8 %vreg122<kill>, <fi#44>, 0; mem:ST256[%a.addr.i231] CPUVecRegs:%vreg122
+	VSTORE8 %vreg121, <fi#45>, 0; mem:ST256[%b.addr.i232] CPUVecRegs:%vreg121
+	%vreg123<def> = VLOAD8 <fi#44>, 0; mem:LD256[%a.addr.i231] CPUVecRegs:%vreg123
+	%vreg124<def> = vlt_10 %vreg123<kill>, %vreg121; CPUVecRegs:%vreg124,%vreg123,%vreg121
+	VSTORE8 %vreg124<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg124
+	%vreg125<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg125
+	%vreg126<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg126
+	VSTORE16 %vreg126<kill>, <fi#46>, 0; mem:ST256[%a.addr.i229] CPUVecRegs:%vreg126
+	VSTORE16 %vreg125, <fi#47>, 0; mem:ST256[%b.addr.i230] CPUVecRegs:%vreg125
+	%vreg127<def> = VLOAD16 <fi#46>, 0; mem:LD256[%a.addr.i229] CPUVecRegs:%vreg127
+	%vreg128<def> = vlt_20 %vreg127<kill>, %vreg125; CPUVecRegs:%vreg128,%vreg127,%vreg125
+	VSTORE16 %vreg128<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg128
+	%vreg129<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg129
+	%vreg130<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg130
+	VSTORE32 %vreg130<kill>, <fi#48>, 0; mem:ST256[%a.addr.i227] CPUVecRegs:%vreg130
+	VSTORE32 %vreg129, <fi#49>, 0; mem:ST256[%b.addr.i228] CPUVecRegs:%vreg129
+	%vreg131<def> = VLOAD32 <fi#48>, 0; mem:LD256[%a.addr.i227] CPUVecRegs:%vreg131
+	%vreg132<def> = vlt_40 %vreg131<kill>, %vreg129; CPUVecRegs:%vreg132,%vreg131,%vreg129
+	VSTORE32 %vreg132<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg132
+	%vreg133<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg133
+	%vreg134<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg134
+	VSTORE8 %vreg134<kill>, <fi#50>, 0; mem:ST256[%a.addr.i225] CPUVecRegs:%vreg134
+	VSTORE8 %vreg133, <fi#51>, 0; mem:ST256[%b.addr.i226] CPUVecRegs:%vreg133
+	%vreg135<def> = VLOAD8 <fi#50>, 0; mem:LD256[%a.addr.i225] CPUVecRegs:%vreg135
+	%vreg136<def> = vge_10 %vreg135<kill>, %vreg133; CPUVecRegs:%vreg136,%vreg135,%vreg133
+	VSTORE8 %vreg136<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg136
+	%vreg137<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg137
+	%vreg138<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg138
+	VSTORE16 %vreg138<kill>, <fi#52>, 0; mem:ST256[%a.addr.i223] CPUVecRegs:%vreg138
+	VSTORE16 %vreg137, <fi#53>, 0; mem:ST256[%b.addr.i224] CPUVecRegs:%vreg137
+	%vreg139<def> = VLOAD16 <fi#52>, 0; mem:LD256[%a.addr.i223] CPUVecRegs:%vreg139
+	%vreg140<def> = vge_20 %vreg139<kill>, %vreg137; CPUVecRegs:%vreg140,%vreg139,%vreg137
+	VSTORE16 %vreg140<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg140
+	%vreg141<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg141
+	%vreg142<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg142
+	VSTORE32 %vreg142<kill>, <fi#54>, 0; mem:ST256[%a.addr.i221] CPUVecRegs:%vreg142
+	VSTORE32 %vreg141, <fi#55>, 0; mem:ST256[%b.addr.i222] CPUVecRegs:%vreg141
+	%vreg143<def> = VLOAD32 <fi#54>, 0; mem:LD256[%a.addr.i221] CPUVecRegs:%vreg143
+	%vreg144<def> = vge_40 %vreg143<kill>, %vreg141; CPUVecRegs:%vreg144,%vreg143,%vreg141
+	VSTORE32 %vreg144<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg144
+	%vreg145<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg145
+	%vreg146<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg146
+	VSTORE8 %vreg146<kill>, <fi#56>, 0; mem:ST256[%a.addr.i219] CPUVecRegs:%vreg146
+	VSTORE8 %vreg145, <fi#57>, 0; mem:ST256[%b.addr.i220] CPUVecRegs:%vreg145
+	%vreg147<def> = VLOAD8 <fi#56>, 0; mem:LD256[%a.addr.i219] CPUVecRegs:%vreg147
+	%vreg148<def> = vle_10 %vreg147<kill>, %vreg145; CPUVecRegs:%vreg148,%vreg147,%vreg145
+	VSTORE8 %vreg148<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg148
+	%vreg149<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg149
+	%vreg150<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg150
+	VSTORE16 %vreg150<kill>, <fi#58>, 0; mem:ST256[%a.addr.i217] CPUVecRegs:%vreg150
+	VSTORE16 %vreg149, <fi#59>, 0; mem:ST256[%b.addr.i218] CPUVecRegs:%vreg149
+	%vreg151<def> = VLOAD16 <fi#58>, 0; mem:LD256[%a.addr.i217] CPUVecRegs:%vreg151
+	%vreg152<def> = vle_20 %vreg151<kill>, %vreg149; CPUVecRegs:%vreg152,%vreg151,%vreg149
+	VSTORE16 %vreg152<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg152
+	%vreg153<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg153
+	%vreg154<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg154
+	VSTORE32 %vreg154<kill>, <fi#60>, 0; mem:ST256[%a.addr.i215] CPUVecRegs:%vreg154
+	VSTORE32 %vreg153, <fi#61>, 0; mem:ST256[%b.addr.i216] CPUVecRegs:%vreg153
+	%vreg155<def> = VLOAD32 <fi#60>, 0; mem:LD256[%a.addr.i215] CPUVecRegs:%vreg155
+	%vreg156<def> = vle_40 %vreg155<kill>, %vreg153; CPUVecRegs:%vreg156,%vreg155,%vreg153
+	VSTORE32 %vreg156<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg156
+	%vreg157<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg157
+	%vreg158<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg158
+	VSTORE8 %vreg158<kill>, <fi#62>, 0; mem:ST256[%a.addr.i213] CPUVecRegs:%vreg158
+	VSTORE8 %vreg157, <fi#63>, 0; mem:ST256[%b.addr.i214] CPUVecRegs:%vreg157
+	%vreg159<def> = VLOAD8 <fi#62>, 0; mem:LD256[%a.addr.i213] CPUVecRegs:%vreg159
+	%vreg160<def> = vadd_10 %vreg159<kill>, %vreg157; CPUVecRegs:%vreg160,%vreg159,%vreg157
+	VSTORE8 %vreg160<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg160
+	%vreg161<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg161
+	%vreg162<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg162
+	VSTORE16 %vreg162<kill>, <fi#64>, 0; mem:ST256[%a.addr.i211] CPUVecRegs:%vreg162
+	VSTORE16 %vreg161, <fi#65>, 0; mem:ST256[%b.addr.i212] CPUVecRegs:%vreg161
+	%vreg163<def> = VLOAD16 <fi#64>, 0; mem:LD256[%a.addr.i211] CPUVecRegs:%vreg163
+	%vreg164<def> = vadd_20 %vreg163<kill>, %vreg161; CPUVecRegs:%vreg164,%vreg163,%vreg161
+	VSTORE16 %vreg164<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg164
+	%vreg165<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg165
+	%vreg166<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg166
+	VSTORE32 %vreg166<kill>, <fi#66>, 0; mem:ST256[%a.addr.i209] CPUVecRegs:%vreg166
+	VSTORE32 %vreg165, <fi#67>, 0; mem:ST256[%b.addr.i210] CPUVecRegs:%vreg165
+	%vreg167<def> = VLOAD32 <fi#66>, 0; mem:LD256[%a.addr.i209] CPUVecRegs:%vreg167
+	%vreg168<def> = vadd_40 %vreg167<kill>, %vreg165; CPUVecRegs:%vreg168,%vreg167,%vreg165
+	VSTORE32 %vreg168<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg168
+	%vreg169<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg169
+	%vreg170<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg170
+	VSTORE8 %vreg170<kill>, <fi#68>, 0; mem:ST256[%a.addr.i207] CPUVecRegs:%vreg170
+	VSTORE8 %vreg169, <fi#69>, 0; mem:ST256[%b.addr.i208] CPUVecRegs:%vreg169
+	%vreg171<def> = VLOAD8 <fi#68>, 0; mem:LD256[%a.addr.i207] CPUVecRegs:%vreg171
+	%vreg172<def> = vsub_10 %vreg171<kill>, %vreg169; CPUVecRegs:%vreg172,%vreg171,%vreg169
+	VSTORE8 %vreg172<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg172
+	%vreg173<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg173
+	%vreg174<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg174
+	VSTORE16 %vreg174<kill>, <fi#70>, 0; mem:ST256[%a.addr.i205] CPUVecRegs:%vreg174
+	VSTORE16 %vreg173, <fi#71>, 0; mem:ST256[%b.addr.i206] CPUVecRegs:%vreg173
+	%vreg175<def> = VLOAD16 <fi#70>, 0; mem:LD256[%a.addr.i205] CPUVecRegs:%vreg175
+	%vreg176<def> = vsub_20 %vreg175<kill>, %vreg173; CPUVecRegs:%vreg176,%vreg175,%vreg173
+	VSTORE16 %vreg176<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg176
+	%vreg177<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg177
+	%vreg178<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg178
+	VSTORE32 %vreg178<kill>, <fi#72>, 0; mem:ST256[%a.addr.i203] CPUVecRegs:%vreg178
+	VSTORE32 %vreg177, <fi#73>, 0; mem:ST256[%b.addr.i204] CPUVecRegs:%vreg177
+	%vreg179<def> = VLOAD32 <fi#72>, 0; mem:LD256[%a.addr.i203] CPUVecRegs:%vreg179
+	%vreg180<def> = vsub_40 %vreg179<kill>, %vreg177; CPUVecRegs:%vreg180,%vreg179,%vreg177
+	VSTORE32 %vreg180<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg180
+	%vreg181<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg181
+	%vreg182<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg182
+	VSTORE8 %vreg182<kill>, <fi#74>, 0; mem:ST256[%a.addr.i201] CPUVecRegs:%vreg182
+	VSTORE8 %vreg181, <fi#75>, 0; mem:ST256[%b.addr.i202] CPUVecRegs:%vreg181
+	%vreg183<def> = VLOAD8 <fi#74>, 0; mem:LD256[%a.addr.i201] CPUVecRegs:%vreg183
+	%vreg184<def> = vsl_10 %vreg183<kill>, %vreg181; CPUVecRegs:%vreg184,%vreg183,%vreg181
+	VSTORE8 %vreg184<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg184
+	%vreg185<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg185
+	%vreg186<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg186
+	VSTORE16 %vreg186<kill>, <fi#76>, 0; mem:ST256[%a.addr.i199] CPUVecRegs:%vreg186
+	VSTORE16 %vreg185, <fi#77>, 0; mem:ST256[%b.addr.i200] CPUVecRegs:%vreg185
+	%vreg187<def> = VLOAD16 <fi#76>, 0; mem:LD256[%a.addr.i199] CPUVecRegs:%vreg187
+	%vreg188<def> = vsl_20 %vreg187<kill>, %vreg185; CPUVecRegs:%vreg188,%vreg187,%vreg185
+	VSTORE16 %vreg188<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg188
+	%vreg189<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg189
+	%vreg190<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg190
+	VSTORE32 %vreg190<kill>, <fi#78>, 0; mem:ST256[%a.addr.i197] CPUVecRegs:%vreg190
+	VSTORE32 %vreg189, <fi#79>, 0; mem:ST256[%b.addr.i198] CPUVecRegs:%vreg189
+	%vreg191<def> = VLOAD32 <fi#78>, 0; mem:LD256[%a.addr.i197] CPUVecRegs:%vreg191
+	%vreg192<def> = vsl_40 %vreg191<kill>, %vreg189; CPUVecRegs:%vreg192,%vreg191,%vreg189
+	VSTORE32 %vreg192<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg192
+	%vreg193<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg193
+	%vreg194<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg194
+	VSTORE8 %vreg194<kill>, <fi#80>, 0; mem:ST256[%a.addr.i195] CPUVecRegs:%vreg194
+	VSTORE8 %vreg193, <fi#81>, 0; mem:ST256[%b.addr.i196] CPUVecRegs:%vreg193
+	%vreg195<def> = VLOAD8 <fi#80>, 0; mem:LD256[%a.addr.i195] CPUVecRegs:%vreg195
+	%vreg196<def> = vsls_10 %vreg195<kill>, %vreg193; CPUVecRegs:%vreg196,%vreg195,%vreg193
+	VSTORE8 %vreg196<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg196
+	%vreg197<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg197
+	%vreg198<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg198
+	VSTORE16 %vreg198<kill>, <fi#82>, 0; mem:ST256[%a.addr.i193] CPUVecRegs:%vreg198
+	VSTORE16 %vreg197, <fi#83>, 0; mem:ST256[%b.addr.i194] CPUVecRegs:%vreg197
+	%vreg199<def> = VLOAD16 <fi#82>, 0; mem:LD256[%a.addr.i193] CPUVecRegs:%vreg199
+	%vreg200<def> = vsls_20 %vreg199<kill>, %vreg197; CPUVecRegs:%vreg200,%vreg199,%vreg197
+	VSTORE16 %vreg200<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg200
+	%vreg201<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg201
+	%vreg202<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg202
+	VSTORE32 %vreg202<kill>, <fi#84>, 0; mem:ST256[%a.addr.i191] CPUVecRegs:%vreg202
+	VSTORE32 %vreg201, <fi#85>, 0; mem:ST256[%b.addr.i192] CPUVecRegs:%vreg201
+	%vreg203<def> = VLOAD32 <fi#84>, 0; mem:LD256[%a.addr.i191] CPUVecRegs:%vreg203
+	%vreg204<def> = vsls_40 %vreg203<kill>, %vreg201; CPUVecRegs:%vreg204,%vreg203,%vreg201
+	VSTORE32 %vreg204<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg204
+	%vreg205<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg205
+	%vreg206<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg206
+	VSTORE8 %vreg206<kill>, <fi#86>, 0; mem:ST256[%a.addr.i189] CPUVecRegs:%vreg206
+	VSTORE8 %vreg205, <fi#87>, 0; mem:ST256[%b.addr.i190] CPUVecRegs:%vreg205
+	%vreg207<def> = VLOAD8 <fi#86>, 0; mem:LD256[%a.addr.i189] CPUVecRegs:%vreg207
+	%vreg208<def> = vsra_10 %vreg207<kill>, %vreg205; CPUVecRegs:%vreg208,%vreg207,%vreg205
+	VSTORE8 %vreg208<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg208
+	%vreg209<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg209
+	%vreg210<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg210
+	VSTORE16 %vreg210<kill>, <fi#88>, 0; mem:ST256[%a.addr.i187] CPUVecRegs:%vreg210
+	VSTORE16 %vreg209, <fi#89>, 0; mem:ST256[%b.addr.i188] CPUVecRegs:%vreg209
+	%vreg211<def> = VLOAD16 <fi#88>, 0; mem:LD256[%a.addr.i187] CPUVecRegs:%vreg211
+	%vreg212<def> = vsra_20 %vreg211<kill>, %vreg209; CPUVecRegs:%vreg212,%vreg211,%vreg209
+	VSTORE16 %vreg212<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg212
+	%vreg213<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg213
+	%vreg214<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg214
+	VSTORE32 %vreg214<kill>, <fi#90>, 0; mem:ST256[%a.addr.i185] CPUVecRegs:%vreg214
+	VSTORE32 %vreg213, <fi#91>, 0; mem:ST256[%b.addr.i186] CPUVecRegs:%vreg213
+	%vreg215<def> = VLOAD32 <fi#90>, 0; mem:LD256[%a.addr.i185] CPUVecRegs:%vreg215
+	%vreg216<def> = vsra_40 %vreg215<kill>, %vreg213; CPUVecRegs:%vreg216,%vreg215,%vreg213
+	VSTORE32 %vreg216<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg216
+	%vreg217<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg217
+	%vreg218<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg218
+	VSTORE8 %vreg218<kill>, <fi#92>, 0; mem:ST256[%a.addr.i183] CPUVecRegs:%vreg218
+	VSTORE8 %vreg217, <fi#93>, 0; mem:ST256[%b.addr.i184] CPUVecRegs:%vreg217
+	%vreg219<def> = VLOAD8 <fi#92>, 0; mem:LD256[%a.addr.i183] CPUVecRegs:%vreg219
+	%vreg220<def> = vsrl_10 %vreg219<kill>, %vreg217; CPUVecRegs:%vreg220,%vreg219,%vreg217
+	VSTORE8 %vreg220<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg220
+	%vreg221<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg221
+	%vreg222<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg222
+	VSTORE16 %vreg222<kill>, <fi#94>, 0; mem:ST256[%a.addr.i181] CPUVecRegs:%vreg222
+	VSTORE16 %vreg221, <fi#95>, 0; mem:ST256[%b.addr.i182] CPUVecRegs:%vreg221
+	%vreg223<def> = VLOAD16 <fi#94>, 0; mem:LD256[%a.addr.i181] CPUVecRegs:%vreg223
+	%vreg224<def> = vsrl_20 %vreg223<kill>, %vreg221; CPUVecRegs:%vreg224,%vreg223,%vreg221
+	VSTORE16 %vreg224<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg224
+	%vreg225<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg225
+	%vreg226<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg226
+	VSTORE32 %vreg226<kill>, <fi#96>, 0; mem:ST256[%a.addr.i179] CPUVecRegs:%vreg226
+	VSTORE32 %vreg225, <fi#97>, 0; mem:ST256[%b.addr.i180] CPUVecRegs:%vreg225
+	%vreg227<def> = VLOAD32 <fi#96>, 0; mem:LD256[%a.addr.i179] CPUVecRegs:%vreg227
+	%vreg228<def> = vsrl_40 %vreg227<kill>, %vreg225; CPUVecRegs:%vreg228,%vreg227,%vreg225
+	VSTORE32 %vreg228<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg228
+	%vreg229<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg229
+	VSTORE8 %vreg229, <fi#98>, 0; mem:ST256[%a.addr.i178] CPUVecRegs:%vreg229
+	%vreg230<def> = vabs_10 %vreg229; CPUVecRegs:%vreg230,%vreg229
+	VSTORE8 %vreg230<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg230
+	%vreg231<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg231
+	VSTORE16 %vreg231, <fi#99>, 0; mem:ST256[%a.addr.i177] CPUVecRegs:%vreg231
+	%vreg232<def> = vabs_20 %vreg231; CPUVecRegs:%vreg232,%vreg231
+	VSTORE16 %vreg232<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg232
+	%vreg233<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg233
+	VSTORE32 %vreg233, <fi#100>, 0; mem:ST256[%a.addr.i176] CPUVecRegs:%vreg233
+	%vreg234<def> = vabs_40 %vreg233; CPUVecRegs:%vreg234,%vreg233
+	VSTORE32 %vreg234<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg234
+	%vreg235<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg235
+	%vreg236<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg236
+	VSTORE8 %vreg236<kill>, <fi#101>, 0; mem:ST256[%a.addr.i174] CPUVecRegs:%vreg236
+	VSTORE8 %vreg235, <fi#102>, 0; mem:ST256[%b.addr.i175] CPUVecRegs:%vreg235
+	%vreg237<def> = VLOAD8 <fi#101>, 0; mem:LD256[%a.addr.i174] CPUVecRegs:%vreg237
+	%vreg238<def> = vfmul_10 %vreg237<kill>, %vreg235; CPUVecRegs:%vreg238,%vreg237,%vreg235
+	VSTORE8 %vreg238<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg238
+	%vreg239<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg239
+	%vreg240<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg240
+	VSTORE16 %vreg240<kill>, <fi#103>, 0; mem:ST256[%a.addr.i172] CPUVecRegs:%vreg240
+	VSTORE16 %vreg239, <fi#104>, 0; mem:ST256[%b.addr.i173] CPUVecRegs:%vreg239
+	%vreg241<def> = VLOAD16 <fi#103>, 0; mem:LD256[%a.addr.i172] CPUVecRegs:%vreg241
+	%vreg242<def> = vfmul_20 %vreg241<kill>, %vreg239; CPUVecRegs:%vreg242,%vreg241,%vreg239
+	VSTORE16 %vreg242<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg242
+	%vreg243<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg243
+	%vreg244<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg244
+	VSTORE32 %vreg244<kill>, <fi#105>, 0; mem:ST256[%a.addr.i170] CPUVecRegs:%vreg244
+	VSTORE32 %vreg243, <fi#106>, 0; mem:ST256[%b.addr.i171] CPUVecRegs:%vreg243
+	%vreg245<def> = VLOAD32 <fi#105>, 0; mem:LD256[%a.addr.i170] CPUVecRegs:%vreg245
+	%vreg246<def> = vfmul_40 %vreg245<kill>, %vreg243; CPUVecRegs:%vreg246,%vreg245,%vreg243
+	VSTORE32 %vreg246<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg246
+	%vreg247<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg247
+	%vreg248<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg248
+	VSTORE8 %vreg248<kill>, <fi#107>, 0; mem:ST256[%a.addr.i168] CPUVecRegs:%vreg248
+	VSTORE8 %vreg247, <fi#108>, 0; mem:ST256[%b.addr.i169] CPUVecRegs:%vreg247
+	%vreg249<def> = VLOAD8 <fi#107>, 0; mem:LD256[%a.addr.i168] CPUVecRegs:%vreg249
+	%vreg250<def> = vfmac_10 %vreg249<kill>, %vreg247; CPUVecRegs:%vreg250,%vreg249,%vreg247
+	VSTORE8 %vreg250<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg250
+	%vreg251<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg251
+	%vreg252<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg252
+	VSTORE16 %vreg252<kill>, <fi#109>, 0; mem:ST256[%a.addr.i166] CPUVecRegs:%vreg252
+	VSTORE16 %vreg251, <fi#110>, 0; mem:ST256[%b.addr.i167] CPUVecRegs:%vreg251
+	%vreg253<def> = VLOAD16 <fi#109>, 0; mem:LD256[%a.addr.i166] CPUVecRegs:%vreg253
+	%vreg254<def> = vfmac_20 %vreg253<kill>, %vreg251; CPUVecRegs:%vreg254,%vreg253,%vreg251
+	VSTORE16 %vreg254<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg254
+	%vreg255<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg255
+	%vreg256<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg256
+	VSTORE32 %vreg256<kill>, <fi#111>, 0; mem:ST256[%a.addr.i164] CPUVecRegs:%vreg256
+	VSTORE32 %vreg255, <fi#112>, 0; mem:ST256[%b.addr.i165] CPUVecRegs:%vreg255
+	%vreg257<def> = VLOAD32 <fi#111>, 0; mem:LD256[%a.addr.i164] CPUVecRegs:%vreg257
+	%vreg258<def> = vfmac_40 %vreg257<kill>, %vreg255; CPUVecRegs:%vreg258,%vreg257,%vreg255
+	VSTORE32 %vreg258<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg258
+	%vreg259<def> = VLOAD8 <fi#186>, 0; mem:LD256[%i8x256_t_b] CPUVecRegs:%vreg259
+	%vreg260<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg260
+	VSTORE8 %vreg260<kill>, <fi#113>, 0; mem:ST256[%a.addr.i162] CPUVecRegs:%vreg260
+	VSTORE8 %vreg259, <fi#114>, 0; mem:ST256[%b.addr.i163] CPUVecRegs:%vreg259
+	%vreg261<def> = VLOAD8 <fi#113>, 0; mem:LD256[%a.addr.i162] CPUVecRegs:%vreg261
+	%vreg262<def> = vcmac_10 %vreg261<kill>, %vreg259; CPUVecRegs:%vreg262,%vreg261,%vreg259
+	VSTORE8 %vreg262<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg262
+	%vreg263<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg263
+	%vreg264<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg264
+	VSTORE16 %vreg264<kill>, <fi#115>, 0; mem:ST256[%a.addr.i160] CPUVecRegs:%vreg264
+	VSTORE16 %vreg263, <fi#116>, 0; mem:ST256[%b.addr.i161] CPUVecRegs:%vreg263
+	%vreg265<def> = VLOAD16 <fi#115>, 0; mem:LD256[%a.addr.i160] CPUVecRegs:%vreg265
+	%vreg266<def> = vcmac_20 %vreg265<kill>, %vreg263; CPUVecRegs:%vreg266,%vreg265,%vreg263
+	VSTORE16 %vreg266<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg266
+	%vreg267<def> = VLOAD16 <fi#189>, 0; mem:LD256[%i16x128_t_b] CPUVecRegs:%vreg267
+	%vreg268<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg268
+	VSTORE16 %vreg268<kill>, <fi#117>, 0; mem:ST256[%a.addr.i158] CPUVecRegs:%vreg268
+	VSTORE16 %vreg267, <fi#118>, 0; mem:ST256[%b.addr.i159] CPUVecRegs:%vreg267
+	%vreg269<def> = VLOAD16 <fi#117>, 0; mem:LD256[%a.addr.i158] CPUVecRegs:%vreg269
+	%vreg270<def> = vcmul_20 %vreg269<kill>, %vreg267; CPUVecRegs:%vreg270,%vreg269,%vreg267
+	VSTORE16 %vreg270<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg270
+	%vreg271<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg271
+	%vreg272<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg272
+	VSTORE32 %vreg272<kill>, <fi#119>, 0; mem:ST256[%a.addr.i156] CPUVecRegs:%vreg272
+	VSTORE32 %vreg271, <fi#120>, 0; mem:ST256[%b.addr.i157] CPUVecRegs:%vreg271
+	%vreg273<def> = VLOAD32 <fi#119>, 0; mem:LD256[%a.addr.i156] CPUVecRegs:%vreg273
+	%vreg274<def> = vcmulr_40 %vreg273<kill>, %vreg271; CPUVecRegs:%vreg274,%vreg273,%vreg271
+	VSTORE32 %vreg274<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg274
+	%vreg275<def> = VLOAD32 <fi#192>, 0; mem:LD256[%i32x64_t_b] CPUVecRegs:%vreg275
+	%vreg276<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg276
+	VSTORE32 %vreg276<kill>, <fi#121>, 0; mem:ST256[%a.addr.i154] CPUVecRegs:%vreg276
+	VSTORE32 %vreg275, <fi#122>, 0; mem:ST256[%b.addr.i155] CPUVecRegs:%vreg275
+	%vreg277<def> = VLOAD32 <fi#121>, 0; mem:LD256[%a.addr.i154] CPUVecRegs:%vreg277
+	%vreg278<def> = vcmuli_40 %vreg277<kill>, %vreg275; CPUVecRegs:%vreg278,%vreg277,%vreg275
+	VSTORE32 %vreg278<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg278
+	%vreg279<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg279
+	ST %vreg279, <fi#123>, 0; mem:ST4[%a.addr.i153] CPURegs:%vreg279
+	%vreg280<def> = CBW %vreg279; CPURegs:%vreg280,%vreg279
+	ST %vreg280<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg280
+	%vreg281<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg281
+	ST %vreg281, <fi#124>, 0; mem:ST4[%a.addr.i152] CPURegs:%vreg281
+	%vreg282<def> = CHW %vreg281; CPURegs:%vreg282,%vreg281
+	ST %vreg282<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg282
+	%vreg283<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg283
+	ST %vreg283, <fi#125>, 0; mem:ST4[%a.addr.i151] CPURegs:%vreg283
+	%vreg284<def> = ABS %vreg283; CPURegs:%vreg284,%vreg283
+	ST %vreg284<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg284
+	%vreg285<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg285
+	ST %vreg285, <fi#126>, 0; mem:ST4[%a.addr.i150] CPURegs:%vreg285
+	%vreg286<def> = TEST %vreg285; CPURegs:%vreg286,%vreg285
+	ST %vreg286<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg286
+	%vreg287<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg287
+	%vreg288<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg288
+	ST %vreg288<kill>, <fi#127>, 0; mem:ST4[%a.addr.i148] CPURegs:%vreg288
+	ST %vreg287, <fi#128>, 0; mem:ST4[%b.addr.i149] CPURegs:%vreg287
+	%vreg289<def> = LD <fi#127>, 0; mem:LD4[%a.addr.i148] CPURegs:%vreg289
+	%vreg290<def> = MAX %vreg289<kill>, %vreg287; CPURegs:%vreg290,%vreg289,%vreg287
+	ST %vreg290<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg290
+	%vreg291<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg291
+	%vreg292<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg292
+	ST %vreg292<kill>, <fi#129>, 0; mem:ST4[%a.addr.i146] CPURegs:%vreg292
+	ST %vreg291, <fi#130>, 0; mem:ST4[%b.addr.i147] CPURegs:%vreg291
+	%vreg293<def> = LD <fi#129>, 0; mem:LD4[%a.addr.i146] CPURegs:%vreg293
+	%vreg294<def> = MIN %vreg293<kill>, %vreg291; CPURegs:%vreg294,%vreg293,%vreg291
+	ST %vreg294<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg294
+	%vreg295<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg295
+	ST %vreg295, <fi#131>, 0; mem:ST4[%a.addr.i145] CPURegs:%vreg295
+	%vreg296<def> = not_0 %vreg295; CPURegs:%vreg296,%vreg295
+	ST %vreg296<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg296
+	%vreg297<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg297
+	ST %vreg297<kill>, <fi#132>, 0; mem:ST4[%a.addr.i143] CPURegs:%vreg297
+	ST %vreg27, <fi#133>, 0; mem:ST4[%b.addr.i144] CPURegs:%vreg27
+	%vreg298<def> = LD <fi#132>, 0; mem:LD4[%a.addr.i143] CPURegs:%vreg298
+	%vreg299<def> = loadu_8 %vreg298<kill>, 1; CPURegs:%vreg299,%vreg298
+	ST %vreg299<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg299
+	%vreg300<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg300
+	ST %vreg300<kill>, <fi#134>, 0; mem:ST4[%a.addr.i141] CPURegs:%vreg300
+	ST %vreg27, <fi#135>, 0; mem:ST4[%b.addr.i142] CPURegs:%vreg27
+	%vreg301<def> = LD <fi#134>, 0; mem:LD4[%a.addr.i141] CPURegs:%vreg301
+	%vreg302<def> = loadu_16 %vreg301<kill>, 1; CPURegs:%vreg302,%vreg301
+	ST %vreg302<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg302
+	%vreg303<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg303
+	ST %vreg303<kill>, <fi#136>, 0; mem:ST4[%a.addr.i139] CPURegs:%vreg303
+	ST %vreg27, <fi#137>, 0; mem:ST4[%b.addr.i140] CPURegs:%vreg27
+	%vreg304<def> = LD <fi#136>, 0; mem:LD4[%a.addr.i139] CPURegs:%vreg304
+	%vreg305<def> = loadu_32 %vreg304<kill>, 1; CPURegs:%vreg305,%vreg304
+	ST %vreg305<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg305
+	%vreg306<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg306
+	%vreg307<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg307
+	ST %vreg307<kill>, <fi#138>, 0; mem:ST4[%a.addr.i137] CPURegs:%vreg307
+	ST %vreg306, <fi#139>, 0; mem:ST4[%b.addr.i138] CPURegs:%vreg306
+	%vreg308<def> = LD <fi#138>, 0; mem:LD4[%a.addr.i137] CPURegs:%vreg308
+	%vreg309<def> = loado_16 %vreg308<kill>, %vreg306; CPURegs:%vreg309,%vreg308,%vreg306
+	ST %vreg309<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg309
+	%vreg310<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg310
+	%vreg311<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg311
+	ST %vreg311<kill>, <fi#140>, 0; mem:ST4[%a.addr.i135] CPURegs:%vreg311
+	ST %vreg310, <fi#141>, 0; mem:ST4[%b.addr.i136] CPURegs:%vreg310
+	%vreg312<def> = LD <fi#140>, 0; mem:LD4[%a.addr.i135] CPURegs:%vreg312
+	%vreg313<def> = loado_32 %vreg312<kill>, %vreg310; CPURegs:%vreg313,%vreg312,%vreg310
+	ST %vreg313<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg313
+	%vreg314<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg314
+	%vreg315<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg315
+	ST %vreg315<kill>, <fi#142>, 0; mem:ST4[%a.addr.i133] CPURegs:%vreg315
+	ST %vreg314, <fi#143>, 0; mem:ST4[%b.addr.i134] CPURegs:%vreg314
+	%vreg316<def> = LD <fi#142>, 0; mem:LD4[%a.addr.i133] CPURegs:%vreg316
+	%vreg317<def> = storeo_16 %vreg316<kill>, %vreg314; CPURegs:%vreg317,%vreg316,%vreg314
+	ST %vreg317<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg317
+	%vreg318<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg318
+	%vreg319<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg319
+	ST %vreg319<kill>, <fi#144>, 0; mem:ST4[%a.addr.i131] CPURegs:%vreg319
+	ST %vreg318, <fi#145>, 0; mem:ST4[%b.addr.i132] CPURegs:%vreg318
+	%vreg320<def> = LD <fi#144>, 0; mem:LD4[%a.addr.i131] CPURegs:%vreg320
+	%vreg321<def> = storeo_32 %vreg320<kill>, %vreg318; CPURegs:%vreg321,%vreg320,%vreg318
+	ST %vreg321<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg321
+	%vreg322<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg322
+	ST %vreg322<kill>, <fi#146>, 0; mem:ST4[%a.addr.i129] CPURegs:%vreg322
+	ST %vreg27, <fi#147>, 0; mem:ST4[%b.addr.i130] CPURegs:%vreg27
+	%vreg323<def> = LD <fi#146>, 0; mem:LD4[%a.addr.i129] CPURegs:%vreg323
+	%vreg324<def> = storeu_10 %vreg323<kill>, 1; CPUVecRegs:%vreg324 CPURegs:%vreg323
+	VSTORE8 %vreg324<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg324
+	%vreg325<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg325
+	ST %vreg325<kill>, <fi#148>, 0; mem:ST4[%a.addr.i127] CPURegs:%vreg325
+	ST %vreg27, <fi#149>, 0; mem:ST4[%b.addr.i128] CPURegs:%vreg27
+	%vreg326<def> = LD <fi#148>, 0; mem:LD4[%a.addr.i127] CPURegs:%vreg326
+	%vreg327<def> = storeu_20 %vreg326<kill>, 1; CPUVecRegs:%vreg327 CPURegs:%vreg326
+	VSTORE16 %vreg327<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg327
+	%vreg328<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg328
+	ST %vreg328<kill>, <fi#150>, 0; mem:ST4[%a.addr.i125] CPURegs:%vreg328
+	ST %vreg27, <fi#151>, 0; mem:ST4[%b.addr.i126] CPURegs:%vreg27
+	%vreg329<def> = LD <fi#150>, 0; mem:LD4[%a.addr.i125] CPURegs:%vreg329
+	%vreg330<def> = storeu_40 %vreg329<kill>, 1; CPUVecRegs:%vreg330 CPURegs:%vreg329
+	VSTORE32 %vreg330<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg330
+	%vreg331<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg331
+	%vreg332<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg332
+	ST %vreg332<kill>, <fi#152>, 0; mem:ST4[%a.addr.i122] CPURegs:%vreg332
+	ST %vreg331<kill>, <fi#153>, 0; mem:ST4[%b.addr.i123] CPURegs:%vreg331
+	ST %vreg27, <fi#154>, 0; mem:ST4[%c.addr.i124] CPURegs:%vreg27
+	%vreg333<def> = LD <fi#153>, 0; mem:LD4[%b.addr.i123] CPURegs:%vreg333
+	%vreg334<def> = LD <fi#152>, 0; mem:LD4[%a.addr.i122] CPURegs:%vreg334
+	storeu_8 %vreg334<kill>, %vreg333<kill>, 1; CPURegs:%vreg334,%vreg333
+	%vreg335<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg335
+	%vreg336<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg336
+	ST %vreg336<kill>, <fi#155>, 0; mem:ST4[%a.addr.i119] CPURegs:%vreg336
+	ST %vreg335<kill>, <fi#156>, 0; mem:ST4[%b.addr.i120] CPURegs:%vreg335
+	ST %vreg27, <fi#157>, 0; mem:ST4[%c.addr.i121] CPURegs:%vreg27
+	%vreg337<def> = LD <fi#156>, 0; mem:LD4[%b.addr.i120] CPURegs:%vreg337
+	%vreg338<def> = LD <fi#155>, 0; mem:LD4[%a.addr.i119] CPURegs:%vreg338
+	storeu_16 %vreg338<kill>, %vreg337<kill>, 1; CPURegs:%vreg338,%vreg337
+	%vreg339<def> = LD <fi#195>, 0; mem:LD4[%int_b] CPURegs:%vreg339
+	%vreg340<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg340
+	ST %vreg340<kill>, <fi#158>, 0; mem:ST4[%a.addr.i117] CPURegs:%vreg340
+	ST %vreg339<kill>, <fi#159>, 0; mem:ST4[%b.addr.i118] CPURegs:%vreg339
+	ST %vreg27, <fi#160>, 0; mem:ST4[%c.addr.i] CPURegs:%vreg27
+	%vreg341<def> = LD <fi#159>, 0; mem:LD4[%b.addr.i118] CPURegs:%vreg341
+	%vreg342<def> = LD <fi#158>, 0; mem:LD4[%a.addr.i117] CPURegs:%vreg342
+	storeu_32 %vreg342<kill>, %vreg341<kill>, 1; CPURegs:%vreg342,%vreg341
+	ST %vreg27, <fi#161>, 0; mem:ST4[%a.addr.i116] CPURegs:%vreg27
+	%vreg343<def> = TESTI 1; CPURegs:%vreg343
+	ST %vreg343<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg343
+	ST %vreg28, <fi#162>, 0; mem:ST4[%a.addr.i115] CPURegs:%vreg28
+	%vreg344<def> = BST 2; CPURegs:%vreg344
+	ST %vreg344<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg344
+	%vreg345<def> = BST 5; CPURegs:%vreg345
+	ST %vreg345<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg345
+	%vreg346<def> = MovGR %ZERO, 5; CPURegs:%vreg346
+	ST %vreg346<kill>, <fi#163>, 0; mem:ST4[%a.addr.i114] CPURegs:%vreg346
+	%vreg347<def> = BCLR 5; CPURegs:%vreg347
+	ST %vreg347<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg347
+	%vreg348<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg348
+	ST %vreg348<kill>, <fi#164>, 0; mem:ST4[%a.addr.i112] CPURegs:%vreg348
+	ST %vreg27, <fi#165>, 0; mem:ST4[%b.addr.i113] CPURegs:%vreg27
+	%vreg349<def> = LD <fi#164>, 0; mem:LD4[%a.addr.i112] CPURegs:%vreg349
+	%vreg350<def> = MovG2V40 %vreg349<kill>, 1; CPUVecRegs:%vreg350 CPURegs:%vreg349
+	VSTORE32 %vreg350<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg350
+	%vreg351<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg351
+	ST %vreg351<kill>, <fi#166>, 0; mem:ST4[%a.addr.i110] CPURegs:%vreg351
+	ST %vreg27, <fi#167>, 0; mem:ST4[%b.addr.i111] CPURegs:%vreg27
+	%vreg352<def> = LD <fi#166>, 0; mem:LD4[%a.addr.i110] CPURegs:%vreg352
+	%vreg353<def> = MovG2V20 %vreg352<kill>, 1; CPUVecRegs:%vreg353 CPURegs:%vreg352
+	VSTORE16 %vreg353<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg353
+	%vreg354<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg354
+	ST %vreg354<kill>, <fi#168>, 0; mem:ST4[%a.addr.i108] CPURegs:%vreg354
+	ST %vreg27, <fi#169>, 0; mem:ST4[%b.addr.i109] CPURegs:%vreg27
+	%vreg355<def> = LD <fi#168>, 0; mem:LD4[%a.addr.i108] CPURegs:%vreg355
+	%vreg356<def> = MovG2V10 %vreg355<kill>, 1; CPUVecRegs:%vreg356 CPURegs:%vreg355
+	VSTORE8 %vreg356<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg356
+	%vreg357<def> = VLOAD32 <fi#191>, 0; mem:LD256[%i32x64_t_a] CPUVecRegs:%vreg357
+	VSTORE32 %vreg357<kill>, <fi#170>, 0; mem:ST256[%a.addr.i106] CPUVecRegs:%vreg357
+	ST %vreg27, <fi#171>, 0; mem:ST4[%b.addr.i107] CPURegs:%vreg27
+	%vreg358<def> = VLOAD32 <fi#170>, 0; mem:LD256[%a.addr.i106] CPUVecRegs:%vreg358
+	%vreg359<def> = MovV2G40 %vreg358<kill>, 1; CPURegs:%vreg359 CPUVecRegs:%vreg358
+	ST %vreg359<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg359
+	%vreg360<def> = VLOAD16 <fi#188>, 0; mem:LD256[%i16x128_t_a] CPUVecRegs:%vreg360
+	VSTORE16 %vreg360<kill>, <fi#172>, 0; mem:ST256[%a.addr.i104] CPUVecRegs:%vreg360
+	ST %vreg27, <fi#173>, 0; mem:ST4[%b.addr.i105] CPURegs:%vreg27
+	%vreg361<def> = VLOAD16 <fi#172>, 0; mem:LD256[%a.addr.i104] CPUVecRegs:%vreg361
+	%vreg362<def> = MovV2G20 %vreg361<kill>, 1; CPURegs:%vreg362 CPUVecRegs:%vreg361
+	ST %vreg362<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg362
+	%vreg363<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg363
+	VSTORE8 %vreg363<kill>, <fi#174>, 0; mem:ST256[%a.addr.i102] CPUVecRegs:%vreg363
+	ST %vreg27, <fi#175>, 0; mem:ST4[%b.addr.i103] CPURegs:%vreg27
+	%vreg364<def> = VLOAD8 <fi#174>, 0; mem:LD256[%a.addr.i102] CPUVecRegs:%vreg364
+	%vreg365<def> = MovV2G10 %vreg364<kill>, 1; CPURegs:%vreg365 CPUVecRegs:%vreg364
+	ST %vreg365<kill>, <fi#193>, 0; mem:ST4[%int_dst] CPURegs:%vreg365
+	%vreg366<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg366
+	VSTORE8 %vreg366, <fi#176>, 0; mem:ST256[%a.addr.i101] CPUVecRegs:%vreg366
+	MovL2V %vreg366; CPUVecRegs:%vreg366
+	%vreg367<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg367
+	VSTORE8 %vreg367, <fi#177>, 0; mem:ST256[%a.addr.i100] CPUVecRegs:%vreg367
+	MovV2L %vreg367; CPUVecRegs:%vreg367
+	%vreg368<def> = VLOAD8 <fi#185>, 0; mem:LD256[%i8x256_t_a] CPUVecRegs:%vreg368
+	VSTORE8 %vreg368, <fi#178>, 0; mem:ST256[%a.addr.i99] CPUVecRegs:%vreg368
+	%vreg369<def> = MovV2V %vreg368; CPUVecRegs:%vreg369,%vreg368
+	VSTORE8 %vreg369<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg369
+	%vreg370<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg370
+	ST %vreg370, <fi#179>, 0; mem:ST4[%a.addr.i98] CPURegs:%vreg370
+	%vreg371<def> = VMovG2V40 %vreg370; CPUVecRegs:%vreg371 CPURegs:%vreg370
+	VSTORE32 %vreg371<kill>, <fi#190>, 0; mem:ST256[%i32x64_t_dst] CPUVecRegs:%vreg371
+	%vreg372<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg372
+	ST %vreg372, <fi#180>, 0; mem:ST4[%a.addr.i97] CPURegs:%vreg372
+	%vreg373<def> = VMovG2V20 %vreg372; CPUVecRegs:%vreg373 CPURegs:%vreg372
+	VSTORE16 %vreg373<kill>, <fi#187>, 0; mem:ST256[%i16x128_t_dst] CPUVecRegs:%vreg373
+	%vreg374<def> = LD <fi#194>, 0; mem:LD4[%int_a] CPURegs:%vreg374
+	ST %vreg374, <fi#181>, 0; mem:ST4[%a.addr.i96] CPURegs:%vreg374
+	%vreg375<def> = VMovG2V10 %vreg374; CPUVecRegs:%vreg375 CPURegs:%vreg374
+	VSTORE8 %vreg375<kill>, <fi#184>, 0; mem:ST256[%i8x256_t_dst] CPUVecRegs:%vreg375
+	RetLR
+
+# End machine code for function SIMD_Intrinsic_Testcase0.
+
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	ADJCALLSTACKDOWN 8, %SP<imp-def,dead>, %SP<imp-use>
+	CALL <ga:@SIMD_Intrinsic_Testcase0>, <regmask>, %SP<imp-def>
+	ADJCALLSTACKUP 8, 0, %SP<imp-def,dead>, %SP<imp-use>
+	%V0<def> = COPY %vreg0; CPURegs:%vreg0
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

@@ -1,0 +1,32 @@
+当前目录：./testcase_4slots/Intrinsic
+
+func_vector.c:
+Time Elapsed 0.486504s
+
+指令个数：21	平均耗时：0.023167s
+
+global_vector.c:
+Time Elapsed 0.382535s
+
+指令个数：27	平均耗时：0.014168s
+
+local_vector.c:
+Time Elapsed 0.280308s
+
+指令个数：18	平均耗时：0.015573s
+
+local_vector_return.c:
+Time Elapsed 0.418292s
+
+指令个数：81	平均耗时：0.005164s
+
+v4max.c:
+Time Elapsed 0.440157s
+
+指令个数：20	平均耗时：0.022008s
+
+vmax.c:
+Time Elapsed 0.412495s
+
+指令个数：40	平均耗时：0.010312s
+

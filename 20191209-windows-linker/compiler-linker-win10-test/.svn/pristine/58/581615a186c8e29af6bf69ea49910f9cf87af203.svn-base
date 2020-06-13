@@ -1,0 +1,14 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+LLVM ERROR: Cannot select: 0xb4d4c8: v16i32 = scalar_to_vector 0xb4d218 [ORD=6] [ID=44]
+  0xb4d218: i32,ch = load 0xb4d188, 0xb4ad58, 0xb4ade8<LD4[%a.addr](align=16)> [ORD=6] [ID=43]
+    0xb4ad58: i32 = FrameIndex<0> [ID=4]
+    0xb4ade8: i32 = undef [ID=5]
+In function: v4si_2add
+Stack dump:
+0.	Program arguments: D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_4slots\build-4slots\Debug\bin\llc ./testcase_4slots/local_vector_return.ll -filetype=asm -o ./testcase_4slots/local_vector_return.s -march=dsp -mcpu=dspse -relocation-model=static -disable-dsp-hwloops 
+1.	Running pass 'Function Pass Manager' on module './testcase_4slots/local_vector_return.ll'.
+2.	Running pass 'DSP DAG->DAG Pattern Instruction Selection' on function '@v4si_2add'

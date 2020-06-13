@@ -1,0 +1,201 @@
+当前目录：./testcase_8slots/
+
+addition.c:
+Time Elapsed 0.730448s
+读取ASM文件中的指令出错and_or_if.c:
+Time Elapsed 0.456381s
+读取ASM文件中的指令出错argument_fir.c:
+Time Elapsed 0.412342s
+读取ASM文件中的指令出错bestoptim.c:
+Time Elapsed 0.313556s
+读取ASM文件中的指令出错binary_insert.c:
+Time Elapsed 0.478094s
+读取ASM文件中的指令出错binary_search.c:
+Time Elapsed 0.379027s
+读取ASM文件中的指令出错biquad_N_sections.c:
+Time Elapsed 0.675848s
+读取ASM文件中的指令出错bound_immoimm.c:
+Time Elapsed 0.307137s
+读取ASM文件中的指令出错bound_immtoreg.c:
+Time Elapsed 0.312325s
+读取ASM文件中的指令出错bound_immtoreg_closedinterval.c:
+Time Elapsed 0.308424s
+读取ASM文件中的指令出错bound_regtoimm.c:
+Time Elapsed 0.296245s
+读取ASM文件中的指令出错bound_regtoreg.c:
+Time Elapsed 0.311355s
+读取ASM文件中的指令出错bound_regtoreg_defwithconst.c:
+Time Elapsed 0.311555s
+读取ASM文件中的指令出错bubblemain.c:
+Time Elapsed 0.340276s
+读取ASM文件中的指令出错bubblesort.c:
+Time Elapsed 0.376471s
+读取ASM文件中的指令出错bump_neg.c:
+Time Elapsed 0.322534s
+读取ASM文件中的指令出错bump_not2power_immbound.c:
+Time Elapsed 0.293868s
+读取ASM文件中的指令出错bump_not2power_regbound.c:
+Time Elapsed 0.312862s
+读取ASM文件中的指令出错bump_notaddi.c:
+Time Elapsed 0.319098s
+读取ASM文件中的指令出错bump_reg.c:
+Time Elapsed 0.307960s
+读取ASM文件中的指令出错ch6_1.c:
+Time Elapsed 0.276198s
+读取ASM文件中的指令出错ch6_1p.c:
+Time Elapsed 0.288558s
+读取ASM文件中的指令出错comcond5.c:
+Time Elapsed 0.351132s
+读取ASM文件中的指令出错compound_condition1.c:
+Time Elapsed 0.351567s
+读取ASM文件中的指令出错compound_condition2.c:
+Time Elapsed 0.349497s
+读取ASM文件中的指令出错condition_neq.c:
+Time Elapsed 0.298551s
+读取ASM文件中的指令出错convolution.c:
+Time Elapsed 0.452497s
+读取ASM文件中的指令出错datarel1.c:
+Time Elapsed 0.397743s
+读取ASM文件中的指令出错datarel2.c:
+Time Elapsed 0.277567s
+读取ASM文件中的指令出错division.c:
+Time Elapsed 0.497205s
+读取ASM文件中的指令出错dot_product.c:
+Time Elapsed 0.422822s
+读取ASM文件中的指令出错doublenestedloop.c:
+Time Elapsed 0.325948s
+读取ASM文件中的指令出错emptyblockinO3.c:
+Time Elapsed 0.454402s
+读取ASM文件中的指令出错exitnotfallthrough.c:
+Time Elapsed 0.357263s
+读取ASM文件中的指令出错externbound_sumarray.c:
+Time Elapsed 0.329444s
+读取ASM文件中的指令出错fir.c:
+Time Elapsed 0.485733s
+读取ASM文件中的指令出错fixup_bumpaftercmp.c:
+Time Elapsed 0.317809s
+读取ASM文件中的指令出错fixup_bumpaftercmp_withreg.c:
+Time Elapsed 0.306273s
+读取ASM文件中的指令出错fixup_bumpbeforecmp.c:
+Time Elapsed 0.296244s
+读取ASM文件中的指令出错funco1.c:
+Time Elapsed 0.313804s
+读取ASM文件中的指令出错funco2.c:
+Time Elapsed 0.251468s
+读取ASM文件中的指令出错func_vector.c:
+Time Elapsed 0.536290s
+读取ASM文件中的指令出错global.c:
+Time Elapsed 0.351958s
+读取ASM文件中的指令出错global_array.c:
+Time Elapsed 0.328357s
+读取ASM文件中的指令出错global_fir.c:
+Time Elapsed 0.449055s
+读取ASM文件中的指令出错global_var_args.c:
+Time Elapsed 0.378742s
+读取ASM文件中的指令出错global_vector.c:
+Time Elapsed 0.362514s
+读取ASM文件中的指令出错go1.c:
+Time Elapsed 0.265587s
+读取ASM文件中的指令出错go2.c:
+Time Elapsed 0.256713s
+读取ASM文件中的指令出错heapsort.c:
+Time Elapsed 0.822153s
+读取ASM文件中的指令出错hello2.c:
+Time Elapsed 0.297153s
+读取ASM文件中的指令出错iltj_if.c:
+Time Elapsed 0.333709s
+读取ASM文件中的指令出错iltj_while.c:
+Time Elapsed 0.345583s
+读取ASM文件中的指令出错iltj_while1.c:
+Time Elapsed 0.331695s
+读取ASM文件中的指令出错latchwithoutInd.c:
+Time Elapsed 0.304859s
+读取ASM文件中的指令出错linklist.c:
+Time Elapsed 0.837354s
+读取ASM文件中的指令出错lms.c:
+Time Elapsed 0.543380s
+读取ASM文件中的指令出错localsumarray.c:
+Time Elapsed 0.322901s
+读取ASM文件中的指令出错local_array.c:
+Time Elapsed 0.308259s
+读取ASM文件中的指令出错local_var_args.c:
+Time Elapsed 0.269267s
+读取ASM文件中的指令出错local_vector.c:
+Time Elapsed 0.284011s
+读取ASM文件中的指令出错local_vector_return.c:
+Time Elapsed 0.430770s
+读取ASM文件中的指令出错loop.c:
+Time Elapsed 0.291514s
+读取ASM文件中的指令出错loopbranch.c:
+Time Elapsed 0.394967s
+读取ASM文件中的指令出错loopCountUnderflow.c:
+Time Elapsed 0.304941s
+读取ASM文件中的指令出错loopCountUnderflow1.c:
+Time Elapsed 0.299706s
+读取ASM文件中的指令出错loopif.c:
+Time Elapsed 0.360904s
+读取ASM文件中的指令出错loopifmain.c:
+Time Elapsed 0.361509s
+读取ASM文件中的指令出错loopmain.c:
+Time Elapsed 0.367011s
+读取ASM文件中的指令出错main.c:
+Time Elapsed 0.273755s
+读取ASM文件中的指令出错mainsort.c:
+Time Elapsed 0.416441s
+读取ASM文件中的指令出错mat1x3.c:
+Time Elapsed 0.373604s
+读取ASM文件中的指令出错matrix1.c:
+Time Elapsed 0.591700s
+读取ASM文件中的指令出错mergesortR.c:
+Time Elapsed 0.579055s
+读取ASM文件中的指令出错nestfor.c:
+Time Elapsed 0.344656s
+读取ASM文件中的指令出错nestfor1.c:
+Time Elapsed 0.313271s
+读取ASM文件中的指令出错notcondition.c:
+Time Elapsed 0.306204s
+读取ASM文件中的指令出错n_complex_updates.c:
+Time Elapsed 0.584694s
+读取ASM文件中的指令出错n_real_updates.c:
+Time Elapsed 0.482894s
+读取ASM文件中的指令出错parallelandnestedloop.c:
+Time Elapsed 0.406076s
+读取ASM文件中的指令出错pointer_global_var_args.c:
+Time Elapsed 0.273732s
+读取ASM文件中的指令出错pointer_local_var_args.c:
+Time Elapsed 0.375229s
+读取ASM文件中的指令出错qsort.c:
+Time Elapsed 0.478762s
+读取ASM文件中的指令出错quicksort.c:
+Time Elapsed 0.519130s
+读取ASM文件中的指令出错quicksort1.c:
+Time Elapsed 0.484586s
+读取ASM文件中的指令出错recursion.c:
+Time Elapsed 0.348767s
+读取ASM文件中的指令出错referenceIndOut.c:
+Time Elapsed 0.307659s
+读取ASM文件中的指令出错sample3.c:
+Time Elapsed 0.314855s
+读取ASM文件中的指令出错sqlist.c:
+Time Elapsed 0.311487s
+读取ASM文件中的指令出错staticvar.c:
+Time Elapsed 0.280546s
+读取ASM文件中的指令出错static_func.c:
+Time Elapsed 0.315519s
+读取ASM文件中的指令出错sumarray.c:
+Time Elapsed 0.296920s
+读取ASM文件中的指令出错summain.c:
+Time Elapsed 0.264306s
+读取ASM文件中的指令出错testa.c:
+Time Elapsed 0.301074s
+读取ASM文件中的指令出错testb.c:
+Time Elapsed 0.373555s
+读取ASM文件中的指令出错v4max.c:
+Time Elapsed 0.349838s
+读取ASM文件中的指令出错vmax.c:
+Time Elapsed 0.323056s
+读取ASM文件中的指令出错while.c:
+Time Elapsed 0.305200s
+读取ASM文件中的指令出错whiletrue.c:
+Time Elapsed 0.336828s
+读取ASM文件中的指令出错

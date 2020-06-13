@@ -1,0 +1,82 @@
+	.text
+	.file	"./testcase_8slots/func_vector.ll"
+	.globl	vsum
+	.align	2
+	.type	vsum,@function
+vsum:                                   # @vsum
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -64
+}
+{
+	vload32	VR0, GR30, 20
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vstore40	VR2, GR30, 8
+	vstore40	VR3, GR30, 4
+}
+{
+	vstore40	VR0, GR30, 0
+	vload32	VR1, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vadd40	VR0, VR1, VR0
+	vload32	VR1, GR30, 8
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vadd40	VR0, VR0, VR1
+	movigh	GR2,%hi(init_vgb)
+}
+{
+	movigl	GR2,%lo(init_vgb)
+}
+{
+	vload32	VR1, GR2, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	vadd40	VR0, VR1, VR0
+}
+{
+	vstore40	VR0, GR2, 0
+	load32	GR2, GR30, 15
+	addi	GR30, GR30, 64
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	vsum, ($tmp0)-vsum
+
+	.type	init_vgb,@object        # @init_vgb
+	.comm	init_vgb,16,16
+

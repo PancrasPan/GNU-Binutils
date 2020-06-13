@@ -1,0 +1,12 @@
+
+#####==========stderr_mid==========#####:
+./testcase_4slots/vmax.c:12:33: error: passing 'v4si' (vector of 4 'int' values) to parameter of incompatible type '__attribute__((__vector_size__(16 * sizeof(int)))) int' (vector of 16 'int' values)
+        v4si c = __builtin_dsp_vmax_40(a, b);
+                                       ^
+./testcase_4slots/vmax.c:14:34: error: passing 'v16sc' (vector of 16 'char' values) to parameter of incompatible type '__attribute__((__vector_size__(64 * sizeof(char)))) char' (vector of 64 'char' values)
+        v16sc j = __builtin_dsp_vmax_10(h, i);
+                                        ^
+2 errors generated.
+
+#####==========stderr_asm==========#####:
+D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_4slots\build-4slots\Debug\bin\llc: ./testcase_4slots/vmax.ll: error: Could not open input file: no such file or directory

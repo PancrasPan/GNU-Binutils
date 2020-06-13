@@ -1,0 +1,83 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	%vreg2<def> = MovGR %ZERO, 0; CPURegs:%vreg2
+	ST %vreg2, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg2
+	ST %vreg0, <fi#1>, 0; mem:ST4[%argc.addr] CPURegs:%vreg0
+	ST %vreg1, <fi#2>, 0; mem:ST4[%argv.addr] CPURegs:%vreg1
+	%vreg3<def> = MovIGH %ZERO, <ga:@init_vgb>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <ga:@init_vgb>[TF=4]; CPURegs:%vreg4,%vreg3
+	%vreg5<def> = VLOAD32 %vreg4<kill>, 0; mem:LD16[@init_vgb] CPU128Regs:%vreg5 CPURegs:%vreg4
+	%vreg6<def> = MovIGH %ZERO, <ga:@uninit_vgb>[TF=3]; CPURegs:%vreg6
+	%vreg7<def,tied1> = MovIGL %vreg6<tied0>, <ga:@uninit_vgb>[TF=4]; CPURegs:%vreg7,%vreg6
+	%vreg8<def> = VLOAD32 %vreg7, 0; mem:LD16[@uninit_vgb] CPU128Regs:%vreg8 CPURegs:%vreg7
+	%vreg9<def> = VADD32 %vreg8<kill>, %vreg5<kill>; CPU128Regs:%vreg9,%vreg8,%vreg5
+	VSTORE32 %vreg9<kill>, %vreg7, 0; mem:ST16[@uninit_vgb] CPU128Regs:%vreg9 CPURegs:%vreg7
+	%vreg10<def> = MovIGH %ZERO, <ga:@uninit_vst>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@uninit_vst>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg12<def> = MovIGH %ZERO, <ga:@main.init_vst>[TF=3]; CPURegs:%vreg12
+	%vreg13<def,tied1> = MovIGL %vreg12<tied0>, <ga:@main.init_vst>[TF=4]; CPURegs:%vreg13,%vreg12
+	%vreg14<def> = VLOAD32 %vreg13<kill>, 0; mem:LD16[@main.init_vst] CPU128Regs:%vreg14 CPURegs:%vreg13
+	VSTORE32 %vreg14<kill>, %vreg11<kill>, 0; mem:ST16[@uninit_vst] CPU128Regs:%vreg14 CPURegs:%vreg11
+	%vreg15<def> = MovIGH %ZERO, <ga:@uninit_st>[TF=3]; CPURegs:%vreg15
+	%vreg16<def,tied1> = MovIGL %vreg15<tied0>, <ga:@uninit_st>[TF=4]; CPURegs:%vreg16,%vreg15
+	%vreg17<def> = MovGR %ZERO, 10; CPURegs:%vreg17
+	ST %vreg17<kill>, %vreg16<kill>, 0; mem:ST4[@uninit_st] CPURegs:%vreg17,%vreg16
+	%V0<def> = COPY %vreg2; CPURegs:%vreg2
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+Function Live Ins: %A0 in %vreg0, %A1 in %vreg1
+
+BB#0: derived from LLVM BB %entry
+    Live Ins: %A0 %A1
+	%vreg1<def> = COPY %A1; CPURegs:%vreg1
+	%vreg0<def> = COPY %A0; CPURegs:%vreg0
+	%vreg2<def> = MovGR %ZERO, 0; CPURegs:%vreg2
+	ST %vreg2, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg2
+	ST %vreg0, <fi#1>, 0; mem:ST4[%argc.addr] CPURegs:%vreg0
+	ST %vreg1, <fi#2>, 0; mem:ST4[%argv.addr] CPURegs:%vreg1
+	%vreg3<def> = MovIGH %ZERO, <ga:@init_vgb>[TF=3]; CPURegs:%vreg3
+	%vreg4<def,tied1> = MovIGL %vreg3<tied0>, <ga:@init_vgb>[TF=4]; CPURegs:%vreg4,%vreg3
+	%vreg5<def> = VLOAD32 %vreg4<kill>, 0; mem:LD16[@init_vgb] CPU128Regs:%vreg5 CPURegs:%vreg4
+	%vreg6<def> = MovIGH %ZERO, <ga:@uninit_vgb>[TF=3]; CPURegs:%vreg6
+	%vreg7<def,tied1> = MovIGL %vreg6<tied0>, <ga:@uninit_vgb>[TF=4]; CPURegs:%vreg7,%vreg6
+	%vreg8<def> = VLOAD32 %vreg7, 0; mem:LD16[@uninit_vgb] CPU128Regs:%vreg8 CPURegs:%vreg7
+	%vreg9<def> = VADD32 %vreg8<kill>, %vreg5<kill>; CPU128Regs:%vreg9,%vreg8,%vreg5
+	VSTORE32 %vreg9<kill>, %vreg7, 0; mem:ST16[@uninit_vgb] CPU128Regs:%vreg9 CPURegs:%vreg7
+	%vreg10<def> = MovIGH %ZERO, <ga:@uninit_vst>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@uninit_vst>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg12<def> = MovIGH %ZERO, <ga:@main.init_vst>[TF=3]; CPURegs:%vreg12
+	%vreg13<def,tied1> = MovIGL %vreg12<tied0>, <ga:@main.init_vst>[TF=4]; CPURegs:%vreg13,%vreg12
+	%vreg14<def> = VLOAD32 %vreg13<kill>, 0; mem:LD16[@main.init_vst] CPU128Regs:%vreg14 CPURegs:%vreg13
+	VSTORE32 %vreg14<kill>, %vreg11<kill>, 0; mem:ST16[@uninit_vst] CPU128Regs:%vreg14 CPURegs:%vreg11
+	%vreg15<def> = MovIGH %ZERO, <ga:@uninit_st>[TF=3]; CPURegs:%vreg15
+	%vreg16<def,tied1> = MovIGL %vreg15<tied0>, <ga:@uninit_st>[TF=4]; CPURegs:%vreg16,%vreg15
+	%vreg17<def> = MovGR %ZERO, 10; CPURegs:%vreg17
+	ST %vreg17<kill>, %vreg16<kill>, 0; mem:ST4[@uninit_st] CPURegs:%vreg17,%vreg16
+	%V0<def> = COPY %vreg2; CPURegs:%vreg2
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

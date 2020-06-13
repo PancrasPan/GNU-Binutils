@@ -1,0 +1,95 @@
+
+#####==========stderr_mid==========#####:
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function add: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%sum] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 4; CPURegs:%vreg1
+	ST %vreg1<kill>, <fi#1>, 0; mem:ST4[%i] CPURegs:%vreg1
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %do.body
+    Predecessors according to CFG: BB#0 BB#2
+	%vreg2<def> = LD <fi#1>, 0; mem:LD4[%i] CPURegs:%vreg2
+	%vreg3<def> = ADDiu %vreg2, -1; CPURegs:%vreg3,%vreg2
+	ST %vreg3<kill>, <fi#1>, 0; mem:ST4[%i] CPURegs:%vreg3
+	%vreg4<def> = MovGR %ZERO, 2; CPURegs:%vreg4
+	%vreg5<def> = SHL %vreg2, %vreg4<kill>; CPURegs:%vreg5,%vreg2,%vreg4
+	%vreg6<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg6
+	%vreg7<def,tied1> = MovIGL %vreg6<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg7,%vreg6
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg5<kill>; CPURegs:%vreg8,%vreg7,%vreg5
+	%vreg9<def> = LD %vreg8<kill>, 0; mem:LD4[%arrayidx] CPURegs:%vreg9,%vreg8
+	%vreg10<def> = LD <fi#0>, 0; mem:LD4[%sum] CPURegs:%vreg10
+	%vreg11<def> = ADDu %vreg10<kill>, %vreg9<kill>; CPURegs:%vreg11,%vreg10,%vreg9
+	ST %vreg11<kill>, <fi#0>, 0; mem:ST4[%sum] CPURegs:%vreg11
+    Successors according to CFG: BB#2
+
+BB#2: derived from LLVM BB %do.cond
+    Predecessors according to CFG: BB#1
+	%vreg12<def> = LD <fi#1>, 0; mem:LD4[%i] CPURegs:%vreg12
+	%vreg13<def> = NEQI %vreg12<kill>, 0; CPURegs:%vreg13,%vreg12
+	JC %vreg13<kill>, <BB#1>; CPURegs:%vreg13
+	Jmp <BB#3>
+    Successors according to CFG: BB#1(124) BB#3(4)
+
+BB#3: derived from LLVM BB %do.end
+    Predecessors according to CFG: BB#2
+	%vreg14<def> = LD <fi#0>, 0; mem:LD4[%sum] CPURegs:%vreg14
+	%V0<def> = COPY %vreg14; CPURegs:%vreg14
+	RetLR %V0<imp-use>
+
+# End machine code for function add.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function add: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0<kill>, <fi#0>, 0; mem:ST4[%sum] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 4; CPURegs:%vreg1
+	ST %vreg1<kill>, <fi#1>, 0; mem:ST4[%i] CPURegs:%vreg1
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %do.body
+    Predecessors according to CFG: BB#0 BB#2
+	%vreg2<def> = LD <fi#1>, 0; mem:LD4[%i] CPURegs:%vreg2
+	%vreg3<def> = ADDiu %vreg2, -1; CPURegs:%vreg3,%vreg2
+	ST %vreg3<kill>, <fi#1>, 0; mem:ST4[%i] CPURegs:%vreg3
+	%vreg4<def> = MovGR %ZERO, 2; CPURegs:%vreg4
+	%vreg5<def> = SHL %vreg2, %vreg4<kill>; CPURegs:%vreg5,%vreg2,%vreg4
+	%vreg6<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg6
+	%vreg7<def,tied1> = MovIGL %vreg6<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg7,%vreg6
+	%vreg8<def> = ADDu %vreg7<kill>, %vreg5<kill>; CPURegs:%vreg8,%vreg7,%vreg5
+	%vreg9<def> = LD %vreg8<kill>, 0; mem:LD4[%arrayidx] CPURegs:%vreg9,%vreg8
+	%vreg10<def> = LD <fi#0>, 0; mem:LD4[%sum] CPURegs:%vreg10
+	%vreg11<def> = ADDu %vreg10<kill>, %vreg9<kill>; CPURegs:%vreg11,%vreg10,%vreg9
+	ST %vreg11<kill>, <fi#0>, 0; mem:ST4[%sum] CPURegs:%vreg11
+    Successors according to CFG: BB#2
+
+BB#2: derived from LLVM BB %do.cond
+    Predecessors according to CFG: BB#1
+	%vreg12<def> = LD <fi#1>, 0; mem:LD4[%i] CPURegs:%vreg12
+	%vreg13<def> = NEQI %vreg12<kill>, 0; CPURegs:%vreg13,%vreg12
+	JC %vreg13<kill>, <BB#1>; CPURegs:%vreg13
+	Jmp <BB#3>
+    Successors according to CFG: BB#1(124) BB#3(4)
+
+BB#3: derived from LLVM BB %do.end
+    Predecessors according to CFG: BB#2
+	%vreg14<def> = LD <fi#0>, 0; mem:LD4[%sum] CPURegs:%vreg14
+	%V0<def> = COPY %vreg14; CPURegs:%vreg14
+	RetLR %V0<imp-use>
+
+# End machine code for function add.
+

@@ -1,0 +1,381 @@
+
+#####==========stderr_mid==========#####:
+./testcase_8slots/loopbranch.c:11:6: warning: expression result unused [-Wunused-value]
+        for(i; i < arraySize; i += 2){
+            ^
+'' is not a recognized processor for this target (ignoring processor)
+1 warning generated.
+
+#####==========stderr_asm==========#####:
+Pass Arguments:  -targetlibinfo -datalayout -jump-instr-table-info -notti -basictti -targetpassconfig -no-aa -tbaa -basicaa -collector-metadata -machinemoduleinfo -machine-branch-prob -jump-instr-tables -verify -verify-di -domtree -loops -loop-simplify -scalar-evolution -iv-users -loop-reduce -gc-lowering -unreachableblockelim -consthoist -codegenprepare -verify-di -stack-protector -verify -domtree -loops -branch-prob -expand-isel-pseudos -tailduplication -opt-phis -machinedomtree -slotindexes -stack-coloring -localstackalloc -dead-mi-elimination -machinedomtree -machine-loops -machinelicm -machine-cse -machine-sink -peephole-opts -machinedomtree -machine-loops -hwloops -processimpdefs -unreachable-mbb-elimination -livevars -machinedomtree -machine-loops -phi-node-elimination -twoaddressinstruction -slotindexes -liveintervals -simple-register-coalescing -machine-block-freq -livedebugvars -livestacks -virtregmap -liveregmatrix -edge-bundles -spill-code-placement -virtregrewriter -stack-slot-coloring -machinelicm -prologepilog -branch-folder -tailduplication -machine-cp -postrapseudos -machinedomtree -machine-loops -post-RA-sched -gc-analysis -machine-block-freq -block-placement2 -machinedomtree -machine-loops -packets -hwloopsfixup -stackmap-liveness
+Target Library Information
+Data Layout
+Jump-Instruction Table Info
+No target information
+Target independent code generator's TTI
+Target Pass Configuration
+No Alias Analysis (always returns 'may' alias)
+Type-Based Alias Analysis
+Basic Alias Analysis (stateless AA impl)
+Create Garbage Collector Module Metadata
+Machine Module Information
+Machine Branch Probability Analysis
+  ModulePass Manager
+    Jump-Instruction Tables
+    FunctionPass Manager
+      Module Verifier
+    Debug Info Verifier
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Induction Variable Users
+        Loop Strength Reduction
+      Lower Garbage Collection Instructions
+      Remove unreachable blocks from the CFG
+      Constant Hoisting
+      CodeGen Prepare
+      Exception handling preparation
+    Debug Info Verifier
+    FunctionPass Manager
+      Insert stack protectors
+      Module Verifier
+      Machine Function Analysis
+      Dominator Tree Construction
+      Natural Loop Information
+      Branch Probability Analysis
+      DSP DAG->DAG Pattern Instruction Selection
+      Expand ISel Pseudo-instructions
+      Tail Duplication
+      Optimize machine instruction PHIs
+      MachineDominator Tree Construction
+      Slot index numbering
+      Merge disjoint stack slots
+      Local Stack Slot Allocation
+      Remove dead machine instructions
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Machine Loop Invariant Code Motion
+      Machine Common Subexpression Elimination
+      Machine code sinking
+      Peephole Optimizations
+      DSP handle CC
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Hardware Loops
+      Process Implicit Definitions
+      Remove unreachable machine basic blocks
+      Live Variable Analysis
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Eliminate PHI nodes for register allocation
+      Two-Address instruction pass
+      Slot index numbering
+      Live Interval Analysis
+      Simple Register Coalescing
+      Machine Block Frequency Analysis
+      Debug Variable Analysis
+      Live Stack Slot Analysis
+      Virtual Register Map
+      Live Register Matrix
+      Bundle Machine CFG Edges
+      Spill Code Placement Analysis
+      Greedy Register Allocator
+      Virtual Register Rewriter
+      Stack Slot Coloring
+      Machine Loop Invariant Code Motion
+      Prologue/Epilogue Insertion & Frame Finalization
+      Control Flow Optimizer
+      Tail Duplication
+      Machine Copy Propagation Pass
+      Post-RA pseudo instruction expansion pass
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Post RA top-down list latency scheduler
+      Analyze Machine Code For Garbage Collection
+      Machine Block Frequency Analysis
+      Branch Probability Basic Block Placement
+      DSP Del Useless jmp
+      DSP Delay Slot Filler
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Packetizer
+      DSP VLIWBundlerDrive
+      DSP Hardware Loop Fixup
+      StackMap Liveness Analysis
+      dsp assembly printer
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	ST %vreg0, <fi#1>, 0; mem:ST4[%sum] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 1; CPURegs:%vreg1
+	ST %vreg1<kill>, <fi#2>, 0; mem:ST4[%i] CPURegs:%vreg1
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#5
+	%vreg2<def> = MovIGH %ZERO, <ga:@arraySize>[TF=3]; CPURegs:%vreg2
+	%vreg3<def,tied1> = MovIGL %vreg2<tied0>, <ga:@arraySize>[TF=4]; CPURegs:%vreg3,%vreg2
+	%vreg4<def> = LD %vreg3<kill>, 0; mem:LD4[@arraySize] CPURegs:%vreg4,%vreg3
+	%vreg5<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg5
+	%vreg6<def> = GE %vreg5<kill>, %vreg4<kill>; CPURegs:%vreg6,%vreg5,%vreg4
+	JC %vreg6<kill>, <BB#6>; CPURegs:%vreg6
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#6(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	%vreg7<def> = MovGR %ZERO, 2; CPURegs:%vreg7
+	%vreg8<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg8
+	%vreg9<def> = SHL %vreg8<kill>, %vreg7; CPURegs:%vreg9,%vreg8,%vreg7
+	%vreg10<def> = MovIGH %ZERO, <ga:@Array1>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@Array1>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg12<def> = ADDu %vreg11, %vreg9; CPURegs:%vreg12,%vreg11,%vreg9
+	%vreg13<def> = MovIGH %ZERO, <ga:@Array2>[TF=3]; CPURegs:%vreg13
+	%vreg14<def,tied1> = MovIGL %vreg13<tied0>, <ga:@Array2>[TF=4]; CPURegs:%vreg14,%vreg13
+	%vreg15<def> = ADDu %vreg14, %vreg9; CPURegs:%vreg15,%vreg14,%vreg9
+	%vreg16<def> = LD %vreg15<kill>, 0; mem:LD4[%arrayidx1] CPURegs:%vreg16,%vreg15
+	%vreg17<def> = LD %vreg12<kill>, 0; mem:LD4[%arrayidx] CPURegs:%vreg17,%vreg12
+	%vreg18<def> = GE %vreg17<kill>, %vreg16<kill>; CPURegs:%vreg18,%vreg17,%vreg16
+	JC %vreg18<kill>, <BB#4>; CPURegs:%vreg18
+	Jmp <BB#3>
+    Successors according to CFG: BB#3(16) BB#4(16)
+
+BB#3: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#2
+	%vreg29<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg29
+	%vreg30<def> = SHL %vreg29<kill>, %vreg7; CPURegs:%vreg30,%vreg29,%vreg7
+	%vreg33<def> = ADDu %vreg14, %vreg30<kill>; CPURegs:%vreg33,%vreg14,%vreg30
+	%vreg34<def> = LD %vreg33<kill>, 0; mem:LD4[%arrayidx3] CPURegs:%vreg34,%vreg33
+	%vreg35<def> = LD <fi#1>, 0; mem:LD4[%sum] CPURegs:%vreg35
+	%vreg36<def> = ADDu %vreg35<kill>, %vreg34<kill>; CPURegs:%vreg36,%vreg35,%vreg34
+	ST %vreg36, <fi#1>, 0; mem:ST4[%sum] CPURegs:%vreg36
+	%vreg37<def> = LTI %vreg36, 11; CPURegs:%vreg37,%vreg36
+	JNC %vreg37<kill>, <BB#6>; CPURegs:%vreg37
+	Jmp <BB#5>
+    Successors according to CFG: BB#6(4) BB#5(124)
+
+BB#4: derived from LLVM BB %if.else
+    Predecessors according to CFG: BB#2
+	%vreg20<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg20
+	%vreg21<def> = SHL %vreg20<kill>, %vreg7; CPURegs:%vreg21,%vreg20,%vreg7
+	%vreg24<def> = ADDu %vreg11, %vreg21<kill>; CPURegs:%vreg24,%vreg11,%vreg21
+	%vreg25<def> = LD %vreg24<kill>, 0; mem:LD4[%arrayidx6] CPURegs:%vreg25,%vreg24
+	%vreg26<def> = LD <fi#1>, 0; mem:LD4[%sum] CPURegs:%vreg26
+	%vreg27<def> = ADDu %vreg26<kill>, %vreg25<kill>; CPURegs:%vreg27,%vreg26,%vreg25
+	ST %vreg27<kill>, <fi#1>, 0; mem:ST4[%sum] CPURegs:%vreg27
+    Successors according to CFG: BB#5
+
+BB#5: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#4 BB#3
+	%vreg38<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg38
+	%vreg39<def> = ADDiu %vreg38<kill>, 2; CPURegs:%vreg39,%vreg38
+	ST %vreg39<kill>, <fi#2>, 0; mem:ST4[%i] CPURegs:%vreg39
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#6: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#1 BB#3
+	%vreg40<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg40
+	%vreg41<def> = LD <fi#1>, 0; mem:LD4[%sum] CPURegs:%vreg41
+	%vreg42<def> = ADDu %vreg41<kill>, %vreg40<kill>; CPURegs:%vreg42,%vreg41,%vreg40
+	%V0<def> = COPY %vreg42; CPURegs:%vreg42
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+Pass Arguments:  -targetlibinfo -datalayout -jump-instr-table-info -notti -basictti -targetpassconfig -no-aa -tbaa -basicaa -collector-metadata -machinemoduleinfo -machine-branch-prob -jump-instr-tables -verify -verify-di -domtree -loops -loop-simplify -scalar-evolution -iv-users -loop-reduce -gc-lowering -unreachableblockelim -consthoist -codegenprepare -verify-di -stack-protector -verify -domtree -loops -branch-prob -expand-isel-pseudos -tailduplication -opt-phis -machinedomtree -slotindexes -stack-coloring -localstackalloc -dead-mi-elimination -machinedomtree -machine-loops -machinelicm -machine-cse -machine-sink -peephole-opts -machinedomtree -machine-loops -hwloops -processimpdefs -unreachable-mbb-elimination -livevars -machinedomtree -machine-loops -phi-node-elimination -twoaddressinstruction -slotindexes -liveintervals -simple-register-coalescing -machine-block-freq -livedebugvars -livestacks -virtregmap -liveregmatrix -edge-bundles -spill-code-placement -virtregrewriter -stack-slot-coloring -machinelicm -prologepilog -branch-folder -tailduplication -machine-cp -postrapseudos -machinedomtree -machine-loops -post-RA-sched -gc-analysis -machine-block-freq -block-placement2 -machinedomtree -machine-loops -packets -hwloopsfixup -stackmap-liveness
+Target Library Information
+Data Layout
+Jump-Instruction Table Info
+No target information
+Target independent code generator's TTI
+Target Pass Configuration
+No Alias Analysis (always returns 'may' alias)
+Type-Based Alias Analysis
+Basic Alias Analysis (stateless AA impl)
+Create Garbage Collector Module Metadata
+Machine Module Information
+Machine Branch Probability Analysis
+  ModulePass Manager
+    Jump-Instruction Tables
+    FunctionPass Manager
+      Module Verifier
+    Debug Info Verifier
+    FunctionPass Manager
+      Dominator Tree Construction
+      Natural Loop Information
+      Canonicalize natural loops
+      Scalar Evolution Analysis
+      Loop Pass Manager
+        Induction Variable Users
+        Loop Strength Reduction
+      Lower Garbage Collection Instructions
+      Remove unreachable blocks from the CFG
+      Constant Hoisting
+      CodeGen Prepare
+      Exception handling preparation
+    Debug Info Verifier
+    FunctionPass Manager
+      Insert stack protectors
+      Module Verifier
+      Machine Function Analysis
+      Dominator Tree Construction
+      Natural Loop Information
+      Branch Probability Analysis
+      DSP DAG->DAG Pattern Instruction Selection
+      Expand ISel Pseudo-instructions
+      Tail Duplication
+      Optimize machine instruction PHIs
+      MachineDominator Tree Construction
+      Slot index numbering
+      Merge disjoint stack slots
+      Local Stack Slot Allocation
+      Remove dead machine instructions
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Machine Loop Invariant Code Motion
+      Machine Common Subexpression Elimination
+      Machine code sinking
+      Peephole Optimizations
+      DSP handle CC
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Hardware Loops
+      Process Implicit Definitions
+      Remove unreachable machine basic blocks
+      Live Variable Analysis
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Eliminate PHI nodes for register allocation
+      Two-Address instruction pass
+      Slot index numbering
+      Live Interval Analysis
+      Simple Register Coalescing
+      Machine Block Frequency Analysis
+      Debug Variable Analysis
+      Live Stack Slot Analysis
+      Virtual Register Map
+      Live Register Matrix
+      Bundle Machine CFG Edges
+      Spill Code Placement Analysis
+      Greedy Register Allocator
+      Virtual Register Rewriter
+      Stack Slot Coloring
+      Machine Loop Invariant Code Motion
+      Prologue/Epilogue Insertion & Frame Finalization
+      Control Flow Optimizer
+      Tail Duplication
+      Machine Copy Propagation Pass
+      Post-RA pseudo instruction expansion pass
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      Post RA top-down list latency scheduler
+      Analyze Machine Code For Garbage Collection
+      Machine Block Frequency Analysis
+      Branch Probability Basic Block Placement
+      DSP Del Useless jmp
+      DSP Delay Slot Filler
+      MachineDominator Tree Construction
+      Machine Natural Loop Construction
+      DSP Packetizer
+      DSP VLIWBundlerDrive
+      DSP Hardware Loop Fixup
+      StackMap Liveness Analysis
+      dsp assembly printer
+# Machine code for function main: SSA
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP]
+  fi#1: size=4, align=4, at location [SP]
+  fi#2: size=4, align=4, at location [SP]
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovGR %ZERO, 0; CPURegs:%vreg0
+	ST %vreg0, <fi#0>, 0; mem:ST4[%retval] CPURegs:%vreg0
+	ST %vreg0, <fi#1>, 0; mem:ST4[%sum] CPURegs:%vreg0
+	%vreg1<def> = MovGR %ZERO, 1; CPURegs:%vreg1
+	ST %vreg1<kill>, <fi#2>, 0; mem:ST4[%i] CPURegs:%vreg1
+    Successors according to CFG: BB#1
+
+BB#1: derived from LLVM BB %for.cond
+    Predecessors according to CFG: BB#0 BB#5
+	%vreg2<def> = MovIGH %ZERO, <ga:@arraySize>[TF=3]; CPURegs:%vreg2
+	%vreg3<def,tied1> = MovIGL %vreg2<tied0>, <ga:@arraySize>[TF=4]; CPURegs:%vreg3,%vreg2
+	%vreg4<def> = LD %vreg3<kill>, 0; mem:LD4[@arraySize] CPURegs:%vreg4,%vreg3
+	%vreg5<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg5
+	%vreg6<def> = GE %vreg5<kill>, %vreg4<kill>; CPURegs:%vreg6,%vreg5,%vreg4
+	JC %vreg6<kill>, <BB#6>; CPURegs:%vreg6
+	Jmp <BB#2>
+    Successors according to CFG: BB#2(124) BB#6(4)
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1
+	%vreg7<def> = MovGR %ZERO, 2; CPURegs:%vreg7
+	%vreg8<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg8
+	%vreg9<def> = SHL %vreg8<kill>, %vreg7; CPURegs:%vreg9,%vreg8,%vreg7
+	%vreg10<def> = MovIGH %ZERO, <ga:@Array1>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@Array1>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg12<def> = ADDu %vreg11, %vreg9; CPURegs:%vreg12,%vreg11,%vreg9
+	%vreg13<def> = MovIGH %ZERO, <ga:@Array2>[TF=3]; CPURegs:%vreg13
+	%vreg14<def,tied1> = MovIGL %vreg13<tied0>, <ga:@Array2>[TF=4]; CPURegs:%vreg14,%vreg13
+	%vreg15<def> = ADDu %vreg14, %vreg9; CPURegs:%vreg15,%vreg14,%vreg9
+	%vreg16<def> = LD %vreg15<kill>, 0; mem:LD4[%arrayidx1] CPURegs:%vreg16,%vreg15
+	%vreg17<def> = LD %vreg12<kill>, 0; mem:LD4[%arrayidx] CPURegs:%vreg17,%vreg12
+	%vreg18<def> = GE %vreg17<kill>, %vreg16<kill>; CPURegs:%vreg18,%vreg17,%vreg16
+	JC %vreg18<kill>, <BB#4>; CPURegs:%vreg18
+	Jmp <BB#3>
+    Successors according to CFG: BB#3(16) BB#4(16)
+
+BB#3: derived from LLVM BB %if.then
+    Predecessors according to CFG: BB#2
+	%vreg29<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg29
+	%vreg30<def> = SHL %vreg29<kill>, %vreg7; CPURegs:%vreg30,%vreg29,%vreg7
+	%vreg33<def> = ADDu %vreg14, %vreg30<kill>; CPURegs:%vreg33,%vreg14,%vreg30
+	%vreg34<def> = LD %vreg33<kill>, 0; mem:LD4[%arrayidx3] CPURegs:%vreg34,%vreg33
+	%vreg35<def> = LD <fi#1>, 0; mem:LD4[%sum] CPURegs:%vreg35
+	%vreg36<def> = ADDu %vreg35<kill>, %vreg34<kill>; CPURegs:%vreg36,%vreg35,%vreg34
+	ST %vreg36, <fi#1>, 0; mem:ST4[%sum] CPURegs:%vreg36
+	%vreg37<def> = LTI %vreg36, 11; CPURegs:%vreg37,%vreg36
+	JNC %vreg37<kill>, <BB#6>; CPURegs:%vreg37
+	Jmp <BB#5>
+    Successors according to CFG: BB#6(4) BB#5(124)
+
+BB#4: derived from LLVM BB %if.else
+    Predecessors according to CFG: BB#2
+	%vreg20<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg20
+	%vreg21<def> = SHL %vreg20<kill>, %vreg7; CPURegs:%vreg21,%vreg20,%vreg7
+	%vreg24<def> = ADDu %vreg11, %vreg21<kill>; CPURegs:%vreg24,%vreg11,%vreg21
+	%vreg25<def> = LD %vreg24<kill>, 0; mem:LD4[%arrayidx6] CPURegs:%vreg25,%vreg24
+	%vreg26<def> = LD <fi#1>, 0; mem:LD4[%sum] CPURegs:%vreg26
+	%vreg27<def> = ADDu %vreg26<kill>, %vreg25<kill>; CPURegs:%vreg27,%vreg26,%vreg25
+	ST %vreg27<kill>, <fi#1>, 0; mem:ST4[%sum] CPURegs:%vreg27
+    Successors according to CFG: BB#5
+
+BB#5: derived from LLVM BB %for.inc
+    Predecessors according to CFG: BB#4 BB#3
+	%vreg38<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg38
+	%vreg39<def> = ADDiu %vreg38<kill>, 2; CPURegs:%vreg39,%vreg38
+	ST %vreg39<kill>, <fi#2>, 0; mem:ST4[%i] CPURegs:%vreg39
+	Jmp <BB#1>
+    Successors according to CFG: BB#1
+
+BB#6: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#1 BB#3
+	%vreg40<def> = LD <fi#2>, 0; mem:LD4[%i] CPURegs:%vreg40
+	%vreg41<def> = LD <fi#1>, 0; mem:LD4[%sum] CPURegs:%vreg41
+	%vreg42<def> = ADDu %vreg41<kill>, %vreg40<kill>; CPURegs:%vreg42,%vreg41,%vreg40
+	%V0<def> = COPY %vreg42; CPURegs:%vreg42
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

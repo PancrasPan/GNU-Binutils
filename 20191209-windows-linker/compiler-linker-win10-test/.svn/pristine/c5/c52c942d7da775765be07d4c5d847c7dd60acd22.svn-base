@@ -1,0 +1,49 @@
+当前目录：./c_standard_lib-master/STRING/
+
+MEMCHR.c:
+Time Elapsed 0.548569s
+读取ASM文件中的指令出错MEMCMP.c:
+Time Elapsed 0.405763s
+读取ASM文件中的指令出错MEMCPY.c:
+Time Elapsed 0.350996s
+读取ASM文件中的指令出错MEMMOVE.c:
+Time Elapsed 0.523943s
+读取ASM文件中的指令出错MEMSET.c:
+Time Elapsed 0.361471s
+读取ASM文件中的指令出错STRCAT.c:
+Time Elapsed 0.391293s
+读取ASM文件中的指令出错STRCHR.c:
+Time Elapsed 0.352463s
+读取ASM文件中的指令出错STRCMP.c:
+Time Elapsed 0.414137s
+读取ASM文件中的指令出错STRCOLL.c:
+Time Elapsed 0.995563s
+读取ASM文件中的指令出错STRCPY.c:
+Time Elapsed 0.333910s
+读取ASM文件中的指令出错STRCSPN.c:
+Time Elapsed 0.396293s
+读取ASM文件中的指令出错STRERROR.c:
+Time Elapsed 0.630822s
+读取ASM文件中的指令出错STRLEN.c:
+Time Elapsed 0.326524s
+读取ASM文件中的指令出错STRNCAT.c:
+Time Elapsed 0.399533s
+读取ASM文件中的指令出错STRNCMP.c:
+Time Elapsed 0.387833s
+读取ASM文件中的指令出错STRNCPY.c:
+Time Elapsed 0.379584s
+读取ASM文件中的指令出错STRPBRK.c:
+Time Elapsed 0.387196s
+读取ASM文件中的指令出错STRRCHR.c:
+Time Elapsed 0.345957s
+读取ASM文件中的指令出错STRSPN.c:
+Time Elapsed 0.397059s
+读取ASM文件中的指令出错STRSTR.c:
+Time Elapsed 0.391233s
+读取ASM文件中的指令出错STRTOK.c:
+Time Elapsed 0.404957s
+读取ASM文件中的指令出错STRXFRM.c:
+Time Elapsed 0.499022s
+读取ASM文件中的指令出错XSTRXFRM.c:
+Time Elapsed 0.756189s
+读取ASM文件中的指令出错

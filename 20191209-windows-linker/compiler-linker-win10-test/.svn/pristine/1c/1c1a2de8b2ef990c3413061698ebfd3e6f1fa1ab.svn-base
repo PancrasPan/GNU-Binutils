@@ -1,0 +1,63 @@
+当前目录：./c_standard_lib-master/STDIO
+
+CLEARERR.C:
+Time Elapsed 0.379878s
+读取ASM文件中的指令出错FEOF.C:
+Time Elapsed 0.350806s
+读取ASM文件中的指令出错FERROR.C:
+Time Elapsed 0.312209s
+读取ASM文件中的指令出错FFLUSH.C:
+Time Elapsed 0.554330s
+读取ASM文件中的指令出错FGETC.C:
+Time Elapsed 0.412324s
+读取ASM文件中的指令出错FGETPOS.C:
+Time Elapsed 0.317672s
+读取ASM文件中的指令出错FPRINTF.C:
+Time Elapsed 0.452120s
+读取ASM文件中的指令出错FPUTC.C:
+Time Elapsed 0.431519s
+读取ASM文件中的指令出错FREOPEN.C:
+Time Elapsed 0.385196s
+读取ASM文件中的指令出错FSCANF.C:
+Time Elapsed 0.442963s
+读取ASM文件中的指令出错FSETPOS.C:
+Time Elapsed 0.358667s
+读取ASM文件中的指令出错GETC.C:
+Time Elapsed 0.349012s
+读取ASM文件中的指令出错GETCHAR.C:
+Time Elapsed 0.305263s
+读取ASM文件中的指令出错PRINTF.C:
+Time Elapsed 0.442940s
+读取ASM文件中的指令出错PUTC.C:
+Time Elapsed 0.355576s
+读取ASM文件中的指令出错PUTCHAR.C:
+Time Elapsed 0.326025s
+读取ASM文件中的指令出错REMOVE.C:
+Time Elapsed 0.354519s
+读取ASM文件中的指令出错RENAME.C:
+Time Elapsed 0.305642s
+读取ASM文件中的指令出错SCANF.C:
+Time Elapsed 0.431032s
+读取ASM文件中的指令出错SPRINTF.C:
+Time Elapsed 0.457988s
+读取ASM文件中的指令出错SSCANF.C:
+Time Elapsed 0.446038s
+读取ASM文件中的指令出错UNGETC.C:
+Time Elapsed 0.426933s
+读取ASM文件中的指令出错VFPRINTF.C:
+Time Elapsed 0.422817s
+读取ASM文件中的指令出错VSPRINTF.C:
+Time Elapsed 0.434045s
+读取ASM文件中的指令出错XFGPOS.C:
+Time Elapsed 0.718443s
+读取ASM文件中的指令出错XFOPEN.C:
+Time Elapsed 0.479046s
+读取ASM文件中的指令出错XFRPREP.C:
+Time Elapsed 0.600992s
+读取ASM文件中的指令出错XFSPOS.C:
+Time Elapsed 0.689342s
+读取ASM文件中的指令出错XFWPREP.C:
+Time Elapsed 0.525609s
+读取ASM文件中的指令出错XPRINTF.C:
+Time Elapsed 1.929012s
+读取ASM文件中的指令出错

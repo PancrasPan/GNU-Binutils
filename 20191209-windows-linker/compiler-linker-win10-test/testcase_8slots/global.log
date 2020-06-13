@@ -1,0 +1,85 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name global.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/global.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/global.ll -x c ./testcase_8slots/global.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = LD %vreg1, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg2,%vreg1
+	%vreg3<def> = LD %vreg1, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg3,%vreg1
+	%vreg4<def> = ADDu %vreg3<kill>, %vreg2<kill>; CPURegs:%vreg4,%vreg3,%vreg2
+	%vreg5<def> = LD %vreg1, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg5,%vreg1
+	%vreg6<def> = ADDu %vreg4<kill>, %vreg5<kill>; CPURegs:%vreg6,%vreg4,%vreg5
+	%vreg7<def> = MovIGH %ZERO, <ga:@sum1>[TF=3]; CPURegs:%vreg7
+	%vreg8<def,tied1> = MovIGL %vreg7<tied0>, <ga:@sum1>[TF=4]; CPURegs:%vreg8,%vreg7
+	ST %vreg6<kill>, %vreg8<kill>, 0; mem:ST4[@sum1](tbaa=<badref>) CPURegs:%vreg6,%vreg8
+	%vreg9<def> = MovIGH %ZERO, <ga:@c>[TF=3]; CPURegs:%vreg9
+	%vreg10<def,tied1> = MovIGL %vreg9<tied0>, <ga:@c>[TF=4]; CPURegs:%vreg10,%vreg9
+	%vreg11<def> = LD %vreg10, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg11,%vreg10
+	%vreg12<def> = LD %vreg1, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg12,%vreg1
+	%vreg13<def> = ADDu %vreg12<kill>, %vreg11<kill>; CPURegs:%vreg13,%vreg12,%vreg11
+	ST %vreg13<kill>, %vreg1, 0; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg13,%vreg1
+	%vreg14<def> = LD %vreg10, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg14,%vreg10
+	%vreg15<def> = LD %vreg1, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg15,%vreg1
+	%vreg16<def> = ADDu %vreg15<kill>, %vreg14<kill>; CPURegs:%vreg16,%vreg15,%vreg14
+	ST %vreg16<kill>, %vreg1, 4; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg16,%vreg1
+	%vreg17<def> = LD %vreg10, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg17,%vreg10
+	%vreg18<def> = LD %vreg1, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg18,%vreg1
+	%vreg19<def> = ADDu %vreg18<kill>, %vreg17<kill>; CPURegs:%vreg19,%vreg18,%vreg17
+	ST %vreg19<kill>, %vreg1, 8; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg19,%vreg1
+	%vreg20<def> = MovGR %ZERO, 0; CPURegs:%vreg20
+	%V0<def> = COPY %vreg20; CPURegs:%vreg20
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function main: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg0<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg0
+	%vreg1<def,tied1> = MovIGL %vreg0<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg1,%vreg0
+	%vreg2<def> = LD %vreg1, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg2,%vreg1
+	%vreg3<def> = LD %vreg1, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg3,%vreg1
+	%vreg4<def> = ADDu %vreg3<kill>, %vreg2<kill>; CPURegs:%vreg4,%vreg3,%vreg2
+	%vreg5<def> = LD %vreg1, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg5,%vreg1
+	%vreg6<def> = ADDu %vreg4<kill>, %vreg5<kill>; CPURegs:%vreg6,%vreg4,%vreg5
+	%vreg7<def> = MovIGH %ZERO, <ga:@sum1>[TF=3]; CPURegs:%vreg7
+	%vreg8<def,tied1> = MovIGL %vreg7<tied0>, <ga:@sum1>[TF=4]; CPURegs:%vreg8,%vreg7
+	ST %vreg6<kill>, %vreg8<kill>, 0; mem:ST4[@sum1](tbaa=<badref>) CPURegs:%vreg6,%vreg8
+	%vreg9<def> = MovIGH %ZERO, <ga:@c>[TF=3]; CPURegs:%vreg9
+	%vreg10<def,tied1> = MovIGL %vreg9<tied0>, <ga:@c>[TF=4]; CPURegs:%vreg10,%vreg9
+	%vreg11<def> = LD %vreg10, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg11,%vreg10
+	%vreg12<def> = LD %vreg1, 0; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg12,%vreg1
+	%vreg13<def> = ADDu %vreg12<kill>, %vreg11<kill>; CPURegs:%vreg13,%vreg12,%vreg11
+	ST %vreg13<kill>, %vreg1, 0; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 0)](tbaa=<badref>) CPURegs:%vreg13,%vreg1
+	%vreg14<def> = LD %vreg10, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg14,%vreg10
+	%vreg15<def> = LD %vreg1, 4; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg15,%vreg1
+	%vreg16<def> = ADDu %vreg15<kill>, %vreg14<kill>; CPURegs:%vreg16,%vreg15,%vreg14
+	ST %vreg16<kill>, %vreg1, 4; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 1)](tbaa=<badref>) CPURegs:%vreg16,%vreg1
+	%vreg17<def> = LD %vreg10, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @c, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg17,%vreg10
+	%vreg18<def> = LD %vreg1, 8; mem:LD4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg18,%vreg1
+	%vreg19<def> = ADDu %vreg18<kill>, %vreg17<kill>; CPURegs:%vreg19,%vreg18,%vreg17
+	ST %vreg19<kill>, %vreg1, 8; mem:ST4[getelementptr inbounds ([3 x i32]* @a, i32 0, i32 2)](tbaa=<badref>) CPURegs:%vreg19,%vreg1
+	%vreg20<def> = MovGR %ZERO, 0; CPURegs:%vreg20
+	%V0<def> = COPY %vreg20; CPURegs:%vreg20
+	RetLR %V0<imp-use>
+
+# End machine code for function main.
+

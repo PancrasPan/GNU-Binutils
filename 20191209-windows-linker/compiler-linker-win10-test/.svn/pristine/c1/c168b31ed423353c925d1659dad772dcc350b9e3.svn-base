@@ -1,0 +1,122 @@
+	.text
+	.file	"./testcase_4slots/loopCountUnderflow1.ll"
+	.globl	add
+	.align	2
+	.type	add,@function
+add:                                    # @add
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -8
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 1
+	movigl	GR2,4
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 0
+}
+$BB0_1:                                 # %do.body
+                                        # =>This Inner Loop Header: Depth=1
+{
+	load32	GR2, GR30, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR3, GR2, -1
+}
+{
+	store32	GR3, GR30, 0
+	movigl	GR3,2
+}
+{
+	movigh	GR3,0
+}
+{
+	sl	GR2, GR2, GR3
+	movigh	GR3,%hi(a)
+}
+{
+	movigl	GR3,%lo(a)
+}
+{
+	add	GR2, GR3, GR2
+}
+{
+	load32	GR2, GR2, 0
+}
+{
+	nop
+}
+{
+	load32	GR3, GR30, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR2, GR3, GR2
+}
+{
+	store32	GR2, GR30, 1
+	load32	GR2, GR30, 0
+}
+{
+	nop
+}
+{
+	neqi	 GR2, 0
+}
+{
+	jc	 $BB0_1
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#2:                                 # %do.end
+{
+	load32	GR2, GR30, 1
+	addi	GR30, GR30, 8
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	add, ($tmp0)-add
+
+	.type	a,@object               # @a
+	.data
+	.globl	a
+	.align	2
+a:
+	.4byte	1                       # 0x1
+	.4byte	2                       # 0x2
+	.4byte	3                       # 0x3
+	.4byte	4                       # 0x4
+	.4byte	5                       # 0x5
+	.size	a, 20
+
+

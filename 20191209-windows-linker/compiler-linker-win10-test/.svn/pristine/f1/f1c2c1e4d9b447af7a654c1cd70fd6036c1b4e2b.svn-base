@@ -1,0 +1,727 @@
+	.text
+	.file	"./c_standard_lib-master/STRING/XSTRXFRM.ll"
+	.globl	_Strxfrm
+	.align	2
+	.type	_Strxfrm,@function
+_Strxfrm:                               # @_Strxfrm
+# BB#0:                                 # %entry
+{
+	addi	GR30, GR30, -56
+}
+{
+	load32	GR2, GR30, 17
+	load32	GR3, GR30, 16
+	store32	GR4, GR30, 12
+	store32	GR5, GR30, 11
+}
+{
+	store32	GR3, GR30, 10
+	store32	GR2, GR30, 9
+}
+{
+	load8	GR2, GR2, 0
+}
+{
+	store8	GR2, GR30, 32
+	movigl	GR2,0
+}
+{
+	movigh	GR2,0
+}
+{
+	store32	GR2, GR30, 7
+	store32	GR2, GR30, 6
+}
+{
+	store32	GR2, GR30, 5
+	load32	GR3, GR30, 11
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load32	GR3, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR30, 4
+	load32	GR3, GR30, 9
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load16	GR3, GR3, 1
+}
+{
+	store16	GR3, GR30, 6
+}
+$BB0_1:                                 # %for.cond
+                                        # =>This Inner Loop Header: Depth=1
+{
+	load8	GR3, GR30, 32
+}
+{
+	lti	 GR3, 16
+}
+{
+	jnc	 $BB0_22
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#2:                                 # %lor.lhs.false
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	movigl	GR3,2
+}
+{
+	movigh	GR3,0
+	load8	GR4, GR30, 32
+}
+{
+	sl	GR3, GR4, GR3
+	movigh	GR4,%hi(_Costate)
+}
+{
+	movigl	GR4,%lo(_Costate)
+}
+{
+	add	GR3, GR4, GR3
+}
+{
+	load32	GR3, GR3, 0
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR30, 1
+}
+{
+	eqi	 GR3, 0
+}
+{
+	jc	 $BB0_22
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#3:                                 # %lor.lhs.false4
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR3, GR30, 6
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR3, GR3, 1
+}
+{
+	store32	GR3, GR30, 6
+}
+{
+	lti	 GR3, 4080
+}
+{
+	jnc	 $BB0_22
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#4:                                 # %lor.lhs.false7
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR3, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load8	GR4, GR3, 0
+	movigl	GR3,1
+}
+{
+	movigh	GR3,0
+}
+{
+	sl	GR4, GR4, GR3
+	load32	GR5, GR30, 1
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR4, GR5, GR4
+}
+{
+	load16	GR4, GR4, 0
+}
+{
+	store16	GR4, GR30, 4
+}
+{
+	eqi	 GR4, 0
+}
+{
+	jc	 $BB0_22
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#5:                                 # %if.end
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	movigl	GR4,3840
+}
+{
+	movigh	GR4,0
+	load16	GR5, GR30, 4
+}
+{
+	and	GR5, GR5, GR4
+	movigl	GR4,8
+}
+{
+	movigh	GR4,0
+}
+{
+	srl	GR5, GR5, GR4
+}
+{
+	store8	GR5, GR30, 32
+	movigl	GR5,128
+}
+{
+	movigh	GR5,0
+	addi	GR28, GR30, 9
+}
+{
+	load8	GR6, GR28, 0
+}
+{
+	and	GR5, GR6, GR5
+}
+{
+	eqi	 GR5, 0
+}
+{
+	jc	 $BB0_7
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#6:                                 # %if.then17
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	movigl	GR5,-256
+}
+{
+	movigh	GR5,0
+	load16	GR6, GR30, 6
+}
+{
+	and	GR5, GR6, GR5
+	load8	GR6, GR30, 8
+}
+{
+	or	GR5, GR5, GR6
+}
+{
+	store16	GR5, GR30, 6
+}
+$BB0_7:                                 # %if.end23
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	movigl	GR5,16
+}
+{
+	movigh	GR5,0
+	addi	GR28, GR30, 9
+}
+{
+	load8	GR6, GR28, 0
+}
+{
+	and	GR5, GR6, GR5
+}
+{
+	eqi	 GR5, 0
+}
+{
+	jc	 $BB0_9
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#8:                                 # %if.then27
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load16	GR5, GR30, 6
+}
+{
+	sl	GR6, GR5, GR4
+	srl	GR4, GR5, GR4
+}
+{
+	or	GR4, GR4, GR6
+}
+{
+	store16	GR4, GR30, 6
+}
+$BB0_9:                                 # %if.end34
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load8	GR4, GR30, 8
+}
+{
+	eqi	 GR4, 0
+}
+{
+	jc	 $BB0_11
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#10:                                # %if.then38
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR4, GR30, 5
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 12
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR4, GR5, GR4
+	load8	GR5, GR30, 8
+}
+{
+	jmp	$BB0_12
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_11:                                # %if.else
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR4, GR30, 5
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 12
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR4, GR5, GR4
+	load8	GR5, GR30, 12
+}
+$BB0_12:                                # %if.end43
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	store8	GR5, GR4, 0
+	movigl	GR4,32
+}
+{
+	movigh	GR4,0
+	addi	GR28, GR30, 9
+}
+{
+	load8	GR5, GR28, 0
+}
+{
+	and	GR4, GR5, GR4
+}
+{
+	eqi	 GR4, 0
+}
+{
+	jc	 $BB0_16
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#13:                                # %land.lhs.true
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR4, GR30, 5
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR5, GR4, 1
+}
+{
+	store32	GR5, GR30, 5
+	load32	GR5, GR30, 12
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR4, GR5, GR4
+}
+{
+	load8	GR4, GR4, 0
+}
+{
+	eqi	 GR4, 0
+}
+{
+	jc	 $BB0_15
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#14:                                # %lor.lhs.false52
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR4, GR30, 5
+}
+{
+	nop
+}
+{
+	load32	GR5, GR30, 10
+}
+{
+	gtu	 GR5, GR4
+}
+{
+	jc	 $BB0_16
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_15:                                # %if.then55
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	store32	GR3, GR30, 7
+}
+$BB0_16:                                # %if.end56
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	movigl	GR4,64
+}
+{
+	movigh	GR4,0
+	addi	GR28, GR30, 9
+}
+{
+	load8	GR5, GR28, 0
+}
+{
+	and	GR4, GR5, GR4
+}
+{
+	eqi	 GR4, 0
+}
+{
+	jc	 $BB0_20
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#17:                                # %if.then60
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR4, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	load8	GR4, GR4, 0
+}
+{
+	eqi	 GR4, 0
+}
+{
+	jc	 $BB0_19
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#18:                                # %if.then64
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR3, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR3, GR3, 1
+}
+{
+	store32	GR3, GR30, 4
+	store32	GR2, GR30, 6
+}
+{
+	jmp	$BB0_20
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_19:                                # %if.else65
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	store32	GR3, GR30, 7
+}
+$BB0_20:                                # %if.end67
+                                        #   in Loop: Header=BB0_1 Depth=1
+{
+	load32	GR3, GR30, 7
+}
+{
+	nop
+}
+{
+	eqi	 GR3, 0
+}
+{
+	jc	 $BB0_1
+}
+{
+	nop
+}
+{
+	nop
+}
+# BB#21:                                # %if.then69
+{
+	load32	GR2, GR30, 11
+}
+{
+	nop
+}
+{
+	load32	GR3, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR2, 0
+}
+{
+	load32	GR2, GR30, 9
+}
+{
+	nop
+}
+{
+	load8	GR3, GR30, 32
+}
+{
+	store8	GR3, GR2, 0
+}
+{
+	load32	GR2, GR30, 9
+}
+{
+	nop
+}
+{
+	load16	GR3, GR30, 6
+}
+{
+	store16	GR3, GR2, 1
+}
+{
+	jmp	$BB0_23
+}
+{
+	nop
+}
+{
+	nop
+}
+$BB0_22:                                # %for.end
+{
+	load32	GR3, GR30, 5
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	addi	GR4, GR3, 1
+}
+{
+	store32	GR4, GR30, 5
+	load32	GR4, GR30, 12
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	add	GR3, GR4, GR3
+}
+{
+	store8	GR2, GR3, 0
+}
+{
+	load32	GR2, GR30, 11
+}
+{
+	nop
+}
+{
+	load32	GR3, GR30, 4
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR3, GR2, 0
+	movigl	GR2,16
+}
+{
+	movigh	GR2,0
+	load32	GR3, GR30, 9
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store8	GR2, GR3, 0
+}
+$BB0_23:                                # %return
+{
+	load32	GR2, GR30, 5
+}
+{
+	nop
+}
+{
+	nop
+}
+{
+	store32	GR2, GR30, 13
+}
+{
+	load32	GR2, GR30, 13
+	addi	GR30, GR30, 56
+}
+{
+	ret	GR31
+}
+{
+	nop
+}
+{
+	nop
+}
+$tmp0:
+	.size	_Strxfrm, ($tmp0)-_Strxfrm
+
+

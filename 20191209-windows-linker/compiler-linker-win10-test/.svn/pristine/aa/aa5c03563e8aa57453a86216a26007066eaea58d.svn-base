@@ -1,0 +1,139 @@
+
+#####==========stderr_mid==========#####:
+clang version 3.5.0 (tags/RELEASE_350/final)
+Target: dsp
+Thread model: posix
+ "D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\clang.exe" -cc1 -triple dsp -emit-llvm -disable-free -main-file-name bound_regtoreg.c -mrelocation-model static -mdisable-fp-elim -fmath-errno -no-integrated-as -mconstructor-aliases -v -dwarf-column-info -coverage-file "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test\\./testcase_8slots/bound_regtoreg.ll" -resource-dir "D:\\ppp\\lee_han-dsp_compiler-master\\dsp_compiler_old\\build-x64\\Debug\\bin\\..\\lib\\clang\\3.5.0" -I ./include -O1 -fno-dwarf-directory-asm -fdebug-compilation-dir "D:\\ppp\\Linker PPP\\20191209-windows-linker\\compiler-linker-win10-test" -ferror-limit 19 -fmessage-length 0 -mstackrealign -fobjc-runtime=gcc -fdiagnostics-show-option -o ./testcase_8slots/bound_regtoreg.ll -x c ./testcase_8slots/bound_regtoreg.c
+clang -cc1 version 3.5.0 based upon LLVM 3.5.0svn default target x86_64-pc-windows-msvc
+ignoring nonexistent directory "/usr/local/include"
+ignoring nonexistent directory "/usr/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ ./include
+ D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\build-x64\Debug\bin\..\lib\clang\3.5.0\include
+End of search list.
+'' is not a recognized processor for this target (ignoring processor)
+
+#####==========stderr_asm==========#####:
+# Machine code for function add: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg7<def> = MovIGH %ZERO, <ga:@upperbound>[TF=3]; CPURegs:%vreg7
+	%vreg8<def,tied1> = MovIGL %vreg7<tied0>, <ga:@upperbound>[TF=4]; CPURegs:%vreg8,%vreg7
+	%vreg9<def> = LD %vreg8<kill>, 0; mem:LD4[@upperbound](tbaa=<badref>) CPURegs:%vreg9,%vreg8
+	%vreg10<def> = MovIGH %ZERO, <ga:@lowerbound>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@lowerbound>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg0<def> = LD %vreg11<kill>, 0; mem:LD4[@lowerbound](tbaa=<badref>) CPURegs:%vreg0,%vreg11
+	%vreg12<def> = GE %vreg0, %vreg9<kill>; CPURegs:%vreg12,%vreg0,%vreg9
+	JC %vreg12<kill>, <BB#4>; CPURegs:%vreg12
+	Jmp <BB#1>
+    Successors according to CFG: BB#1(16) BB#4(16)
+
+BB#1: derived from LLVM BB %for.body.lr.ph
+    Predecessors according to CFG: BB#0
+	%vreg13<def> = MovIGH %ZERO, <ga:@sum>[TF=3]; CPURegs:%vreg13
+	%vreg14<def,tied1> = MovIGL %vreg13<tied0>, <ga:@sum>[TF=4]; CPURegs:%vreg14,%vreg13
+	%vreg2<def> = LD %vreg14<kill>, 0; mem:LD4[@sum](tbaa=<badref>) CPURegs:%vreg2,%vreg14
+	%vreg15<def> = MovIGH %ZERO, <ga:@upperbound>[TF=3]; CPURegs:%vreg15
+	%vreg16<def,tied1> = MovIGL %vreg15<tied0>, <ga:@upperbound>[TF=4]; CPURegs:%vreg16,%vreg15
+	%vreg1<def> = LD %vreg16<kill>, 0; mem:LD4[@upperbound](tbaa=<badref>) CPURegs:%vreg1,%vreg16
+	Jmp <BB#2>
+    Successors according to CFG: BB#2
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1 BB#2
+	%vreg3<def> = PHI %vreg2, <BB#1>, %vreg5, <BB#2>; CPURegs:%vreg3,%vreg2,%vreg5
+	%vreg4<def> = PHI %vreg0, <BB#1>, %vreg6, <BB#2>; CPURegs:%vreg4,%vreg0,%vreg6
+	%vreg17<def> = MovGR %ZERO, 2; CPURegs:%vreg17
+	%vreg18<def> = SHL %vreg4, %vreg17<kill>; CPURegs:%vreg18,%vreg4,%vreg17
+	%vreg19<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg19
+	%vreg20<def,tied1> = MovIGL %vreg19<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg20,%vreg19
+	%vreg21<def> = ADDu %vreg20<kill>, %vreg18<kill>; CPURegs:%vreg21,%vreg20,%vreg18
+	%vreg22<def> = LD %vreg21<kill>, 0; mem:LD4[%arrayidx](tbaa=<badref>) CPURegs:%vreg22,%vreg21
+	%vreg5<def> = ADDu %vreg3, %vreg22<kill>; CPURegs:%vreg5,%vreg3,%vreg22
+	%vreg6<def> = ADDiu %vreg4, 2; CPURegs:%vreg6,%vreg4
+	%vreg23<def> = LT %vreg6, %vreg1; CPURegs:%vreg23,%vreg6,%vreg1
+	JC %vreg23<kill>, <BB#2>; CPURegs:%vreg23
+	Jmp <BB#3>
+    Successors according to CFG: BB#2(124) BB#3(4)
+
+BB#3: derived from LLVM BB %for.cond.for.end_crit_edge
+    Predecessors according to CFG: BB#2
+	%vreg24<def> = MovIGH %ZERO, <ga:@sum>[TF=3]; CPURegs:%vreg24
+	%vreg25<def,tied1> = MovIGL %vreg24<tied0>, <ga:@sum>[TF=4]; CPURegs:%vreg25,%vreg24
+	ST %vreg5, %vreg25<kill>, 0; mem:ST4[@sum](tbaa=<badref>) CPURegs:%vreg5,%vreg25
+	Jmp <BB#4>
+    Successors according to CFG: BB#4
+
+BB#4: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#0 BB#3
+	%vreg26<def> = MovIGH %ZERO, <ga:@sum>[TF=3]; CPURegs:%vreg26
+	%vreg27<def,tied1> = MovIGL %vreg26<tied0>, <ga:@sum>[TF=4]; CPURegs:%vreg27,%vreg26
+	%vreg28<def> = LD %vreg27<kill>, 0; mem:LD4[@sum](tbaa=<badref>) CPURegs:%vreg28,%vreg27
+	%V0<def> = COPY %vreg28; CPURegs:%vreg28
+	RetLR %V0<imp-use>
+
+# End machine code for function add.
+
+
+#####==========stderr_obj==========#####:
+# Machine code for function add: SSA
+
+BB#0: derived from LLVM BB %entry
+	%vreg7<def> = MovIGH %ZERO, <ga:@upperbound>[TF=3]; CPURegs:%vreg7
+	%vreg8<def,tied1> = MovIGL %vreg7<tied0>, <ga:@upperbound>[TF=4]; CPURegs:%vreg8,%vreg7
+	%vreg9<def> = LD %vreg8<kill>, 0; mem:LD4[@upperbound](tbaa=<badref>) CPURegs:%vreg9,%vreg8
+	%vreg10<def> = MovIGH %ZERO, <ga:@lowerbound>[TF=3]; CPURegs:%vreg10
+	%vreg11<def,tied1> = MovIGL %vreg10<tied0>, <ga:@lowerbound>[TF=4]; CPURegs:%vreg11,%vreg10
+	%vreg0<def> = LD %vreg11<kill>, 0; mem:LD4[@lowerbound](tbaa=<badref>) CPURegs:%vreg0,%vreg11
+	%vreg12<def> = GE %vreg0, %vreg9<kill>; CPURegs:%vreg12,%vreg0,%vreg9
+	JC %vreg12<kill>, <BB#4>; CPURegs:%vreg12
+	Jmp <BB#1>
+    Successors according to CFG: BB#1(16) BB#4(16)
+
+BB#1: derived from LLVM BB %for.body.lr.ph
+    Predecessors according to CFG: BB#0
+	%vreg13<def> = MovIGH %ZERO, <ga:@sum>[TF=3]; CPURegs:%vreg13
+	%vreg14<def,tied1> = MovIGL %vreg13<tied0>, <ga:@sum>[TF=4]; CPURegs:%vreg14,%vreg13
+	%vreg2<def> = LD %vreg14<kill>, 0; mem:LD4[@sum](tbaa=<badref>) CPURegs:%vreg2,%vreg14
+	%vreg15<def> = MovIGH %ZERO, <ga:@upperbound>[TF=3]; CPURegs:%vreg15
+	%vreg16<def,tied1> = MovIGL %vreg15<tied0>, <ga:@upperbound>[TF=4]; CPURegs:%vreg16,%vreg15
+	%vreg1<def> = LD %vreg16<kill>, 0; mem:LD4[@upperbound](tbaa=<badref>) CPURegs:%vreg1,%vreg16
+	Jmp <BB#2>
+    Successors according to CFG: BB#2
+
+BB#2: derived from LLVM BB %for.body
+    Predecessors according to CFG: BB#1 BB#2
+	%vreg3<def> = PHI %vreg2, <BB#1>, %vreg5, <BB#2>; CPURegs:%vreg3,%vreg2,%vreg5
+	%vreg4<def> = PHI %vreg0, <BB#1>, %vreg6, <BB#2>; CPURegs:%vreg4,%vreg0,%vreg6
+	%vreg17<def> = MovGR %ZERO, 2; CPURegs:%vreg17
+	%vreg18<def> = SHL %vreg4, %vreg17<kill>; CPURegs:%vreg18,%vreg4,%vreg17
+	%vreg19<def> = MovIGH %ZERO, <ga:@a>[TF=3]; CPURegs:%vreg19
+	%vreg20<def,tied1> = MovIGL %vreg19<tied0>, <ga:@a>[TF=4]; CPURegs:%vreg20,%vreg19
+	%vreg21<def> = ADDu %vreg20<kill>, %vreg18<kill>; CPURegs:%vreg21,%vreg20,%vreg18
+	%vreg22<def> = LD %vreg21<kill>, 0; mem:LD4[%arrayidx](tbaa=<badref>) CPURegs:%vreg22,%vreg21
+	%vreg5<def> = ADDu %vreg3, %vreg22<kill>; CPURegs:%vreg5,%vreg3,%vreg22
+	%vreg6<def> = ADDiu %vreg4, 2; CPURegs:%vreg6,%vreg4
+	%vreg23<def> = LT %vreg6, %vreg1; CPURegs:%vreg23,%vreg6,%vreg1
+	JC %vreg23<kill>, <BB#2>; CPURegs:%vreg23
+	Jmp <BB#3>
+    Successors according to CFG: BB#2(124) BB#3(4)
+
+BB#3: derived from LLVM BB %for.cond.for.end_crit_edge
+    Predecessors according to CFG: BB#2
+	%vreg24<def> = MovIGH %ZERO, <ga:@sum>[TF=3]; CPURegs:%vreg24
+	%vreg25<def,tied1> = MovIGL %vreg24<tied0>, <ga:@sum>[TF=4]; CPURegs:%vreg25,%vreg24
+	ST %vreg5, %vreg25<kill>, 0; mem:ST4[@sum](tbaa=<badref>) CPURegs:%vreg5,%vreg25
+	Jmp <BB#4>
+    Successors according to CFG: BB#4
+
+BB#4: derived from LLVM BB %for.end
+    Predecessors according to CFG: BB#0 BB#3
+	%vreg26<def> = MovIGH %ZERO, <ga:@sum>[TF=3]; CPURegs:%vreg26
+	%vreg27<def,tied1> = MovIGL %vreg26<tied0>, <ga:@sum>[TF=4]; CPURegs:%vreg27,%vreg26
+	%vreg28<def> = LD %vreg27<kill>, 0; mem:LD4[@sum](tbaa=<badref>) CPURegs:%vreg28,%vreg27
+	%V0<def> = COPY %vreg28; CPURegs:%vreg28
+	RetLR %V0<imp-use>
+
+# End machine code for function add.
+

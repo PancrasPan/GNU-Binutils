@@ -1,0 +1,108 @@
+	.text
+	.file	"./testcase_8slots/compound_condition3.ll"
+	.globl	main
+	.align	2
+	.type	main,@function
+main:                                   # @main
+# BB#0:                                 # %entry
+Slot:	                                # 0
+{
+	addi	GR30, GR30, -16
+Slot:	                                # 0
+	movigl	GR2,0
+}
+Slot:	                                # 0
+{
+	movigh	GR2,0
+}
+Slot:	                                # 6
+{
+	store32	GR2, GR30, 3
+Slot:	                                # 6
+	store32	GR2, GR30, 2
+Slot:	                                # 0
+	movigl	GR3,4
+}
+Slot:	                                # 0
+{
+	movigh	GR3,0
+}
+Slot:	                                # 6
+{
+	store32	GR3, GR30, 1
+Slot:	                                # 0
+	movigl	GR3,2
+}
+Slot:	                                # 0
+{
+	movigh	GR3,0
+}
+Slot:	                                # 6
+{
+	store32	GR3, GR30, 0
+}
+Slot:	                                # 0
+{
+	jmp	$BB0_1
+}
+Slot:	                                # 0
+{
+	nop
+}
+Slot:	                                # 0
+{
+	nop
+}
+$BB0_5:                                 # %while.body
+                                        #   in Loop: Header=BB0_1 Depth=1
+Slot:	                                # 4
+{
+	load32	GR3, GR30, 2
+}
+Slot:	                                # 0
+{
+	nop
+}
+Slot:	                                # 0
+{
+	nop
+}
+Slot:	                                # 0
+{
+	addi	GR3, GR3, 1
+}
+Slot:	                                # 6
+{
+	store32	GR3, GR30, 2
+}
+$BB0_1:                                 # %while.cond
+                                        # =>This Inner Loop Header: Depth=1
+Slot:	                                # 4
+{
+	load32	GR3, GR30, 1
+}
+Slot:	                                # 0
+{
+	nop
+}
+Slot:	                                # 4
+{
+	load32	GR4, GR30, 2
+}
+Slot:	                                # 0
+{
+	lt	 GR4, GR3
+}
+Slot:	                                # 0
+{
+	jc	 $BB0_3
+}
+Slot:	                                # 0
+{
+	nop
+}
+Slot:	                                # 0
+{
+	nop
+}
+# BB#2:                                 #

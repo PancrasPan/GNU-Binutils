@@ -1,0 +1,17 @@
+当前目录：./testcase_8slots/SIMD_Intrinsic/
+
+func_vector.c:
+Time Elapsed 0.525955s
+读取ASM文件中的指令出错global_vector.c:
+Time Elapsed 0.466643s
+读取ASM文件中的指令出错local_vector.c:
+Time Elapsed 0.572859s
+读取ASM文件中的指令出错local_vector_return.c:
+Time Elapsed 0.530557s
+读取ASM文件中的指令出错SIMD_Intrinsic_Testcase.c:
+Time Elapsed 3.942736s
+读取ASM文件中的指令出错SIMD_Intrinsic_Testcase1.c:
+Time Elapsed 3.255711s
+读取ASM文件中的指令出错vmax.c:
+Time Elapsed 1.865701s
+读取ASM文件中的指令出错

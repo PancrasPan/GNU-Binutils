@@ -1,0 +1,12 @@
+1 testcase里的compound_condition.ll,compound_condition3.ll,compound_condition2.ll经过
+8slots的llc报错:Assertion failed: begin() + idx < end(), file D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\dsp_compiler-master\include\llvm/ADT/SmallVector.h, line 145
+4slots的llc可以正确跑通
+目前可以确定是while里的复合条件语句and or会出错，单独的或者if里面的复合条件语句没错（and_or_if.ll）；
+4/8slots的clang编译出的ll文件都一样，没错；
+smallvector和while好像并没有什么关系；
+在D:\ppp\lee_han-dsp_compiler-master\dsp_compiler_old\dsp_compiler-master\lib\CodeGen\StackMapLivenessAnalysis.cpp里的debug：COMPUTING STACKMAP LIVENESS后开始报错（lines:67）;
+在StackMapLiveness::runOnMachineFunction里return false后开始出错，后续编译遍即： 出错在dsp assembly printer编译遍;
+第21次进入EmitInstruction函数开始出错
+第27条指令后出问题，即ge	 GR4, GR3，后一条指令为movg2g	GR3,GR2
+if (MI->isBundle()) 第28此EmitToStreamer（）调用前没出错，调用后出错，movg2g指令？前后没修改这条指令
+2
